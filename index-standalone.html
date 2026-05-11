@@ -208,7 +208,7 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
 .tourn-card{background:var(--ink-800);border:1px solid rgba(246,243,235,.06);border-radius:var(--radius-xl);overflow:hidden;cursor:pointer;transition:transform .3s,border-color .3s}
 .tourn-card:hover{transform:translateY(-4px);border-color:rgba(218,254,61,.3)}
 .tourn-card__img{height:200px;background-size:cover;background-position:center;position:relative}
-.tourn-card__img-grad{position:absolute;inset:0;background:linear-gradient(to top,var(--ink-800) 0%,transparent 60%)}
+.tourn-card__img-grad{position:absolute;inset:0;background:linear-gradient(to top,var(--ink-800) 0%,rgba(17,19,24,.7) 40%,rgba(17,19,24,.2) 100%)}
 .tourn-card__body{padding:var(--sp-6)}
 .tourn-card__eyebrow{font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--volt-500);margin-bottom:var(--sp-2)}
 .tourn-card__title{font-family:var(--font-display);font-size:22px;text-transform:uppercase;margin-bottom:var(--sp-3)}
@@ -293,8 +293,8 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
 <nav class="nav" id="main-nav">
   <div class="nav__left">
     <a href="#" onclick="go('home');return false;" style="border:none;display:flex;align-items:center">
-      <img class="nav__logo" src="assets/logo-white.png" onerror="this.style.display='none';this.nextSibling.style.display='block'" alt="Ballerz Abroad" />
-      <span style="display:none;font-family:var(--font-display);font-size:18px;letter-spacing:.04em;color:var(--chalk-50)">BALLERZ ABROAD</span>
+      <img class="nav__logo" src="https://raw.githubusercontent.com/harry1995green-art/WEBSITE/claude/implement-design-system-RPFyb/assets/logo-white.png" onerror="this.style.display='none';this.nextSibling.style.display='block'" alt="Ballerz Abroad" />
+      <span style="display:none;font-family:var(--font-display);font-size:16px;letter-spacing:.08em;color:var(--chalk-50)">BALLERZ ABROAD</span>
     </a>
     <div class="nav__links">
       <a class="nav-link" data-page="home" onclick="go('home');return false;" href="#">Home</a>
@@ -324,12 +324,12 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
   <!-- Hero -->
   <section class="hero">
     <div class="hero__bg"></div>
-    <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1600&q=80') center/cover;opacity:.22;z-index:0"></div>
-    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,11,13,1) 0%,rgba(10,11,13,.6) 50%,rgba(10,11,13,.3) 100%);z-index:0"></div>
+    <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1551038247-3d935f07e9f1?w=1600&q=80') center/cover;opacity:.45;z-index:0"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,11,13,1) 0%,rgba(10,11,13,.75) 40%,rgba(10,11,13,.4) 70%,rgba(10,11,13,.2) 100%);z-index:0"></div>
     <div class="hero__content">
       <div class="hero__eyebrow">European Football Experiences</div>
       <h1 class="hero__h1">Train Where<br/><em>Legends</em><br/>Are Made</h1>
-      <p class="hero__p">Elite football academies in Spain &amp; Portugal. Professional coaching, first-team training grounds, lifetime memories — built around your squad.</p>
+      <p class="hero__p">Your squad. European pitches. Professional methodology. Ballerz Abroad puts UK players inside the world's elite football environments — because real development happens in real football cultures.</p>
       <div class="hero__actions">
         <button class="btn btn--primary btn--lg" onclick="go('levante')">Explore Experiences <span>→</span></button>
         <button class="btn btn--ghost btn--lg" onclick="go('tournaments')">View Tournaments</button>
@@ -356,38 +356,38 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
     <div class="section__inner">
       <div class="section__header">
         <div class="eyebrow">Destinations</div>
-        <h2 class="h2">Choose Your<br/>Experience</h2>
-        <p class="lead">Three world-class clubs. Three unforgettable weeks. Your squad trains where the pros train.</p>
+        <h2 class="h2">Three Clubs.<br/>One Standard.</h2>
+        <p class="lead">Spanish intensity. Portuguese precision. Not holiday-camp football — real professional environments, real coaching staff, real development.</p>
       </div>
       <div class="exp-grid">
         <div class="exp-card exp-card--featured" onclick="go('levante')">
-          <div class="exp-card__img" style="background-image:url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=900&q=80')"></div>
+          <div class="exp-card__img" style="background-image:url('https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=900&q=80')"></div>
           <div class="exp-card__grad"></div>
           <span class="exp-card__pill"><span class="dot"></span>Enrolling Now</span>
           <div class="exp-card__body">
             <div class="exp-card__meta">Valencia, Spain · 7 Days</div>
             <div class="exp-card__t">Levante UD Experience</div>
-            <div class="exp-card__sub">Train at Levante UD Sports City with UEFA-licensed coaches</div>
+            <div class="exp-card__sub">The same pitches. The same coaching staff. The same standards.</div>
           </div>
         </div>
         <div class="exp-card exp-card--regular" onclick="go('betis')">
-          <div class="exp-card__img" style="background-image:url('https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=600&q=80')"></div>
+          <div class="exp-card__img" style="background-image:url('https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=600&q=80')"></div>
           <div class="exp-card__grad"></div>
           <span class="exp-card__pill"><span class="dot"></span>Enrolling Now</span>
           <div class="exp-card__body">
             <div class="exp-card__meta">Seville, Spain · 7 Days</div>
             <div class="exp-card__t">Real Betis Experience</div>
-            <div class="exp-card__sub">La Liga royalty since 1907</div>
+            <div class="exp-card__sub">La Liga's most passionate club. A football city like no other.</div>
           </div>
         </div>
         <div class="exp-card exp-card--regular" onclick="go('benfica')">
-          <div class="exp-card__img" style="background-image:url('https://images.unsplash.com/photo-1551958219-acbc595f10a5?w=600&q=80')"></div>
+          <div class="exp-card__img" style="background-image:url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=600&q=80')"></div>
           <div class="exp-card__grad"></div>
           <span class="exp-card__pill"><span class="dot"></span>Limited Spaces</span>
           <div class="exp-card__body">
             <div class="exp-card__meta">Lisbon, Portugal · 7 Days</div>
             <div class="exp-card__t">Benfica Experience</div>
-            <div class="exp-card__sub">World's best academy 2015 &amp; 2019</div>
+            <div class="exp-card__sub">World's greatest academy. Two titles. One standard.</div>
           </div>
         </div>
       </div>
@@ -399,12 +399,12 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
     <div class="section__inner">
       <div class="section__header">
         <div class="eyebrow">Who It's For</div>
-        <h2 class="h2">Built For<br/>Every Baller</h2>
+        <h2 class="h2">If You're Serious<br/>About Football.</h2>
       </div>
-      <div class="audience-row"><div class="audience-row__n">01</div><div class="audience-row__t">Academy Players</div><div class="audience-row__d">Currently in an academy setup or grassroots team. Ready for European exposure.</div><div class="audience-row__a">→</div></div>
-      <div class="audience-row"><div class="audience-row__n">02</div><div class="audience-row__t">Elite Squads</div><div class="audience-row__d">Teams looking for a pre-season tour, mid-season camp or end-of-season reward.</div><div class="audience-row__a">→</div></div>
-      <div class="audience-row"><div class="audience-row__n">03</div><div class="audience-row__t">Development Players U9–U19</div><div class="audience-row__d">All age groups catered for with tailored coaching programs and age-appropriate games.</div><div class="audience-row__a">→</div></div>
-      <div class="audience-row"><div class="audience-row__n">04</div><div class="audience-row__t">Parents &amp; Families</div><div class="audience-row__d">Family-friendly resorts, chaperone options, and full support from first enquiry to final whistle.</div><div class="audience-row__a">→</div></div>
+      <div class="audience-row"><div class="audience-row__n">01</div><div class="audience-row__t">Academy & Grassroots Players</div><div class="audience-row__d">Currently in an academy or grassroots setup and ready for the next level. European football is a different game — come and find out why.</div><div class="audience-row__a">→</div></div>
+      <div class="audience-row"><div class="audience-row__n">02</div><div class="audience-row__t">Teams & Squads</div><div class="audience-row__d">Pre-season tours, mid-season development camps, end-of-season rewards. We build the trip around your group — not the other way round.</div><div class="audience-row__a">→</div></div>
+      <div class="audience-row"><div class="audience-row__n">03</div><div class="audience-row__t">Players Aged U9 to U19</div><div class="audience-row__d">Every age group. Every ability level. Our coaching partners deliver age-appropriate sessions inside elite professional environments.</div><div class="audience-row__a">→</div></div>
+      <div class="audience-row"><div class="audience-row__n">04</div><div class="audience-row__t">Parents Who Get It</div><div class="audience-row__d">Full chaperone cover. Regular updates. Family-friendly accommodation. You hand us the trust — we take care of every detail from first call to final whistle.</div><div class="audience-row__a">→</div></div>
     </div>
   </section>
 
@@ -413,8 +413,8 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
     <div class="section__inner">
       <div class="section__header">
         <div class="eyebrow">Tournaments 2026</div>
-        <h2 class="h2">Compete On The<br/>Biggest Stages</h2>
-        <p class="lead">Six elite European tournaments. Register your squad through Ballerz Abroad — we handle everything.</p>
+        <h2 class="h2">The Biggest<br/>Stages in Youth<br/>Football.</h2>
+        <p class="lead">Six elite tournaments across Europe and the Caribbean. We handle registration, travel, and accommodation — your squad just needs to show up and play.</p>
       </div>
       <table class="fixture-table">
         <thead>
@@ -439,7 +439,7 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
   <footer class="foot">
     <div class="foot__grid">
       <div class="foot__logo">
-        <img src="assets/logo-white.png" onerror="this.style.display='none'" alt="Ballerz Abroad" />
+        <img src="https://raw.githubusercontent.com/harry1995green-art/WEBSITE/claude/implement-design-system-RPFyb/assets/logo-white.png" onerror="this.style.display='none'" alt="Ballerz Abroad" />
         <div class="foot__tag">European football experiences — built around your squad.</div>
       </div>
       <div class="foot__col">
@@ -476,8 +476,8 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
    ========================================================================= -->
 <div id="page-levante" class="page">
   <div class="detail-hero" style="background:linear-gradient(135deg,#0A1A0F,#0A0B0D)">
-    <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1600&q=80') center/cover;opacity:.25"></div>
-    <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--ink-900) 0%,rgba(10,11,13,.5) 50%,transparent 100%)"></div>
+    <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1543423924-a9df48de5f5a?w=1600&q=80') center/cover;opacity:.5"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--ink-900) 0%,rgba(10,11,13,.8) 40%,rgba(10,11,13,.4) 70%,rgba(10,11,13,.15) 100%)"></div>
     <div class="detail-hero__content">
       <button class="back-btn" onclick="go('home')">← Back to Experiences</button>
       <div class="detail-hero__club">
@@ -485,7 +485,7 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
         <div class="club-name">Levante UD · Valencia, Spain</div>
       </div>
       <h1 class="h2" style="font-size:clamp(48px,7vw,80px)">Levante UD<br/>Experience</h1>
-      <p class="lead">7 days training at one of Spain's most storied clubs — on the same pitches as La Liga professionals.</p>
+      <p class="lead">Seven days inside a real La Liga club. Same pitches. Same coaching methodology. Same standards they hold their own academy to.</p>
       <div style="margin-top:var(--sp-8);display:flex;gap:var(--sp-3)">
         <button class="btn btn--primary btn--lg" onclick="go('application')">Apply Now →</button>
         <a href="tel:07867205763" class="btn btn--ghost btn--lg">Call Us</a>
@@ -559,8 +559,8 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
 
   <div class="apply-band">
     <div class="section__inner" style="max-width:600px">
-      <h2 class="h2">Ready to Train<br/>in Valencia?</h2>
-      <p class="lead">Spaces are limited. Secure your squad's place on the Levante UD Experience today.</p>
+      <h2 class="h2">Valencia Is<br/>Waiting.</h2>
+      <p class="lead">Spaces are strictly limited per age group. Don't lose your place to another squad.</p>
       <div style="display:flex;gap:var(--sp-3);justify-content:center;flex-wrap:wrap">
         <button class="btn btn--primary btn--lg" onclick="go('application')">Apply Now →</button>
         <a href="tel:07867205763" class="btn btn--ghost btn--lg">07867 205763</a>
@@ -571,7 +571,7 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
   <footer class="foot">
     <div class="foot__grid">
       <div class="foot__logo">
-        <img src="assets/logo-white.png" onerror="this.style.display='none'" alt="Ballerz Abroad" />
+        <img src="https://raw.githubusercontent.com/harry1995green-art/WEBSITE/claude/implement-design-system-RPFyb/assets/logo-white.png" onerror="this.style.display='none'" alt="Ballerz Abroad" />
         <div class="foot__tag">European football experiences — built around your squad.</div>
       </div>
       <div class="foot__col">
@@ -601,8 +601,8 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
    ========================================================================= -->
 <div id="page-betis" class="page">
   <div class="detail-hero" style="background:linear-gradient(135deg,#0A1A0A,#0A0B0D)">
-    <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=1600&q=80') center/cover;opacity:.25"></div>
-    <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--ink-900) 0%,rgba(10,11,13,.5) 50%,transparent 100%)"></div>
+    <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=1600&q=80') center/cover;opacity:.5"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--ink-900) 0%,rgba(10,11,13,.8) 40%,rgba(10,11,13,.4) 70%,rgba(10,11,13,.15) 100%)"></div>
     <div class="detail-hero__content">
       <button class="back-btn" onclick="go('home')">← Back to Experiences</button>
       <div class="detail-hero__club">
@@ -610,7 +610,7 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
         <div class="club-name">Real Betis · Seville, Spain</div>
       </div>
       <h1 class="h2" style="font-size:clamp(48px,7vw,80px)">Real Betis<br/>Experience</h1>
-      <p class="lead">Train at one of La Liga's most iconic clubs — founded 1907, home of the passionate Béticos culture of Seville.</p>
+      <p class="lead">A La Liga club with 117 years of history, a city that eats and breathes football, and a training philosophy built on technical dominance. This is Seville.</p>
       <div style="margin-top:var(--sp-8);display:flex;gap:var(--sp-3)">
         <button class="btn btn--primary btn--lg" onclick="go('application')">Apply Now →</button>
         <a href="tel:07867205763" class="btn btn--ghost btn--lg">Call Us</a>
@@ -684,8 +684,8 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
 
   <div class="apply-band">
     <div class="section__inner" style="max-width:600px">
-      <h2 class="h2">Ready to Train<br/>in Seville?</h2>
-      <p class="lead">Spaces are limited. Secure your squad's place on the Real Betis Experience today.</p>
+      <h2 class="h2">Seville Won't<br/>Wait.</h2>
+      <p class="lead">Spaces fill fast. Lock in your squad's place before the season's gone.</p>
       <div style="display:flex;gap:var(--sp-3);justify-content:center;flex-wrap:wrap">
         <button class="btn btn--primary btn--lg" onclick="go('application')">Apply Now →</button>
         <a href="tel:07867205763" class="btn btn--ghost btn--lg">07867 205763</a>
@@ -696,7 +696,7 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
   <footer class="foot">
     <div class="foot__grid">
       <div class="foot__logo">
-        <img src="assets/logo-white.png" onerror="this.style.display='none'" alt="Ballerz Abroad" />
+        <img src="https://raw.githubusercontent.com/harry1995green-art/WEBSITE/claude/implement-design-system-RPFyb/assets/logo-white.png" onerror="this.style.display='none'" alt="Ballerz Abroad" />
         <div class="foot__tag">European football experiences — built around your squad.</div>
       </div>
       <div class="foot__col">
@@ -726,8 +726,8 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
    ========================================================================= -->
 <div id="page-benfica" class="page">
   <div class="detail-hero" style="background:linear-gradient(135deg,#1A0A0A,#0A0B0D)">
-    <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1551958219-acbc595f10a5?w=1600&q=80') center/cover;opacity:.25"></div>
-    <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--ink-900) 0%,rgba(10,11,13,.5) 50%,transparent 100%)"></div>
+    <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1600&q=80') center/cover;opacity:.5"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--ink-900) 0%,rgba(10,11,13,.8) 40%,rgba(10,11,13,.4) 70%,rgba(10,11,13,.15) 100%)"></div>
     <div class="detail-hero__content">
       <button class="back-btn" onclick="go('home')">← Back to Experiences</button>
       <div class="detail-hero__club">
@@ -735,7 +735,7 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
         <div class="club-name">SL Benfica · Lisbon, Portugal</div>
       </div>
       <h1 class="h2" style="font-size:clamp(48px,7vw,80px)">Benfica<br/>Experience</h1>
-      <p class="lead">Train at the world's best football academy — 19 hectares, 9 pitches, and the methodology that produced Eusébio, Figo, and Renato Sanches.</p>
+      <p class="lead">The world's greatest football academy. Voted best on the planet in 2015 and 2019. 19 hectares. 9 pitches. The methodology that produced generations of world-class players.</p>
       <div style="margin-top:var(--sp-8);display:flex;gap:var(--sp-3)">
         <button class="btn btn--primary btn--lg" onclick="go('application')">Apply Now →</button>
         <a href="tel:07867205763" class="btn btn--ghost btn--lg">Call Us</a>
@@ -809,8 +809,8 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
 
   <div class="apply-band">
     <div class="section__inner" style="max-width:600px">
-      <h2 class="h2">Ready for the<br/>World's Best?</h2>
-      <p class="lead">Benfica spaces are our most sought-after. Apply early to avoid disappointment.</p>
+      <h2 class="h2">The World's Best<br/>Is There.</h2>
+      <p class="lead">Benfica spaces are our most sought-after programme. Early applications only — spaces go fast.</p>
       <div style="display:flex;gap:var(--sp-3);justify-content:center;flex-wrap:wrap">
         <button class="btn btn--primary btn--lg" onclick="go('application')">Apply Now →</button>
         <a href="tel:07867205763" class="btn btn--ghost btn--lg">07867 205763</a>
@@ -821,7 +821,7 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
   <footer class="foot">
     <div class="foot__grid">
       <div class="foot__logo">
-        <img src="assets/logo-white.png" onerror="this.style.display='none'" alt="Ballerz Abroad" />
+        <img src="https://raw.githubusercontent.com/harry1995green-art/WEBSITE/claude/implement-design-system-RPFyb/assets/logo-white.png" onerror="this.style.display='none'" alt="Ballerz Abroad" />
         <div class="foot__tag">European football experiences — built around your squad.</div>
       </div>
       <div class="foot__col">
@@ -853,13 +853,13 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
   <!-- Hub view -->
   <div id="tourn-hub">
     <section class="detail-hero" style="background:linear-gradient(135deg,#0A0A1A,#0A0B0D);min-height:420px;height:50vh">
-      <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=1600&q=80') center/cover;opacity:.2"></div>
-      <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--ink-900) 0%,rgba(10,11,13,.4) 100%)"></div>
+      <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1551038247-3d935f07e9f1?w=1600&q=80') center/cover;opacity:.5"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--ink-900) 0%,rgba(10,11,13,.8) 40%,rgba(10,11,13,.4) 70%,rgba(10,11,13,.1) 100%)"></div>
       <div class="detail-hero__content">
         <button class="back-btn" onclick="go('home')">← Back to Home</button>
         <div class="eyebrow" style="margin-bottom:var(--sp-4)">Tournaments 2026</div>
         <h1 class="h2" style="font-size:clamp(40px,6vw,72px)">Compete On The<br/>World Stage</h1>
-        <p class="lead">Six elite European tournaments. Ballerz Abroad handles registration, travel, and everything in between.</p>
+        <p class="lead">Six elite European tournaments. We handle registration, travel, and everything in between — you just show up and play.</p>
       </div>
     </section>
 
@@ -868,7 +868,7 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
         <div class="tourn-grid">
 
           <div class="tourn-card" onclick="showTourn('mic')">
-            <div class="tourn-card__img" style="background-image:url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=600&q=80')">
+            <div class="tourn-card__img" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80')">
               <div class="tourn-card__img-grad"></div>
             </div>
             <div class="tourn-card__body">
@@ -882,7 +882,7 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
           </div>
 
           <div class="tourn-card" onclick="showTourn('copa')">
-            <div class="tourn-card__img" style="background-image:url('https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=600&q=80')">
+            <div class="tourn-card__img" style="background-image:url('https://images.unsplash.com/photo-1518604666860-9ed391f76460?w=600&q=80')">
               <div class="tourn-card__img-grad"></div>
             </div>
             <div class="tourn-card__body">
@@ -896,7 +896,7 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
           </div>
 
           <div class="tourn-card" onclick="showTourn('mare')">
-            <div class="tourn-card__img" style="background-image:url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=600&q=80')">
+            <div class="tourn-card__img" style="background-image:url('https://images.unsplash.com/photo-1553778263-73a83bab9b0c?w=600&q=80')">
               <div class="tourn-card__img-grad"></div>
             </div>
             <div class="tourn-card__body">
@@ -910,7 +910,7 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
           </div>
 
           <div class="tourn-card" onclick="showTourn('cruyff')">
-            <div class="tourn-card__img" style="background-image:url('https://images.unsplash.com/photo-1556056504-5c7696c4c28d?w=600&q=80')">
+            <div class="tourn-card__img" style="background-image:url('https://images.unsplash.com/photo-1547347298-4074fc3086f0?w=600&q=80')">
               <div class="tourn-card__img-grad"></div>
             </div>
             <div class="tourn-card__body">
@@ -925,7 +925,7 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
 
           <div class="tourn-card" onclick="showTourn('levante')">
             <div class="tourn-card__img" style="background-image:url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&q=80')">
-              <div class="tourn-card__img-grad"></div>
+              <div class="tourn-card__img-grad" style="background:linear-gradient(to top,var(--ink-800) 0%,rgba(17,19,24,.6) 50%,transparent 100%)"></div>
             </div>
             <div class="tourn-card__body">
               <div class="tourn-card__eyebrow">Valencia, Spain · Jun 18–21 2026</div>
@@ -938,7 +938,7 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
           </div>
 
           <div class="tourn-card" onclick="showTourn('punta')">
-            <div class="tourn-card__img" style="background-image:url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80')">
+            <div class="tourn-card__img" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80')">
               <div class="tourn-card__img-grad"></div>
             </div>
             <div class="tourn-card__body">
@@ -957,8 +957,8 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
 
     <div class="apply-band">
       <div class="section__inner" style="max-width:600px">
-        <h2 class="h2">Ready to Register<br/>Your Squad?</h2>
-        <p class="lead">We handle all tournament registration, travel, and accommodation. Just show up and play.</p>
+        <h2 class="h2">Your Squad.<br/>Europe's Stages.</h2>
+        <p class="lead">We handle all registration, travel, and accommodation. Your only job is turning up ready to compete.</p>
         <div style="display:flex;gap:var(--sp-3);justify-content:center;flex-wrap:wrap">
           <button class="btn btn--primary btn--lg" onclick="go('application')">Apply Now →</button>
           <a href="tel:07867205763" class="btn btn--ghost btn--lg">07867 205763</a>
@@ -969,7 +969,7 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
     <footer class="foot">
       <div class="foot__grid">
         <div class="foot__logo">
-          <img src="assets/logo-white.png" onerror="this.style.display='none'" alt="Ballerz Abroad" />
+          <img src="https://raw.githubusercontent.com/harry1995green-art/WEBSITE/claude/implement-design-system-RPFyb/assets/logo-white.png" onerror="this.style.display='none'" alt="Ballerz Abroad" />
           <div class="foot__tag">European football experiences — built around your squad.</div>
         </div>
         <div class="foot__col">
@@ -1034,8 +1034,8 @@ button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
       <!-- Step 1 -->
       <div class="form-step active" id="step-1">
         <div class="eyebrow">Step 1 of 4</div>
-        <h2 class="form-step__title">Tell Us About<br/>Your Squad</h2>
-        <p class="form-step__sub">Let's start with the basics — who are you and what are you after?</p>
+        <h2 class="form-step__title">Let's Get<br/>Started.</h2>
+        <p class="form-step__sub">Tell us who you are. We'll take it from there.</p>
         <div class="field"><label>Contact Name</label><input type="text" placeholder="Your full name" /></div>
         <div class="field-row">
           <div class="field"><label>Email Address</label><input type="email" placeholder="you@example.com" /></div>
