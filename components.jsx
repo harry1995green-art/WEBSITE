@@ -29,7 +29,7 @@ function Nav({ active = "home", onNavigate }) {
     <nav className={"nav " + (scrolled ? "nav--scrolled" : "")}>
       <div className="nav__left">
         <a href="#" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate("home"); }} style={{ border: "none", display: "flex", alignItems: "center" }}>
-          <img className="nav__logo" src="assets/logo-white.png" alt="Ballerz Abroad" />
+          <img className="nav__logo" src="assets/logo-white.png" alt="Ballerz Abroad" style={{ fontSize: "34px", width: "auto", alignSelf: "stretch" }} />
         </a>
         <div className="nav__links">
           {link("home", "Home")}
@@ -102,11 +102,11 @@ function AudienceRow({ n, title, desc }) {
 // ---------------------------------------------------------------------------
 // Experience card
 // ---------------------------------------------------------------------------
-function ExpCard({ featured, image, meta, title, sub, pill, onClick }) {
+function ExpCard({ featured, image, meta, title, sub, pill, onClick, gradBg }) {
   return (
     <div className={"exp-card " + (featured ? "exp-card--featured" : "exp-card--regular")} onClick={onClick}>
       <div className="exp-card__img" style={{ backgroundImage: `url(${image})` }}></div>
-      <div className="exp-card__grad"></div>
+      <div className="exp-card__grad" style={gradBg ? { backgroundImage: `url(${gradBg})`, backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundSize: "cover" } : {}}></div>
       {pill && (
         <span className="exp-card__pill">
           <span className="dot"></span>{pill}

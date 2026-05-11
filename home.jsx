@@ -23,7 +23,7 @@ function Home({ onNavigate }) {
             <div className="hero__eyebrow-rule"></div>
             <div className="hero__eyebrow-text">Levante UD · Real Betis · MIC · Mare Nostrum · Cruyff</div>
           </div>
-          <h1 className="display-xl">Train like<br/>a pro abroad.</h1>
+          <h1 className="display-xl">Professional football experiences.</h1>
           <div className="hero__sub">Professional training environments, organised fixtures, and tournament football across Spain, the Netherlands and the UK. Built around your squad.</div>
           <div className="hero__ctas">
             <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Apply for a tour →</button>
@@ -54,7 +54,7 @@ function Home({ onNavigate }) {
             <AudienceRow n="01" title="Grassroots clubs" desc="Lift a season-long programme. Bond a squad. Expose players to the next level." />
             <AudienceRow n="02" title="Academies" desc="Pre-season camps, mid-season resets, scouting windows inside partner-club environments." />
             <AudienceRow n="03" title="Schools" desc="Football-first travel for school football programmes — academic + athletic friendly." />
-            <AudienceRow n="04" title="Development teams" desc="Pro-grade environments without an academy budget. Compete, recover, return sharper." />
+            <AudienceRow n="04" title="Development teams" desc="Professional environments without an academy budget. Compete, recover, return sharper." />
             <AudienceRow n="05" title="US college soccer" desc="European exposure for NCAA programmes. Pre-season abroad, contested fixtures." />
           </div>
         </div>
@@ -83,6 +83,7 @@ function Home({ onNavigate }) {
               sub="La Liga training environment. Andalusian football culture."
               pill="Application open"
               onClick={() => onNavigate("betis")}
+              gradBg="https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fc8bef32bbe7c4b9e9fac7ac15bd62932?format=webp"
             />
             <ExpCard
               image="https://images.unsplash.com/photo-1517747614396-d21a78b850e8?w=900&q=80"
@@ -91,6 +92,7 @@ function Home({ onNavigate }) {
               sub="Best Global Academy 2015 &amp; 2019. 9-pitch campus, UEFA-accredited coaches."
               pill="Application open"
               onClick={() => onNavigate("benfica")}
+              gradBg="https://cdn.builder.io/o/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F2dd0b3c55fc3419caa72fb236bd670fd?alt=media&token=e4d9a904-1980-4a8c-a4a6-c6c15919f422&apiKey=94fd70ad307f4ddc9cac607abab780ad"
             />
             <ExpCard
               image="https://images.unsplash.com/photo-1577223625816-7546f13df25d?w=900&q=80"
