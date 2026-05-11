@@ -1,0 +1,284 @@
+/* =========================================================================
+   BALLERZ ABROAD — Colors & Type
+   Premium boutique football experiences. Cinematic, performance-focused.
+   ========================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@500;600;700;800;900&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  /* -------------------------------------------------------------------------
+     CORE PALETTE
+     ------------------------------------------------------------------------- */
+
+  /* Ink — the cinematic dark surfaces (matchday at night, tunnel walks) */
+  --ink-1000: #050608;    /* deepest, pitch at midnight */
+  --ink-900:  #0A0B0D;    /* primary background */
+  --ink-800:  #14181C;    /* elevated surface, cards */
+  --ink-700:  #1F252B;    /* raised cards, dividers on dark */
+  --ink-600:  #2A323A;    /* hover, subtle fill */
+  --ink-500:  #3A444E;    /* border on dark */
+
+  /* Chalk — warm off-whites (chalkline, kit fabric, ball leather) */
+  --chalk-50:  #F6F3EB;   /* primary light surface, slightly warm */
+  --chalk-100: #EBE7DC;   /* secondary light surface */
+  --chalk-200: #D9D3C3;   /* dividers on light */
+  --chalk-300: #B8B1A0;   /* muted text on light */
+
+  /* Stand — neutrals between ink and chalk */
+  --stand-700: #545B63;
+  --stand-500: #7A828A;
+  --stand-300: #9CA4AC;
+  --stand-200: #C3C8CD;
+
+  /* -------------------------------------------------------------------------
+     SIGNAL PALETTE — used sparingly, never as backgrounds
+     ------------------------------------------------------------------------- */
+
+  /* Volt — the floodlight/pitch-line green-yellow. Primary action color. */
+  --volt-500:  #DAFE3D;
+  --volt-400:  #E8FF6E;
+  --volt-600:  #B6DD1F;
+  --volt-700:  #8AAA11;
+
+  /* Pitch — deep grass green. Trust + heritage. */
+  --pitch-700: #1F4F2A;
+  --pitch-600: #2F7A3B;
+  --pitch-500: #3D9C4C;
+
+  /* Clay — european terracotta. Warmth, leather, sunset travel. */
+  --clay-600:  #B36438;
+  --clay-500:  #C8784A;
+  --clay-400:  #DCA07A;
+
+  /* Whistle — referee red. Alerts only. */
+  --whistle-500: #FF3D2E;
+
+  /* -------------------------------------------------------------------------
+     SEMANTIC TOKENS (default = dark theme; light overrides below)
+     ------------------------------------------------------------------------- */
+
+  --bg:           var(--ink-900);
+  --bg-elevated:  var(--ink-800);
+  --bg-raised:    var(--ink-700);
+  --bg-overlay:   rgba(5, 6, 8, 0.72);
+
+  --fg:           var(--chalk-50);
+  --fg-muted:     var(--stand-300);
+  --fg-subtle:    var(--stand-500);
+  --fg-inverse:   var(--ink-900);
+
+  --border:       var(--ink-500);
+  --border-soft:  rgba(246, 243, 235, 0.08);
+  --border-bold:  var(--chalk-50);
+
+  --accent:       var(--volt-500);
+  --accent-fg:    var(--ink-900);
+  --accent-hover: var(--volt-400);
+
+  --danger:       var(--whistle-500);
+
+  /* Optical mix for subtle dark-on-dark tints */
+  --tint-chalk-04: rgba(246, 243, 235, 0.04);
+  --tint-chalk-08: rgba(246, 243, 235, 0.08);
+  --tint-chalk-12: rgba(246, 243, 235, 0.12);
+  --tint-chalk-24: rgba(246, 243, 235, 0.24);
+
+  /* -------------------------------------------------------------------------
+     TYPE — three families, used with intent
+     ------------------------------------------------------------------------- */
+
+  /* Anton — heavy condensed display. ALL CAPS only. Hero headlines, scoreline numerals. */
+  --font-display: 'Anton', 'Archivo Black', 'Impact', sans-serif;
+
+  /* Archivo — modern editorial sans. Headings, subheads, eyebrows. Weight range. */
+  --font-heading: 'Archivo', system-ui, sans-serif;
+
+  /* Manrope — clean, readable, slightly geometric. Body, UI. */
+  --font-body: 'Manrope', system-ui, -apple-system, sans-serif;
+
+  /* JetBrains Mono — stats, metadata, timestamps, dates, codes. */
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+
+  /* -------------------------------------------------------------------------
+     TYPE SCALE — bold contrast. Display is much bigger than body.
+     ------------------------------------------------------------------------- */
+
+  --fs-display-xl: clamp(72px, 12vw, 184px);  /* Hero "TRAIN LIKE A PRO" */
+  --fs-display-l:  clamp(56px, 8vw, 128px);   /* Section openers */
+  --fs-display-m:  clamp(40px, 5vw, 80px);    /* Big stats */
+  --fs-display-s:  clamp(28px, 3vw, 48px);    /* Card headlines */
+
+  --fs-h1:  44px;
+  --fs-h2:  32px;
+  --fs-h3:  24px;
+  --fs-h4:  18px;
+
+  --fs-body-l: 19px;
+  --fs-body:   16px;
+  --fs-body-s: 14px;
+  --fs-caption: 12px;
+  --fs-micro:   11px;
+
+  /* -------------------------------------------------------------------------
+     SPACING — 4px base
+     ------------------------------------------------------------------------- */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* -------------------------------------------------------------------------
+     RADIUS — sharp + subtle. Football kit aesthetic = mostly sharp corners.
+     ------------------------------------------------------------------------- */
+
+  --r-0: 0px;
+  --r-1: 2px;
+  --r-2: 4px;
+  --r-3: 8px;
+  --r-pill: 999px;
+
+  /* -------------------------------------------------------------------------
+     SHADOWS — used very lightly. Cinematic = deep blacks, no fluffy elevation.
+     ------------------------------------------------------------------------- */
+
+  --shadow-lift: 0 1px 0 0 var(--tint-chalk-08), 0 12px 32px -8px rgba(0,0,0,0.6);
+  --shadow-card: 0 24px 60px -12px rgba(0,0,0,0.55);
+  --shadow-pop:  0 32px 80px -16px rgba(0,0,0,0.7);
+
+  --ring-focus: 0 0 0 2px var(--ink-900), 0 0 0 4px var(--volt-500);
+
+  /* -------------------------------------------------------------------------
+     MOTION — confident, tight. No bounces; precise easing.
+     ------------------------------------------------------------------------- */
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);   /* default, decisive */
+  --ease-in:  cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-cinematic: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --dur-1: 120ms;
+  --dur-2: 220ms;
+  --dur-3: 360ms;
+  --dur-4: 560ms;
+  --dur-cinematic: 900ms;
+
+  /* -------------------------------------------------------------------------
+     LAYOUT
+     ------------------------------------------------------------------------- */
+
+  --container-max: 1440px;
+  --container-pad: clamp(24px, 5vw, 80px);
+  --grid-gutter: 24px;
+}
+
+/* =========================================================================
+   LIGHT THEME OVERRIDE
+   ========================================================================= */
+
+.theme-light {
+  --bg:           var(--chalk-50);
+  --bg-elevated:  #FFFFFF;
+  --bg-raised:    var(--chalk-100);
+  --bg-overlay:   rgba(246, 243, 235, 0.86);
+
+  --fg:           var(--ink-900);
+  --fg-muted:     var(--stand-700);
+  --fg-subtle:    var(--stand-500);
+  --fg-inverse:   var(--chalk-50);
+
+  --border:       var(--chalk-200);
+  --border-soft:  rgba(10, 11, 13, 0.08);
+  --border-bold:  var(--ink-900);
+}
+
+/* =========================================================================
+   SEMANTIC TYPOGRAPHY
+   ========================================================================= */
+
+html, body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.55;
+  color: var(--fg);
+  background: var(--bg);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.display, .display-xl, .display-l, .display-m, .display-s {
+  font-family: var(--font-display);
+  font-weight: 400; /* Anton is single-weight */
+  line-height: 0.88;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+/* The italic display — borrowed from the live site's "Expertly crafted" treatment.
+   Use for: brand-line moments, hero sub-tagline, partner intros, signature copy. */
+.display-italic {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1.0;
+  letter-spacing: -0.015em;
+}
+.display-xl { font-size: var(--fs-display-xl); }
+.display-l  { font-size: var(--fs-display-l); }
+.display-m  { font-size: var(--fs-display-m); }
+.display-s  { font-size: var(--fs-display-s); }
+
+h1, .h1 { font-family: var(--font-heading); font-weight: 800; font-size: var(--fs-h1); line-height: 1.05; letter-spacing: -0.02em; }
+h2, .h2 { font-family: var(--font-heading); font-weight: 700; font-size: var(--fs-h2); line-height: 1.1;  letter-spacing: -0.015em; }
+h3, .h3 { font-family: var(--font-heading); font-weight: 700; font-size: var(--fs-h3); line-height: 1.2;  letter-spacing: -0.01em; }
+h4, .h4 { font-family: var(--font-heading); font-weight: 600; font-size: var(--fs-h4); line-height: 1.3; }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--fg-muted);
+}
+.eyebrow--accent { color: var(--accent); }
+
+.body-l { font-size: var(--fs-body-l); line-height: 1.55; }
+.body   { font-size: var(--fs-body);   line-height: 1.6; }
+.body-s { font-size: var(--fs-body-s); line-height: 1.55; color: var(--fg-muted); }
+
+.caption {
+  font-family: var(--font-mono);
+  font-size: var(--fs-caption);
+  letter-spacing: 0.06em;
+  color: var(--fg-muted);
+}
+
+.numeric, .stat {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Pull-quote / lead paragraph */
+.lead {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.45;
+  color: var(--fg);
+}
+
+/* Link styling */
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  transition: opacity var(--dur-1) var(--ease-out);
+}
+a:hover { opacity: 0.7; }
