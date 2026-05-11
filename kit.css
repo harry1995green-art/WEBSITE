@@ -33,6 +33,32 @@ html, body { margin: 0; padding: 0; background: var(--ink-900); color: var(--cha
   border: none;
 }
 .nav__links a.is-active { color: var(--volt-500); }
+
+/* Nav dropdown */
+.nav__dropdown-wrap { position: relative; }
+.nav__dropdown-wrap > a { display: block; }
+.nav__dropdown {
+  display: none;
+  position: absolute; top: calc(100% + 16px); left: 0;
+  background: rgba(10, 11, 13, 0.96);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(246,243,235,0.10);
+  min-width: 220px;
+  padding: 8px 0;
+  z-index: 100;
+}
+.nav__dropdown-wrap:hover .nav__dropdown { display: block; }
+.nav__dropdown a {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 600; font-size: 13px;
+  letter-spacing: 0.04em; text-transform: none;
+  color: var(--chalk-50); border: none;
+  padding: 10px 20px;
+  transition: color var(--dur-1) var(--ease-out), background var(--dur-1);
+}
+.nav__dropdown a:hover { color: var(--volt-500); background: rgba(246,243,235,0.04); }
 .nav__cta { display: flex; align-items: center; gap: 12px; }
 .lang-pill {
   font-family: var(--font-mono);
@@ -248,6 +274,10 @@ footer.foot { background: var(--ink-1000); color: var(--chalk-50); padding: clam
 .callout-grid .cell__n { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em; color: var(--volt-500); text-transform: uppercase; }
 .callout-grid .cell__t { font-family: var(--font-heading); font-weight: 700; font-size: 22px; color: var(--chalk-50); }
 .callout-grid .cell__d { font-family: var(--font-body); font-size: 14px; line-height: 1.55; color: var(--stand-200); }
+
+/* Tournament rows */
+.tournament-row:hover { padding-left: 12px; }
+.tournament-row:hover .tournament-row__arrow { color: var(--volt-500); transform: translateX(6px); }
 
 /* Responsive */
 @media (max-width: 900px) {

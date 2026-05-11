@@ -14,10 +14,14 @@ function Nav({ active = "home", onNavigate }) {
     window.addEventListener("scroll", fn, { passive: true });
     return () => window.removeEventListener("scroll", fn);
   }, []);
+  const isActive = (id) => {
+    if (id === "levante") return ["levante", "betis", "benfica"].includes(active);
+    return active === id;
+  };
   const link = (id, label) => (
     <a
       href="#"
-      className={active === id ? "is-active" : ""}
+      className={isActive(id) ? "is-active" : ""}
       onClick={(e) => { e.preventDefault(); onNavigate && onNavigate(id); }}
     >{label}</a>
   );
@@ -29,10 +33,20 @@ function Nav({ active = "home", onNavigate }) {
         </a>
         <div className="nav__links">
           {link("home", "Home")}
-          {link("detail", "Destinations")}
+          <div className="nav__dropdown-wrap">
+            <a
+              href="#"
+              className={isActive("levante") ? "is-active" : ""}
+              onClick={(e) => { e.preventDefault(); onNavigate && onNavigate("levante"); }}
+            >Destinations</a>
+            <div className="nav__dropdown">
+              <a href="#" onClick={(e) => { e.preventDefault(); onNavigate("levante"); }}>Levante UD Experience</a>
+              <a href="#" onClick={(e) => { e.preventDefault(); onNavigate("betis"); }}>Real Betis Experience</a>
+              <a href="#" onClick={(e) => { e.preventDefault(); onNavigate("benfica"); }}>Benfica Experience</a>
+            </div>
+          </div>
           {link("tournaments", "Tournaments")}
-          {link("about", "About")}
-          {link("contact", "Contact")}
+          {link("application", "Apply")}
         </div>
       </div>
       <div className="nav__cta">

@@ -27,7 +27,7 @@ function Home({ onNavigate }) {
           <div className="hero__sub">Professional training environments, organised fixtures, and tournament football across Spain, the Netherlands and the UK. Built around your squad.</div>
           <div className="hero__ctas">
             <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Apply for a tour →</button>
-            <button className="btn btn--ghost btn--lg" onClick={() => onNavigate("detail")}>View the destinations</button>
+            <button className="btn btn--ghost btn--lg" onClick={() => onNavigate("levante")}>View the destinations</button>
           </div>
         </div>
       </section>
@@ -70,33 +70,35 @@ function Home({ onNavigate }) {
             <ExpCard
               featured
               image="https://images.unsplash.com/photo-1610294232527-d11a4c7ce40c?w=1200&q=80"
-              meta="PRO EXPERIENCE · VALENCIA"
+              meta="PRO EXPERIENCE · VALENCIA, SPAIN"
               title="Levante UD experience"
-              sub="Inside the partner-club training environment. Individual Player Development available — parents welcome to travel."
+              sub="Inside a La Liga club's training environment. Academy coaching, contested fixtures, and the Levante UD International Cup. Individual Player Development available."
               pill="Application open"
-              onClick={() => onNavigate("detail")}
+              onClick={() => onNavigate("levante")}
             />
             <ExpCard
               image="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=900&q=80"
-              meta="EXPERIENCE · SEVILLE"
+              meta="EXPERIENCE · SEVILLE, SPAIN"
               title="Real Betis experience"
-              sub="Andalusian football. Pro environment."
+              sub="La Liga training environment. Andalusian football culture."
               pill="Application open"
-              onClick={() => onNavigate("detail")}
+              onClick={() => onNavigate("betis")}
             />
             <ExpCard
               image="https://images.unsplash.com/photo-1517747614396-d21a78b850e8?w=900&q=80"
-              meta="DEVELOPMENT · ENGLAND"
-              title="NXGENPro"
-              sub="UK-based programme. Year-round windows."
-              pill="Year-round"
+              meta="PRO EXPERIENCE · LISBON, PORTUGAL"
+              title="Benfica experience"
+              sub="Best Global Academy 2015 &amp; 2019. 9-pitch campus, UEFA-accredited coaches."
+              pill="Application open"
+              onClick={() => onNavigate("benfica")}
             />
             <ExpCard
               image="https://images.unsplash.com/photo-1577223625816-7546f13df25d?w=900&q=80"
               meta="TOURNAMENT · COSTA BRAVA"
               title="MIC Costa Brava"
-              sub="The reference event."
+              sub="The reference event. Easter window."
               pill="Apr 2026"
+              onClick={() => onNavigate("tournaments")}
             />
             <ExpCard
               featured
@@ -104,6 +106,7 @@ function Home({ onNavigate }) {
               meta="COMBINED TOUR · BUILT TO BRIEF"
               title="Combined tours — your squad, your way"
               sub="Mixed-level, mixed-age, mixed-gender groups. Aligned to one of our partner tournaments. Custom-built end to end."
+              onClick={() => onNavigate("application")}
             />
           </div>
         </div>
@@ -157,20 +160,23 @@ function Home({ onNavigate }) {
           <div className="section-lead">Direct entries into European youth football's most contested tournaments — selected for level, not name.</div>
           <div className="fixture-table">
             {[
-              ["MIC COSTA BRAVA",    "Spain · Easter window",          "The international youth football reference tournament"],
-              ["COPA DAURADA",       "Salou, Costa Daurada",           "Grassroots through academy bracket"],
-              ["MARE NOSTRUM CUP",   "Catalonia · Mediterranean coast","U8 — U19 international field"],
-              ["CRUYFF TOURNAMENT",  "Netherlands",                    "Hosted in the spirit of the Cruyff philosophy"],
-              ["LEVANTE UD INT. CUP","Valencia, Spain",                "Hosted by our partner La Liga club"],
-              ["MIC PUNTA CANA",     "Dominican Republic",             "Winter window — MIC format, Caribbean staging"],
+              ["MIC COSTA BRAVA",    "Costa Brava · Easter 2026",      "900+ matches · 59 pitches · Alumni: Pedri, Lamine Yamal, Rodri"],
+              ["COPA DAURADA",       "Salou · Apr 6–10 2026",          "90 teams · 300 clubs from 25 countries"],
+              ["MARE NOSTRUM CUP",   "Salou · Easter &amp; Summer",        "U9 — U19 · 10,000+ participants annually"],
+              ["CRUYFF TOURNAMENT",  "Salou, Catalonia",               "Honoring Johan Cruyff · All matches recorded for scouting"],
+              ["LEVANTE UD INT. CUP","Valencia · Jun 18–21 2026",      "Hosted at Levante UD Sports City · Inaugural edition"],
+              ["MIC PUNTA CANA",     "Dominican Republic · Jun 24–29", "100+ teams · 13 natural-grass pitches · Caribbean window"],
             ].map(([city, sub, opp], i) => (
-              <div className="fixture-row" key={i}>
+              <div className="fixture-row" key={i} onClick={() => onNavigate("tournaments")} style={{ cursor: "pointer" }}>
                 <div className="fixture-row__date">T0{i+1}</div>
                 <div className="fixture-row__city">{city}</div>
-                <div className="fixture-row__opp">{opp}</div>
-                <div className="fixture-row__status" style={{ color: "var(--stand-300)" }}>{sub}</div>
+                <div className="fixture-row__opp" dangerouslySetInnerHTML={{ __html: opp }}></div>
+                <div className="fixture-row__status" style={{ color: "var(--stand-300)" }} dangerouslySetInnerHTML={{ __html: sub }}></div>
               </div>
             ))}
+          </div>
+          <div style={{ marginTop: 24 }}>
+            <button className="btn btn--ghost" onClick={() => onNavigate("tournaments")}>View all tournaments →</button>
           </div>
         </div>
       </section>
