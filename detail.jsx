@@ -4,12 +4,12 @@
 // Shared detail layout helpers
 // ---------------------------------------------------------------------------
 
-function DetailHero({ eyebrow, badge1, badge2, badge3, img, title, sub, onNavigate }) {
+function DetailHero({ eyebrow, badge1, badge2, badge3, img, title, sub, onNavigate, gradBg, titleColor }) {
   return (
     <section className="hero" style={{ minHeight: "88vh" }}>
       <div className="hero__img" style={{ backgroundImage: `url(${img})` }}></div>
       <div className="hero__grain"></div>
-      <div className="hero__gradient"></div>
+      <div className="hero__gradient" style={gradBg ? { backgroundImage: `url(${gradBg})`, backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundSize: "cover" } : {}}></div>
       <div className="hero__meta">
         {badge1 && <span>{badge1}</span>}
         {badge2 && <span dangerouslySetInnerHTML={{ __html: badge2 }}></span>}
@@ -20,7 +20,7 @@ function DetailHero({ eyebrow, badge1, badge2, badge3, img, title, sub, onNaviga
           <div className="hero__eyebrow-rule"></div>
           <div className="hero__eyebrow-text">{eyebrow}</div>
         </div>
-        <h1 className="display-xl" dangerouslySetInnerHTML={{ __html: title }}></h1>
+        <h1 className="display-xl" style={titleColor ? { color: titleColor } : {}} dangerouslySetInnerHTML={{ __html: title }}></h1>
         <div className="hero__sub">{sub}</div>
         <div className="hero__ctas">
           <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Apply for this experience →</button>
@@ -457,6 +457,8 @@ function BenficaDetail({ onNavigate }) {
         title="Benfica<br/>experience."
         sub="Train at the facility voted Best Global Academy twice. SL Benfica's 19-hectare campus in Seixal — 9 pitches, UEFA-accredited coaches, and one of European football's most respected development environments."
         onNavigate={onNavigate}
+        gradBg="https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fc447d2d12c6b441c9c8283cbe34dde2d"
+        titleColor="rgba(0, 0, 0, 1)"
       />
 
       {/* QUICK STATS */}
