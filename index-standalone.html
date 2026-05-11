@@ -597,16 +597,18 @@ footer.foot { background: var(--ink-1000); color: var(--chalk-50); padding: clam
 <body>
   <div id="root"></div>
 
-  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
 
-  <script type="text/babel" data-type="module">
+  <script type="text/babel">
+const { useState, useEffect, useRef } = React;
+
+/* ── components ── */
 // Shared React components for the Ballerz Abroad website.
 // Loaded via <script type="text/babel" src="components.jsx">.
 // Components are attached to window at the bottom for cross-file access.
 
-const { useState, useEffect, useRef } = React;
 
 // ---------------------------------------------------------------------------
 // Nav — sticky, blurs on scroll
@@ -781,12 +783,11 @@ function Footer() {
   );
 }
 
-Object.assign(window, { Nav, WhatsAppFab, EyebrowBar, AudienceRow, ExpCard, StatCell, Footer });
 
 
+/* ── home ── */
 // Home page composition.
 
-const { useState } = React;
 
 const HERO_IMG = "https://images.unsplash.com/photo-1551958219-acbc608c6377?w=1920&q=80";
 
@@ -1060,9 +1061,9 @@ function Home({ onNavigate }) {
   );
 }
 
-window.Home = Home;
 
 
+/* ── detail ── */
 // Experience detail pages — Levante UD, Real Betis, Benfica.
 
 // ---------------------------------------------------------------------------
@@ -1686,11 +1687,11 @@ function BenficaDetail({ onNavigate }) {
   );
 }
 
-window.LevanteDetail = LevanteDetail;
-window.BetisDetail   = BetisDetail;
-window.BenficaDetail = BenficaDetail;
 
 
+
+
+/* ── tournaments ── */
 // Tournaments hub page — all 6 tournaments Ballerz Abroad enters.
 
 function TournamentsPage({ onNavigate }) {
@@ -2139,24 +2140,23 @@ function TournamentsPage({ onNavigate }) {
   );
 }
 
-window.TournamentsPage = TournamentsPage;
 
 
+/* ── application ── */
 // Application — 4-step premium intake.
 
-const { useState: useStateApp } = React;
 
 function Application({ onNavigate }) {
-  const [step, setStep] = useStateApp(0);
-  const [club, setClub] = useStateApp("Hackney Marshes FC");
-  const [role, setRole] = useStateApp("Head Coach");
-  const [orgType, setOrgType] = useStateApp("Grassroots");
-  const [size, setSize] = useStateApp("18 players");
-  const [age, setAge]  = useStateApp("U16 — U18");
-  const [level, setLevel] = useStateApp("Regional");
-  const [goals, setGoals] = useStateApp([1, 2]);
-  const [dest, setDest] = useStateApp(["Barcelona"]);
-  const [budget, setBudget] = useStateApp("£1,800 — £2,200");
+  const [step, setStep] = useState(0);
+  const [club, setClub] = useState("Hackney Marshes FC");
+  const [role, setRole] = useState("Head Coach");
+  const [orgType, setOrgType] = useState("Grassroots");
+  const [size, setSize] = useState("18 players");
+  const [age, setAge]  = useState("U16 — U18");
+  const [level, setLevel] = useState("Regional");
+  const [goals, setGoals] = useState([1, 2]);
+  const [dest, setDest] = useState(["Barcelona"]);
+  const [budget, setBudget] = useState("£1,800 — £2,200");
 
   const steps = ["Your club", "Your squad", "Your goals", "Window & budget"];
 
@@ -2318,31 +2318,20 @@ function Application({ onNavigate }) {
   );
 }
 
-window.Application = Application;
 
 
-const { useState: useAppState } = React;
-
+/* ── router ── */
 function App() {
-  const [route, setAppRoute] = useAppState("home");
-  React.useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "instant" });
-  }, [route]);
-  const screenLabel =
-    route === "home"         ? "Home" :
-    route === "levante"      ? "Levante UD Experience" :
-    route === "betis"        ? "Real Betis Experience" :
-    route === "benfica"      ? "Benfica Experience" :
-    route === "tournaments"  ? "Tournaments" :
-    route === "application"  ? "Application" : "Home";
+  const [route, setRoute] = useState("home");
+  useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, [route]);
   return (
-    <div data-screen-label={screenLabel}>
-      {route === "home"        && <Home       onNavigate={setAppRoute} />}
-      {route === "levante"     && <LevanteDetail  onNavigate={setAppRoute} />}
-      {route === "betis"       && <BetisDetail    onNavigate={setAppRoute} />}
-      {route === "benfica"     && <BenficaDetail  onNavigate={setAppRoute} />}
-      {route === "tournaments" && <TournamentsPage onNavigate={setAppRoute} />}
-      {route === "application" && <Application    onNavigate={setAppRoute} />}
+    <div>
+      {route === "home"        && <Home            onNavigate={setRoute} />}
+      {route === "levante"     && <LevanteDetail   onNavigate={setRoute} />}
+      {route === "betis"       && <BetisDetail      onNavigate={setRoute} />}
+      {route === "benfica"     && <BenficaDetail    onNavigate={setRoute} />}
+      {route === "tournaments" && <TournamentsPage  onNavigate={setRoute} />}
+      {route === "application" && <Application      onNavigate={setRoute} />}
     </div>
   );
 }
