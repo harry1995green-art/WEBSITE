@@ -1,0 +1,2353 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ballerz Abroad — Train like a pro abroad</title>
+  <meta name="description" content="European football experiences built around your squad." />
+  <style>
+/* =========================================================================
+   BALLERZ ABROAD — Colors & Type
+   Premium boutique football experiences. Cinematic, performance-focused.
+   ========================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@500;600;700;800;900&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  /* -------------------------------------------------------------------------
+     CORE PALETTE
+     ------------------------------------------------------------------------- */
+
+  /* Ink — the cinematic dark surfaces (matchday at night, tunnel walks) */
+  --ink-1000: #050608;    /* deepest, pitch at midnight */
+  --ink-900:  #0A0B0D;    /* primary background */
+  --ink-800:  #14181C;    /* elevated surface, cards */
+  --ink-700:  #1F252B;    /* raised cards, dividers on dark */
+  --ink-600:  #2A323A;    /* hover, subtle fill */
+  --ink-500:  #3A444E;    /* border on dark */
+
+  /* Chalk — warm off-whites (chalkline, kit fabric, ball leather) */
+  --chalk-50:  #F6F3EB;   /* primary light surface, slightly warm */
+  --chalk-100: #EBE7DC;   /* secondary light surface */
+  --chalk-200: #D9D3C3;   /* dividers on light */
+  --chalk-300: #B8B1A0;   /* muted text on light */
+
+  /* Stand — neutrals between ink and chalk */
+  --stand-700: #545B63;
+  --stand-500: #7A828A;
+  --stand-300: #9CA4AC;
+  --stand-200: #C3C8CD;
+
+  /* -------------------------------------------------------------------------
+     SIGNAL PALETTE — used sparingly, never as backgrounds
+     ------------------------------------------------------------------------- */
+
+  /* Volt — the floodlight/pitch-line green-yellow. Primary action color. */
+  --volt-500:  #DAFE3D;
+  --volt-400:  #E8FF6E;
+  --volt-600:  #B6DD1F;
+  --volt-700:  #8AAA11;
+
+  /* Pitch — deep grass green. Trust + heritage. */
+  --pitch-700: #1F4F2A;
+  --pitch-600: #2F7A3B;
+  --pitch-500: #3D9C4C;
+
+  /* Clay — european terracotta. Warmth, leather, sunset travel. */
+  --clay-600:  #B36438;
+  --clay-500:  #C8784A;
+  --clay-400:  #DCA07A;
+
+  /* Whistle — referee red. Alerts only. */
+  --whistle-500: #FF3D2E;
+
+  /* -------------------------------------------------------------------------
+     SEMANTIC TOKENS (default = dark theme; light overrides below)
+     ------------------------------------------------------------------------- */
+
+  --bg:           var(--ink-900);
+  --bg-elevated:  var(--ink-800);
+  --bg-raised:    var(--ink-700);
+  --bg-overlay:   rgba(5, 6, 8, 0.72);
+
+  --fg:           var(--chalk-50);
+  --fg-muted:     var(--stand-300);
+  --fg-subtle:    var(--stand-500);
+  --fg-inverse:   var(--ink-900);
+
+  --border:       var(--ink-500);
+  --border-soft:  rgba(246, 243, 235, 0.08);
+  --border-bold:  var(--chalk-50);
+
+  --accent:       var(--volt-500);
+  --accent-fg:    var(--ink-900);
+  --accent-hover: var(--volt-400);
+
+  --danger:       var(--whistle-500);
+
+  /* Optical mix for subtle dark-on-dark tints */
+  --tint-chalk-04: rgba(246, 243, 235, 0.04);
+  --tint-chalk-08: rgba(246, 243, 235, 0.08);
+  --tint-chalk-12: rgba(246, 243, 235, 0.12);
+  --tint-chalk-24: rgba(246, 243, 235, 0.24);
+
+  /* -------------------------------------------------------------------------
+     TYPE — three families, used with intent
+     ------------------------------------------------------------------------- */
+
+  /* Anton — heavy condensed display. ALL CAPS only. Hero headlines, scoreline numerals. */
+  --font-display: 'Anton', 'Archivo Black', 'Impact', sans-serif;
+
+  /* Archivo — modern editorial sans. Headings, subheads, eyebrows. Weight range. */
+  --font-heading: 'Archivo', system-ui, sans-serif;
+
+  /* Manrope — clean, readable, slightly geometric. Body, UI. */
+  --font-body: 'Manrope', system-ui, -apple-system, sans-serif;
+
+  /* JetBrains Mono — stats, metadata, timestamps, dates, codes. */
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+
+  /* -------------------------------------------------------------------------
+     TYPE SCALE — bold contrast. Display is much bigger than body.
+     ------------------------------------------------------------------------- */
+
+  --fs-display-xl: clamp(72px, 12vw, 184px);  /* Hero "TRAIN LIKE A PRO" */
+  --fs-display-l:  clamp(56px, 8vw, 128px);   /* Section openers */
+  --fs-display-m:  clamp(40px, 5vw, 80px);    /* Big stats */
+  --fs-display-s:  clamp(28px, 3vw, 48px);    /* Card headlines */
+
+  --fs-h1:  44px;
+  --fs-h2:  32px;
+  --fs-h3:  24px;
+  --fs-h4:  18px;
+
+  --fs-body-l: 19px;
+  --fs-body:   16px;
+  --fs-body-s: 14px;
+  --fs-caption: 12px;
+  --fs-micro:   11px;
+
+  /* -------------------------------------------------------------------------
+     SPACING — 4px base
+     ------------------------------------------------------------------------- */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* -------------------------------------------------------------------------
+     RADIUS — sharp + subtle. Football kit aesthetic = mostly sharp corners.
+     ------------------------------------------------------------------------- */
+
+  --r-0: 0px;
+  --r-1: 2px;
+  --r-2: 4px;
+  --r-3: 8px;
+  --r-pill: 999px;
+
+  /* -------------------------------------------------------------------------
+     SHADOWS — used very lightly. Cinematic = deep blacks, no fluffy elevation.
+     ------------------------------------------------------------------------- */
+
+  --shadow-lift: 0 1px 0 0 var(--tint-chalk-08), 0 12px 32px -8px rgba(0,0,0,0.6);
+  --shadow-card: 0 24px 60px -12px rgba(0,0,0,0.55);
+  --shadow-pop:  0 32px 80px -16px rgba(0,0,0,0.7);
+
+  --ring-focus: 0 0 0 2px var(--ink-900), 0 0 0 4px var(--volt-500);
+
+  /* -------------------------------------------------------------------------
+     MOTION — confident, tight. No bounces; precise easing.
+     ------------------------------------------------------------------------- */
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);   /* default, decisive */
+  --ease-in:  cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-cinematic: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --dur-1: 120ms;
+  --dur-2: 220ms;
+  --dur-3: 360ms;
+  --dur-4: 560ms;
+  --dur-cinematic: 900ms;
+
+  /* -------------------------------------------------------------------------
+     LAYOUT
+     ------------------------------------------------------------------------- */
+
+  --container-max: 1440px;
+  --container-pad: clamp(24px, 5vw, 80px);
+  --grid-gutter: 24px;
+}
+
+/* =========================================================================
+   LIGHT THEME OVERRIDE
+   ========================================================================= */
+
+.theme-light {
+  --bg:           var(--chalk-50);
+  --bg-elevated:  #FFFFFF;
+  --bg-raised:    var(--chalk-100);
+  --bg-overlay:   rgba(246, 243, 235, 0.86);
+
+  --fg:           var(--ink-900);
+  --fg-muted:     var(--stand-700);
+  --fg-subtle:    var(--stand-500);
+  --fg-inverse:   var(--chalk-50);
+
+  --border:       var(--chalk-200);
+  --border-soft:  rgba(10, 11, 13, 0.08);
+  --border-bold:  var(--ink-900);
+}
+
+/* =========================================================================
+   SEMANTIC TYPOGRAPHY
+   ========================================================================= */
+
+html, body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.55;
+  color: var(--fg);
+  background: var(--bg);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.display, .display-xl, .display-l, .display-m, .display-s {
+  font-family: var(--font-display);
+  font-weight: 400; /* Anton is single-weight */
+  line-height: 0.88;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+/* The italic display — borrowed from the live site's "Expertly crafted" treatment.
+   Use for: brand-line moments, hero sub-tagline, partner intros, signature copy. */
+.display-italic {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1.0;
+  letter-spacing: -0.015em;
+}
+.display-xl { font-size: var(--fs-display-xl); }
+.display-l  { font-size: var(--fs-display-l); }
+.display-m  { font-size: var(--fs-display-m); }
+.display-s  { font-size: var(--fs-display-s); }
+
+h1, .h1 { font-family: var(--font-heading); font-weight: 800; font-size: var(--fs-h1); line-height: 1.05; letter-spacing: -0.02em; }
+h2, .h2 { font-family: var(--font-heading); font-weight: 700; font-size: var(--fs-h2); line-height: 1.1;  letter-spacing: -0.015em; }
+h3, .h3 { font-family: var(--font-heading); font-weight: 700; font-size: var(--fs-h3); line-height: 1.2;  letter-spacing: -0.01em; }
+h4, .h4 { font-family: var(--font-heading); font-weight: 600; font-size: var(--fs-h4); line-height: 1.3; }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--fg-muted);
+}
+.eyebrow--accent { color: var(--accent); }
+
+.body-l { font-size: var(--fs-body-l); line-height: 1.55; }
+.body   { font-size: var(--fs-body);   line-height: 1.6; }
+.body-s { font-size: var(--fs-body-s); line-height: 1.55; color: var(--fg-muted); }
+
+.caption {
+  font-family: var(--font-mono);
+  font-size: var(--fs-caption);
+  letter-spacing: 0.06em;
+  color: var(--fg-muted);
+}
+
+.numeric, .stat {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Pull-quote / lead paragraph */
+.lead {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.45;
+  color: var(--fg);
+}
+
+/* Link styling */
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  transition: opacity var(--dur-1) var(--ease-out);
+}
+a:hover { opacity: 0.7; }
+
+/* Web kit local helpers — extends colors_and_type.css */
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--ink-900); color: var(--chalk-50); font-family: var(--font-body); }
+
+.wrap { max-width: 1440px; margin: 0 auto; padding: 0 clamp(24px, 5vw, 80px); }
+
+/* Nav */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px clamp(24px, 5vw, 80px);
+  z-index: 50;
+  transition: background var(--dur-2) var(--ease-out), backdrop-filter var(--dur-2) var(--ease-out), border-color var(--dur-2);
+  border-bottom: 1px solid transparent;
+}
+.nav--scrolled {
+  background: rgba(10, 11, 13, 0.72);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border-bottom-color: rgba(246, 243, 235, 0.08);
+}
+.nav__left { display: flex; align-items: center; gap: 36px; }
+.nav__logo { height: 36px; display: block; }
+.nav__links { display: flex; gap: 26px; }
+.nav__links a {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--chalk-50);
+  border: none;
+}
+.nav__links a.is-active { color: var(--volt-500); }
+
+/* Nav dropdown */
+.nav__dropdown-wrap { position: relative; }
+.nav__dropdown-wrap > a { display: block; }
+.nav__dropdown {
+  display: none;
+  position: absolute; top: calc(100% + 16px); left: 0;
+  background: rgba(10, 11, 13, 0.96);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(246,243,235,0.10);
+  min-width: 220px;
+  padding: 8px 0;
+  z-index: 100;
+}
+.nav__dropdown-wrap:hover .nav__dropdown { display: block; }
+.nav__dropdown a {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 600; font-size: 13px;
+  letter-spacing: 0.04em; text-transform: none;
+  color: var(--chalk-50); border: none;
+  padding: 10px 20px;
+  transition: color var(--dur-1) var(--ease-out), background var(--dur-1);
+}
+.nav__dropdown a:hover { color: var(--volt-500); background: rgba(246,243,235,0.04); }
+.nav__cta { display: flex; align-items: center; gap: 12px; }
+.lang-pill {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--stand-300);
+  text-transform: uppercase;
+  border: 1px solid rgba(246,243,235,0.2);
+  padding: 7px 12px;
+  border-radius: 999px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: none; cursor: pointer;
+  font-family: var(--font-heading); font-weight: 800;
+  font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 13px 20px; border-radius: 999px;
+  transition: transform var(--dur-1) var(--ease-out), background var(--dur-1);
+}
+.btn:active { transform: scale(0.98); }
+.btn--primary { background: var(--volt-500); color: var(--ink-900); }
+.btn--primary:hover { background: var(--volt-400); transform: translateY(-1px); }
+.btn--ghost { background: transparent; color: var(--chalk-50); border: 1px solid rgba(246,243,235,0.32); }
+.btn--ghost:hover { background: rgba(246,243,235,0.06); }
+.btn--inverse { background: var(--chalk-50); color: var(--ink-900); }
+.btn--whatsapp { background: #25D366; color: var(--ink-900); }
+.btn--whatsapp:hover { background: #1FBA5C; }
+.btn--lg { padding: 16px 24px; font-size: 13px; }
+.btn--sm { padding: 9px 14px; font-size: 11px; }
+
+/* WhatsApp floating */
+.wa-fab {
+  position: fixed; bottom: 24px; right: 24px;
+  z-index: 60;
+  display: inline-flex; align-items: center; gap: 10px;
+  background: #25D366; color: var(--ink-900);
+  padding: 13px 18px 13px 14px;
+  border-radius: 999px;
+  font-family: var(--font-heading); font-weight: 800;
+  font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+  box-shadow: 0 24px 60px -12px rgba(0,0,0,0.55);
+  cursor: pointer; border: none;
+  transition: transform var(--dur-2) var(--ease-out);
+}
+.wa-fab:hover { transform: translateY(-2px); }
+
+/* Hero */
+.hero {
+  position: relative; min-height: 100vh; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 0 clamp(24px, 5vw, 80px) clamp(48px, 6vw, 96px);
+}
+.hero__img { position: absolute; inset: 0; background-size: cover; background-position: center; filter: contrast(1.08) saturate(0.9); }
+.hero__grain { position: absolute; inset: 0; opacity: 0.05; mix-blend-mode: overlay; pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+.hero__gradient { position: absolute; inset: 0; background:
+  linear-gradient(to top, rgba(5,6,8,0.92) 0%, rgba(5,6,8,0.45) 40%, rgba(5,6,8,0.15) 70%, transparent 100%); }
+.hero__inner { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; width: 100%; }
+.hero__eyebrow { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
+.hero__eyebrow-rule { width: 32px; height: 1px; background: var(--volt-500); }
+.hero__eyebrow-text { font-family: var(--font-mono); font-size: 11px; font-weight: 500; letter-spacing: 0.18em; color: var(--volt-500); text-transform: uppercase; }
+.hero h1.display-xl { font-family: var(--font-display); font-size: clamp(72px, 12vw, 184px); line-height: 0.88; letter-spacing: -0.01em; text-transform: uppercase; margin: 0; color: var(--chalk-50); }
+.hero__sub { font-family: var(--font-heading); font-weight: 400; font-size: clamp(18px, 1.6vw, 24px); line-height: 1.4; color: var(--stand-200); max-width: 560px; margin-top: 28px; }
+.hero__ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 36px; }
+.hero__meta {
+  display: flex; gap: 32px; flex-wrap: wrap;
+  position: absolute; top: 92px; right: clamp(24px, 5vw, 80px); z-index: 3;
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; color: var(--stand-300); text-transform: uppercase;
+}
+.hero__meta strong { color: var(--chalk-50); font-weight: 600; }
+
+/* Sections */
+section.band { padding: clamp(64px, 8vw, 128px) 0; position: relative; }
+.eyebrow-bar { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+.eyebrow-bar__rule { width: 32px; height: 1px; background: var(--volt-500); }
+.eyebrow-bar__text { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em; color: var(--volt-500); text-transform: uppercase; font-weight: 500; }
+h2.section-h { font-family: var(--font-display); font-size: clamp(48px, 7vw, 112px); line-height: 0.88; letter-spacing: -0.01em; text-transform: uppercase; margin: 0 0 24px; color: var(--chalk-50); }
+.section-lead { font-family: var(--font-heading); font-weight: 400; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.45; color: var(--stand-200); max-width: 620px; }
+
+/* Audience list */
+.audience-list { display: flex; flex-direction: column; border-top: 1px solid rgba(246,243,235,0.12); margin-top: 48px; }
+.audience-row { display: grid; grid-template-columns: 60px 1fr auto 50px; align-items: center; gap: 24px; padding: 28px 0; border-bottom: 1px solid rgba(246,243,235,0.12); cursor: pointer; transition: padding var(--dur-2) var(--ease-out); }
+.audience-row:hover { padding-left: 12px; }
+.audience-row__n { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.18em; color: var(--stand-300); }
+.audience-row__t { font-family: var(--font-display); font-size: clamp(28px, 4vw, 56px); line-height: 0.95; text-transform: uppercase; color: var(--chalk-50); }
+.audience-row__d { font-family: var(--font-body); font-size: 14px; color: var(--stand-300); max-width: 320px; }
+.audience-row__a { font-family: var(--font-mono); font-size: 18px; color: var(--stand-300); justify-self: end; transition: color var(--dur-2), transform var(--dur-2) var(--ease-out); }
+.audience-row:hover .audience-row__a { color: var(--volt-500); transform: translateX(6px); }
+
+/* Experience grid */
+.exp-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; margin-top: 48px; }
+.exp-card { position: relative; overflow: hidden; cursor: pointer; background: var(--ink-800); }
+.exp-card--featured { grid-column: span 8; aspect-ratio: 16 / 10; }
+.exp-card--regular  { grid-column: span 4; aspect-ratio: 4 / 5; }
+.exp-card__img { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform var(--dur-cinematic) var(--ease-cinematic); }
+.exp-card:hover .exp-card__img { transform: scale(1.04); }
+.exp-card__grad { position: absolute; inset: 0; background: linear-gradient(to top, rgba(5,6,8,0.92) 0%, rgba(5,6,8,0.25) 55%, transparent 100%); }
+.exp-card__body { position: absolute; left: 0; right: 0; bottom: 0; padding: 28px; z-index: 2; }
+.exp-card__meta { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em; color: var(--volt-500); text-transform: uppercase; display: flex; gap: 10px; align-items: center; }
+.exp-card__t { font-family: var(--font-display); font-size: clamp(32px, 3.5vw, 52px); line-height: 0.88; text-transform: uppercase; color: var(--chalk-50); margin-top: 10px; }
+.exp-card__sub { font-family: var(--font-body); font-size: 14px; color: var(--stand-200); margin-top: 8px; max-width: 320px; }
+.exp-card__pill {
+  position: absolute; top: 20px; left: 20px;
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: var(--volt-500);
+  border: 1px solid var(--volt-500);
+  padding: 6px 12px; border-radius: 999px;
+  font-family: var(--font-mono); font-weight: 500; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  z-index: 2;
+}
+.exp-card__pill .dot { width: 6px; height: 6px; background: var(--volt-500); border-radius: 50%; }
+
+/* Stat row */
+.stat-row { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(246,243,235,0.12); border-bottom: 1px solid rgba(246,243,235,0.12); margin-top: 48px; }
+.stat-cell { padding: 32px 24px; border-right: 1px solid rgba(246,243,235,0.12); }
+.stat-cell:last-child { border-right: none; }
+.stat-cell .n { font-family: var(--font-display); font-size: clamp(56px, 6vw, 96px); line-height: 0.88; color: var(--chalk-50); font-variant-numeric: tabular-nums; }
+.stat-cell .l { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em; color: var(--stand-300); text-transform: uppercase; margin-top: 12px; }
+.stat-cell.accent .n { color: var(--volt-500); }
+.stat-cell.accent .l { color: var(--volt-500); }
+
+/* Trust marks */
+.trust-row { display: flex; flex-wrap: wrap; gap: 0; margin-top: 48px; border-top: 1px solid rgba(246,243,235,0.12); }
+.trust-cell { flex: 1; min-width: 200px; padding: 24px; border-right: 1px solid rgba(246,243,235,0.12); border-bottom: 1px solid rgba(246,243,235,0.12); display: flex; flex-direction: column; gap: 8px; }
+.trust-cell__label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; color: var(--stand-300); text-transform: uppercase; }
+.trust-cell__v { font-family: var(--font-heading); font-weight: 700; font-size: 18px; color: var(--chalk-50); }
+
+/* Application banner */
+.app-band {
+  position: relative; padding: clamp(64px, 8vw, 128px) clamp(24px, 5vw, 80px);
+  background: var(--chalk-50); color: var(--ink-900);
+  margin-top: 96px;
+}
+.app-band h2 { color: var(--ink-900); }
+.app-band__grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; max-width: 1280px; margin: 0 auto; align-items: end; }
+.app-band__steps { display: flex; flex-direction: column; gap: 12px; margin-top: 32px; }
+.app-step { display: grid; grid-template-columns: 56px 1fr; gap: 16px; padding: 16px 0; border-top: 1px solid rgba(10,11,13,0.12); }
+.app-step__n { font-family: var(--font-mono); font-size: 13px; font-weight: 600; letter-spacing: 0.14em; color: var(--stand-700); }
+.app-step__t { font-family: var(--font-heading); font-weight: 700; font-size: 17px; color: var(--ink-900); }
+.app-step__d { font-family: var(--font-body); font-size: 14px; color: var(--stand-700); margin-top: 4px; }
+
+/* Footer */
+footer.foot { background: var(--ink-1000); color: var(--chalk-50); padding: clamp(64px, 6vw, 96px) clamp(24px, 5vw, 80px) 24px; }
+.foot__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; max-width: 1440px; margin: 0 auto; }
+.foot__logo img { height: 56px; }
+.foot__tag { font-family: var(--font-heading); font-weight: 600; font-size: 22px; margin-top: 18px; max-width: 360px; line-height: 1.3; }
+.foot__col h4 { font-family: var(--font-mono); font-size: 11px; font-weight: 500; letter-spacing: 0.18em; color: var(--stand-300); text-transform: uppercase; margin: 0 0 16px; }
+.foot__col a { display: block; font-family: var(--font-body); font-size: 14px; color: var(--chalk-50); border: none; padding: 4px 0; }
+.foot__bottom { display: flex; justify-content: space-between; align-items: center; margin-top: 64px; padding-top: 24px; border-top: 1px solid rgba(246,243,235,0.08); font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; color: var(--stand-300); text-transform: uppercase; }
+
+/* Social grid */
+.social-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 48px; }
+.social-tile { position: relative; aspect-ratio: 4 / 5; overflow: hidden; }
+.social-tile__img { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform var(--dur-cinematic) var(--ease-cinematic); }
+.social-tile:hover .social-tile__img { transform: scale(1.05); }
+.social-tile__overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(5,6,8,0.6), transparent 60%); }
+.social-tile__meta { position: absolute; left: 14px; bottom: 12px; right: 14px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; color: var(--chalk-50); text-transform: uppercase; display: flex; justify-content: space-between; }
+
+/* Fixture table */
+.fixture-table { margin-top: 32px; border-top: 1px solid rgba(246,243,235,0.12); }
+.fixture-row {
+  display: grid; grid-template-columns: 100px 1fr 1.2fr 140px;
+  align-items: center; padding: 20px 0;
+  border-bottom: 1px solid rgba(246,243,235,0.12);
+  font-family: var(--font-mono);
+}
+.fixture-row__date { font-size: 11px; letter-spacing: 0.14em; color: var(--stand-300); text-transform: uppercase; }
+.fixture-row__city { font-family: var(--font-display); font-size: 26px; line-height: 1; text-transform: uppercase; color: var(--chalk-50); }
+.fixture-row__opp { font-size: 13px; color: var(--chalk-50); }
+.fixture-row__status { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; text-align: right; }
+
+/* Itinerary */
+.itin { display: flex; flex-direction: column; gap: 0; margin-top: 32px; border-top: 1px solid rgba(246,243,235,0.12); }
+.itin-day { display: grid; grid-template-columns: 120px 1fr 1fr; gap: 32px; padding: 28px 0; border-bottom: 1px solid rgba(246,243,235,0.12); align-items: start; }
+.itin-day__n { font-family: var(--font-display); font-size: 48px; line-height: 1; text-transform: uppercase; color: var(--chalk-50); }
+.itin-day__title { font-family: var(--font-heading); font-weight: 700; font-size: 22px; color: var(--chalk-50); }
+.itin-day__time { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; color: var(--volt-500); text-transform: uppercase; margin-top: 6px; }
+.itin-day__desc { font-family: var(--font-body); font-size: 15px; line-height: 1.6; color: var(--stand-200); }
+
+/* Application page */
+.app-page { min-height: 100vh; background: var(--ink-900); color: var(--chalk-50); padding: 120px clamp(24px, 5vw, 80px) 96px; }
+.app-page__wrap { max-width: 760px; margin: 0 auto; }
+.app-stepper { display: flex; gap: 8px; margin-bottom: 56px; }
+.app-stepper__dot { flex: 1; height: 2px; background: rgba(246,243,235,0.16); transition: background var(--dur-2); }
+.app-stepper__dot.is-done { background: var(--volt-500); }
+.app-stepper__dot.is-current { background: var(--volt-500); }
+.app-form-row { margin-bottom: 28px; }
+.app-form-row label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; color: var(--stand-300); text-transform: uppercase; display: block; margin-bottom: 10px; }
+.app-form-row input, .app-form-row textarea, .app-form-row select {
+  width: 100%;
+  background: transparent; border: none; border-bottom: 1px solid rgba(246,243,235,0.24);
+  color: var(--chalk-50); font-family: var(--font-body); font-size: 19px;
+  padding: 8px 0; outline: none;
+  transition: border-color var(--dur-2);
+}
+.app-form-row input:focus, .app-form-row textarea:focus, .app-form-row select:focus { border-bottom-color: var(--volt-500); }
+.app-form-row textarea { min-height: 100px; resize: vertical; }
+.app-form-row .chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+.app-form-row .chip {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 8px 14px; border-radius: 999px; cursor: pointer;
+  border: 1px solid rgba(246,243,235,0.24); color: var(--stand-200); background: transparent;
+  transition: all var(--dur-2);
+}
+.app-form-row .chip.is-on { background: var(--volt-500); color: var(--ink-900); border-color: var(--volt-500); }
+
+/* Section: who-we-build-for boxes (light variant on dark) */
+.callout-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(246,243,235,0.12); margin-top: 48px; border: 1px solid rgba(246,243,235,0.12); }
+.callout-grid > .cell { background: var(--ink-900); padding: 32px; display: flex; flex-direction: column; gap: 12px; min-height: 220px; }
+.callout-grid .cell__n { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em; color: var(--volt-500); text-transform: uppercase; }
+.callout-grid .cell__t { font-family: var(--font-heading); font-weight: 700; font-size: 22px; color: var(--chalk-50); }
+.callout-grid .cell__d { font-family: var(--font-body); font-size: 14px; line-height: 1.55; color: var(--stand-200); }
+
+/* Tournament rows */
+.tournament-row:hover { padding-left: 12px; }
+.tournament-row:hover .tournament-row__arrow { color: var(--volt-500); transform: translateX(6px); }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nav__links { display: none; }
+  .exp-card--featured { grid-column: span 12; }
+  .exp-card--regular  { grid-column: span 6; }
+  .foot__grid { grid-template-columns: 1fr 1fr; }
+  .app-band__grid { grid-template-columns: 1fr; }
+  .stat-row { grid-template-columns: repeat(2, 1fr); }
+  .audience-row { grid-template-columns: 40px 1fr 40px; }
+  .audience-row__d { display: none; }
+  .callout-grid { grid-template-columns: 1fr; }
+  .social-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .exp-card--regular { grid-column: span 12; }
+  .itin-day { grid-template-columns: 80px 1fr; }
+  .itin-day__desc { display: none; }
+  .foot__grid { grid-template-columns: 1fr; }
+}
+
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <script type="text/babel" data-type="module">
+// Shared React components for the Ballerz Abroad website.
+// Loaded via <script type="text/babel" src="components.jsx">.
+// Components are attached to window at the bottom for cross-file access.
+
+const { useState, useEffect, useRef } = React;
+
+// ---------------------------------------------------------------------------
+// Nav — sticky, blurs on scroll
+// ---------------------------------------------------------------------------
+function Nav({ active = "home", onNavigate }) {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const fn = () => setScrolled(window.scrollY > 24);
+    window.addEventListener("scroll", fn, { passive: true });
+    return () => window.removeEventListener("scroll", fn);
+  }, []);
+  const isActive = (id) => {
+    if (id === "levante") return ["levante", "betis", "benfica"].includes(active);
+    return active === id;
+  };
+  const link = (id, label) => (
+    <a
+      href="#"
+      className={isActive(id) ? "is-active" : ""}
+      onClick={(e) => { e.preventDefault(); onNavigate && onNavigate(id); }}
+    >{label}</a>
+  );
+  return (
+    <nav className={"nav " + (scrolled ? "nav--scrolled" : "")}>
+      <div className="nav__left">
+        <a href="#" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate("home"); }} style={{ border: "none", display: "flex", alignItems: "center" }}>
+          <img className="nav__logo" src="https://raw.githubusercontent.com/harry1995green-art/WEBSITE/claude/implement-design-system-RPFyb/assets/logo-white.png" alt="Ballerz Abroad" />
+        </a>
+        <div className="nav__links">
+          {link("home", "Home")}
+          <div className="nav__dropdown-wrap">
+            <a
+              href="#"
+              className={isActive("levante") ? "is-active" : ""}
+              onClick={(e) => { e.preventDefault(); onNavigate && onNavigate("levante"); }}
+            >Destinations</a>
+            <div className="nav__dropdown">
+              <a href="#" onClick={(e) => { e.preventDefault(); onNavigate("levante"); }}>Levante UD Experience</a>
+              <a href="#" onClick={(e) => { e.preventDefault(); onNavigate("betis"); }}>Real Betis Experience</a>
+              <a href="#" onClick={(e) => { e.preventDefault(); onNavigate("benfica"); }}>Benfica Experience</a>
+            </div>
+          </div>
+          {link("tournaments", "Tournaments")}
+          {link("application", "Apply")}
+        </div>
+      </div>
+      <div className="nav__cta">
+        <a href="tel:07867205763" className="lang-pill" style={{ border: "1px solid rgba(246,243,235,0.2)" }}>07867 205763</a>
+        <button className="btn btn--primary btn--sm" onClick={() => onNavigate && onNavigate("application")}>
+          Get in touch <span>→</span>
+        </button>
+      </div>
+    </nav>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Floating WhatsApp pill — always visible
+// ---------------------------------------------------------------------------
+function WhatsAppFab() {
+  return (
+    <button className="wa-fab" onClick={() => window.open("https://wa.me/447867205763", "_blank")}>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 2.1.55 4.14 1.6 5.95L2 22l4.31-1.13a9.86 9.86 0 0 0 5.73 1.82h0c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01A9.82 9.82 0 0 0 12.04 2zm5.46 14.16c-.23.65-1.34 1.24-1.87 1.32-.48.07-1.09.1-1.76-.11-.41-.13-.93-.3-1.6-.59-2.82-1.22-4.66-4.06-4.8-4.25-.14-.19-1.15-1.53-1.15-2.91 0-1.38.73-2.06.99-2.34.26-.28.56-.35.75-.35h.54c.17.01.41-.07.64.49.23.57.79 1.96.86 2.1.07.14.11.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.49-.14.13-.29.28-.13.55.16.27.71 1.17 1.52 1.9 1.04.93 1.92 1.21 2.19 1.34.27.13.43.11.59-.07.16-.18.69-.81.87-1.08.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.13.45.2.52.31.07.11.07.66-.16 1.31z"/>
+      </svg>
+      Talk to us
+    </button>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Eyebrow
+// ---------------------------------------------------------------------------
+function EyebrowBar({ children, dark }) {
+  return (
+    <div className="eyebrow-bar">
+      <div className="eyebrow-bar__rule" style={dark ? { background: "#0A0B0D" } : {}}></div>
+      <div className="eyebrow-bar__text" style={dark ? { color: "#0A0B0D" } : {}}>{children}</div>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Audience row
+// ---------------------------------------------------------------------------
+function AudienceRow({ n, title, desc }) {
+  return (
+    <div className="audience-row">
+      <div className="audience-row__n">{n}</div>
+      <div className="audience-row__t">{title}</div>
+      <div className="audience-row__d">{desc}</div>
+      <div className="audience-row__a">→</div>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Experience card
+// ---------------------------------------------------------------------------
+function ExpCard({ featured, image, meta, title, sub, pill, onClick }) {
+  return (
+    <div className={"exp-card " + (featured ? "exp-card--featured" : "exp-card--regular")} onClick={onClick}>
+      <div className="exp-card__img" style={{ backgroundImage: `url(${image})` }}></div>
+      <div className="exp-card__grad"></div>
+      {pill && (
+        <span className="exp-card__pill">
+          <span className="dot"></span>{pill}
+        </span>
+      )}
+      <div className="exp-card__body">
+        <div className="exp-card__meta">{meta}</div>
+        <div className="exp-card__t">{title}</div>
+        {sub && <div className="exp-card__sub">{sub}</div>}
+      </div>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Stat cell
+// ---------------------------------------------------------------------------
+function StatCell({ n, label, accent }) {
+  return (
+    <div className={"stat-cell " + (accent ? "accent" : "")}>
+      <div className="n">{n}</div>
+      <div className="l">{label}</div>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Footer
+// ---------------------------------------------------------------------------
+function Footer() {
+  return (
+    <footer className="foot">
+      <div className="foot__grid">
+        <div className="foot__logo">
+          <img src="https://raw.githubusercontent.com/harry1995green-art/WEBSITE/claude/implement-design-system-RPFyb/assets/logo-white.png" alt="Ballerz Abroad" />
+          <div className="foot__tag">European football experiences — built around your squad.</div>
+        </div>
+        <div className="foot__col">
+          <h4>Destinations</h4>
+          <a href="#">European Tours</a>
+          <a href="#">Levante UD Experience</a>
+          <a href="#">Real Betis Experience</a>
+          <a href="#">NXGENPro · England</a>
+        </div>
+        <div className="foot__col">
+          <h4>Tournaments</h4>
+          <a href="#">MIC Costa Brava</a>
+          <a href="#">Copa Daurada</a>
+          <a href="#">Mare Nostrum Cup</a>
+          <a href="#">Cruyff Tournament</a>
+          <a href="#">Levante UD Int. Cup</a>
+          <a href="#">MIC Punta Cana</a>
+        </div>
+        <div className="foot__col">
+          <h4>Contact</h4>
+          <a href="mailto:info@ballerzabroad.com">info@ballerzabroad.com</a>
+          <a href="tel:07867205763">07867 205763</a>
+          <a href="https://www.tiktok.com/@ballerzabroad" target="_blank" rel="noopener">@ballerzabroad · TikTok</a>
+          <a href="https://www.facebook.com/ballerzabroad" target="_blank" rel="noopener">@ballerzabroad · Facebook</a>
+          <a href="#">FAQ · How it works</a>
+        </div>
+      </div>
+      <div className="foot__bottom">
+        <div>© 2026 Ballerz Abroad · Company Reg. 16941046 · England &amp; Wales</div>
+        <div>Terms · Privacy · FAQ</div>
+      </div>
+    </footer>
+  );
+}
+
+Object.assign(window, { Nav, WhatsAppFab, EyebrowBar, AudienceRow, ExpCard, StatCell, Footer });
+
+
+// Home page composition.
+
+const { useState } = React;
+
+const HERO_IMG = "https://images.unsplash.com/photo-1551958219-acbc608c6377?w=1920&q=80";
+
+function Home({ onNavigate }) {
+  return (
+    <>
+      <Nav active="home" onNavigate={onNavigate} />
+
+      {/* HERO */}
+      <section className="hero">
+        <div className="hero__img" style={{ backgroundImage: `url(${HERO_IMG})` }}></div>
+        <div className="hero__grain"></div>
+        <div className="hero__gradient"></div>
+        <div className="hero__meta">
+          <span>2026 · WINDOWS OPEN</span>
+          <span><strong>SPAIN</strong> · <strong>NL</strong> · <strong>UK</strong></span>
+        </div>
+        <div className="hero__inner">
+          <div className="hero__eyebrow">
+            <div className="hero__eyebrow-rule"></div>
+            <div className="hero__eyebrow-text">Levante UD · Real Betis · MIC · Mare Nostrum · Cruyff</div>
+          </div>
+          <h1 className="display-xl">Train like<br/>a pro abroad.</h1>
+          <div className="hero__sub">Professional training environments, organised fixtures, and tournament football across Spain, the Netherlands and the UK. Built around your squad.</div>
+          <div className="hero__ctas">
+            <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Apply for a tour →</button>
+            <button className="btn btn--ghost btn--lg" onClick={() => onNavigate("levante")}>View the destinations</button>
+          </div>
+        </div>
+      </section>
+
+      {/* STAT BAND */}
+      <section className="band" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="stat-row">
+            <StatCell n="07" label="Days abroad" />
+            <StatCell n="15" label="Pro sessions" />
+            <StatCell n="03" label="Int. fixtures" />
+            <StatCell n="01" label="Pro environment" accent />
+          </div>
+        </div>
+      </section>
+
+      {/* WHO IT'S FOR */}
+      <section className="band">
+        <div className="wrap">
+          <EyebrowBar>01 — Built for clubs</EyebrowBar>
+          <h2 className="section-h">Tailored around your squad.</h2>
+          <div className="section-lead">Every tour is custom-built around your club's age groups, level, duration, budget, destination, and training intensity. We don't run packages — we build them.</div>
+          <div className="audience-list">
+            <AudienceRow n="01" title="Grassroots clubs" desc="Lift a season-long programme. Bond a squad. Expose players to the next level." />
+            <AudienceRow n="02" title="Academies" desc="Pre-season camps, mid-season resets, scouting windows inside partner-club environments." />
+            <AudienceRow n="03" title="Schools" desc="Football-first travel for school football programmes — academic + athletic friendly." />
+            <AudienceRow n="04" title="Development teams" desc="Pro-grade environments without an academy budget. Compete, recover, return sharper." />
+            <AudienceRow n="05" title="US college soccer" desc="European exposure for NCAA programmes. Pre-season abroad, contested fixtures." />
+          </div>
+        </div>
+      </section>
+
+      {/* EXPERIENCE GRID */}
+      <section className="band">
+        <div className="wrap">
+          <EyebrowBar>02 — 2026 Windows</EyebrowBar>
+          <h2 className="section-h">Selected dates only.</h2>
+          <div className="section-lead">Each window is opened against partner club calendars — never more, never the same.</div>
+          <div className="exp-grid">
+            <ExpCard
+              featured
+              image="https://images.unsplash.com/photo-1610294232527-d11a4c7ce40c?w=1200&q=80"
+              meta="PRO EXPERIENCE · VALENCIA, SPAIN"
+              title="Levante UD experience"
+              sub="Inside a La Liga club's training environment. Academy coaching, contested fixtures, and the Levante UD International Cup. Individual Player Development available."
+              pill="Application open"
+              onClick={() => onNavigate("levante")}
+            />
+            <ExpCard
+              image="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=900&q=80"
+              meta="EXPERIENCE · SEVILLE, SPAIN"
+              title="Real Betis experience"
+              sub="La Liga training environment. Andalusian football culture."
+              pill="Application open"
+              onClick={() => onNavigate("betis")}
+            />
+            <ExpCard
+              image="https://images.unsplash.com/photo-1517747614396-d21a78b850e8?w=900&q=80"
+              meta="PRO EXPERIENCE · LISBON, PORTUGAL"
+              title="Benfica experience"
+              sub="Best Global Academy 2015 &amp; 2019. 9-pitch campus, UEFA-accredited coaches."
+              pill="Application open"
+              onClick={() => onNavigate("benfica")}
+            />
+            <ExpCard
+              image="https://images.unsplash.com/photo-1577223625816-7546f13df25d?w=900&q=80"
+              meta="TOURNAMENT · COSTA BRAVA"
+              title="MIC Costa Brava"
+              sub="The reference event. Easter window."
+              pill="Apr 2026"
+              onClick={() => onNavigate("tournaments")}
+            />
+            <ExpCard
+              featured
+              image="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=1200&q=80"
+              meta="COMBINED TOUR · BUILT TO BRIEF"
+              title="Combined tours — your squad, your way"
+              sub="Mixed-level, mixed-age, mixed-gender groups. Aligned to one of our partner tournaments. Custom-built end to end."
+              onClick={() => onNavigate("application")}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* TOUR TYPES */}
+      <section className="band">
+        <div className="wrap">
+          <EyebrowBar>03 — Tour type</EyebrowBar>
+          <h2 className="section-h">Four ways to travel.</h2>
+          <div className="callout-grid">
+            <div className="cell">
+              <div className="cell__n">01</div>
+              <div className="cell__t">Pro Experience Tours.</div>
+              <div className="cell__d">For squads competing at the top end. Development, team coherence, contested fixtures — the standard players see at the next level.</div>
+            </div>
+            <div className="cell">
+              <div className="cell__n">02</div>
+              <div className="cell__t">Experience Tours.</div>
+              <div className="cell__d">For squads stepping up. Train at the next level, compete abroad, return sharper than you left.</div>
+            </div>
+            <div className="cell">
+              <div className="cell__n">03</div>
+              <div className="cell__t">Combined Tours.</div>
+              <div className="cell__d">Mixed-level, mixed-age, mixed-gender groups. Built around the squad you actually have — not the one the brochure assumes.</div>
+            </div>
+            <div className="cell">
+              <div className="cell__n">04</div>
+              <div className="cell__t">Individual Player Development.</div>
+              <div className="cell__d">A structured programme inside Levante UD's training environment. Parents welcome to travel.</div>
+            </div>
+            <div className="cell">
+              <div className="cell__n">05</div>
+              <div className="cell__t">On-tour delivery.</div>
+              <div className="cell__d">A Ballerz Abroad lead with your squad from arrival to wheels-up. Logistics handled. You focus on football.</div>
+            </div>
+            <div className="cell">
+              <div className="cell__n">06</div>
+              <div className="cell__t">The Ballerz network.</div>
+              <div className="cell__d">Vetted clubs, federations and tournament organisers across the UK, Europe and beyond. Selected to our standards — never the other way round.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TOURNAMENTS */}
+      <section className="band">
+        <div className="wrap">
+          <EyebrowBar>04 — Tournaments</EyebrowBar>
+          <h2 className="section-h">Compete at the reference events.</h2>
+          <div className="section-lead">Direct entries into European youth football's most contested tournaments — selected for level, not name.</div>
+          <div className="fixture-table">
+            {[
+              ["MIC COSTA BRAVA",    "Costa Brava · Easter 2026",      "900+ matches · 59 pitches · Alumni: Pedri, Lamine Yamal, Rodri"],
+              ["COPA DAURADA",       "Salou · Apr 6–10 2026",          "90 teams · 300 clubs from 25 countries"],
+              ["MARE NOSTRUM CUP",   "Salou · Easter &amp; Summer",        "U9 — U19 · 10,000+ participants annually"],
+              ["CRUYFF TOURNAMENT",  "Salou, Catalonia",               "Honoring Johan Cruyff · All matches recorded for scouting"],
+              ["LEVANTE UD INT. CUP","Valencia · Jun 18–21 2026",      "Hosted at Levante UD Sports City · Inaugural edition"],
+              ["MIC PUNTA CANA",     "Dominican Republic · Jun 24–29", "100+ teams · 13 natural-grass pitches · Caribbean window"],
+            ].map(([city, sub, opp], i) => (
+              <div className="fixture-row" key={i} onClick={() => onNavigate("tournaments")} style={{ cursor: "pointer" }}>
+                <div className="fixture-row__date">T0{i+1}</div>
+                <div className="fixture-row__city">{city}</div>
+                <div className="fixture-row__opp" dangerouslySetInnerHTML={{ __html: opp }}></div>
+                <div className="fixture-row__status" style={{ color: "var(--stand-300)" }} dangerouslySetInnerHTML={{ __html: sub }}></div>
+              </div>
+            ))}
+          </div>
+          <div style={{ marginTop: 24 }}>
+            <button className="btn btn--ghost" onClick={() => onNavigate("tournaments")}>View all tournaments →</button>
+          </div>
+        </div>
+      </section>
+
+      {/* PARTNERS */}
+      <section className="band" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <EyebrowBar>05 — Partners</EyebrowBar>
+          <h2 className="section-h">Vetted partners.</h2>
+          <div className="section-lead">We only work with clubs, federations and tournaments who share our standards for safety, quality and competition.</div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 1, background: "rgba(246,243,235,0.12)", marginTop: 48, border: "1px solid rgba(246,243,235,0.12)" }}>
+            {[
+              ["Levante UD",   "https://images.squarespace-cdn.com/content/v1/69657d0bde7b1d54486a7193/cdc306a3-efb4-407b-a841-cc986a9a0b41/ChatGPT+Image+Jan+9%2C+2026%2C+11_01_00+AM.png"],
+              ["Real Betis",   "https://images.squarespace-cdn.com/content/v1/69657d0bde7b1d54486a7193/d9d4fac9-5dd8-41f7-b464-2d6345e2b12f/Real_betis_logo.svg.png"],
+              ["MIC Football", "https://images.squarespace-cdn.com/content/v1/69657d0bde7b1d54486a7193/69806f9e-a44a-473f-8214-23cce19f86e3/images+%282%29.png"],
+              ["Mare Nostrum", "https://images.squarespace-cdn.com/content/v1/69657d0bde7b1d54486a7193/25655f7a-a5f8-46cf-a5fb-3900848733d8/mare_nostrum_gmail_logo.png"],
+            ].map(([name, src]) => (
+              <div key={name} style={{ background: "var(--ink-900)", padding: 32, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16, minHeight: 180 }}>
+                <img src={src} alt={name} style={{ maxHeight: 80, maxWidth: "70%", objectFit: "contain", filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.4))" }} />
+                <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.16em", color: "var(--stand-300)", textTransform: "uppercase" }}>{name}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TRUST */}
+      <section className="band">
+        <div className="wrap">
+          <EyebrowBar>06 — Trust</EyebrowBar>
+          <h2 className="section-h">What you can expect.</h2>
+          <div className="trust-row">
+            <div className="trust-cell"><div className="trust-cell__label">Partnerships</div><div className="trust-cell__v">Professional club access via European academy network.</div></div>
+            <div className="trust-cell"><div className="trust-cell__label">Facilities</div><div className="trust-cell__v">Academy-grade pitches, gyms, recovery rooms across Europe.</div></div>
+            <div className="trust-cell"><div className="trust-cell__label">Support</div><div className="trust-cell__v">Dedicated camp lead with your squad from arrival to wheels-up.</div></div>
+            <div className="trust-cell"><div className="trust-cell__label">Based</div><div className="trust-cell__v">UK company. UK contracts. UK-managed travel ops.</div></div>
+            <div className="trust-cell"><div className="trust-cell__label">Planning</div><div className="trust-cell__v">Tailored brief, full itinerary, weekly check-ins until departure.</div></div>
+            <div className="trust-cell"><div className="trust-cell__label">Insurance</div><div className="trust-cell__v">Specialist youth football travel insurance included.</div></div>
+          </div>
+        </div>
+      </section>
+
+      {/* SOCIAL */}
+      <section className="band">
+        <div className="wrap">
+          <EyebrowBar>07 — From the tours</EyebrowBar>
+          <h2 className="section-h">@ballerzabroad</h2>
+          <div className="section-lead">Instagram · TikTok · @ballerzabroad — the feed updates from inside every camp.</div>
+          <div className="social-grid">
+            {[
+              ["https://images.unsplash.com/photo-1564415051543-cca4a18fe2cc?w=600&q=80", "@ballerzabroad", "BCN"],
+              ["https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?w=600&q=80", "Tunnel walk", "DAY 02"],
+              ["https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&q=80", "Recovery", "DAY 04"],
+              ["https://images.unsplash.com/photo-1518614846906-3a8a8f0c40d5?w=600&q=80", "Matchday", "FIXTURE 02"],
+            ].map(([img, label, badge], i) => (
+              <div key={i} className="social-tile">
+                <div className="social-tile__img" style={{ backgroundImage: `url(${img})` }}></div>
+                <div className="social-tile__overlay"></div>
+                <div className="social-tile__meta"><span>{label}</span><span>{badge}</span></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* APPLICATION BAND */}
+      <section className="app-band">
+        <div className="app-band__grid">
+          <div>
+            <EyebrowBar dark>08 — Apply</EyebrowBar>
+            <h2 className="section-h">Tour by application.</h2>
+            <div className="section-lead" style={{ color: "#545B63" }}>Tell us about your squad. We respond within two working days with a tailored brief — or open a discovery call. info@ballerzabroad.com · 07867 205763.</div>
+            <div style={{ display: "flex", gap: 12, marginTop: 32, flexWrap: "wrap" }}>
+              <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Start an application →</button>
+              <button className="btn btn--whatsapp btn--lg" onClick={() => window.open("https://wa.me/447867205763", "_blank")}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 2.1.55 4.14 1.6 5.95L2 22l4.31-1.13a9.86 9.86 0 0 0 5.73 1.82h0c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01A9.82 9.82 0 0 0 12.04 2zm5.46 14.16c-.23.65-1.34 1.24-1.87 1.32-.48.07-1.09.1-1.76-.11-.41-.13-.93-.3-1.6-.59-2.82-1.22-4.66-4.06-4.8-4.25-.14-.19-1.15-1.53-1.15-2.91 0-1.38.73-2.06.99-2.34.26-.28.56-.35.75-.35h.54c.17.01.41-.07.64.49.23.57.79 1.96.86 2.1.07.14.11.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.49-.14.13-.29.28-.13.55.16.27.71 1.17 1.52 1.9 1.04.93 1.92 1.21 2.19 1.34.27.13.43.11.59-.07.16-.18.69-.81.87-1.08.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.13.45.2.52.31.07.11.07.66-.16 1.31z"/></svg>
+                Talk on WhatsApp
+              </button>
+            </div>
+          </div>
+          <div>
+            <div className="app-band__steps">
+              <div className="app-step"><div className="app-step__n">01</div><div><div className="app-step__t">Tell us about your club.</div><div className="app-step__d">Who you are. Where you sit. What good looks like.</div></div></div>
+              <div className="app-step"><div className="app-step__n">02</div><div><div className="app-step__t">Your squad.</div><div className="app-step__d">Squad size, age groups, level. We use this to design opposition.</div></div></div>
+              <div className="app-step"><div className="app-step__n">03</div><div><div className="app-step__t">Your goals.</div><div className="app-step__d">Pre-season fitness? Scouting? Culture? Tell us what success looks like.</div></div></div>
+              <div className="app-step"><div className="app-step__n">04</div><div><div className="app-step__t">Window &amp; budget.</div><div className="app-step__d">Preferred dates and a workable budget range. We'll do the rest.</div></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+      <WhatsAppFab />
+    </>
+  );
+}
+
+window.Home = Home;
+
+
+// Experience detail pages — Levante UD, Real Betis, Benfica.
+
+// ---------------------------------------------------------------------------
+// Shared detail layout helpers
+// ---------------------------------------------------------------------------
+
+function DetailHero({ eyebrow, badge1, badge2, badge3, img, title, sub, onNavigate }) {
+  return (
+    <section className="hero" style={{ minHeight: "88vh" }}>
+      <div className="hero__img" style={{ backgroundImage: `url(${img})` }}></div>
+      <div className="hero__grain"></div>
+      <div className="hero__gradient"></div>
+      <div className="hero__meta">
+        {badge1 && <span>{badge1}</span>}
+        {badge2 && <span dangerouslySetInnerHTML={{ __html: badge2 }}></span>}
+        {badge3 && <span>{badge3}</span>}
+      </div>
+      <div className="hero__inner">
+        <div className="hero__eyebrow">
+          <div className="hero__eyebrow-rule"></div>
+          <div className="hero__eyebrow-text">{eyebrow}</div>
+        </div>
+        <h1 className="display-xl" dangerouslySetInnerHTML={{ __html: title }}></h1>
+        <div className="hero__sub">{sub}</div>
+        <div className="hero__ctas">
+          <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Apply for this experience →</button>
+          <button className="btn btn--ghost btn--lg" onClick={() => window.open("https://wa.me/447867205763", "_blank")}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 2.1.55 4.14 1.6 5.95L2 22l4.31-1.13a9.86 9.86 0 0 0 5.73 1.82h0c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01A9.82 9.82 0 0 0 12.04 2zm5.46 14.16c-.23.65-1.34 1.24-1.87 1.32-.48.07-1.09.1-1.76-.11-.41-.13-.93-.3-1.6-.59-2.82-1.22-4.66-4.06-4.8-4.25-.14-.19-1.15-1.53-1.15-2.91 0-1.38.73-2.06.99-2.34.26-.28.56-.35.75-.35h.54c.17.01.41-.07.64.49.23.57.79 1.96.86 2.1.07.14.11.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.49-.14.13-.29.28-.13.55.16.27.71 1.17 1.52 1.9 1.04.93 1.92 1.21 2.19 1.34.27.13.43.11.59-.07.16-.18.69-.81.87-1.08.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.13.45.2.52.31.07.11.07.66-.16 1.31z"/></svg>
+            Talk to us first
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function IncludedGrid({ items }) {
+  return (
+    <div className="callout-grid">
+      {items.map(([n, t, d]) => (
+        <div key={n} className="cell">
+          <div className="cell__n">{n}</div>
+          <div className="cell__t">{t}</div>
+          <div className="cell__d">{d}</div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function ApplyCTA({ headline, sub, detail1, detail2, detail3, campName, onNavigate }) {
+  return (
+    <section className="app-band">
+      <div className="app-band__grid">
+        <div>
+          <EyebrowBar dark>Apply</EyebrowBar>
+          <h2 className="section-h">{headline}</h2>
+          <div className="section-lead" style={{ color: "#545B63" }}>{sub}</div>
+          <div style={{ display: "flex", gap: 12, marginTop: 32, flexWrap: "wrap" }}>
+            <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Apply for {campName} →</button>
+            <button className="btn btn--whatsapp btn--lg" onClick={() => window.open("https://wa.me/447867205763", "_blank")}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 2.1.55 4.14 1.6 5.95L2 22l4.31-1.13a9.86 9.86 0 0 0 5.73 1.82h0c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01A9.82 9.82 0 0 0 12.04 2zm5.46 14.16c-.23.65-1.34 1.24-1.87 1.32-.48.07-1.09.1-1.76-.11-.41-.13-.93-.3-1.6-.59-2.82-1.22-4.66-4.06-4.8-4.25-.14-.19-1.15-1.53-1.15-2.91 0-1.38.73-2.06.99-2.34.26-.28.56-.35.75-.35h.54c.17.01.41-.07.64.49.23.57.79 1.96.86 2.1.07.14.11.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.49-.14.13-.29.28-.13.55.16.27.71 1.17 1.52 1.9 1.04.93 1.92 1.21 2.19 1.34.27.13.43.11.59-.07.16-.18.69-.81.87-1.08.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.13.45.2.52.31.07.11.07.66-.16 1.31z"/></svg>
+              Talk on WhatsApp
+            </button>
+          </div>
+        </div>
+        <div>
+          <div className="app-band__steps">
+            {detail1 && <div className="app-step"><div className="app-step__n">●</div><div><div className="app-step__t">{detail1[0]}</div><div className="app-step__d">{detail1[1]}</div></div></div>}
+            {detail2 && <div className="app-step"><div className="app-step__n">●</div><div><div className="app-step__t">{detail2[0]}</div><div className="app-step__d">{detail2[1]}</div></div></div>}
+            {detail3 && <div className="app-step"><div className="app-step__n">£</div><div><div className="app-step__t">{detail3[0]}</div><div className="app-step__d">{detail3[1]}</div></div></div>}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Levante UD Experience
+// ---------------------------------------------------------------------------
+function LevanteDetail({ onNavigate }) {
+  return (
+    <>
+      <Nav active="levante" onNavigate={onNavigate} />
+
+      <DetailHero
+        img="https://images.unsplash.com/photo-1610294232527-d11a4c7ce40c?w=2000&q=80"
+        eyebrow="Pro Experience · Valencia · La Liga partner"
+        badge1="PRO EXPERIENCE"
+        badge2="<strong>VALENCIA</strong> · SPAIN · ES"
+        badge3="2026 WINDOWS OPEN"
+        title="Levante UD<br/>experience."
+        sub="Train inside a La Liga club's academy environment. Professional coaching staff, contested fixtures, and the option to compete in the Levante UD International Cup. Built around your squad."
+        onNavigate={onNavigate}
+      />
+
+      {/* QUICK STATS */}
+      <section className="band" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="stat-row">
+            <StatCell n="07" label="Days in Valencia" />
+            <StatCell n="12" label="Pro sessions" />
+            <StatCell n="03" label="Contested fixtures" />
+            <StatCell n="01" label="La Liga environment" accent />
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT THE PARTNER */}
+      <section className="band">
+        <div className="wrap">
+          <EyebrowBar>01 — The partner</EyebrowBar>
+          <h2 className="section-h">Levante UD.</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
+            <div>
+              <div className="section-lead">One of Valencia's historic La Liga clubs. Levante UD's Sports City sits on the edge of the city — a full-scale professional training environment with multiple first-team pitches, academy facilities, a gym complex, and recovery suite.</div>
+              <p style={{ fontFamily: "var(--font-body)", fontSize: 16, lineHeight: 1.6, color: "var(--stand-200)", marginTop: 24 }}>Your squad trains where the professional players train. Academy-grade pitches, the same dressing rooms, the same tunnel walk. The environment is intentional — it changes what players believe is possible.</p>
+              <p style={{ fontFamily: "var(--font-body)", fontSize: 16, lineHeight: 1.6, color: "var(--stand-200)", marginTop: 16 }}>Levante UD coaching staff deliver the sessions — UEFA-licensed, academy-experienced, and briefed on your squad before you arrive.</p>
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 0, borderTop: "1px solid rgba(246,243,235,0.12)" }}>
+              {[
+                ["Location", "Levante UD Sports City, Valencia, Spain"],
+                ["Club", "Levante UD · La Liga"],
+                ["Facility", "First-team pitches, gym, recovery suite, dressing rooms"],
+                ["Coaching", "Levante UD UEFA-licensed academy coaches"],
+                ["Age groups", "U10 — U19 (squad-dependent)"],
+                ["Tournament option", "Levante UD International Cup · June 2026"],
+              ].map(([k, v]) => (
+                <div key={k} style={{ display: "grid", gridTemplateColumns: "160px 1fr", gap: 16, padding: "16px 0", borderBottom: "1px solid rgba(246,243,235,0.12)" }}>
+                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.14em", color: "var(--stand-300)", textTransform: "uppercase" }}>{k}</div>
+                  <div style={{ fontFamily: "var(--font-body)", fontSize: 15, color: "var(--chalk-50)" }}>{v}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ITINERARY */}
+      <section className="band">
+        <div className="wrap">
+          <EyebrowBar>02 — Itinerary</EyebrowBar>
+          <h2 className="section-h">Seven days inside La Liga.</h2>
+          <div className="section-lead">An indicative schedule — your final programme is built around squad age, training load, and your club's goals.</div>
+          <div className="itin">
+            <div className="itin-day">
+              <div className="itin-day__n">DAY 01</div>
+              <div><div className="itin-day__title">Arrival · Sports City orientation · Kit handover</div><div className="itin-day__time">14:00 – 21:00</div></div>
+              <div className="itin-day__desc">Land at Valencia Airport. Ground transfer to the hotel. Kit handover at the team room — match-shirt, training kit, recovery wear. Evening walk through Levante UD's Sports City with your camp lead.</div>
+            </div>
+            <div className="itin-day">
+              <div className="itin-day__n">DAY 02</div>
+              <div><div className="itin-day__title">Session 01 · Technical individual skills</div><div className="itin-day__time">09:30 – 11:30 / 16:00 – 17:30</div></div>
+              <div className="itin-day__desc">Double session with Levante UD academy coaches. Morning: individual technical work — first touch, movement, positioning. Afternoon: possession patterns, pressing triggers, video debrief in the team room.</div>
+            </div>
+            <div className="itin-day">
+              <div className="itin-day__n">DAY 03</div>
+              <div><div className="itin-day__title">Session 02 · Shape &amp; team organisation</div><div className="itin-day__time">10:00 – 12:30</div></div>
+              <div className="itin-day__desc">Tactical session focused on the team's shape in and out of possession. Emphasis on transitions — how Levante's academy presses and builds. Afternoon recovery: pool, nutrition briefing.</div>
+            </div>
+            <div className="itin-day">
+              <div className="itin-day__n">DAY 04</div>
+              <div><div className="itin-day__title">Fixture 01 · Valencia-area academy XI</div><div className="itin-day__time">19:30 KO · Floodlit</div></div>
+              <div className="itin-day__desc">First contested fixture. Pre-match meal, full tunnel walk, matchday environment. Opposition sourced from the Valencia academy network — matched to your level. Post-match debrief with coaching staff on the bus.</div>
+            </div>
+            <div className="itin-day">
+              <div className="itin-day__n">DAY 05</div>
+              <div><div className="itin-day__title">Behind-the-scenes · Q&amp;A · Free afternoon</div><div className="itin-day__time">10:00 – 18:00</div></div>
+              <div className="itin-day__desc">Media room access. Q&amp;A with a Levante UD academy coach — football philosophy, route to pro football, life at a La Liga club. Free afternoon in Valencia city centre.</div>
+            </div>
+            <div className="itin-day">
+              <div className="itin-day__n">DAY 06</div>
+              <div><div className="itin-day__title">Fixture 02 + Session 03 · Set-piece masterclass</div><div className="itin-day__time">10:00 – 12:30 / 19:00 KO</div></div>
+              <div className="itin-day__desc">Morning set-piece session — attacking and defending corners, free-kicks, throw-in routines. Evening second fixture against a different opponent from the academy network.</div>
+            </div>
+            <div className="itin-day">
+              <div className="itin-day__n">DAY 07</div>
+              <div><div className="itin-day__title">Fixture 03 · Debrief · Wheels-up</div><div className="itin-day__time">10:00 KO · 19:00 dep</div></div>
+              <div className="itin-day__desc">Final fixture before lunch. Full squad debrief with coaching staff in the team room. Transfer to Valencia Airport. Wheels-up at sunset.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* LEVANTE UD INTERNATIONAL CUP */}
+      <section className="band">
+        <div className="wrap">
+          <EyebrowBar>03 — Tournament option</EyebrowBar>
+          <h2 className="section-h">Levante UD Int. Cup.</h2>
+          <div className="section-lead">Add the Levante UD International Cup to your experience window. National and international clubs compete at the Sports City in an inaugural tournament combining football, culture, and Valencia.</div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 1, background: "rgba(246,243,235,0.12)", marginTop: 48, border: "1px solid rgba(246,243,235,0.12)" }}>
+            {[
+              ["Dates", "June 18–21, 2026"],
+              ["Location", "Levante UD Sports City, Valencia"],
+              ["Format", "Group stage + knockout · national &amp; international clubs"],
+              ["Edition", "Inaugural 2026 tournament"],
+              ["Facilities", "First-team pitches at the Sports City"],
+              ["Add-on", "Combine with the 7-day experience or stand-alone entry"],
+            ].map(([k, v]) => (
+              <div key={k} style={{ background: "var(--ink-900)", padding: "28px 32px", display: "flex", flexDirection: "column", gap: 10 }}>
+                <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.16em", color: "var(--volt-500)", textTransform: "uppercase" }}>{k}</div>
+                <div style={{ fontFamily: "var(--font-heading)", fontWeight: 600, fontSize: 16, color: "var(--chalk-50)", lineHeight: 1.4 }} dangerouslySetInnerHTML={{ __html: v }}></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* INCLUDED */}
+      <section className="band">
+        <div className="wrap">
+          <EyebrowBar>04 — What's included</EyebrowBar>
+          <h2 className="section-h">Built into every window.</h2>
+          <IncludedGrid items={[
+            ["01", "La Liga facility access", "Daily use of Levante UD's Sports City — pitches, gym, recovery suite, dressing rooms."],
+            ["02", "Levante UD coaching staff", "12 sessions delivered by UEFA-licensed Levante UD academy coaches."],
+            ["03", "3 contested fixtures", "Opponents sourced from Valencia's academy network and matched to your squad level."],
+            ["04", "Full kit pack", "Match shirt, training kit, and recovery wear — kept by every player."],
+            ["05", "Travel + accommodation", "Flights, ground transfers, 4-star team hotel with squad-floor block booking."],
+            ["06", "Camp lead + content", "Dedicated UK camp lead with your squad throughout. Daily content feed for parents and social."],
+          ]} />
+        </div>
+      </section>
+
+      {/* INDIVIDUAL PLAYER DEVELOPMENT */}
+      <section className="band">
+        <div className="wrap">
+          <EyebrowBar>05 — Individual option</EyebrowBar>
+          <h2 className="section-h">Player development programme.</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
+            <div>
+              <div className="section-lead">The Levante UD experience is available for individual players — not just full squads. Parents are welcome to travel.</div>
+              <p style={{ fontFamily: "var(--font-body)", fontSize: 16, lineHeight: 1.6, color: "var(--stand-200)", marginTop: 24 }}>Players join a structured programme inside the Levante UD training environment alongside other invited individual players. Bespoke coaching focus agreed ahead of the window — technical, positional, or tactical.</p>
+              <p style={{ fontFamily: "var(--font-body)", fontSize: 16, lineHeight: 1.6, color: "var(--stand-200)", marginTop: 16 }}>A written performance report is provided at the end of the programme. Parents can observe training sessions and meet the coaching staff.</p>
+              <div style={{ marginTop: 32 }}>
+                <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Apply for the individual programme →</button>
+              </div>
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 0, borderTop: "1px solid rgba(246,243,235,0.12)" }}>
+              {[
+                ["Format", "Individual player · join existing programme"],
+                ["Duration", "5 or 7 days · selected windows only"],
+                ["Coaching", "Dedicated 1:1 sessions alongside squad programme"],
+                ["Parents", "Welcome to travel · parent accommodation available"],
+                ["Report", "Written performance review at close of programme"],
+                ["Age groups", "U12 — U18"],
+              ].map(([k, v]) => (
+                <div key={k} style={{ display: "grid", gridTemplateColumns: "140px 1fr", gap: 16, padding: "16px 0", borderBottom: "1px solid rgba(246,243,235,0.12)" }}>
+                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.14em", color: "var(--stand-300)", textTransform: "uppercase" }}>{k}</div>
+                  <div style={{ fontFamily: "var(--font-body)", fontSize: 15, color: "var(--chalk-50)" }}>{v}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <ApplyCTA
+        headline="Application open."
+        sub="2026 windows are filling against the Levante UD Sports City calendar. Apply with your squad details — we'll confirm fit and availability within two working days."
+        detail1={["Application open", "Limited windows per year against the partner-club calendar."]}
+        detail2={["Squads + individuals", "Full squad bookings and individual player development slots available."]}
+        detail3={["From £1,895 per player", "Indicative, all-in. Individual programme pricing on request."]}
+        campName="the Levante UD experience"
+        onNavigate={onNavigate}
+      />
+
+      <Footer />
+      <WhatsAppFab />
+    </>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Real Betis Experience
+// ---------------------------------------------------------------------------
+function BetisDetail({ onNavigate }) {
+  return (
+    <>
+      <Nav active="betis" onNavigate={onNavigate} />
+
+      <DetailHero
+        img="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=2000&q=80"
+        eyebrow="Pro Experience · Seville · La Liga partner"
+        badge1="PRO EXPERIENCE"
+        badge2="<strong>SEVILLE</strong> · ANDALUSIA · ES"
+        badge3="2026 WINDOWS OPEN"
+        title="Real Betis<br/>experience."
+        sub="Train in a La Liga environment on the edge of Europe's most passionate football city. Professional coaching, contested fixtures, and behind-the-scenes access at one of Seville's iconic clubs."
+        onNavigate={onNavigate}
+      />
+
+      {/* QUICK STATS */}
+      <section className="band" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="stat-row">
+            <StatCell n="07" label="Days in Seville" />
+            <StatCell n="12" label="Pro sessions" />
+            <StatCell n="03" label="Contested fixtures" />
+            <StatCell n="01" label="La Liga environment" accent />
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT THE PARTNER */}
+      <section className="band">
+        <div className="wrap">
+          <EyebrowBar>01 — The partner</EyebrowBar>
+          <h2 className="section-h">Real Betis.</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
+            <div>
+              <div className="section-lead">Real Betis Balompié — one of the most celebrated clubs in Andalusia and Spain. Founded 1907. La Liga. Europa League regulars. A club built on culture, identity, and the kind of football that gets under your skin.</div>
+              <p style={{ fontFamily: "var(--font-body)", fontSize: 16, lineHeight: 1.6, color: "var(--stand-200)", marginTop: 24 }}>The Ballerz Abroad Real Betis experience places your squad inside the club's training environment. Coaching delivered by Betis academy staff — same methodology, same standards the first team operates to.</p>
+              <p style={{ fontFamily: "var(--font-body)", fontSize: 16, lineHeight: 1.6, color: "var(--stand-200)", marginTop: 16 }}>Seville is one of Spain's great football cities. Your squad trains in it, lives in it, competes in it. The environment is part of the programme — not just the backdrop.</p>
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 0, borderTop: "1px solid rgba(246,243,235,0.12)" }}>
+              {[
+                ["Location", "Seville, Andalusia, Spain"],
+                ["Club", "Real Betis Balompié · La Liga"],
+                ["Founded", "1907"],
+                ["Facility", "Academy training complex, pitches, gym, recovery areas"],
+                ["Coaching", "Real Betis academy coaches · UEFA-licensed"],
+                ["Age groups", "U10 — U19 (squad-dependent)"],
+              ].map(([k, v]) => (
+                <div key={k} style={{ display: "grid", gridTemplateColumns: "160px 1fr", gap: 16, padding: "16px 0", borderBottom: "1px solid rgba(246,243,235,0.12)" }}>
+                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.14em", color: "var(--stand-300)", textTransform: "uppercase" }}>{k}</div>
+                  <div style={{ fontFamily: "var(--font-body)", fontSize: 15, color: "var(--chalk-50)" }}>{v}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ITINERARY */}
+      <section className="band">
+        <div className="wrap">
+          <EyebrowBar>02 — Itinerary</EyebrowBar>
+          <h2 className="section-h">Seven days in Andalusia.</h2>
+          <div className="section-lead">An indicative programme — built around your squad's age, level, and goals.</div>
+          <div className="itin">
+            <div className="itin-day">
+              <div className="itin-day__n">DAY 01</div>
+              <div><div className="itin-day__title">Arrival · Club orientation · Kit handover</div><div className="itin-day__time">13:00 – 21:00</div></div>
+              <div className="itin-day__desc">Fly into Seville. Ground transfer. Hotel check-in and kit handover in the team room. Evening club orientation — ground tour, meeting the Betis coaching staff who'll be delivering your sessions.</div>
+            </div>
+            <div className="itin-day">
+              <div className="itin-day__n">DAY 02</div>
+              <div><div className="itin-day__title">Session 01 · Betis philosophy — possession &amp; press</div><div className="itin-day__time">09:30 – 11:30 / 15:30 – 17:00</div></div>
+              <div className="itin-day__desc">Morning technical block: Betis academy principles of ball retention under pressure. Afternoon: team shape session — how Betis builds from the back, triggers to press, transitions. Video debrief after.</div>
+            </div>
+            <div className="itin-day">
+              <div className="itin-day__n">DAY 03</div>
+              <div><div className="itin-day__title">Session 02 · Positional play masterclass</div><div className="itin-day__time">10:00 – 12:30</div></div>
+              <div className="itin-day__desc">Positional play session focused on spatial awareness, third-man combinations, and exploiting width. Afternoon recovery — pool, and a behind-the-scenes tour of Benito Villamarín stadium.</div>
+            </div>
+            <div className="itin-day">
+              <div className="itin-day__n">DAY 04</div>
+              <div><div className="itin-day__title">Fixture 01 · Andalusian academy opposition</div><div className="itin-day__time">19:30 KO · Floodlit</div></div>
+              <div className="itin-day__desc">First fixture. Pre-match meal, full tunnel walk, matchday environment. Opposition curated from Seville's academy landscape — level-matched to your squad. Post-match recovery and debrief.</div>
+            </div>
+            <div className="itin-day">
+              <div className="itin-day__n">DAY 05</div>
+              <div><div className="itin-day__title">Recovery · Q&amp;A with Betis academy staff</div><div className="itin-day__time">10:00 – 18:00</div></div>
+              <div className="itin-day__desc">Recovery morning. Q&amp;A with a Betis academy coach — the philosophy, the path to professional football, what scouts look for at this level. Free afternoon in Seville.</div>
+            </div>
+            <div className="itin-day">
+              <div className="itin-day__n">DAY 06</div>
+              <div><div className="itin-day__title">Session 03 · Set pieces + Fixture 02</div><div className="itin-day__time">10:00 – 12:00 / 19:00 KO</div></div>
+              <div className="itin-day__desc">Morning set-piece session with the Betis coaches. Evening second fixture against a different opponent — same competitive standard, different tactical challenge.</div>
+            </div>
+            <div className="itin-day">
+              <div className="itin-day__n">DAY 07</div>
+              <div><div className="itin-day__title">Fixture 03 · Debrief · Wheels-up</div><div className="itin-day__time">10:00 KO · 18:00 dep</div></div>
+              <div className="itin-day__desc">Final fixture. Squad debrief with coaching staff. Transfer to Seville Airport. Wheels-up in the early evening.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FIXTURES */}
+      <section className="band">
+        <div className="wrap">
+          <EyebrowBar>03 — Opposition</EyebrowBar>
+          <h2 className="section-h">Curated competition.</h2>
+          <div className="section-lead">Every opponent is selected for the quality of contest — not the name. We source from Seville's rich academy infrastructure and match to your level, age group, and style.</div>
+          <div className="fixture-table">
+            <div className="fixture-row">
+              <div className="fixture-row__date">FIX 01</div>
+              <div className="fixture-row__city">Seville</div>
+              <div className="fixture-row__opp">vs. Andalusian academy XI — Level A</div>
+              <div className="fixture-row__status" style={{ color: "var(--volt-500)" }}>● Confirmed on booking</div>
+            </div>
+            <div className="fixture-row">
+              <div className="fixture-row__date">FIX 02</div>
+              <div className="fixture-row__city">Seville</div>
+              <div className="fixture-row__opp">vs. Regional select XI — Level A/B</div>
+              <div className="fixture-row__status" style={{ color: "var(--volt-500)" }}>● Confirmed on booking</div>
+            </div>
+            <div className="fixture-row">
+              <div className="fixture-row__date">FIX 03</div>
+              <div className="fixture-row__city">Seville</div>
+              <div className="fixture-row__opp">vs. Partner academy XI (TBC by window)</div>
+              <div className="fixture-row__status" style={{ color: "var(--clay-500)" }}>● Confirmed 8 weeks prior</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* INCLUDED */}
+      <section className="band">
+        <div className="wrap">
+          <EyebrowBar>04 — What's included</EyebrowBar>
+          <h2 className="section-h">Built into every window.</h2>
+          <IncludedGrid items={[
+            ["01", "Betis academy facility access", "Daily use of Real Betis training pitches, gym, and recovery areas."],
+            ["02", "Real Betis coaching staff", "12 sessions delivered by UEFA-licensed Betis academy coaches."],
+            ["03", "3 contested fixtures", "Opponents curated from Seville's academy network — level-matched throughout."],
+            ["04", "Full kit pack", "Match shirt, training kit, recovery wear — kept by every player."],
+            ["05", "Travel + accommodation", "Flights, ground transfers, 4-star team hotel in Seville city."],
+            ["06", "Camp lead + content", "UK camp lead throughout. Daily content for parents, club channels, and social."],
+          ]} />
+        </div>
+      </section>
+
+      <ApplyCTA
+        headline="Application open."
+        sub="Seville windows fill quickly. Apply with your squad details and preferred dates — we'll confirm availability and build the brief within two working days."
+        detail1={["Application open", "2026 windows against the Betis academy calendar."]}
+        detail2={["Squad-only", "Full squad bookings. Minimum 14 players travelling."]}
+        detail3={["From £1,895 per player", "Indicative, all-in. Final price built around squad size."]}
+        campName="the Real Betis experience"
+        onNavigate={onNavigate}
+      />
+
+      <Footer />
+      <WhatsAppFab />
+    </>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Benfica Experience
+// ---------------------------------------------------------------------------
+function BenficaDetail({ onNavigate }) {
+  return (
+    <>
+      <Nav active="benfica" onNavigate={onNavigate} />
+
+      <DetailHero
+        img="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=2000&q=80"
+        eyebrow="Pro Experience · Lisbon · Best Global Academy"
+        badge1="PRO EXPERIENCE"
+        badge2="<strong>LISBON</strong> · PORTUGAL · PT"
+        badge3="2026 WINDOWS OPEN"
+        title="Benfica<br/>experience."
+        sub="Train at the facility voted Best Global Academy twice. SL Benfica's 19-hectare campus in Seixal — 9 pitches, UEFA-accredited coaches, and one of European football's most respected development environments."
+        onNavigate={onNavigate}
+      />
+
+      {/* QUICK STATS */}
+      <section className="band" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="stat-row">
+            <StatCell n="07" label="Days in Lisbon" />
+            <StatCell n="9"  label="Pitches on campus" />
+            <StatCell n="03" label="Contested fixtures" />
+            <StatCell n="02" label="Global Academy Awards" accent />
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT THE PARTNER */}
+      <section className="band">
+        <div className="wrap">
+          <EyebrowBar>01 — The partner</EyebrowBar>
+          <h2 className="section-h">SL Benfica.</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
+            <div>
+              <div className="section-lead">SL Benfica are one of the world's most decorated youth football institutions — Globe Soccer Best Global Academy in 2015 and 2019. The Benfica Campus at Seixal is among the best youth football facilities on the planet.</div>
+              <p style={{ fontFamily: "var(--font-body)", fontSize: 16, lineHeight: 1.6, color: "var(--stand-200)", marginTop: 24 }}>19 hectares. 9 pitches (6 natural grass, 3 artificial). An 86-room hotel on campus. 28 dressing rooms. 2 gymnasiums. Swimming pool and spa. Everything a professional development environment needs — all in one place.</p>
+              <p style={{ fontFamily: "var(--font-body)", fontSize: 16, lineHeight: 1.6, color: "var(--stand-200)", marginTop: 16 }}>Coaching staff are UEFA-licensed and FPF-accredited. Players who've come through this system include João Félix, Renato Sanches, Bernardo Silva, Rúben Dias, and Ederson.</p>
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 0, borderTop: "1px solid rgba(246,243,235,0.12)" }}>
+              {[
+                ["Location", "Benfica Campus, Seixal, Lisbon, Portugal"],
+                ["Club", "SL Benfica · Primeira Liga"],
+                ["Campus size", "19 hectares"],
+                ["Pitches", "9 total — 6 natural grass + 3 artificial"],
+                ["Coaching", "UEFA-licensed + FPF-accredited Benfica coaches"],
+                ["Award", "Best Global Academy · Globe Soccer 2015 &amp; 2019"],
+                ["Age groups", "U10 — U19 (squad-dependent)"],
+              ].map(([k, v]) => (
+                <div key={k} style={{ display: "grid", gridTemplateColumns: "160px 1fr", gap: 16, padding: "16px 0", borderBottom: "1px solid rgba(246,243,235,0.12)" }}>
+                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.14em", color: "var(--stand-300)", textTransform: "uppercase" }}>{k}</div>
+                  <div style={{ fontFamily: "var(--font-heading)", fontWeight: 500, fontSize: 15, color: "var(--chalk-50)" }} dangerouslySetInnerHTML={{ __html: v }}></div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CAMPUS HIGHLIGHTS */}
+      <section className="band">
+        <div className="wrap">
+          <EyebrowBar>02 — The campus</EyebrowBar>
+          <h2 className="section-h">Best-in-class facility.</h2>
+          <div className="section-lead">The Benfica Campus is one of the most comprehensively equipped youth football facilities in Europe. Your squad uses the same environment as Benfica's academy players.</div>
+          <div className="callout-grid" style={{ marginTop: 48 }}>
+            <div className="cell">
+              <div className="cell__n">9 pitches</div>
+              <div className="cell__t">Training surfaces</div>
+              <div className="cell__d">6 natural grass and 3 artificial turf pitches — your squad will always have the right surface for the session.</div>
+            </div>
+            <div className="cell">
+              <div className="cell__n">19 ha</div>
+              <div className="cell__t">Purpose-built campus</div>
+              <div className="cell__d">Everything on-site — hotel, pitches, gym, physio, recovery, dressing rooms, analysis suite. No commuting. Total immersion.</div>
+            </div>
+            <div className="cell">
+              <div className="cell__n">86 rooms</div>
+              <div className="cell__t">On-campus hotel</div>
+              <div className="cell__d">Your squad stays at the campus hotel — the same facility used by Benfica's academy players and visiting professional teams.</div>
+            </div>
+            <div className="cell">
+              <div className="cell__n">2× gym</div>
+              <div className="cell__t">Strength &amp; conditioning</div>
+              <div className="cell__d">Two full gymnasiums for strength and conditioning work. Supplementary sessions built into the programme for squads that want them.</div>
+            </div>
+            <div className="cell">
+              <div className="cell__n">Pool + spa</div>
+              <div className="cell__t">Recovery suite</div>
+              <div className="cell__d">Swimming pool and spa for structured recovery sessions between training days and fixtures. Used daily post-session.</div>
+            </div>
+            <div className="cell">
+              <div className="cell__n">28</div>
+              <div className="cell__t">Dressing rooms</div>
+              <div className="cell__d">Full matchday dressing-room experience — the same rooms used by Benfica academy squads on matchday.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ITINERARY */}
+      <section className="band">
+        <div className="wrap">
+          <EyebrowBar>03 — Itinerary</EyebrowBar>
+          <h2 className="section-h">Seven days at the best global academy.</h2>
+          <div className="section-lead">An indicative schedule — finalised around your squad's age group, level, and training objectives.</div>
+          <div className="itin">
+            <div className="itin-day">
+              <div className="itin-day__n">DAY 01</div>
+              <div><div className="itin-day__title">Arrival · Campus check-in · Kit handover</div><div className="itin-day__time">14:00 – 21:00</div></div>
+              <div className="itin-day__desc">Fly into Lisbon Humberto Delgado Airport. Ground transfer to Benfica Campus, Seixal. Check into the on-site hotel. Kit handover in the team room. Campus orientation with your camp lead.</div>
+            </div>
+            <div className="itin-day">
+              <div className="itin-day__n">DAY 02</div>
+              <div><div className="itin-day__title">Session 01 · Technical fundamentals + physical tests</div><div className="itin-day__time">09:00 – 12:00 / 15:00 – 16:30</div></div>
+              <div className="itin-day__desc">Opening session: Benfica methodology — technical individual skills, agility and movement patterns. Afternoon: physical benchmark tests. Evening video debrief — analysis session in the Benfica analysis suite.</div>
+            </div>
+            <div className="itin-day">
+              <div className="itin-day__n">DAY 03</div>
+              <div><div className="itin-day__title">Session 02 · Positional play &amp; structure</div><div className="itin-day__time">09:30 – 12:00 / Pool recovery 15:00</div></div>
+              <div className="itin-day__desc">Positional play session based on Benfica's academy framework — block structure, high press, build-up patterns. Recovery pool session in the afternoon.</div>
+            </div>
+            <div className="itin-day">
+              <div className="itin-day__n">DAY 04</div>
+              <div><div className="itin-day__title">Fixture 01 · Lisbon academy opposition</div><div className="itin-day__time">19:00 KO · Floodlit</div></div>
+              <div className="itin-day__desc">First fixture on the campus pitches. Pre-match meal, full tunnel walk, matchday environment. Opposition sourced from the Lisbon academy network and matched to your level. Post-match physiotherapy and debrief.</div>
+            </div>
+            <div className="itin-day">
+              <div className="itin-day__n">DAY 05</div>
+              <div><div className="itin-day__title">Workshop · Gym session · Lisbon</div><div className="itin-day__time">09:00 – 17:00</div></div>
+              <div className="itin-day__desc">Morning workshop with Benfica coaches — football philosophy, the path from academy to professional, analysis of your squad's performance from footage taken during sessions. Afternoon S&amp;C session. Optional Lisbon city visit for the evening.</div>
+            </div>
+            <div className="itin-day">
+              <div className="itin-day__n">DAY 06</div>
+              <div><div className="itin-day__title">Session 03 · Set pieces + Fixture 02</div><div className="itin-day__time">10:00 – 12:00 / 19:00 KO</div></div>
+              <div className="itin-day__desc">Morning set-piece masterclass with Benfica staff. Evening second fixture — different opponent, same competitive standard.</div>
+            </div>
+            <div className="itin-day">
+              <div className="itin-day__n">DAY 07</div>
+              <div><div className="itin-day__title">Fixture 03 · Performance reports · Wheels-up</div><div className="itin-day__time">10:00 KO · 18:00 dep</div></div>
+              <div className="itin-day__desc">Final fixture on campus. Individual written performance reports distributed to each player. Squad debrief. Transfer to Lisbon Airport. Wheels-up in the evening.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* INCLUDED */}
+      <section className="band">
+        <div className="wrap">
+          <EyebrowBar>04 — What's included</EyebrowBar>
+          <h2 className="section-h">Built into every window.</h2>
+          <IncludedGrid items={[
+            ["01", "Benfica Campus access", "Full use of the 19-hectare campus — pitches, gym, pool, recovery suite, dressing rooms, analysis suite."],
+            ["02", "Benfica coaching staff", "12 sessions delivered by UEFA-licensed, FPF-accredited Benfica academy coaches."],
+            ["03", "3 contested fixtures", "Lisbon academy opposition — level-matched. Played on the campus pitches."],
+            ["04", "Individual player reports", "Written performance report for each player at the end of the programme."],
+            ["05", "On-campus accommodation", "Stay at the Benfica Campus hotel. Same facility used by the academy. Flights and transfers included."],
+            ["06", "Camp lead + content", "Dedicated UK camp lead. Daily content drop — parents, club social, Instagram, TikTok."],
+          ]} />
+        </div>
+      </section>
+
+      <ApplyCTA
+        headline="Selected windows only."
+        sub="Benfica Campus windows are limited by the academy calendar. Apply early — we confirm availability and build the brief within two working days of receiving your application."
+        detail1={["Limited windows", "Availability against the Benfica Campus academy calendar."]}
+        detail2={["On-campus stay", "Your squad stays at the Benfica Campus hotel throughout."]}
+        detail3={["From £2,095 per player", "Indicative, all-in including on-campus accommodation. Final price built around squad size."]}
+        campName="the Benfica experience"
+        onNavigate={onNavigate}
+      />
+
+      <Footer />
+      <WhatsAppFab />
+    </>
+  );
+}
+
+window.LevanteDetail = LevanteDetail;
+window.BetisDetail   = BetisDetail;
+window.BenficaDetail = BenficaDetail;
+
+
+// Tournaments hub page — all 6 tournaments Ballerz Abroad enters.
+
+function TournamentsPage({ onNavigate }) {
+  const [active, setActive] = React.useState(null);
+
+  const tournaments = [
+    {
+      id: "mic-costa-brava",
+      eyebrow: "T01 · EASTER WINDOW",
+      name: "MIC Costa Brava",
+      location: "Costa Brava · Catalonia · Spain",
+      dates: "Easter 2026",
+      img: "https://images.unsplash.com/photo-1577223625816-7546f13df25d?w=1200&q=80",
+      pill: "Application open",
+      tagline: "The reference event.",
+      headline: "MIC<br/>Costa Brava.",
+      intro: "MICFootball is the world's most prestigious international youth football tournament. Held each Easter on the Costa Brava, it has produced over two decades of elite competition — alumni include Lamine Yamal, Cole Palmer, Rodri, Marcus Rashford, Pedri, and Dani Carvajal.",
+      body: "900+ matches. 59 grass and artificial pitches across the Costa Brava. Teams from elite academies, national federations, and grassroots clubs — all competing at the same tournament, in the same environment. The MIC is where the world's youth football benchmarks itself.",
+      body2: "Ballerz Abroad handles your squad's entry, travel, accommodation, and camp lead throughout. You compete. We handle everything else.",
+      facts: [
+        ["Dates", "Easter week · April 2026"],
+        ["Location", "Costa Brava, Catalonia, Spain"],
+        ["Format", "Round-robin groups · knockout finals · consolation bracket"],
+        ["Age groups", "U12 — U19 · Female U16"],
+        ["Pitches", "59 grass and artificial pitches"],
+        ["Matches", "900+ total across the tournament"],
+        ["Alumni", "Pedri · Lamine Yamal · Cole Palmer · Rodri · Rashford · Carvajal"],
+        ["Editions", "20+ annual editions"],
+      ],
+      included: [
+        ["01", "Tournament entry", "Full squad registration and confirmed group placement."],
+        ["02", "Travel + accommodation", "Flights, transfers, and 4-star hotel close to the tournament venues."],
+        ["03", "Camp lead", "Dedicated Ballerz Abroad lead with your squad for the full tournament."],
+        ["04", "Training sessions", "Optional pre-tournament training sessions on-site before group play begins."],
+        ["05", "Kit pack", "Tournament kit included for every player."],
+        ["06", "Content", "Daily photo and video content — parents, club channels, social."],
+      ],
+    },
+    {
+      id: "copa-daurada",
+      eyebrow: "T02 · APRIL WINDOW",
+      name: "Copa Daurada",
+      location: "Salou · Costa Daurada · Spain",
+      dates: "Apr 6–10, 2026",
+      img: "https://images.unsplash.com/photo-1564415051543-cca4a18fe2cc?w=1200&q=80",
+      pill: "Apr 6–10 2026",
+      tagline: "Costa Daurada. Five days of competition.",
+      headline: "Copa<br/>Daurada.",
+      intro: "The Copa Daurada brings together over 90 teams and 300 clubs from 25+ countries at a purpose-built sports complex in Salou on the Costa Daurada — 100km west of Barcelona. Five tournament days, grassroots through academy brackets.",
+      body: "Eight adjacent pitches including artificial turf, hybrid, and natural grass surfaces. The tournament is accessible for squads at all levels — competitive brackets mean every team is genuinely tested. Salou is a well-connected base with direct links from the UK.",
+      body2: "Ballerz Abroad manages entry, travel, accommodation, and your camp lead throughout. Optional pre-tournament training is available on-site.",
+      facts: [
+        ["Dates", "April 6–10, 2026"],
+        ["Location", "Salou, Costa Daurada, Spain"],
+        ["Format", "Round-robin + knockout stages · 5 tournament days"],
+        ["Teams", "90+ teams · 300 clubs from 25 countries"],
+        ["Pitches", "8 adjacent pitches · artificial, hybrid, natural grass"],
+        ["Age groups", "Boys and girls · full range of age categories"],
+        ["Bracket", "Grassroots through academy level"],
+        ["Nearby", "Port Aventura · beach access · Barcelona day trip"],
+      ],
+      included: [
+        ["01", "Tournament entry", "Full squad registration and confirmed bracket placement."],
+        ["02", "Travel + accommodation", "Flights, transfers, hotel in Salou for the tournament duration."],
+        ["03", "Camp lead", "Dedicated Ballerz Abroad camp lead throughout."],
+        ["04", "Pre-tournament session", "Optional on-site training session before the tournament opens."],
+        ["05", "Kit pack", "Tournament kit for every player."],
+        ["06", "Content", "Daily content feed for parents and club social channels."],
+      ],
+    },
+    {
+      id: "mare-nostrum",
+      eyebrow: "T03 · EASTER + SUMMER",
+      name: "Mare Nostrum Cup",
+      location: "Salou · Catalonia · Spain",
+      dates: "Easter & Summer 2026",
+      img: "https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?w=1200&q=80",
+      pill: "2 windows · 2026",
+      tagline: "Easter and summer. U9 to U19.",
+      headline: "Mare Nostrum<br/>Cup.",
+      intro: "The Mare Nostrum Cup runs twice a year — Easter and Summer — at the Esportiu Futbol Salou complex in Catalonia. Over 20 years of youth football events. 10,000+ boys and girls competing annually. U9 to U19, all competitive levels.",
+      body: "12 pitches at the Esportiu Futbol Salou. Professional staff, structured competition, and a Mediterranean setting. The tournament has built a reputation for high-quality organisation and a fair competitive structure — squads are bracketed properly so every match means something.",
+      body2: "The summer window in particular suits clubs looking to finish a season with a competitive experience abroad — or start a pre-season with something that'll test the squad properly.",
+      facts: [
+        ["Dates", "Easter 2026 + Summer 2026"],
+        ["Location", "Esportiu Futbol Salou, Catalonia, Spain"],
+        ["Format", "Structured brackets · group + knockout"],
+        ["Age groups", "U9 — U19 · boys and girls"],
+        ["Pitches", "12 pitches at Esportiu Futbol Salou"],
+        ["Participants", "10,000+ players annually"],
+        ["History", "20+ years of football events"],
+        ["Windows", "Easter and Summer editions available"],
+      ],
+      included: [
+        ["01", "Tournament entry", "Full squad registration · your preferred window (Easter or Summer)."],
+        ["02", "Travel + accommodation", "Flights, transfers, Salou hotel for the tournament duration."],
+        ["03", "Camp lead", "Dedicated Ballerz Abroad lead with your squad."],
+        ["04", "Training access", "Pre-tournament on-site training available."],
+        ["05", "Kit pack", "Tournament kit for every player."],
+        ["06", "Content", "Daily content for parents and club channels."],
+      ],
+    },
+    {
+      id: "cruyff",
+      eyebrow: "T04 · SALOU, CATALONIA",
+      name: "Cruyff Tournament",
+      location: "Salou · Catalonia · Spain",
+      dates: "2026 window TBC",
+      img: "https://images.unsplash.com/photo-1518614846906-3a8a8f0c40d5?w=1200&q=80",
+      pill: "2026 window",
+      tagline: "Every match recorded. Every player scouted.",
+      headline: "Cruyff<br/>Tournament.",
+      intro: "Created by Jordi Cruyff in honour of Johan Cruyff's legacy, the Cruyff Tournament launched its first edition in 2024. Held in Salou, Catalonia — 90 teams, 17 countries, 1,600 players. Every match recorded and available in the app for scouting analysis.",
+      body: "Groups of 4 teams. Each group guaranteed to include at least one team from Spanish La Liga or a major international league. The tournament is structured around the Cruyff philosophy — technique, intelligence, teamwork. FC Barcelona and AFC Ajax are the benchmark clubs.",
+      body2: "The scouting element is genuine. Recorded footage is available through the tournament app. If your players perform, they will be seen. The 2026 edition is expanding — application through Ballerz Abroad gives your squad a confirmed slot.",
+      facts: [
+        ["Location", "Salou, Catalonia, Spain"],
+        ["Format", "Groups of 4 · at least 1 La Liga / top-league club per group"],
+        ["Age groups", "U10 (F7) through U19 (F11)"],
+        ["Teams", "90 teams from 17 countries in first edition"],
+        ["Players", "1,600 players · 2024 inaugural edition"],
+        ["Recording", "All matches recorded · player analysis app"],
+        ["Scouting", "Footage available for clubs and scouts via the tournament platform"],
+        ["Philosophy", "Honoring Johan Cruyff · Barcelona & Ajax as benchmark clubs"],
+      ],
+      included: [
+        ["01", "Tournament entry", "Full squad entry · confirmed group placement with guaranteed quality opposition."],
+        ["02", "Travel + accommodation", "Flights, transfers, Salou hotel for the tournament."],
+        ["03", "Camp lead", "Dedicated Ballerz Abroad lead throughout."],
+        ["04", "Match footage", "Full match recordings available via the Cruyff Tournament app."],
+        ["05", "Kit pack", "Tournament kit for every player."],
+        ["06", "Content", "Daily content feed — parents, club channels, and social."],
+      ],
+    },
+    {
+      id: "levante-cup",
+      eyebrow: "T05 · JUNE 2026 · INAUGURAL",
+      name: "Levante UD Int. Cup",
+      location: "Valencia · Spain",
+      dates: "Jun 18–21, 2026",
+      img: "https://images.unsplash.com/photo-1610294232527-d11a4c7ce40c?w=1200&q=80",
+      pill: "Jun 18–21 2026",
+      tagline: "A new tournament. Our partner La Liga club.",
+      headline: "Levante UD<br/>International Cup.",
+      intro: "The inaugural Levante UD International Cup takes place at Levante UD Sports City in Valencia, June 18–21, 2026. National and international clubs compete at the partner-club's training ground — football, culture, and Valencia combined.",
+      body: "Organised by Levante UD, the tournament combines competitive football with the full Sports City experience — Fan Zone, cultural activities, tourist access to Valencia, and training programmes alongside competition. Participants stay at the Sports City facilities.",
+      body2: "As a Ballerz Abroad partner club, Levante UD has reserved entry slots for squads travelling through us. The inaugural edition is a significant moment — be part of a tournament that will grow into one of the European calendar's fixtures.",
+      facts: [
+        ["Dates", "June 18–21, 2026"],
+        ["Location", "Levante UD Sports City, Valencia, Spain"],
+        ["Edition", "Inaugural 2026 tournament"],
+        ["Format", "Group + knockout · national and international clubs"],
+        ["Facilities", "Levante UD Sports City first-team pitches"],
+        ["Extras", "Fan Zone · cultural activities · Valencia city tours"],
+        ["Accommodation", "Sports City facilities for participating squads"],
+        ["Partner", "Organised by Levante UD · Ballerz Abroad allocated entry"],
+      ],
+      included: [
+        ["01", "Tournament entry", "Partner-allocated entry through Ballerz Abroad — confirmed slot."],
+        ["02", "Travel + accommodation", "Flights, Valencia transfers, Sports City / partner accommodation."],
+        ["03", "Camp lead", "Dedicated Ballerz Abroad lead throughout."],
+        ["04", "Training sessions", "Pre-tournament sessions on the Sports City pitches with Levante UD coaching staff."],
+        ["05", "Kit pack", "Tournament kit for every player."],
+        ["06", "Content", "Daily content — parents feed, club channels, and social."],
+      ],
+    },
+    {
+      id: "mic-punta-cana",
+      eyebrow: "T06 · CARIBBEAN WINDOW",
+      name: "MIC Punta Cana",
+      location: "Cap Cana · Dominican Republic",
+      dates: "Jun 24–29, 2026",
+      img: "https://images.unsplash.com/photo-1551958219-acbc608c6377?w=1200&q=80",
+      pill: "Jun 24–29 2026",
+      tagline: "MIC format. Caribbean staging.",
+      headline: "MIC<br/>Punta Cana.",
+      intro: "The second edition of MICFootball's Caribbean expansion. Jun 24–29, 2026 at Cap Cana Sports City in the Dominican Republic. 100+ teams from 20 countries. All-inclusive 4–5 star resort accommodation. The MIC format — in the Caribbean.",
+      body: "125,000 m² sports complex purpose-built for the tournament. 13 natural-grass pitches. The entire event takes place within one facility — teams travel from the hotel to the pitch on foot. Elite academies from Barcelona, Liverpool, Manchester United, Real Madrid, and Inter Miami competed in the 2025 edition.",
+      body2: "This is a premium window — the combination of high-level competition and full-resort accommodation makes it particularly suited to clubs rewarding a squad, combining a pre-season with something genuinely different, or competing internationally for the first time.",
+      facts: [
+        ["Dates", "June 24–29, 2026"],
+        ["Location", "Cap Cana Sports City, Punta Cana, Dominican Republic"],
+        ["Edition", "Second edition · first held 2025"],
+        ["Teams", "100+ teams from 20 countries"],
+        ["Facility", "125,000 m² sports complex · 13 natural-grass pitches"],
+        ["Accommodation", "All-inclusive 4–5 star resort on-site"],
+        ["Previous entrants", "Barcelona · Liverpool · Man Utd · Real Madrid · Inter Miami"],
+        ["Format", "MIC tournament format · full group + knockout stages"],
+      ],
+      included: [
+        ["01", "Tournament entry", "Full squad MIC Punta Cana registration."],
+        ["02", "Travel + all-inclusive accommodation", "Flights, transfers, all-inclusive 4–5 star resort for the tournament duration."],
+        ["03", "Camp lead", "Dedicated Ballerz Abroad lead throughout."],
+        ["04", "Training access", "On-site pre-tournament training on natural grass before group play."],
+        ["05", "Kit pack", "Tournament kit for every player."],
+        ["06", "Content", "Daily content feed — players, parents, and club channels."],
+      ],
+    },
+  ];
+
+  const selected = active ? tournaments.find(t => t.id === active) : null;
+
+  if (selected) {
+    return (
+      <>
+        <Nav active="tournaments" onNavigate={onNavigate} />
+
+        {/* TOURNAMENT HERO */}
+        <section className="hero" style={{ minHeight: "80vh" }}>
+          <div className="hero__img" style={{ backgroundImage: `url(${selected.img})` }}></div>
+          <div className="hero__grain"></div>
+          <div className="hero__gradient"></div>
+          <div className="hero__meta">
+            <span>{selected.dates}</span>
+            <span dangerouslySetInnerHTML={{ __html: selected.location.replace("·", "·") }}></span>
+          </div>
+          <div className="hero__inner">
+            <div className="hero__eyebrow">
+              <div className="hero__eyebrow-rule"></div>
+              <div className="hero__eyebrow-text">{selected.eyebrow}</div>
+            </div>
+            <h1 className="display-xl" dangerouslySetInnerHTML={{ __html: selected.headline }}></h1>
+            <div className="hero__sub">{selected.tagline}</div>
+            <div className="hero__ctas">
+              <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Apply for this tournament →</button>
+              <button className="btn btn--ghost btn--lg" onClick={() => setActive(null)}>← All tournaments</button>
+            </div>
+          </div>
+        </section>
+
+        {/* ABOUT */}
+        <section className="band">
+          <div className="wrap">
+            <EyebrowBar>01 — About</EyebrowBar>
+            <h2 className="section-h">{selected.name}.</h2>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
+              <div>
+                <div className="section-lead">{selected.intro}</div>
+                <p style={{ fontFamily: "var(--font-body)", fontSize: 16, lineHeight: 1.6, color: "var(--stand-200)", marginTop: 24 }}>{selected.body}</p>
+                <p style={{ fontFamily: "var(--font-body)", fontSize: 16, lineHeight: 1.6, color: "var(--stand-200)", marginTop: 16 }}>{selected.body2}</p>
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 0, borderTop: "1px solid rgba(246,243,235,0.12)" }}>
+                {selected.facts.map(([k, v]) => (
+                  <div key={k} style={{ display: "grid", gridTemplateColumns: "160px 1fr", gap: 16, padding: "16px 0", borderBottom: "1px solid rgba(246,243,235,0.12)" }}>
+                    <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.14em", color: "var(--stand-300)", textTransform: "uppercase" }}>{k}</div>
+                    <div style={{ fontFamily: "var(--font-body)", fontSize: 15, color: "var(--chalk-50)" }}>{v}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* WHAT'S INCLUDED */}
+        <section className="band">
+          <div className="wrap">
+            <EyebrowBar>02 — What's included</EyebrowBar>
+            <h2 className="section-h">Built into the package.</h2>
+            <div className="callout-grid">
+              {selected.included.map(([n, t, d]) => (
+                <div key={n} className="cell">
+                  <div className="cell__n">{n}</div>
+                  <div className="cell__t">{t}</div>
+                  <div className="cell__d">{d}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="app-band">
+          <div className="app-band__grid">
+            <div>
+              <EyebrowBar dark>Apply</EyebrowBar>
+              <h2 className="section-h">Secure your slot.</h2>
+              <div className="section-lead" style={{ color: "#545B63" }}>Tournament entry is managed through Ballerz Abroad. Apply with your squad details — we confirm availability and the full brief within two working days.</div>
+              <div style={{ display: "flex", gap: 12, marginTop: 32, flexWrap: "wrap" }}>
+                <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Apply for {selected.name} →</button>
+                <button className="btn btn--whatsapp btn--lg" onClick={() => window.open("https://wa.me/447867205763", "_blank")}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 2.1.55 4.14 1.6 5.95L2 22l4.31-1.13a9.86 9.86 0 0 0 5.73 1.82h0c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01A9.82 9.82 0 0 0 12.04 2zm5.46 14.16c-.23.65-1.34 1.24-1.87 1.32-.48.07-1.09.1-1.76-.11-.41-.13-.93-.3-1.6-.59-2.82-1.22-4.66-4.06-4.8-4.25-.14-.19-1.15-1.53-1.15-2.91 0-1.38.73-2.06.99-2.34.26-.28.56-.35.75-.35h.54c.17.01.41-.07.64.49.23.57.79 1.96.86 2.1.07.14.11.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.49-.14.13-.29.28-.13.55.16.27.71 1.17 1.52 1.9 1.04.93 1.92 1.21 2.19 1.34.27.13.43.11.59-.07.16-.18.69-.81.87-1.08.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.13.45.2.52.31.07.11.07.66-.16 1.31z"/></svg>
+                  Talk on WhatsApp
+                </button>
+              </div>
+            </div>
+            <div>
+              <div className="app-band__steps">
+                <div className="app-step"><div className="app-step__n">01</div><div><div className="app-step__t">Submit your squad details.</div><div className="app-step__d">Age group, squad size, level, preferred window.</div></div></div>
+                <div className="app-step"><div className="app-step__n">02</div><div><div className="app-step__t">We confirm availability.</div><div className="app-step__d">Within two working days — with full pricing and brief.</div></div></div>
+                <div className="app-step"><div className="app-step__n">03</div><div><div className="app-step__t">Deposit secures your slot.</div><div className="app-step__d">Payment plan agreed. We handle everything from there.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <Footer />
+        <WhatsAppFab />
+      </>
+    );
+  }
+
+  // TOURNAMENTS HUB
+  return (
+    <>
+      <Nav active="tournaments" onNavigate={onNavigate} />
+
+      {/* HERO */}
+      <section className="hero" style={{ minHeight: "72vh" }}>
+        <div className="hero__img" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1577223625816-7546f13df25d?w=2000&q=80)" }}></div>
+        <div className="hero__grain"></div>
+        <div className="hero__gradient"></div>
+        <div className="hero__meta">
+          <span>6 TOURNAMENTS</span>
+          <span><strong>SPAIN</strong> · <strong>PORTUGAL</strong> · <strong>CARIBBEAN</strong></span>
+          <span>2026 ENTRIES OPEN</span>
+        </div>
+        <div className="hero__inner">
+          <div className="hero__eyebrow">
+            <div className="hero__eyebrow-rule"></div>
+            <div className="hero__eyebrow-text">MIC · Copa Daurada · Mare Nostrum · Cruyff · Levante Cup · Punta Cana</div>
+          </div>
+          <h1 className="display-xl">Compete at<br/>the reference events.</h1>
+          <div className="hero__sub">Direct entries into European youth football's most contested tournaments — and one Caribbean window. Selected for competition level, not prestige alone.</div>
+        </div>
+      </section>
+
+      {/* TOURNAMENT GRID */}
+      <section className="band">
+        <div className="wrap">
+          <EyebrowBar>2026 tournament calendar</EyebrowBar>
+          <h2 className="section-h">Six events. One calendar.</h2>
+          <div className="section-lead">Ballerz Abroad manages entry, travel, accommodation, and your camp lead for all six tournaments. One application — we do the rest.</div>
+
+          <div style={{ display: "flex", flexDirection: "column", gap: 0, marginTop: 48, borderTop: "1px solid rgba(246,243,235,0.12)" }}>
+            {tournaments.map((t, i) => (
+              <div
+                key={t.id}
+                onClick={() => { setActive(t.id); window.scrollTo({ top: 0, behavior: "instant" }); }}
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "80px 280px 1fr 240px 56px",
+                  alignItems: "center",
+                  gap: 24,
+                  padding: "32px 0",
+                  borderBottom: "1px solid rgba(246,243,235,0.12)",
+                  cursor: "pointer",
+                  transition: "padding var(--dur-2) var(--ease-out)",
+                }}
+                className="tournament-row"
+              >
+                <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.18em", color: "var(--stand-300)", textTransform: "uppercase" }}>T0{i+1}</div>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: "clamp(24px, 2.5vw, 40px)", lineHeight: 0.95, textTransform: "uppercase", color: "var(--chalk-50)" }}>{t.name}</div>
+                <div style={{ fontFamily: "var(--font-body)", fontSize: 14, color: "var(--stand-300)", lineHeight: 1.5 }}>{t.tagline}</div>
+                <div>
+                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.14em", color: "var(--volt-500)", textTransform: "uppercase", marginBottom: 4 }}>{t.dates}</div>
+                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.12em", color: "var(--stand-300)", textTransform: "uppercase" }}>{t.location}</div>
+                </div>
+                <div style={{ fontFamily: "var(--font-mono)", fontSize: 18, color: "var(--stand-300)", textAlign: "right", transition: "color var(--dur-2), transform var(--dur-2) var(--ease-out)" }} className="tournament-row__arrow">→</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TOURNAMENT CARDS */}
+      <section className="band">
+        <div className="wrap">
+          <EyebrowBar>In detail</EyebrowBar>
+          <h2 className="section-h">Every tournament.</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24, marginTop: 48 }}>
+            {tournaments.map((t) => (
+              <div
+                key={t.id}
+                style={{ position: "relative", overflow: "hidden", cursor: "pointer", background: "var(--ink-800)", aspectRatio: "4/5" }}
+                onClick={() => { setActive(t.id); window.scrollTo({ top: 0, behavior: "instant" }); }}
+                className="exp-card"
+              >
+                <div className="exp-card__img" style={{ backgroundImage: `url(${t.img})` }}></div>
+                <div className="exp-card__grad"></div>
+                <span className="exp-card__pill"><span className="dot"></span>{t.pill}</span>
+                <div className="exp-card__body">
+                  <div className="exp-card__meta">{t.eyebrow}</div>
+                  <div className="exp-card__t">{t.name}</div>
+                  <div className="exp-card__sub">{t.location}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* HOW IT WORKS */}
+      <section className="band">
+        <div className="wrap">
+          <EyebrowBar>How we manage tournament entry</EyebrowBar>
+          <h2 className="section-h">One application. Everything managed.</h2>
+          <div className="section-lead">Ballerz Abroad handles registration, travel, accommodation, and your camp lead for every tournament on this page. You apply once — we build the rest.</div>
+          <div className="callout-grid" style={{ marginTop: 48 }}>
+            <div className="cell">
+              <div className="cell__n">01</div>
+              <div className="cell__t">Apply with your squad details.</div>
+              <div className="cell__d">Age group, squad size, preferred tournament, window. We respond within two working days with availability and pricing.</div>
+            </div>
+            <div className="cell">
+              <div className="cell__n">02</div>
+              <div className="cell__t">We confirm and build the brief.</div>
+              <div className="cell__d">Full itinerary, travel plan, accommodation, kit, and camp lead assignment. One point of contact throughout.</div>
+            </div>
+            <div className="cell">
+              <div className="cell__n">03</div>
+              <div className="cell__t">Deposit and you're confirmed.</div>
+              <div className="cell__d">Payment plan agreed. Tournament entry secured. We handle everything from registration to wheels-up and back.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="app-band">
+        <div className="app-band__grid">
+          <div>
+            <EyebrowBar dark>Apply</EyebrowBar>
+            <h2 className="section-h">Tournament by application.</h2>
+            <div className="section-lead" style={{ color: "#545B63" }}>Tell us which tournament, your squad size, and age group. We confirm availability and pricing within two working days — info@ballerzabroad.com or 07867 205763.</div>
+            <div style={{ display: "flex", gap: 12, marginTop: 32, flexWrap: "wrap" }}>
+              <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Start an application →</button>
+              <button className="btn btn--whatsapp btn--lg" onClick={() => window.open("https://wa.me/447867205763", "_blank")}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 2.1.55 4.14 1.6 5.95L2 22l4.31-1.13a9.86 9.86 0 0 0 5.73 1.82h0c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01A9.82 9.82 0 0 0 12.04 2zm5.46 14.16c-.23.65-1.34 1.24-1.87 1.32-.48.07-1.09.1-1.76-.11-.41-.13-.93-.3-1.6-.59-2.82-1.22-4.66-4.06-4.8-4.25-.14-.19-1.15-1.53-1.15-2.91 0-1.38.73-2.06.99-2.34.26-.28.56-.35.75-.35h.54c.17.01.41-.07.64.49.23.57.79 1.96.86 2.1.07.14.11.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.49-.14.13-.29.28-.13.55.16.27.71 1.17 1.52 1.9 1.04.93 1.92 1.21 2.19 1.34.27.13.43.11.59-.07.16-.18.69-.81.87-1.08.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.13.45.2.52.31.07.11.07.66-.16 1.31z"/></svg>
+                Talk on WhatsApp
+              </button>
+            </div>
+          </div>
+          <div>
+            <div className="app-band__steps">
+              <div className="app-step"><div className="app-step__n">01</div><div><div className="app-step__t">Choose your tournament.</div><div className="app-step__d">Or let us recommend one based on your squad's level and window.</div></div></div>
+              <div className="app-step"><div className="app-step__n">02</div><div><div className="app-step__t">Tell us about your squad.</div><div className="app-step__d">Age group, size, level, and preferred travel dates.</div></div></div>
+              <div className="app-step"><div className="app-step__n">03</div><div><div className="app-step__t">We confirm and handle everything.</div><div className="app-step__d">Entry, travel, kit, accommodation, camp lead — end to end.</div></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+      <WhatsAppFab />
+    </>
+  );
+}
+
+window.TournamentsPage = TournamentsPage;
+
+
+// Application — 4-step premium intake.
+
+const { useState: useStateApp } = React;
+
+function Application({ onNavigate }) {
+  const [step, setStep] = useStateApp(0);
+  const [club, setClub] = useStateApp("Hackney Marshes FC");
+  const [role, setRole] = useStateApp("Head Coach");
+  const [orgType, setOrgType] = useStateApp("Grassroots");
+  const [size, setSize] = useStateApp("18 players");
+  const [age, setAge]  = useStateApp("U16 — U18");
+  const [level, setLevel] = useStateApp("Regional");
+  const [goals, setGoals] = useStateApp([1, 2]);
+  const [dest, setDest] = useStateApp(["Barcelona"]);
+  const [budget, setBudget] = useStateApp("£1,800 — £2,200");
+
+  const steps = ["Your club", "Your squad", "Your goals", "Window & budget"];
+
+  const toggleArr = (state, setter, v) =>
+    setter(state.includes(v) ? state.filter(x => x !== v) : [...state, v]);
+
+  return (
+    <div className="app-page">
+      <Nav active="application" onNavigate={onNavigate} />
+
+      <div className="app-page__wrap">
+        <div className="eyebrow-bar">
+          <div className="eyebrow-bar__rule"></div>
+          <div className="eyebrow-bar__text">Application · Step {String(step + 1).padStart(2, "0")} / 04 · {steps[step]}</div>
+        </div>
+        <h2 className="section-h" style={{ marginBottom: 24 }}>
+          {step === 0 && "Tell us about your club."}
+          {step === 1 && "Tell us about your squad."}
+          {step === 2 && "What does success look like?"}
+          {step === 3 && "Window & budget."}
+        </h2>
+
+        <div className="app-stepper">
+          {steps.map((_, i) => (
+            <div key={i} className={"app-stepper__dot " + (i < step ? "is-done" : i === step ? "is-current" : "")}></div>
+          ))}
+        </div>
+
+        {/* Step 0 */}
+        {step === 0 && (
+          <>
+            <div className="app-form-row">
+              <label>Club / organisation</label>
+              <input value={club} onChange={(e) => setClub(e.target.value)} />
+            </div>
+            <div className="app-form-row">
+              <label>Your role</label>
+              <input value={role} onChange={(e) => setRole(e.target.value)} />
+            </div>
+            <div className="app-form-row">
+              <label>Type of organisation</label>
+              <div className="chips">
+                {["Grassroots", "Academy", "School", "Non-league", "US college", "Other"].map(c => (
+                  <button key={c} className={"chip " + (orgType === c ? "is-on" : "")} onClick={() => setOrgType(c)}>{c}</button>
+                ))}
+              </div>
+            </div>
+            <div className="app-form-row">
+              <label>Your email</label>
+              <input placeholder="head.coach@yourclub.com" type="email" />
+            </div>
+          </>
+        )}
+
+        {/* Step 1 */}
+        {step === 1 && (
+          <>
+            <div className="app-form-row">
+              <label>Squad size</label>
+              <input value={size} onChange={(e) => setSize(e.target.value)} />
+            </div>
+            <div className="app-form-row">
+              <label>Age groups travelling</label>
+              <input value={age} onChange={(e) => setAge(e.target.value)} />
+            </div>
+            <div className="app-form-row">
+              <label>Level of competition you typically face</label>
+              <div className="chips">
+                {["Local league", "County", "Regional", "National", "Academy / pro", "Mixed"].map(c => (
+                  <button key={c} className={"chip " + (level === c ? "is-on" : "")} onClick={() => setLevel(c)}>{c}</button>
+                ))}
+              </div>
+            </div>
+            <div className="app-form-row">
+              <label>Number of staff travelling</label>
+              <input placeholder="e.g. 3 coaches, 1 physio" />
+            </div>
+          </>
+        )}
+
+        {/* Step 2 */}
+        {step === 2 && (
+          <>
+            <div className="app-form-row">
+              <label>What do you want this camp to deliver? (Pick all that apply)</label>
+              <div className="chips">
+                {["Pre-season fitness", "Team culture", "Tactical reset", "Scouting exposure", "Player development", "Reward for the season", "International experience"].map((c, i) => (
+                  <button
+                    key={c}
+                    className={"chip " + (goals.includes(i) ? "is-on" : "")}
+                    onClick={() => toggleArr(goals, setGoals, i)}
+                  >{c}</button>
+                ))}
+              </div>
+            </div>
+            <div className="app-form-row">
+              <label>How would your squad describe a successful trip?</label>
+              <textarea placeholder="Tell us in your own words — we read every application." />
+            </div>
+          </>
+        )}
+
+        {/* Step 3 */}
+        {step === 3 && (
+          <>
+            <div className="app-form-row">
+              <label>Preferred destination</label>
+              <div className="chips">
+                {["Barcelona", "Valencia", "Seville", "Amsterdam", "England", "Open — surprise us"].map(c => (
+                  <button
+                    key={c}
+                    className={"chip " + (dest.includes(c) ? "is-on" : "")}
+                    onClick={() => toggleArr(dest, setDest, c)}
+                  >{c}</button>
+                ))}
+              </div>
+            </div>
+            <div className="app-form-row">
+              <label>Preferred window</label>
+              <input placeholder="e.g. April 2026, half-term, pre-season" />
+            </div>
+            <div className="app-form-row">
+              <label>Workable budget (per player)</label>
+              <div className="chips">
+                {["£1,200 — £1,500", "£1,500 — £1,800", "£1,800 — £2,200", "£2,200+", "Open"].map(c => (
+                  <button key={c} className={"chip " + (budget === c ? "is-on" : "")} onClick={() => setBudget(c)}>{c}</button>
+                ))}
+              </div>
+            </div>
+            <div className="app-form-row">
+              <label>Anything else we should know</label>
+              <textarea placeholder="Optional." />
+            </div>
+          </>
+        )}
+
+        {/* Navigation controls */}
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 56, paddingTop: 24, borderTop: "1px solid rgba(246,243,235,0.12)" }}>
+          <button
+            className="btn btn--ghost"
+            disabled={step === 0}
+            onClick={() => setStep(s => Math.max(0, s - 1))}
+            style={{ opacity: step === 0 ? 0.35 : 1 }}
+          >← Previous</button>
+          {step < 3 ? (
+            <button className="btn btn--primary btn--lg" onClick={() => setStep(s => s + 1)}>Continue →</button>
+          ) : (
+            <button className="btn btn--primary btn--lg" onClick={() => alert("Application submitted — we'll be in touch within 2 working days.")}>Submit application →</button>
+          )}
+        </div>
+
+        <div style={{ marginTop: 64, fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--stand-300)" }}>
+          We respond to every application within two working days · By submitting, you accept a follow-up call from a UK number.
+        </div>
+      </div>
+
+      <WhatsAppFab />
+    </div>
+  );
+}
+
+window.Application = Application;
+
+
+const { useState: useAppState } = React;
+
+function App() {
+  const [route, setAppRoute] = useAppState("home");
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [route]);
+  const screenLabel =
+    route === "home"         ? "Home" :
+    route === "levante"      ? "Levante UD Experience" :
+    route === "betis"        ? "Real Betis Experience" :
+    route === "benfica"      ? "Benfica Experience" :
+    route === "tournaments"  ? "Tournaments" :
+    route === "application"  ? "Application" : "Home";
+  return (
+    <div data-screen-label={screenLabel}>
+      {route === "home"        && <Home       onNavigate={setAppRoute} />}
+      {route === "levante"     && <LevanteDetail  onNavigate={setAppRoute} />}
+      {route === "betis"       && <BetisDetail    onNavigate={setAppRoute} />}
+      {route === "benfica"     && <BenficaDetail  onNavigate={setAppRoute} />}
+      {route === "tournaments" && <TournamentsPage onNavigate={setAppRoute} />}
+      {route === "application" && <Application    onNavigate={setAppRoute} />}
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
+</body>
+</html>
