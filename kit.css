@@ -61,7 +61,7 @@ html, body { margin: 0; padding: 0; background: var(--ink-900); color: var(--cha
 .nav__menu.is-open { opacity: 1; pointer-events: auto; transform: translateY(0); }
 .nav__menu-inner { padding: 18px; display: flex; flex-direction: column; gap: 2px; }
 .nav__menu-eyebrow {
-  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em; font-weight: 700;
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em;
   color: var(--volt-500); text-transform: uppercase;
   padding: 6px 12px 10px;
   border-bottom: 1px solid rgba(246,243,235,0.08);
@@ -169,9 +169,9 @@ html, body { margin: 0; padding: 0; background: var(--ink-900); color: var(--cha
 section.band { padding: clamp(64px, 8vw, 128px) 0; position: relative; }
 .eyebrow-bar { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
 .eyebrow-bar__rule { width: 32px; height: 1px; background: var(--volt-500); }
-.eyebrow-bar__text { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em; color: var(--volt-500); text-transform: uppercase; font-weight: 700; }
+.eyebrow-bar__text { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em; color: var(--volt-500); text-transform: uppercase; font-weight: 500; }
 h2.section-h { font-family: var(--font-display); font-size: clamp(48px, 7vw, 112px); line-height: 0.88; letter-spacing: -0.01em; text-transform: uppercase; margin: 0 0 24px; color: var(--chalk-50); }
-.section-lead { font-family: var(--font-heading); font-weight: 700; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.45; color: var(--stand-200); max-width: 620px; }
+.section-lead { font-family: var(--font-heading); font-weight: 400; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.45; color: var(--stand-200); max-width: 620px; }
 
 /* Audience list */
 .audience-list { display: flex; flex-direction: column; border-top: 1px solid rgba(246,243,235,0.12); margin-top: 48px; }
