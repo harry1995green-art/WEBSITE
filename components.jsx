@@ -69,7 +69,6 @@ function Nav({ active = "home", onNavigate }) {
           </div>
         </div>
         <div className="nav__cta">
-          <a href="tel:07867205763" className="lang-pill" style={{ border: "1px solid rgba(246,243,235,0.2)" }}>07867 205763</a>
           <button className="btn btn--primary btn--sm" onClick={() => go("application")}>Get in touch <span>→</span></button>
           <button className="nav__hamburger" onClick={() => setMobileOpen(true)} aria-label="Open menu">
             <span></span><span></span><span></span>

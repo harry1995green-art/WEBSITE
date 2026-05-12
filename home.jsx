@@ -76,9 +76,9 @@ function Home({ onNavigate }) {
         <div className="hero__inner">
           <div className="hero__eyebrow">
             <div className="hero__eyebrow-rule"></div>
-            <div className="hero__eyebrow-text">Levante UD · Real Betis · MIC · Mare Nostrum · Cruyff</div>
+            <div className="hero__eyebrow-text">ENGLAND · SPAIN · PORTUGAL · NETHERLANDS</div>
           </div>
-          <h1 className="display-xl">Train like<br/>a pro abroad.</h1>
+          <h1 className="display-xl">PROFESSIONAL FOOTBALL EXPERIENCES</h1>
           <div className="hero__sub">Professional training environments, organised fixtures, and tournament football across Spain, the Netherlands and the UK. Built around your squad.</div>
           <div className="hero__ctas">
             <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Apply for a tour →</button>
