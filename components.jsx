@@ -102,11 +102,11 @@ function AudienceRow({ n, title, desc }) {
 // ---------------------------------------------------------------------------
 // Experience card
 // ---------------------------------------------------------------------------
-function ExpCard({ featured, image, meta, title, sub, pill, onClick, gradBg }) {
+function ExpCard({ featured, image, meta, title, sub, pill, onClick, gradBg, gradBgSize }) {
   return (
     <div className={"exp-card " + (featured ? "exp-card--featured" : "exp-card--regular")} onClick={onClick}>
       <div className="exp-card__img" style={{ backgroundImage: `url(${image})` }}></div>
-      <div className="exp-card__grad" style={gradBg ? { backgroundImage: `url(${gradBg})`, backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundSize: "cover" } : {}}></div>
+      <div className="exp-card__grad" style={gradBg ? { backgroundImage: `url(${gradBg})`, backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundSize: gradBgSize || "cover" } : {}}></div>
       {pill && (
         <span className="exp-card__pill">
           <span className="dot"></span>{pill}
