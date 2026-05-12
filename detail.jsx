@@ -216,7 +216,7 @@ function Detail({ onNavigate, expId = "exp-levante" }) {
         <section className="band" style={{ background: "var(--ink-800)", borderTop: "1px solid rgba(246,243,235,0.08)", borderBottom: "1px solid rgba(246,243,235,0.08)" }}>
           <div className="wrap">
             <EyebrowBar>04 — Accommodation</EyebrowBar>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
+            <div className="exp-detail-accommodation" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
               <div>
                 <div style={{ fontFamily: "'Archivo', system-ui, sans-serif", fontWeight: 800, fontSize: 28, lineHeight: 1.2, letterSpacing: "-0.01em", color: "#F6F3EB", marginBottom: 12, textTransform: "none" }}>{d.accommodation.name}</div>
                 {d.accommodation.link && (
@@ -233,9 +233,9 @@ function Detail({ onNavigate, expId = "exp-levante" }) {
                 </div>
               </div>
               <div>
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 8 }}>
+                <div className="exp-detail-photos-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 8 }}>
                   {d.accommodation.photos.slice(0, 6).map((p, i) => (
-                    <div key={i} style={{ position: "relative", aspectRatio: i === 0 ? "16/9" : "4/3", gridColumn: i === 0 ? "span 2" : "span 1", overflow: "hidden" }}>
+                    <div key={i} className={i === 0 ? "exp-detail-photos-first" : ""} style={{ position: "relative", aspectRatio: i === 0 ? "16/9" : "4/3", gridColumn: i === 0 ? "span 2" : "span 1", overflow: "hidden" }}>
                       <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${p.url})`, backgroundSize: "cover", backgroundPosition: "center", transition: "transform 0.6s cubic-bezier(0.22,1,0.36,1)" }}
                         onMouseEnter={e => e.currentTarget.style.transform = "scale(1.04)"}
                         onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
@@ -245,7 +245,7 @@ function Detail({ onNavigate, expId = "exp-levante" }) {
                   ))}
                 </div>
                 {d.accommodation.photos.length > 6 && (
-                  <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8, marginTop: 8 }}>
+                  <div className="exp-detail-photos-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8, marginTop: 8 }}>
                     {d.accommodation.photos.slice(6).map((p, i) => (
                       <div key={i} style={{ position: "relative", aspectRatio: "4/3", overflow: "hidden" }}>
                         <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${p.url})`, backgroundSize: "cover", backgroundPosition: "center" }}></div>

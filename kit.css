@@ -373,6 +373,11 @@ footer.foot { background: var(--ink-1000); color: var(--chalk-50); padding: clam
   /* Dest explorer */
   .dest-grid { grid-template-columns: 1fr !important; }
 
+  /* Experience detail pages */
+  .exp-detail-accommodation { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .exp-detail-photos-grid { grid-template-columns: 1fr !important; }
+  .exp-detail-photos-first { grid-column: span 1 !important; }
+
   /* Blog */
   .blog-grid { grid-template-columns: 1fr !important; }
   .blog-feature { grid-template-columns: 1fr !important; }
