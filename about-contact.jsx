@@ -85,16 +85,19 @@ function About({ onNavigate }) {
 
       {/* TEAM */}
       <section className="band">
-        <div className="wrap">
-          <EyebrowBar>03 — Team</EyebrowBar>
-          <h2 className="section-h">Who you'll meet.</h2>
-          <div style={{ marginTop: 48, maxWidth: 600 }}>
-            <div style={{ background: "var(--ink-800)", border: "1px solid rgba(246,243,235,0.08)", padding: 32 }}>
-              <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.18em", color: "var(--volt-500)", textTransform: "uppercase", marginBottom: 8 }}>Founder & Tour Director</div>
-              <h3 style={{ fontFamily: "var(--font-display)", fontSize: 28, color: "var(--chalk-50)", textTransform: "uppercase", marginBottom: 12 }}>Harrison Green</h3>
-              <div style={{ fontFamily: "var(--font-body)", fontSize: 16, color: "var(--stand-200)", lineHeight: 1.6 }}>
-                <p style={{ marginBottom: 12 }}>Harrison is Ballerz Abroad. He designs every window, talks to every applicant, travels with every squad, and coordinates every partnership.</p>
-                <p>After 20 years in football — first as a player, then as a grassroots coach — he built Ballerz Abroad to fill a gap. No call centres, no templates, no layers. You speak directly to the person who'll design your tour.</p>
+        <div className="wrap" style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: 64, alignItems: "center" }}>
+          <div style={{ aspectRatio: "3/4", background: "var(--ink-800)", border: "1px solid rgba(246,243,235,0.08)", borderRadius: 8, overflow: "hidden", backgroundImage: `url(https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fc50f71cb4d8340f68b4f304608879763?format=webp&width=800&height=1200)`, backgroundSize: "cover", backgroundPosition: "center" }}></div>
+          <div>
+            <EyebrowBar>03 — Team</EyebrowBar>
+            <h2 className="section-h">Who you'll meet.</h2>
+            <div style={{ marginTop: 24 }}>
+              <div style={{ background: "var(--ink-800)", border: "1px solid rgba(246,243,235,0.08)", padding: 32 }}>
+                <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.18em", color: "var(--volt-500)", textTransform: "uppercase", marginBottom: 8 }}>Founder & Tour Director</div>
+                <h3 style={{ fontFamily: "var(--font-display)", fontSize: 28, color: "var(--chalk-50)", textTransform: "uppercase", marginBottom: 12 }}>Harrison Green</h3>
+                <div style={{ fontFamily: "var(--font-body)", fontSize: 16, color: "var(--stand-200)", lineHeight: 1.6 }}>
+                  <p style={{ marginBottom: 12 }}>Harrison is Ballerz Abroad. He designs every window, talks to every applicant, travels with every squad, and coordinates every partnership.</p>
+                  <p>After 20 years in football — first as a player, then as a grassroots coach — he built Ballerz Abroad to fill a gap. No call centres, no templates, no layers. You speak directly to the person who'll design your tour.</p>
+                </div>
               </div>
             </div>
           </div>
