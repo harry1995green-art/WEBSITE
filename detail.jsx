@@ -75,7 +75,7 @@ const EXP_DATA = {
     eyebrow: "Lisbon · PT · Seixal training environment",
     sub: "Inside Benfica's Seixal campus — the most decorated academy in modern Portuguese football. Coached by partner-club staff, tested against the Sub-19 field.",
     location: "Lisbon · PT",
-    facts: [["Country", "Portugal"], ["Partner", "SL Benfica"], ["Age", "U14 — U19"], ["From", "£2,150 pp"]],
+    facts: [["Country", "Portugal"], ["Partner", "SL Benfica"], ["Age", "U7 — U19"], ["From", "£749"]],
     img: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=2000&q=80",
     pill: "By application",
     accent: "Summer window · Jul 12 — 19 2026",
