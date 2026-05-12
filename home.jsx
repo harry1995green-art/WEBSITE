@@ -36,10 +36,10 @@ function Home({ onNavigate }) {
       <section className="band" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="stat-row">
-            <StatCell n="07" label="Days abroad" />
-            <StatCell n="15" label="Pro sessions" />
-            <StatCell n="03" label="Int. fixtures" />
-            <StatCell n="01" label="Pro environment" accent />
+            <StatCell n="4" label="countries" />
+            <StatCell n="15" label="tour destinations" />
+            <StatCell n="4" label="pro club partners" />
+            <StatCell n="100%" label="tailored " accent />
           </div>
         </div>
       </section>
@@ -75,6 +75,7 @@ function Home({ onNavigate }) {
               sub="Inside a La Liga club's training environment. Academy coaching, contested fixtures, and the Levante UD International Cup. Individual Player Development available."
               pill="Application open"
               onClick={() => onNavigate("levante")}
+              gradBg="https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fe56947d566fa42c08392dcadc64de8f3"
             />
             <ExpCard
               image="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=900&q=80"
