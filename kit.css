@@ -331,10 +331,10 @@ footer.foot { background: var(--ink-1000); color: var(--chalk-50); padding: clam
   .wrap { padding: 0 20px; }
 
   /* Stats */
-  .stat-row { grid-template-columns: 1fr 1fr; }
-  .stat-cell { border-right: none !important; border-bottom: 1px solid rgba(246,243,235,0.12); padding: 20px 16px !important; }
-  .stat-cell .n { font-size: clamp(32px, 5vw, 56px) !important; }
-  .stat-cell .l { font-size: 9px !important; }
+  .stat-row { grid-template-columns: 1fr !important; }
+  .stat-cell { border-right: none !important; border-bottom: 1px solid rgba(246,243,235,0.12); padding: 24px 16px !important; }
+  .stat-cell .n { font-size: clamp(36px, 6vw, 56px) !important; }
+  .stat-cell .l { font-size: 10px !important; }
 
   /* Audiences */
   .audience-row { grid-template-columns: 40px 1fr 30px; gap: 12px; }
