@@ -121,15 +121,104 @@ Not the right fit for squads at very early grassroots level entering their first
   },
   "tour-copa-daurada": {
     name: "Copa Daurada.",
-    eyebrow: "Salou · Costa Daurada · ES",
-    sub: "Grassroots-through-academy bracket on the Mediterranean coast. 1,500+ matches in a single week.",
+    eyebrow: "Tournament · Spain · Costa Daurada",
+    sub: "Five days of international tournament football on the Costa Daurada. Over 90 teams from across Europe. Salou, Spain — Easter and summer windows available.",
     location: "Salou · ES",
-    facts: [["Country", "Spain"], ["Window", "Apr / Oct 2026"], ["Age", "U8 — U18"], ["Teams", "300+"]],
+    facts: [["Country", "Spain"], ["Windows", "Easter & Summer 2026"], ["Age", "U8 — U16"], ["Teams", "90+"]],
     img: "https://images.unsplash.com/photo-1521412644187-c49fa049e84d?w=2000&q=80",
-    pill: "Two windows / year",
+    pill: "Two windows available",
     accent: "Beachside basing · FIFA-grade pitches",
-    summary: "Copa Daurada opens the European tournament calendar. Brackets from U8 through U18 play across the Salou coast on dedicated tournament pitches. Bracketed format — every team gets a knockout fixture.",
+    summary: "Copa Daurada is an international youth football tournament held in Salou on the Costa Daurada with two windows per year — Easter and summer.",
     accommodation: CAMBRILS_ACCOM,
+    sections: [
+      {
+        eyebrow: "01 — What Is Copa Daurada",
+        title: "International tournament football in the best possible setting.",
+        content: `The Copa Daurada is an international youth football tournament held in Salou on the Costa Daurada — a stretch of Mediterranean coastline about 100 kilometres south-west of Barcelona. It runs over five days and brings together more than 90 teams from across Europe, competing across grassroots and academy brackets on one of the most modern multi-pitch sports facilities in Spain.
+
+Where MIC Costa Brava is the benchmark for elite academy competition, Copa Daurada occupies a different and equally important space — a high-quality international tournament that is genuinely accessible across ability levels, from grassroots clubs entering their first overseas tournament to development squads looking for competitive European football in a well-organised environment.
+
+Two windows are available: Easter and summer. Both run from the same venue in Salou. Both offer the same format and standard. The window you choose depends on your squad's calendar.`,
+      },
+      {
+        eyebrow: "02 — Format",
+        title: "How it works.",
+        content: `Copa Daurada is played across eight adjacent natural grass, hybrid, and artificial pitches at the Futbol Salou Sports Center — all on the same site, meaning no long transfers between matches. Everything happens in one place.
+
+Group stage: Teams are drawn into groups of four and play a round-robin format. The top two from each group advance to the Gold Phase final rounds. Third and fourth-placed teams enter a Playoff B — meaning every team is guaranteed football throughout and no squad is simply eliminated after the group stage.
+
+Minimum matches: Every team is guaranteed a minimum of four matches across the tournament.
+
+Match format:
+F11 (11-a-side): Two halves of 25 minutes
+F7 (7-a-side): Two halves of 20 minutes
+
+Age categories: U8 · U10 · U12 · U14 · U16 · Girls categories available
+
+Windows:
+Easter Edition — April 2026 · Salou, Costa Daurada
+Summer Edition — May 2026 · Salou, Costa Daurada`,
+      },
+      {
+        eyebrow: "03 — Why Copa Daurada Works for UK Squads",
+        title: "The right level. The right environment. The right trip.",
+        content: `Not every squad is ready for MIC. Not every club should be entering their players into the most competitive youth tournament in Europe on their first overseas football tour. Copa Daurada is the honest answer for squads who want genuine international competition — teams from 15 or more countries, a properly structured tournament, a professional facility — without the step up in opposition standard that MIC demands.
+
+For grassroots clubs running their first overseas tour, Copa Daurada delivers everything that matters: international competition, a great location, a well-organised event, and a format that guarantees your players are still playing on the final day regardless of group stage results.
+
+For academies using Copa Daurada as part of a broader Spain tour, it works perfectly as a competition element alongside training sessions at a partner club earlier in the week — giving players a context to apply what they've worked on in training.
+
+We'll tell you honestly which tournament fits your squad. Copa Daurada is frequently the right answer.`,
+      },
+      {
+        eyebrow: "04 — Salou and the Costa Daurada",
+        title: "The location does a lot of the work.",
+        content: `Salou is a Mediterranean resort town sitting directly on the Costa Daurada coastline — fine sandy beaches, warm April weather, and a relaxed atmosphere that makes the days between matches feel like a genuine trip rather than just football logistics.
+
+Everything in Salou is walkable. The tournament facility, accommodation, beaches, and the town itself are all within easy reach on foot. For squads travelling with parents, it removes the common tournament stress of long transfers and unfamiliar logistics.
+
+Barcelona is 100 kilometres away — close enough for a day trip if your itinerary has space. PortAventura, one of Europe's largest theme parks, is right next door to Salou for squads who want to build an off-pitch activity into the programme.
+
+For younger age groups particularly, Salou as a location lands well with players and parents in equal measure.`,
+      },
+      {
+        eyebrow: "05 — How Ballerz Abroad Builds a Copa Daurada Tour",
+        title: "More than tournament entry.",
+        content: `Ballerz Abroad secures your entry, manages accommodation in Salou, arranges all ground transfers, and provides a dedicated tour lead with your squad throughout. Half-board meals are typically included within the tournament package — breakfast and dinner provided, with catering available at the venue during match days.
+
+A typical Copa Daurada tour with Ballerz Abroad:
+
+Days 1–2 — Arrival in Spain, professional training sessions at a partner club
+Days 3–7 — Copa Daurada competition, five full tournament days in Salou
+Day 8 — Departure
+
+As with all Ballerz Abroad tours, the training days before the tournament are built around your squad's objectives — not added as an afterthought. Your players arrive at Copa Daurada having already trained in a professional environment that week.`,
+      },
+      {
+        eyebrow: "06 — Who This Is For",
+        title: "Right for your squad if…",
+        content: `You're organising a first overseas football tour and want a well-structured international tournament that is competitive without being the most demanding environment available
+
+You have a mixed-ability or mixed-age group and need a tournament with accessible brackets across different levels
+
+You're travelling with younger age groups — U8 through U14 — where the environment and experience matter as much as the opposition standard
+
+You want an Easter or summer window in Spain with a great location that works for players and parents alike
+
+You're an academy using tournament football as part of a broader Spain-based development programme
+
+Copa Daurada sits in a different bracket from MIC — deliberately so. If your squad is at the top end of their domestic pathway and ready to face European academy opposition, we'll point you towards MIC. If Copa Daurada is the right fit, we'll tell you that too.`,
+      },
+      {
+        eyebrow: "07 — Also Available in Spain",
+        title: "Other tournament options from the Ballerz Abroad network.",
+        content: `MIC Costa Brava — The reference European academy tournament. Easter window. 400+ teams, 40+ countries. For squads at the top end of their development pathway.
+
+Mare Nostrum Cup — U8–U19 international field. Catalonia, Mediterranean coast. Easter window.
+
+Levante UD International Cup — Hosted by our La Liga partner club in Valencia.`,
+      },
+    ],
   },
   "tour-mare-nostrum": {
     name: "Mare Nostrum Cup.",
