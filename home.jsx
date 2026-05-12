@@ -77,6 +77,7 @@ function Home({ onNavigate }) {
               onClick={() => onNavigate("levante")}
               gradBg="https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fb918eef2dd304197848f3e96ef0bf284?format=webp&width=800&height=1200"
               gradBgSize="25%"
+              gradBgPosition="right center"
             />
             <ExpCard
               image="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=900&q=80"
