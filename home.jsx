@@ -11,7 +11,7 @@ function Home({ onNavigate }) {
 
       {/* HERO */}
       <section className="hero">
-        <div className="hero__img" style={{ backgroundImage: `url(${HERO_IMG})`, backgroundSize: "contain" }}></div>
+        <div className="hero__img" style={{ backgroundImage: `url(${HERO_IMG})`, backgroundSize: "50%" }}></div>
         <div className="hero__grain"></div>
         <div className="hero__gradient"></div>
         <div className="hero__meta">
