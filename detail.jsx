@@ -1,335 +1,179 @@
-// Experience detail pages — Levante UD, Real Betis, Benfica.
+// Experience detail page — single camp deep-dive, parametrised by id.
 
-// ---------------------------------------------------------------------------
-// Shared detail layout helpers
-// ---------------------------------------------------------------------------
+const EXP_DATA = {
+  "exp-nxgenpro": {
+    title: "NXGENPro.",
+    eyebrow: "England · UK-based development programme",
+    sub: "Year-round professional development inside an English elite environment. UK-managed end to end — domestic windows, no travel friction.",
+    location: "England · UK",
+    facts: [["Country", "England"], ["Format", "Year-round windows"], ["Age", "U13 — U18"], ["From", "£895 pp"]],
+    img: "https://images.unsplash.com/photo-1518604666860-9ed391f76460?w=2000&q=80",
+    pill: "Year-round",
+    accent: "Apr 2026 · May 2026 · Jul 2026 — multiple windows live",
+    summary: "Built for clubs and squads who want pro-grade exposure without crossing a border. NXGENPro runs against the calendar of partner academies in the English football pyramid.",
+    accommodation: {
+      name: "Gordon's School · Augusta Boarding House · Surrey, England",
+      link: "https://nx-genpro.com",
+      linkLabel: "Visit NXGENPro.com — quote BALLERZ ABROAD to book",
+      desc: "Players are housed in the Augusta Boarding House at Gordon's School — a recently refurbished residential boarding house run by resident NXGEN staff members. Gordon's School boasts a prestigious £6 million first-class sports hub with a 1,233 m² indoor sports hall and a brand new 150 m² fully air-conditioned fitness suite, alongside dedicated football pitches and recovery facilities.",
+      features: ["Augusta Boarding House · recently refurbished", "Resident NXGEN staff on-site 24/7", "£6m sports hub + 1,233m² indoor hall", "150m² air-conditioned fitness suite", "Football pitches on campus", "Full board · all meals provided"],
+      photos: [
+        { url: "https://nx-genpro.com/wp-content/uploads/2025/08/3163_618-1-1024x683.jpg", cap: "Gordon's School sports hub" },
+        { url: "https://images.unsplash.com/photo-1580041065738-e72023775cdc?w=900&q=80", cap: "Boarding house grounds" },
+        { url: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&q=80", cap: "Fitness suite" },
+        { url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900&q=80", cap: "Team dining" },
+      ],
+    },
+  },
+  "exp-levante": {
+    title: "Levante Academy Experience.",
+    eyebrow: "Valencia · ES · Pro Experience · La Liga partner",
+    sub: "Inside Levante UD's training environment. Individual Player Development available. Parents welcome to travel. The fullest pro-grade window we run.",
+    location: "Valencia · ES",
+    facts: [["Country", "Spain"], ["Partner", "Levante UD"], ["Age", "U13 — U19"], ["From", "£1,895 pp"]],
+    img: "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?w=2000&q=80",
+    pill: "Application open",
+    accent: "Easter window · Apr 04 — 11 2026",
+    summary: "Full La Liga academy environment. Coached by Levante UD academy staff, fed at the Ciutat Esportiva, matched against Levante's own age-group XIs.",
+    accommodation: {
+      name: "Global-Levante UD International Residence · L'Eliana, Valencia",
+      desc: "Players stay at the official Global-Levante UD International Residence — located in L'Eliana, one of the quietest and most comfortable areas of the Valencian community. The 23,000 m² campus houses up to 120 players with private bathrooms, dining room (breakfast, lunch and dinner), swimming pool, gymnasium, crossfit area, padel courts, tennis courts, a cafeteria, games room and 24-hour surveillance. Players live, eat and recover where Levante UD's international programme is based — the environment is part of the experience.",
+      features: ["Up to 120 players · private bathrooms", "Full board (breakfast, lunch & dinner)", "Swimming pool + sports centre", "Gymnasium · crossfit · padel · tennis", "Games room · TV lounge · laundry", "24-hour surveillance + tutoring service", "Direct bus transfer to training campus"],
+      photos: [
+        { url: "https://images.unsplash.com/photo-1580041065738-e72023775cdc?w=1200&q=80", cap: "Residence exterior" },
+        { url: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=900&q=80", cap: "Player rooms" },
+        { url: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=900&q=80", cap: "Swimming pool" },
+        { url: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80", cap: "Dining room" },
+        { url: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&q=80", cap: "Gymnasium" },
+        { url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900&q=80", cap: "Cafeteria" },
+        { url: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=900&q=80", cap: "Grounds" },
+        { url: "https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=900&q=80", cap: "Courts" },
+      ],
+    },
+  },
+  "exp-betis": {
+    title: "Real Betis Academy Experience.",
+    eyebrow: "Seville · ES · Andalusian football",
+    sub: "Andalusian football, on its own terms. Coached at the Real Betis Cantera, contested against the Andalusian academy field.",
+    location: "Seville · ES",
+    facts: [["Country", "Spain"], ["Partner", "Real Betis Balompié"], ["Age", "U14 — U19"], ["From", "£1,950 pp"]],
+    img: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=2000&q=80",
+    pill: "Application open",
+    accent: "Spring window · May 02 — 09 2026",
+    summary: "Cantera environment. Possession-heavy, southern Spanish football. The week ends with one fixture inside the Estadio Benito Villamarín training complex.",
+    accommodation: {
+      name: "4-star team hotel · Seville city centre",
+      desc: "Squads are based in a four-star hotel in central Seville, within easy reach of the Real Betis training facility. A dedicated squad floor, daily breakfast and team dinner, plus a team briefing room are reserved for Ballerz Abroad groups. The hotel's location puts players in the heart of Seville — Andalusia's football culture is part of the curriculum.",
+      features: ["Squad-floor block booking", "Breakfast + team dinner included", "Dedicated team briefing room", "Central Seville location", "Short coach transfer to Betis cantera", "On-site pool + wellness area"],
+      photos: [
+        { url: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=900&q=80", cap: "Hotel exterior" },
+        { url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=900&q=80", cap: "Pool terrace" },
+        { url: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=900&q=80", cap: "Player rooms" },
+        { url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900&q=80", cap: "Team dining" },
+      ],
+    },
+  },
+  "exp-benfica": {
+    title: "Benfica Academy Experience.",
+    eyebrow: "Lisbon · PT · Seixal training environment",
+    sub: "Inside Benfica's Seixal campus — the most decorated academy in modern Portuguese football. Coached by partner-club staff, tested against the Sub-19 field.",
+    location: "Lisbon · PT",
+    facts: [["Country", "Portugal"], ["Partner", "SL Benfica"], ["Age", "U14 — U19"], ["From", "£2,150 pp"]],
+    img: "https://images.unsplash.com/photo-1577471488278-16eec37ffcc2?w=2000&q=80",
+    pill: "By application",
+    accent: "Summer window · Jul 12 — 19 2026",
+    summary: "Seixal access. Daily sessions, video debrief, two fixtures against Benfica-aligned youth sides, one against an external Lisbon academy.",
+    accommodation: {
+      name: "Crowne Plaza Caparica Lisbon by IHG · Costa da Caparica",
+      link: "https://www.ihg.com/crowneplaza/hotels/gb/en/caparica/lispr/hoteldetail",
+      linkLabel: "View Crowne Plaza Caparica Lisbon on IHG.com",
+      desc: "Squads on the Benfica window stay at the Crowne Plaza Caparica Lisbon by IHG — strategically located near Costa da Caparica, just 15 minutes from Lisbon city centre. The hotel features indoor and outdoor heated swimming pools, a full Wellness Spa (sauna, Turkish bath, treatments), a fully equipped fitness suite, seven conference rooms and the RAIMUNDO Restaurant. A dedicated team floor with full-board service is reserved for Ballerz Abroad groups. Morning transfers run direct to the Benfica Seixal campus.",
+      features: ["Costa da Caparica · 15 min from Lisbon", "Crowne Plaza by IHG · four-star", "Indoor + outdoor heated pools", "Full Wellness Spa · sauna + Turkish bath", "Fitness centre · pilates · yoga · aqua aerobics", "7 conference rooms · team suite", "RAIMUNDO Restaurant on site", "~20 min transfer to Seixal campus"],
+      photos: [
+        { url: "https://digital.ihg.com/is/image/ihg/crowne-plaza-caparica-8467903272-4x3", cap: "Hotel exterior" },
+        { url: "https://digital.ihg.com/is/image/ihg/crowne-plaza-caparica-8456254860-4x3", cap: "Rooms" },
+        { url: "https://digital.ihg.com/is/image/ihg/crowne-plaza-caparica-8730142370-4x3", cap: "Spa" },
+        { url: "https://digital.ihg.com/is/image/ihg/crowne-plaza-caparica-8730142846-4x3", cap: "Wellness centre" },
+        { url: "https://digital.ihg.com/is/image/ihg/crowne-plaza-caparica-8431809472-4x3", cap: "RAIMUNDO Restaurant" },
+        { url: "https://digital.ihg.com/is/image/ihg/crowne-plaza-caparica-8467903272-2x1", cap: "Hotel overview" },
+      ],
+    },
+  },
+  "exp-feyenoord": {
+    title: "Feyenoord Academy Experience.",
+    eyebrow: "Rotterdam · NL · Eredivisie partner",
+    sub: "Inside Feyenoord's training environment. Direct, physical, attacking Dutch football — contested against Rotterdam and Dutch youth opposition.",
+    location: "Rotterdam · NL",
+    facts: [["Country", "Netherlands"], ["Partner", "Feyenoord"], ["Age", "U14 — U19"], ["From", "£1,795 pp"]],
+    img: "https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?w=2000&q=80",
+    pill: "Application open",
+    accent: "Pre-season window · Jul — Aug 2026",
+    summary: "Feyenoord's academy — one of the most respected in European football — opens its training complex to Ballerz Abroad squads. Coached by partner-club staff, tested against Feyenoord youth sides and Dutch regional opposition. De Kuip access. Seven days in Rotterdam.",
+    accommodation: {
+      name: "Mainport Hotel · Rotterdam Old Harbour",
+      link: "https://mainport.1strotterdamhotels.com/en/",
+      linkLabel: "Visit mainport.1strotterdamhotels.com",
+      desc: "Players stay at Mainport Hotel — a boutique design hotel set on the Maas riverfront in Rotterdam's Old Harbour (Leuvehaven). The hotel's Vitality Spa features an outdoor rooftop pool, sauna, steam room and treatments. 214 contemporary rooms, a riverside restaurant and bar, and direct access to the waterfront. Feyenoord's training complex is a short transfer by coach. Rotterdam's architecture, the waterfront and De Kuip are part of the daily backdrop.",
+      features: ["Old Harbour · Leuvehaven, Rotterdam", "Vitality Spa · rooftop pool + sauna", "214 contemporary rooms", "Riverside restaurant + bar", "Full board for travelling squads", "Short transfer to Feyenoord training complex"],
+      photos: [
+        { url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80", cap: "Mainport Hotel exterior" },
+        { url: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=900&q=80", cap: "Rooftop pool" },
+        { url: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=900&q=80", cap: "Player rooms" },
+        { url: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80", cap: "Riverside restaurant" },
+        { url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900&q=80", cap: "Hotel interiors" },
+        { url: "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=900&q=80", cap: "Spa & wellness" },
+      ],
+    },
+  },
+};
 
-function DetailHero({ eyebrow, badge1, badge2, badge3, img, title, sub, onNavigate }) {
-  return (
-    <section className="hero" style={{ minHeight: "88vh" }}>
-      <div className="hero__img" style={{ backgroundImage: `url(${img})` }}></div>
-      <div className="hero__grain"></div>
-      <div className="hero__gradient"></div>
-      <div className="hero__meta">
-        {badge1 && <span>{badge1}</span>}
-        {badge2 && <span dangerouslySetInnerHTML={{ __html: badge2 }}></span>}
-        {badge3 && <span>{badge3}</span>}
-      </div>
-      <div className="hero__inner">
-        <div className="hero__eyebrow">
-          <div className="hero__eyebrow-rule"></div>
-          <div className="hero__eyebrow-text">{eyebrow}</div>
-        </div>
-        <h1 className="display-xl" dangerouslySetInnerHTML={{ __html: title }}></h1>
-        <div className="hero__sub">{sub}</div>
-        <div className="hero__ctas">
-          <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Apply for this experience →</button>
-          <button className="btn btn--ghost btn--lg" onClick={() => window.open("https://wa.me/447867205763", "_blank")}>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 2.1.55 4.14 1.6 5.95L2 22l4.31-1.13a9.86 9.86 0 0 0 5.73 1.82h0c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01A9.82 9.82 0 0 0 12.04 2zm5.46 14.16c-.23.65-1.34 1.24-1.87 1.32-.48.07-1.09.1-1.76-.11-.41-.13-.93-.3-1.6-.59-2.82-1.22-4.66-4.06-4.8-4.25-.14-.19-1.15-1.53-1.15-2.91 0-1.38.73-2.06.99-2.34.26-.28.56-.35.75-.35h.54c.17.01.41-.07.64.49.23.57.79 1.96.86 2.1.07.14.11.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.49-.14.13-.29.28-.13.55.16.27.71 1.17 1.52 1.9 1.04.93 1.92 1.21 2.19 1.34.27.13.43.11.59-.07.16-.18.69-.81.87-1.08.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.13.45.2.52.31.07.11.07.66-.16 1.31z"/></svg>
-            Talk to us first
-          </button>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function IncludedGrid({ items }) {
-  return (
-    <div className="callout-grid">
-      {items.map(([n, t, d]) => (
-        <div key={n} className="cell">
-          <div className="cell__n">{n}</div>
-          <div className="cell__t">{t}</div>
-          <div className="cell__d">{d}</div>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function ApplyCTA({ headline, sub, detail1, detail2, detail3, campName, onNavigate }) {
-  return (
-    <section className="app-band">
-      <div className="app-band__grid">
-        <div>
-          <EyebrowBar dark>Apply</EyebrowBar>
-          <h2 className="section-h">{headline}</h2>
-          <div className="section-lead" style={{ color: "#545B63" }}>{sub}</div>
-          <div style={{ display: "flex", gap: 12, marginTop: 32, flexWrap: "wrap" }}>
-            <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Apply for {campName} →</button>
-            <button className="btn btn--whatsapp btn--lg" onClick={() => window.open("https://wa.me/447867205763", "_blank")}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 2.1.55 4.14 1.6 5.95L2 22l4.31-1.13a9.86 9.86 0 0 0 5.73 1.82h0c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01A9.82 9.82 0 0 0 12.04 2zm5.46 14.16c-.23.65-1.34 1.24-1.87 1.32-.48.07-1.09.1-1.76-.11-.41-.13-.93-.3-1.6-.59-2.82-1.22-4.66-4.06-4.8-4.25-.14-.19-1.15-1.53-1.15-2.91 0-1.38.73-2.06.99-2.34.26-.28.56-.35.75-.35h.54c.17.01.41-.07.64.49.23.57.79 1.96.86 2.1.07.14.11.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.49-.14.13-.29.28-.13.55.16.27.71 1.17 1.52 1.9 1.04.93 1.92 1.21 2.19 1.34.27.13.43.11.59-.07.16-.18.69-.81.87-1.08.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.13.45.2.52.31.07.11.07.66-.16 1.31z"/></svg>
-              Talk on WhatsApp
-            </button>
-          </div>
-        </div>
-        <div>
-          <div className="app-band__steps">
-            {detail1 && <div className="app-step"><div className="app-step__n">●</div><div><div className="app-step__t">{detail1[0]}</div><div className="app-step__d">{detail1[1]}</div></div></div>}
-            {detail2 && <div className="app-step"><div className="app-step__n">●</div><div><div className="app-step__t">{detail2[0]}</div><div className="app-step__d">{detail2[1]}</div></div></div>}
-            {detail3 && <div className="app-step"><div className="app-step__n">£</div><div><div className="app-step__t">{detail3[0]}</div><div className="app-step__d">{detail3[1]}</div></div></div>}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ---------------------------------------------------------------------------
-// Levante UD Experience
-// ---------------------------------------------------------------------------
-function LevanteDetail({ onNavigate }) {
+function Detail({ onNavigate, expId = "exp-levante" }) {
+  const d = EXP_DATA[expId] || EXP_DATA["exp-levante"];
   return (
     <>
-      <Nav active="levante" onNavigate={onNavigate} />
+      <Nav active={expId} onNavigate={onNavigate} />
 
-      <DetailHero
-        img="https://images.unsplash.com/photo-1610294232527-d11a4c7ce40c?w=2000&q=80"
-        eyebrow="Pro Experience · Valencia · La Liga partner"
-        badge1="PRO EXPERIENCE"
-        badge2="<strong>VALENCIA</strong> · SPAIN · ES"
-        badge3="2026 WINDOWS OPEN"
-        title="Levante UD<br/>experience."
-        sub="Train inside a La Liga club's academy environment. Professional coaching staff, contested fixtures, and the option to compete in the Levante UD International Cup. Built around your squad."
-        onNavigate={onNavigate}
-      />
+      {/* DETAIL HERO */}
+      <section className="hero" style={{ minHeight: "85vh" }}>
+        <div className="hero__img" style={{ backgroundImage: `url(${d.img})` }}></div>
+        <div className="hero__grain"></div>
+        <div className="hero__gradient"></div>
+        <div className="hero__meta">
+          <span>{d.location.toUpperCase()}</span>
+          <span><strong>{d.pill.toUpperCase()}</strong></span>
+          <span>{d.accent.toUpperCase()}</span>
+        </div>
+        <div className="hero__inner">
+          <div className="hero__eyebrow">
+            <div className="hero__eyebrow-rule"></div>
+            <div className="hero__eyebrow-text">{d.eyebrow}</div>
+          </div>
+          <h1 className="display-xl">{d.title}</h1>
+          <div className="hero__sub">{d.sub}</div>
+          <div className="hero__ctas">
+            <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Apply for this experience →</button>
+            <button className="btn btn--ghost btn--lg" onClick={() => onNavigate("detail")}>View all experiences</button>
+          </div>
+        </div>
+      </section>
 
       {/* QUICK STATS */}
       <section className="band" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="stat-row">
-            <StatCell n="07" label="Days in Valencia" />
-            <StatCell n="12" label="Pro sessions" />
-            <StatCell n="03" label="Contested fixtures" />
-            <StatCell n="01" label="La Liga environment" accent />
-          </div>
-        </div>
-      </section>
-
-      {/* ABOUT THE PARTNER */}
-      <section className="band">
-        <div className="wrap">
-          <EyebrowBar>01 — The partner</EyebrowBar>
-          <h2 className="section-h">Levante UD.</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
-            <div>
-              <div className="section-lead">One of Valencia's historic La Liga clubs. Levante UD's Sports City sits on the edge of the city — a full-scale professional training environment with multiple first-team pitches, academy facilities, a gym complex, and recovery suite.</div>
-              <p style={{ fontFamily: "var(--font-body)", fontSize: 16, lineHeight: 1.6, color: "var(--stand-200)", marginTop: 24 }}>Your squad trains where the professional players train. Academy-grade pitches, the same dressing rooms, the same tunnel walk. The environment is intentional — it changes what players believe is possible.</p>
-              <p style={{ fontFamily: "var(--font-body)", fontSize: 16, lineHeight: 1.6, color: "var(--stand-200)", marginTop: 16 }}>Levante UD coaching staff deliver the sessions — UEFA-licensed, academy-experienced, and briefed on your squad before you arrive.</p>
-            </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 0, borderTop: "1px solid rgba(246,243,235,0.12)" }}>
-              {[
-                ["Location", "Levante UD Sports City, Valencia, Spain"],
-                ["Club", "Levante UD · La Liga"],
-                ["Facility", "First-team pitches, gym, recovery suite, dressing rooms"],
-                ["Coaching", "Levante UD UEFA-licensed academy coaches"],
-                ["Age groups", "U10 — U19 (squad-dependent)"],
-                ["Tournament option", "Levante UD International Cup · June 2026"],
-              ].map(([k, v]) => (
-                <div key={k} style={{ display: "grid", gridTemplateColumns: "160px 1fr", gap: 16, padding: "16px 0", borderBottom: "1px solid rgba(246,243,235,0.12)" }}>
-                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.14em", color: "var(--stand-300)", textTransform: "uppercase" }}>{k}</div>
-                  <div style={{ fontFamily: "var(--font-body)", fontSize: 15, color: "var(--chalk-50)" }}>{v}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ITINERARY */}
-      <section className="band">
-        <div className="wrap">
-          <EyebrowBar>02 — Itinerary</EyebrowBar>
-          <h2 className="section-h">Seven days inside La Liga.</h2>
-          <div className="section-lead">An indicative schedule — your final programme is built around squad age, training load, and your club's goals.</div>
-          <div className="itin">
-            <div className="itin-day">
-              <div className="itin-day__n">DAY 01</div>
-              <div><div className="itin-day__title">Arrival · Sports City orientation · Kit handover</div><div className="itin-day__time">14:00 – 21:00</div></div>
-              <div className="itin-day__desc">Land at Valencia Airport. Ground transfer to the hotel. Kit handover at the team room — match-shirt, training kit, recovery wear. Evening walk through Levante UD's Sports City with your camp lead.</div>
-            </div>
-            <div className="itin-day">
-              <div className="itin-day__n">DAY 02</div>
-              <div><div className="itin-day__title">Session 01 · Technical individual skills</div><div className="itin-day__time">09:30 – 11:30 / 16:00 – 17:30</div></div>
-              <div className="itin-day__desc">Double session with Levante UD academy coaches. Morning: individual technical work — first touch, movement, positioning. Afternoon: possession patterns, pressing triggers, video debrief in the team room.</div>
-            </div>
-            <div className="itin-day">
-              <div className="itin-day__n">DAY 03</div>
-              <div><div className="itin-day__title">Session 02 · Shape &amp; team organisation</div><div className="itin-day__time">10:00 – 12:30</div></div>
-              <div className="itin-day__desc">Tactical session focused on the team's shape in and out of possession. Emphasis on transitions — how Levante's academy presses and builds. Afternoon recovery: pool, nutrition briefing.</div>
-            </div>
-            <div className="itin-day">
-              <div className="itin-day__n">DAY 04</div>
-              <div><div className="itin-day__title">Fixture 01 · Valencia-area academy XI</div><div className="itin-day__time">19:30 KO · Floodlit</div></div>
-              <div className="itin-day__desc">First contested fixture. Pre-match meal, full tunnel walk, matchday environment. Opposition sourced from the Valencia academy network — matched to your level. Post-match debrief with coaching staff on the bus.</div>
-            </div>
-            <div className="itin-day">
-              <div className="itin-day__n">DAY 05</div>
-              <div><div className="itin-day__title">Behind-the-scenes · Q&amp;A · Free afternoon</div><div className="itin-day__time">10:00 – 18:00</div></div>
-              <div className="itin-day__desc">Media room access. Q&amp;A with a Levante UD academy coach — football philosophy, route to pro football, life at a La Liga club. Free afternoon in Valencia city centre.</div>
-            </div>
-            <div className="itin-day">
-              <div className="itin-day__n">DAY 06</div>
-              <div><div className="itin-day__title">Fixture 02 + Session 03 · Set-piece masterclass</div><div className="itin-day__time">10:00 – 12:30 / 19:00 KO</div></div>
-              <div className="itin-day__desc">Morning set-piece session — attacking and defending corners, free-kicks, throw-in routines. Evening second fixture against a different opponent from the academy network.</div>
-            </div>
-            <div className="itin-day">
-              <div className="itin-day__n">DAY 07</div>
-              <div><div className="itin-day__title">Fixture 03 · Debrief · Wheels-up</div><div className="itin-day__time">10:00 KO · 19:00 dep</div></div>
-              <div className="itin-day__desc">Final fixture before lunch. Full squad debrief with coaching staff in the team room. Transfer to Valencia Airport. Wheels-up at sunset.</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* LEVANTE UD INTERNATIONAL CUP */}
-      <section className="band">
-        <div className="wrap">
-          <EyebrowBar>03 — Tournament option</EyebrowBar>
-          <h2 className="section-h">Levante UD Int. Cup.</h2>
-          <div className="section-lead">Add the Levante UD International Cup to your experience window. National and international clubs compete at the Sports City in an inaugural tournament combining football, culture, and Valencia.</div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 1, background: "rgba(246,243,235,0.12)", marginTop: 48, border: "1px solid rgba(246,243,235,0.12)" }}>
-            {[
-              ["Dates", "June 18–21, 2026"],
-              ["Location", "Levante UD Sports City, Valencia"],
-              ["Format", "Group stage + knockout · national &amp; international clubs"],
-              ["Edition", "Inaugural 2026 tournament"],
-              ["Facilities", "First-team pitches at the Sports City"],
-              ["Add-on", "Combine with the 7-day experience or stand-alone entry"],
-            ].map(([k, v]) => (
-              <div key={k} style={{ background: "var(--ink-900)", padding: "28px 32px", display: "flex", flexDirection: "column", gap: 10 }}>
-                <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.16em", color: "var(--volt-500)", textTransform: "uppercase" }}>{k}</div>
-                <div style={{ fontFamily: "var(--font-heading)", fontWeight: 600, fontSize: 16, color: "var(--chalk-50)", lineHeight: 1.4 }} dangerouslySetInnerHTML={{ __html: v }}></div>
-              </div>
+            {d.facts.map(([l, v], i) => (
+              <StatCell key={l} n={v} label={l} accent={i === 3} />
             ))}
           </div>
         </div>
       </section>
 
-      {/* INCLUDED */}
+      {/* SUMMARY */}
       <section className="band">
         <div className="wrap">
-          <EyebrowBar>04 — What's included</EyebrowBar>
-          <h2 className="section-h">Built into every window.</h2>
-          <IncludedGrid items={[
-            ["01", "La Liga facility access", "Daily use of Levante UD's Sports City — pitches, gym, recovery suite, dressing rooms."],
-            ["02", "Levante UD coaching staff", "12 sessions delivered by UEFA-licensed Levante UD academy coaches."],
-            ["03", "3 contested fixtures", "Opponents sourced from Valencia's academy network and matched to your squad level."],
-            ["04", "Full kit pack", "Match shirt, training kit, and recovery wear — kept by every player."],
-            ["05", "Travel + accommodation", "Flights, ground transfers, 4-star team hotel with squad-floor block booking."],
-            ["06", "Camp lead + content", "Dedicated UK camp lead with your squad throughout. Daily content feed for parents and social."],
-          ]} />
-        </div>
-      </section>
-
-      {/* INDIVIDUAL PLAYER DEVELOPMENT */}
-      <section className="band">
-        <div className="wrap">
-          <EyebrowBar>05 — Individual option</EyebrowBar>
-          <h2 className="section-h">Player development programme.</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
-            <div>
-              <div className="section-lead">The Levante UD experience is available for individual players — not just full squads. Parents are welcome to travel.</div>
-              <p style={{ fontFamily: "var(--font-body)", fontSize: 16, lineHeight: 1.6, color: "var(--stand-200)", marginTop: 24 }}>Players join a structured programme inside the Levante UD training environment alongside other invited individual players. Bespoke coaching focus agreed ahead of the window — technical, positional, or tactical.</p>
-              <p style={{ fontFamily: "var(--font-body)", fontSize: 16, lineHeight: 1.6, color: "var(--stand-200)", marginTop: 16 }}>A written performance report is provided at the end of the programme. Parents can observe training sessions and meet the coaching staff.</p>
-              <div style={{ marginTop: 32 }}>
-                <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Apply for the individual programme →</button>
-              </div>
-            </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 0, borderTop: "1px solid rgba(246,243,235,0.12)" }}>
-              {[
-                ["Format", "Individual player · join existing programme"],
-                ["Duration", "5 or 7 days · selected windows only"],
-                ["Coaching", "Dedicated 1:1 sessions alongside squad programme"],
-                ["Parents", "Welcome to travel · parent accommodation available"],
-                ["Report", "Written performance review at close of programme"],
-                ["Age groups", "U12 — U18"],
-              ].map(([k, v]) => (
-                <div key={k} style={{ display: "grid", gridTemplateColumns: "140px 1fr", gap: 16, padding: "16px 0", borderBottom: "1px solid rgba(246,243,235,0.12)" }}>
-                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.14em", color: "var(--stand-300)", textTransform: "uppercase" }}>{k}</div>
-                  <div style={{ fontFamily: "var(--font-body)", fontSize: 15, color: "var(--chalk-50)" }}>{v}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <ApplyCTA
-        headline="Application open."
-        sub="2026 windows are filling against the Levante UD Sports City calendar. Apply with your squad details — we'll confirm fit and availability within two working days."
-        detail1={["Application open", "Limited windows per year against the partner-club calendar."]}
-        detail2={["Squads + individuals", "Full squad bookings and individual player development slots available."]}
-        detail3={["From £1,895 per player", "Indicative, all-in. Individual programme pricing on request."]}
-        campName="the Levante UD experience"
-        onNavigate={onNavigate}
-      />
-
-      <Footer />
-      <WhatsAppFab />
-    </>
-  );
-}
-
-// ---------------------------------------------------------------------------
-// Real Betis Experience
-// ---------------------------------------------------------------------------
-function BetisDetail({ onNavigate }) {
-  return (
-    <>
-      <Nav active="betis" onNavigate={onNavigate} />
-
-      <DetailHero
-        img="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=2000&q=80"
-        eyebrow="Pro Experience · Seville · La Liga partner"
-        badge1="PRO EXPERIENCE"
-        badge2="<strong>SEVILLE</strong> · ANDALUSIA · ES"
-        badge3="2026 WINDOWS OPEN"
-        title="Real Betis<br/>experience."
-        sub="Train in a La Liga environment on the edge of Europe's most passionate football city. Professional coaching, contested fixtures, and behind-the-scenes access at one of Seville's iconic clubs."
-        onNavigate={onNavigate}
-      />
-
-      {/* QUICK STATS */}
-      <section className="band" style={{ paddingTop: 0 }}>
-        <div className="wrap">
-          <div className="stat-row">
-            <StatCell n="07" label="Days in Seville" />
-            <StatCell n="12" label="Pro sessions" />
-            <StatCell n="03" label="Contested fixtures" />
-            <StatCell n="01" label="La Liga environment" accent />
-          </div>
-        </div>
-      </section>
-
-      {/* ABOUT THE PARTNER */}
-      <section className="band">
-        <div className="wrap">
-          <EyebrowBar>01 — The partner</EyebrowBar>
-          <h2 className="section-h">Real Betis.</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
-            <div>
-              <div className="section-lead">Real Betis Balompié — one of the most celebrated clubs in Andalusia and Spain. Founded 1907. La Liga. Europa League regulars. A club built on culture, identity, and the kind of football that gets under your skin.</div>
-              <p style={{ fontFamily: "var(--font-body)", fontSize: 16, lineHeight: 1.6, color: "var(--stand-200)", marginTop: 24 }}>The Ballerz Abroad Real Betis experience places your squad inside the club's training environment. Coaching delivered by Betis academy staff — same methodology, same standards the first team operates to.</p>
-              <p style={{ fontFamily: "var(--font-body)", fontSize: 16, lineHeight: 1.6, color: "var(--stand-200)", marginTop: 16 }}>Seville is one of Spain's great football cities. Your squad trains in it, lives in it, competes in it. The environment is part of the programme — not just the backdrop.</p>
-            </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 0, borderTop: "1px solid rgba(246,243,235,0.12)" }}>
-              {[
-                ["Location", "Seville, Andalusia, Spain"],
-                ["Club", "Real Betis Balompié · La Liga"],
-                ["Founded", "1907"],
-                ["Facility", "Academy training complex, pitches, gym, recovery areas"],
-                ["Coaching", "Real Betis academy coaches · UEFA-licensed"],
-                ["Age groups", "U10 — U19 (squad-dependent)"],
-              ].map(([k, v]) => (
-                <div key={k} style={{ display: "grid", gridTemplateColumns: "160px 1fr", gap: 16, padding: "16px 0", borderBottom: "1px solid rgba(246,243,235,0.12)" }}>
-                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.14em", color: "var(--stand-300)", textTransform: "uppercase" }}>{k}</div>
-                  <div style={{ fontFamily: "var(--font-body)", fontSize: 15, color: "var(--chalk-50)" }}>{v}</div>
-                </div>
-              ))}
-            </div>
-          </div>
+          <EyebrowBar>01 — The environment</EyebrowBar>
+          <h2 className="section-h">What this is.</h2>
+          <div className="section-lead">{d.summary}</div>
         </div>
       </section>
 
@@ -337,283 +181,126 @@ function BetisDetail({ onNavigate }) {
       <section className="band">
         <div className="wrap">
           <EyebrowBar>02 — Itinerary</EyebrowBar>
-          <h2 className="section-h">Seven days in Andalusia.</h2>
-          <div className="section-lead">An indicative programme — built around your squad's age, level, and goals.</div>
+          <h2 className="section-h">Seven days, seven standards.</h2>
+          <div className="section-lead">An indicative schedule — your final itinerary is built around squad age, training load, and your club's specific goals.</div>
           <div className="itin">
-            <div className="itin-day">
-              <div className="itin-day__n">DAY 01</div>
-              <div><div className="itin-day__title">Arrival · Club orientation · Kit handover</div><div className="itin-day__time">13:00 – 21:00</div></div>
-              <div className="itin-day__desc">Fly into Seville. Ground transfer. Hotel check-in and kit handover in the team room. Evening club orientation — ground tour, meeting the Betis coaching staff who'll be delivering your sessions.</div>
-            </div>
-            <div className="itin-day">
-              <div className="itin-day__n">DAY 02</div>
-              <div><div className="itin-day__title">Session 01 · Betis philosophy — possession &amp; press</div><div className="itin-day__time">09:30 – 11:30 / 15:30 – 17:00</div></div>
-              <div className="itin-day__desc">Morning technical block: Betis academy principles of ball retention under pressure. Afternoon: team shape session — how Betis builds from the back, triggers to press, transitions. Video debrief after.</div>
-            </div>
-            <div className="itin-day">
-              <div className="itin-day__n">DAY 03</div>
-              <div><div className="itin-day__title">Session 02 · Positional play masterclass</div><div className="itin-day__time">10:00 – 12:30</div></div>
-              <div className="itin-day__desc">Positional play session focused on spatial awareness, third-man combinations, and exploiting width. Afternoon recovery — pool, and a behind-the-scenes tour of Benito Villamarín stadium.</div>
-            </div>
-            <div className="itin-day">
-              <div className="itin-day__n">DAY 04</div>
-              <div><div className="itin-day__title">Fixture 01 · Andalusian academy opposition</div><div className="itin-day__time">19:30 KO · Floodlit</div></div>
-              <div className="itin-day__desc">First fixture. Pre-match meal, full tunnel walk, matchday environment. Opposition curated from Seville's academy landscape — level-matched to your squad. Post-match recovery and debrief.</div>
-            </div>
-            <div className="itin-day">
-              <div className="itin-day__n">DAY 05</div>
-              <div><div className="itin-day__title">Recovery · Q&amp;A with Betis academy staff</div><div className="itin-day__time">10:00 – 18:00</div></div>
-              <div className="itin-day__desc">Recovery morning. Q&amp;A with a Betis academy coach — the philosophy, the path to professional football, what scouts look for at this level. Free afternoon in Seville.</div>
-            </div>
-            <div className="itin-day">
-              <div className="itin-day__n">DAY 06</div>
-              <div><div className="itin-day__title">Session 03 · Set pieces + Fixture 02</div><div className="itin-day__time">10:00 – 12:00 / 19:00 KO</div></div>
-              <div className="itin-day__desc">Morning set-piece session with the Betis coaches. Evening second fixture against a different opponent — same competitive standard, different tactical challenge.</div>
-            </div>
-            <div className="itin-day">
-              <div className="itin-day__n">DAY 07</div>
-              <div><div className="itin-day__title">Fixture 03 · Debrief · Wheels-up</div><div className="itin-day__time">10:00 KO · 18:00 dep</div></div>
-              <div className="itin-day__desc">Final fixture. Squad debrief with coaching staff. Transfer to Seville Airport. Wheels-up in the early evening.</div>
-            </div>
+            <div className="itin-day"><div className="itin-day__n">DAY 01</div><div><div className="itin-day__title">Arrival · Kit handover · Stadium walk-in</div><div className="itin-day__time">14:00 – 22:00</div></div><div className="itin-day__desc">Squad transfer from the airport. Hotel check-in. Kit handover at the team room — match shirt, training kit, recovery wear. Evening walk-in at the partner club's stadium.</div></div>
+            <div className="itin-day"><div className="itin-day__n">DAY 02</div><div><div className="itin-day__title">Session 01 · Possession & shape</div><div className="itin-day__time">09:30 — 11:30 / 16:00 — 17:30</div></div><div className="itin-day__desc">Double-session under partner-club academy coaches. Morning technical block; afternoon shape, pressing triggers, video debrief.</div></div>
+            <div className="itin-day"><div className="itin-day__n">DAY 03</div><div><div className="itin-day__title">Fixture 01 · Partner academy XI</div><div className="itin-day__time">19:30 KO</div></div><div className="itin-day__desc">First fixture, floodlit. Pre-match meal, tunnel walk, full matchday environment. Post-match recovery + debrief on the bus.</div></div>
+            <div className="itin-day"><div className="itin-day__n">DAY 04</div><div><div className="itin-day__title">Recovery · Behind-the-scenes</div><div className="itin-day__time">10:00 — 18:00</div></div><div className="itin-day__desc">Pool recovery. Media room access. Q&A with academy first-team coach. Free evening in town.</div></div>
+            <div className="itin-day"><div className="itin-day__n">DAY 05</div><div><div className="itin-day__title">Session 02 · Set-piece masterclass</div><div className="itin-day__time">10:00 — 12:30</div></div><div className="itin-day__desc">Set-piece detail under specialist coach — attacking and defending corners, free-kick rotations. Video first, pitch second.</div></div>
+            <div className="itin-day"><div className="itin-day__n">DAY 06</div><div><div className="itin-day__title">Fixture 02 · Regional select XI</div><div className="itin-day__time">11:00 KO</div></div><div className="itin-day__desc">A curated regional select side. Same matchday standard. Different test.</div></div>
+            <div className="itin-day"><div className="itin-day__n">DAY 07</div><div><div className="itin-day__title">Fixture 03 · Wheels-up</div><div className="itin-day__time">10:00 KO · 19:00 dep</div></div><div className="itin-day__desc">Final fixture before lunch. Debrief in the team room. Transfer to the airport. Wheels-up at sunset.</div></div>
           </div>
         </div>
       </section>
 
-      {/* FIXTURES */}
+      {/* WHAT'S INCLUDED */}
       <section className="band">
         <div className="wrap">
-          <EyebrowBar>03 — Opposition</EyebrowBar>
-          <h2 className="section-h">Curated competition.</h2>
-          <div className="section-lead">Every opponent is selected for the quality of contest — not the name. We source from Seville's rich academy infrastructure and match to your level, age group, and style.</div>
-          <div className="fixture-table">
-            <div className="fixture-row">
-              <div className="fixture-row__date">FIX 01</div>
-              <div className="fixture-row__city">Seville</div>
-              <div className="fixture-row__opp">vs. Andalusian academy XI — Level A</div>
-              <div className="fixture-row__status" style={{ color: "var(--volt-500)" }}>● Confirmed on booking</div>
-            </div>
-            <div className="fixture-row">
-              <div className="fixture-row__date">FIX 02</div>
-              <div className="fixture-row__city">Seville</div>
-              <div className="fixture-row__opp">vs. Regional select XI — Level A/B</div>
-              <div className="fixture-row__status" style={{ color: "var(--volt-500)" }}>● Confirmed on booking</div>
-            </div>
-            <div className="fixture-row">
-              <div className="fixture-row__date">FIX 03</div>
-              <div className="fixture-row__city">Seville</div>
-              <div className="fixture-row__opp">vs. Partner academy XI (TBC by window)</div>
-              <div className="fixture-row__status" style={{ color: "var(--clay-500)" }}>● Confirmed 8 weeks prior</div>
-            </div>
+          <EyebrowBar>03 — Included</EyebrowBar>
+          <h2 className="section-h">What's in the experience.</h2>
+          <div className="callout-grid">
+            <div className="cell"><div className="cell__n">01</div><div className="cell__t">Partner facility access</div><div className="cell__d">Daily access to partner-club training pitches, gym, recovery suite.</div></div>
+            <div className="cell"><div className="cell__n">02</div><div className="cell__t">Pro coaching staff</div><div className="cell__d">Sessions delivered by partner-club academy coaches.</div></div>
+            <div className="cell"><div className="cell__n">03</div><div className="cell__t">Contested fixtures</div><div className="cell__d">Matchday environments against academy-level opposition.</div></div>
+            <div className="cell"><div className="cell__n">04</div><div className="cell__t">Full kit pack</div><div className="cell__d">Match shirt, training kit, recovery wear — kept by every player.</div></div>
+            <div className="cell"><div className="cell__n">05</div><div className="cell__t">Accommodation + ground transport</div><div className="cell__d">Team accommodation with squad-floor allocation. Ground transfers included.</div></div>
+            <div className="cell"><div className="cell__n">06</div><div className="cell__t">Camp lead + media</div><div className="cell__d">Dedicated UK camp lead. Daily content drop — Instagram, TikTok, parents.</div></div>
           </div>
         </div>
       </section>
 
-      {/* INCLUDED */}
-      <section className="band">
-        <div className="wrap">
-          <EyebrowBar>04 — What's included</EyebrowBar>
-          <h2 className="section-h">Built into every window.</h2>
-          <IncludedGrid items={[
-            ["01", "Betis academy facility access", "Daily use of Real Betis training pitches, gym, and recovery areas."],
-            ["02", "Real Betis coaching staff", "12 sessions delivered by UEFA-licensed Betis academy coaches."],
-            ["03", "3 contested fixtures", "Opponents curated from Seville's academy network — level-matched throughout."],
-            ["04", "Full kit pack", "Match shirt, training kit, recovery wear — kept by every player."],
-            ["05", "Travel + accommodation", "Flights, ground transfers, 4-star team hotel in Seville city."],
-            ["06", "Camp lead + content", "UK camp lead throughout. Daily content for parents, club channels, and social."],
-          ]} />
-        </div>
-      </section>
-
-      <ApplyCTA
-        headline="Application open."
-        sub="Seville windows fill quickly. Apply with your squad details and preferred dates — we'll confirm availability and build the brief within two working days."
-        detail1={["Application open", "2026 windows against the Betis academy calendar."]}
-        detail2={["Squad-only", "Full squad bookings. Minimum 14 players travelling."]}
-        detail3={["From £1,895 per player", "Indicative, all-in. Final price built around squad size."]}
-        campName="the Real Betis experience"
-        onNavigate={onNavigate}
-      />
-
-      <Footer />
-      <WhatsAppFab />
-    </>
-  );
-}
-
-// ---------------------------------------------------------------------------
-// Benfica Experience
-// ---------------------------------------------------------------------------
-function BenficaDetail({ onNavigate }) {
-  return (
-    <>
-      <Nav active="benfica" onNavigate={onNavigate} />
-
-      <DetailHero
-        img="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=2000&q=80"
-        eyebrow="Pro Experience · Lisbon · Best Global Academy"
-        badge1="PRO EXPERIENCE"
-        badge2="<strong>LISBON</strong> · PORTUGAL · PT"
-        badge3="2026 WINDOWS OPEN"
-        title="Benfica<br/>experience."
-        sub="Train at the facility voted Best Global Academy twice. SL Benfica's 19-hectare campus in Seixal — 9 pitches, UEFA-accredited coaches, and one of European football's most respected development environments."
-        onNavigate={onNavigate}
-      />
-
-      {/* QUICK STATS */}
-      <section className="band" style={{ paddingTop: 0 }}>
-        <div className="wrap">
-          <div className="stat-row">
-            <StatCell n="07" label="Days in Lisbon" />
-            <StatCell n="9"  label="Pitches on campus" />
-            <StatCell n="03" label="Contested fixtures" />
-            <StatCell n="02" label="Global Academy Awards" accent />
-          </div>
-        </div>
-      </section>
-
-      {/* ABOUT THE PARTNER */}
-      <section className="band">
-        <div className="wrap">
-          <EyebrowBar>01 — The partner</EyebrowBar>
-          <h2 className="section-h">SL Benfica.</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
-            <div>
-              <div className="section-lead">SL Benfica are one of the world's most decorated youth football institutions — Globe Soccer Best Global Academy in 2015 and 2019. The Benfica Campus at Seixal is among the best youth football facilities on the planet.</div>
-              <p style={{ fontFamily: "var(--font-body)", fontSize: 16, lineHeight: 1.6, color: "var(--stand-200)", marginTop: 24 }}>19 hectares. 9 pitches (6 natural grass, 3 artificial). An 86-room hotel on campus. 28 dressing rooms. 2 gymnasiums. Swimming pool and spa. Everything a professional development environment needs — all in one place.</p>
-              <p style={{ fontFamily: "var(--font-body)", fontSize: 16, lineHeight: 1.6, color: "var(--stand-200)", marginTop: 16 }}>Coaching staff are UEFA-licensed and FPF-accredited. Players who've come through this system include João Félix, Renato Sanches, Bernardo Silva, Rúben Dias, and Ederson.</p>
-            </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 0, borderTop: "1px solid rgba(246,243,235,0.12)" }}>
-              {[
-                ["Location", "Benfica Campus, Seixal, Lisbon, Portugal"],
-                ["Club", "SL Benfica · Primeira Liga"],
-                ["Campus size", "19 hectares"],
-                ["Pitches", "9 total — 6 natural grass + 3 artificial"],
-                ["Coaching", "UEFA-licensed + FPF-accredited Benfica coaches"],
-                ["Award", "Best Global Academy · Globe Soccer 2015 &amp; 2019"],
-                ["Age groups", "U10 — U19 (squad-dependent)"],
-              ].map(([k, v]) => (
-                <div key={k} style={{ display: "grid", gridTemplateColumns: "160px 1fr", gap: 16, padding: "16px 0", borderBottom: "1px solid rgba(246,243,235,0.12)" }}>
-                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.14em", color: "var(--stand-300)", textTransform: "uppercase" }}>{k}</div>
-                  <div style={{ fontFamily: "var(--font-heading)", fontWeight: 500, fontSize: 15, color: "var(--chalk-50)" }} dangerouslySetInnerHTML={{ __html: v }}></div>
+      {/* ACCOMMODATION ---------------------------------------------------- */}
+      {d.accommodation && (
+        <section className="band" style={{ background: "var(--ink-800)", borderTop: "1px solid rgba(246,243,235,0.08)", borderBottom: "1px solid rgba(246,243,235,0.08)" }}>
+          <div className="wrap">
+            <EyebrowBar>04 — Accommodation</EyebrowBar>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
+              <div>
+                <div style={{ fontFamily: "'Archivo', system-ui, sans-serif", fontWeight: 800, fontSize: 28, lineHeight: 1.2, letterSpacing: "-0.01em", color: "#F6F3EB", marginBottom: 12, textTransform: "none" }}>{d.accommodation.name}</div>
+                {d.accommodation.link && (
+                  <a href={d.accommodation.link} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 8, fontFamily: "'JetBrains Mono', monospace", fontSize: 10, letterSpacing: "0.16em", color: "#DAFE3D", textTransform: "uppercase", border: "none", marginBottom: 18 }}>{d.accommodation.linkLabel} →</a>
+                )}
+                <div style={{ fontFamily: "'Manrope', system-ui, sans-serif", fontSize: 17, lineHeight: 1.65, color: "#9CA4AC", marginTop: 8 }}>{d.accommodation.desc}</div>
+                <div style={{ marginTop: 28, display: "flex", flexDirection: "column", gap: 10 }}>
+                  {d.accommodation.features.map((f, i) => (
+                    <div key={i} style={{ display: "flex", alignItems: "baseline", gap: 14 }}>
+                      <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, letterSpacing: "0.18em", color: "#DAFE3D", textTransform: "uppercase", flexShrink: 0 }}>●</span>
+                      <span style={{ fontFamily: "'Manrope', system-ui, sans-serif", fontSize: 15, color: "#F6F3EB" }}>{f}</span>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+              <div>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 8 }}>
+                  {d.accommodation.photos.slice(0, 6).map((p, i) => (
+                    <div key={i} style={{ position: "relative", aspectRatio: i === 0 ? "16/9" : "4/3", gridColumn: i === 0 ? "span 2" : "span 1", overflow: "hidden" }}>
+                      <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${p.url})`, backgroundSize: "cover", backgroundPosition: "center", transition: "transform 0.6s cubic-bezier(0.22,1,0.36,1)" }}
+                        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.04)"}
+                        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+                      ></div>
+                      <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "8px 12px", background: "linear-gradient(to top, rgba(5,6,8,0.7), transparent)", fontFamily: "var(--font-mono)", fontSize: 9, letterSpacing: "0.16em", color: "var(--chalk-50)", textTransform: "uppercase" }}>{p.cap}</div>
+                    </div>
+                  ))}
+                </div>
+                {d.accommodation.photos.length > 6 && (
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8, marginTop: 8 }}>
+                    {d.accommodation.photos.slice(6).map((p, i) => (
+                      <div key={i} style={{ position: "relative", aspectRatio: "4/3", overflow: "hidden" }}>
+                        <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${p.url})`, backgroundSize: "cover", backgroundPosition: "center" }}></div>
+                        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "6px 10px", background: "linear-gradient(to top, rgba(5,6,8,0.7), transparent)", fontFamily: "var(--font-mono)", fontSize: 9, letterSpacing: "0.16em", color: "var(--chalk-50)", textTransform: "uppercase" }}>{p.cap}</div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
+          </div>
+        </section>
+      )}
+
+      {/* OTHER EXPERIENCES */}
+      <section className="band">
+        <div className="wrap">
+          <EyebrowBar>05 — Other experiences</EyebrowBar>
+          <h2 className="section-h">More ways to travel.</h2>
+          <div className="exp-grid" style={{ marginTop: 32 }}>
+            {EXPERIENCES.filter(e => e.id !== expId).map(e => (
+              <ExpCard
+                key={e.id}
+                image={(EXP_DATA[e.id] || {}).img}
+                meta={e.loc.toUpperCase()}
+                title={e.label}
+                pill={(EXP_DATA[e.id] || {}).pill}
+                onClick={() => onNavigate(e.id)}
+              />
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CAMPUS HIGHLIGHTS */}
-      <section className="band">
-        <div className="wrap">
-          <EyebrowBar>02 — The campus</EyebrowBar>
-          <h2 className="section-h">Best-in-class facility.</h2>
-          <div className="section-lead">The Benfica Campus is one of the most comprehensively equipped youth football facilities in Europe. Your squad uses the same environment as Benfica's academy players.</div>
-          <div className="callout-grid" style={{ marginTop: 48 }}>
-            <div className="cell">
-              <div className="cell__n">9 pitches</div>
-              <div className="cell__t">Training surfaces</div>
-              <div className="cell__d">6 natural grass and 3 artificial turf pitches — your squad will always have the right surface for the session.</div>
+      {/* CTA BAND */}
+      <section className="app-band">
+        <div className="app-band__grid">
+          <div>
+            <div className="eyebrow-bar"><div className="eyebrow-bar__rule" style={{ background: "#0A0B0D" }}></div><div className="eyebrow-bar__text" style={{ color: "#0A0B0D" }}>06 — Apply</div></div>
+            <h2 className="section-h">Apply for {d.title.replace(".", "")}</h2>
+            <div className="section-lead" style={{ color: "#545B63" }}>Tell us about your squad. We respond within two working days with a tailored brief — or open a discovery call.</div>
+            <div style={{ display: "flex", gap: 12, marginTop: 32, flexWrap: "wrap" }}>
+              <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Start an application →</button>
+              <a className="btn btn--ghost btn--lg" href="tel:07867205763" style={{ textDecoration: "none", color: "#0A0B0D", borderColor: "rgba(10,11,13,0.32)" }}>07867 205763</a>
             </div>
-            <div className="cell">
-              <div className="cell__n">19 ha</div>
-              <div className="cell__t">Purpose-built campus</div>
-              <div className="cell__d">Everything on-site — hotel, pitches, gym, physio, recovery, dressing rooms, analysis suite. No commuting. Total immersion.</div>
-            </div>
-            <div className="cell">
-              <div className="cell__n">86 rooms</div>
-              <div className="cell__t">On-campus hotel</div>
-              <div className="cell__d">Your squad stays at the campus hotel — the same facility used by Benfica's academy players and visiting professional teams.</div>
-            </div>
-            <div className="cell">
-              <div className="cell__n">2× gym</div>
-              <div className="cell__t">Strength &amp; conditioning</div>
-              <div className="cell__d">Two full gymnasiums for strength and conditioning work. Supplementary sessions built into the programme for squads that want them.</div>
-            </div>
-            <div className="cell">
-              <div className="cell__n">Pool + spa</div>
-              <div className="cell__t">Recovery suite</div>
-              <div className="cell__d">Swimming pool and spa for structured recovery sessions between training days and fixtures. Used daily post-session.</div>
-            </div>
-            <div className="cell">
-              <div className="cell__n">28</div>
-              <div className="cell__t">Dressing rooms</div>
-              <div className="cell__d">Full matchday dressing-room experience — the same rooms used by Benfica academy squads on matchday.</div>
+          </div>
+          <div>
+            <div className="app-band__steps">
+              <div className="app-step"><div className="app-step__n">●</div><div><div className="app-step__t">{d.pill}</div><div className="app-step__d">{d.accent}</div></div></div>
+              <div className="app-step"><div className="app-step__n">04</div><div><div className="app-step__t">Squads taken so far</div><div className="app-step__d">2 of 4 confirmed · 1 under review · 1 open.</div></div></div>
+              <div className="app-step"><div className="app-step__n">£</div><div><div className="app-step__t">{d.facts.find(f => f[0] === "From") ? d.facts.find(f => f[0] === "From")[1] : "POA"}</div><div className="app-step__d">Indicative, all-in. Final price built around your squad size.</div></div></div>
             </div>
           </div>
         </div>
       </section>
-
-      {/* ITINERARY */}
-      <section className="band">
-        <div className="wrap">
-          <EyebrowBar>03 — Itinerary</EyebrowBar>
-          <h2 className="section-h">Seven days at the best global academy.</h2>
-          <div className="section-lead">An indicative schedule — finalised around your squad's age group, level, and training objectives.</div>
-          <div className="itin">
-            <div className="itin-day">
-              <div className="itin-day__n">DAY 01</div>
-              <div><div className="itin-day__title">Arrival · Campus check-in · Kit handover</div><div className="itin-day__time">14:00 – 21:00</div></div>
-              <div className="itin-day__desc">Fly into Lisbon Humberto Delgado Airport. Ground transfer to Benfica Campus, Seixal. Check into the on-site hotel. Kit handover in the team room. Campus orientation with your camp lead.</div>
-            </div>
-            <div className="itin-day">
-              <div className="itin-day__n">DAY 02</div>
-              <div><div className="itin-day__title">Session 01 · Technical fundamentals + physical tests</div><div className="itin-day__time">09:00 – 12:00 / 15:00 – 16:30</div></div>
-              <div className="itin-day__desc">Opening session: Benfica methodology — technical individual skills, agility and movement patterns. Afternoon: physical benchmark tests. Evening video debrief — analysis session in the Benfica analysis suite.</div>
-            </div>
-            <div className="itin-day">
-              <div className="itin-day__n">DAY 03</div>
-              <div><div className="itin-day__title">Session 02 · Positional play &amp; structure</div><div className="itin-day__time">09:30 – 12:00 / Pool recovery 15:00</div></div>
-              <div className="itin-day__desc">Positional play session based on Benfica's academy framework — block structure, high press, build-up patterns. Recovery pool session in the afternoon.</div>
-            </div>
-            <div className="itin-day">
-              <div className="itin-day__n">DAY 04</div>
-              <div><div className="itin-day__title">Fixture 01 · Lisbon academy opposition</div><div className="itin-day__time">19:00 KO · Floodlit</div></div>
-              <div className="itin-day__desc">First fixture on the campus pitches. Pre-match meal, full tunnel walk, matchday environment. Opposition sourced from the Lisbon academy network and matched to your level. Post-match physiotherapy and debrief.</div>
-            </div>
-            <div className="itin-day">
-              <div className="itin-day__n">DAY 05</div>
-              <div><div className="itin-day__title">Workshop · Gym session · Lisbon</div><div className="itin-day__time">09:00 – 17:00</div></div>
-              <div className="itin-day__desc">Morning workshop with Benfica coaches — football philosophy, the path from academy to professional, analysis of your squad's performance from footage taken during sessions. Afternoon S&amp;C session. Optional Lisbon city visit for the evening.</div>
-            </div>
-            <div className="itin-day">
-              <div className="itin-day__n">DAY 06</div>
-              <div><div className="itin-day__title">Session 03 · Set pieces + Fixture 02</div><div className="itin-day__time">10:00 – 12:00 / 19:00 KO</div></div>
-              <div className="itin-day__desc">Morning set-piece masterclass with Benfica staff. Evening second fixture — different opponent, same competitive standard.</div>
-            </div>
-            <div className="itin-day">
-              <div className="itin-day__n">DAY 07</div>
-              <div><div className="itin-day__title">Fixture 03 · Performance reports · Wheels-up</div><div className="itin-day__time">10:00 KO · 18:00 dep</div></div>
-              <div className="itin-day__desc">Final fixture on campus. Individual written performance reports distributed to each player. Squad debrief. Transfer to Lisbon Airport. Wheels-up in the evening.</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* INCLUDED */}
-      <section className="band">
-        <div className="wrap">
-          <EyebrowBar>04 — What's included</EyebrowBar>
-          <h2 className="section-h">Built into every window.</h2>
-          <IncludedGrid items={[
-            ["01", "Benfica Campus access", "Full use of the 19-hectare campus — pitches, gym, pool, recovery suite, dressing rooms, analysis suite."],
-            ["02", "Benfica coaching staff", "12 sessions delivered by UEFA-licensed, FPF-accredited Benfica academy coaches."],
-            ["03", "3 contested fixtures", "Lisbon academy opposition — level-matched. Played on the campus pitches."],
-            ["04", "Individual player reports", "Written performance report for each player at the end of the programme."],
-            ["05", "On-campus accommodation", "Stay at the Benfica Campus hotel. Same facility used by the academy. Flights and transfers included."],
-            ["06", "Camp lead + content", "Dedicated UK camp lead. Daily content drop — parents, club social, Instagram, TikTok."],
-          ]} />
-        </div>
-      </section>
-
-      <ApplyCTA
-        headline="Selected windows only."
-        sub="Benfica Campus windows are limited by the academy calendar. Apply early — we confirm availability and build the brief within two working days of receiving your application."
-        detail1={["Limited windows", "Availability against the Benfica Campus academy calendar."]}
-        detail2={["On-campus stay", "Your squad stays at the Benfica Campus hotel throughout."]}
-        detail3={["From £2,095 per player", "Indicative, all-in including on-campus accommodation. Final price built around squad size."]}
-        campName="the Benfica experience"
-        onNavigate={onNavigate}
-      />
 
       <Footer />
       <WhatsAppFab />
@@ -621,6 +308,5 @@ function BenficaDetail({ onNavigate }) {
   );
 }
 
-window.LevanteDetail = LevanteDetail;
-window.BetisDetail   = BetisDetail;
-window.BenficaDetail = BenficaDetail;
+window.Detail = Detail;
+window.EXP_DATA = EXP_DATA;

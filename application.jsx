@@ -6,17 +6,14 @@ function Application({ onNavigate }) {
   const [step, setStep] = useStateApp(0);
   const [club, setClub] = useStateApp("Hackney Marshes FC");
   const [role, setRole] = useStateApp("Head Coach");
-  const [orgType, setOrgType] = useStateApp("Grassroots");
   const [size, setSize] = useStateApp("18 players");
-  const [age, setAge]  = useStateApp("U16 — U18");
-  const [level, setLevel] = useStateApp("Regional");
+  const [age,  setAge]  = useStateApp("U16 — U18");
   const [goals, setGoals] = useStateApp([1, 2]);
   const [dest, setDest] = useStateApp(["Barcelona"]);
-  const [budget, setBudget] = useStateApp("£1,800 — £2,200");
 
   const steps = ["Your club", "Your squad", "Your goals", "Window & budget"];
 
-  const toggleArr = (state, setter, v) =>
+  const toggle = (state, setter, v) =>
     setter(state.includes(v) ? state.filter(x => x !== v) : [...state, v]);
 
   return (
@@ -56,13 +53,13 @@ function Application({ onNavigate }) {
               <label>Type of organisation</label>
               <div className="chips">
                 {["Grassroots", "Academy", "School", "Non-league", "US college", "Other"].map(c => (
-                  <button key={c} className={"chip " + (orgType === c ? "is-on" : "")} onClick={() => setOrgType(c)}>{c}</button>
+                  <button key={c} className={"chip " + (c === "Grassroots" ? "is-on" : "")}>{c}</button>
                 ))}
               </div>
             </div>
             <div className="app-form-row">
               <label>Your email</label>
-              <input placeholder="head.coach@yourclub.com" type="email" />
+              <input placeholder="head.coach@yourclub.com" />
             </div>
           </>
         )}
@@ -82,7 +79,7 @@ function Application({ onNavigate }) {
               <label>Level of competition you typically face</label>
               <div className="chips">
                 {["Local league", "County", "Regional", "National", "Academy / pro", "Mixed"].map(c => (
-                  <button key={c} className={"chip " + (level === c ? "is-on" : "")} onClick={() => setLevel(c)}>{c}</button>
+                  <button key={c} className={"chip " + (c === "Regional" ? "is-on" : "")}>{c}</button>
                 ))}
               </div>
             </div>
@@ -103,7 +100,7 @@ function Application({ onNavigate }) {
                   <button
                     key={c}
                     className={"chip " + (goals.includes(i) ? "is-on" : "")}
-                    onClick={() => toggleArr(goals, setGoals, i)}
+                    onClick={() => toggle(goals, setGoals, i)}
                   >{c}</button>
                 ))}
               </div>
@@ -121,11 +118,11 @@ function Application({ onNavigate }) {
             <div className="app-form-row">
               <label>Preferred destination</label>
               <div className="chips">
-                {["Barcelona", "Valencia", "Seville", "Amsterdam", "England", "Open — surprise us"].map(c => (
+                {["Barcelona", "Madrid", "Lisbon", "Milan", "Amsterdam", "Open — surprise us"].map(c => (
                   <button
                     key={c}
                     className={"chip " + (dest.includes(c) ? "is-on" : "")}
-                    onClick={() => toggleArr(dest, setDest, c)}
+                    onClick={() => toggle(dest, setDest, c)}
                   >{c}</button>
                 ))}
               </div>
@@ -138,7 +135,7 @@ function Application({ onNavigate }) {
               <label>Workable budget (per player)</label>
               <div className="chips">
                 {["£1,200 — £1,500", "£1,500 — £1,800", "£1,800 — £2,200", "£2,200+", "Open"].map(c => (
-                  <button key={c} className={"chip " + (budget === c ? "is-on" : "")} onClick={() => setBudget(c)}>{c}</button>
+                  <button key={c} className={"chip " + (c === "£1,800 — £2,200" ? "is-on" : "")}>{c}</button>
                 ))}
               </div>
             </div>
@@ -149,7 +146,7 @@ function Application({ onNavigate }) {
           </>
         )}
 
-        {/* Navigation controls */}
+        {/* Footer / controls */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 56, paddingTop: 24, borderTop: "1px solid rgba(246,243,235,0.12)" }}>
           <button
             className="btn btn--ghost"

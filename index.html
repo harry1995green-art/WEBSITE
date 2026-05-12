@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ballerz Abroad — Train like a pro abroad</title>
   <meta name="description" content="European football experiences built around your squad. Professional training environments, organised fixtures, and tournament football across Spain, Portugal and the UK." />
+  <title>Ballerz Abroad — Train like a pro abroad</title>
   <link rel="icon" href="assets/logo-mark-black.png" />
   <link rel="stylesheet" href="colors_and_type.css" />
   <link rel="stylesheet" href="kit.css" />
 </head>
 <body>
-  <div id="root"></div>
+  <div id="root" data-screen-label="Home"></div>
 
   <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
@@ -20,38 +20,44 @@
   <script type="text/babel" src="home.jsx"></script>
   <script type="text/babel" src="detail.jsx"></script>
   <script type="text/babel" src="tournaments.jsx"></script>
+  <script type="text/babel" src="tournament-detail.jsx"></script>
+  <script type="text/babel" src="blog.jsx"></script>
+  <script type="text/babel" src="about-contact.jsx"></script>
   <script type="text/babel" src="application.jsx"></script>
 
   <script type="text/babel">
-    const { useState: useAppState } = React;
-
+    const { useState: useStateApp2 } = React;
     function App() {
-      const [route, setAppRoute] = useAppState("home");
-
-      React.useEffect(() => {
-        window.scrollTo({ top: 0, behavior: "instant" });
-      }, [route]);
-
-      const screenLabel =
-        route === "home"         ? "Home" :
-        route === "levante"      ? "Levante UD Experience" :
-        route === "betis"        ? "Real Betis Experience" :
-        route === "benfica"      ? "Benfica Experience" :
-        route === "tournaments"  ? "Tournaments" :
-        route === "application"  ? "Application" : "Home";
-
+      const [route, setRoute] = useStateApp2("home");
+      React.useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, [route]);
+      const isExp = typeof route === "string" && route.startsWith("exp-");
+      const isTour = typeof route === "string" && route.startsWith("tour-");
+      React.useEffect(() => { window.__navigate = setRoute; }, []);
+      const label =
+        route === "home" ? "Home" :
+        route === "tournaments" ? "Tournaments" :
+        route === "blog" ? "Journal" :
+        route === "blog-post" ? "Journal · Post" :
+        route === "about" ? "About" :
+        route === "contact" ? "Contact" :
+        route === "application" ? "Application" :
+        route === "detail" ? "Experiences" :
+        isExp ? "Experience · " + route.replace("exp-", "") :
+        isTour ? "Tournament · " + route.replace("tour-", "") : route;
       return (
-        <div data-screen-label={screenLabel}>
-          {route === "home"        && <Home       onNavigate={setAppRoute} />}
-          {route === "levante"     && <LevanteDetail  onNavigate={setAppRoute} />}
-          {route === "betis"       && <BetisDetail    onNavigate={setAppRoute} />}
-          {route === "benfica"     && <BenficaDetail  onNavigate={setAppRoute} />}
-          {route === "tournaments" && <TournamentsPage onNavigate={setAppRoute} />}
-          {route === "application" && <Application    onNavigate={setAppRoute} />}
+        <div data-screen-label={label}>
+          {route === "home" && <Home onNavigate={setRoute} />}
+          {(route === "detail" || isExp) && <Detail onNavigate={setRoute} expId={isExp ? route : "exp-levante"} />}
+          {isTour && <TournamentDetail onNavigate={setRoute} tourId={route} />}
+          {route === "tournaments" && <Tournaments onNavigate={setRoute} />}
+          {route === "blog" && <Blog onNavigate={setRoute} />}
+          {route === "blog-post" && <BlogPost onNavigate={setRoute} />}
+          {route === "about" && <About onNavigate={setRoute} />}
+          {route === "contact" && <Contact onNavigate={setRoute} />}
+          {route === "application" && <Application onNavigate={setRoute} />}
         </div>
       );
     }
-
     ReactDOM.createRoot(document.getElementById("root")).render(<App />);
   </script>
 </body>

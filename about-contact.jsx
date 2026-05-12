@@ -1,0 +1,192 @@
+// About + Contact — finishing the site.
+
+function About({ onNavigate }) {
+  return (
+    <>
+      <Nav active="about" onNavigate={onNavigate} />
+
+      {/* HERO */}
+      <section className="hero" style={{ minHeight: "70vh" }}>
+        <div className="hero__img" style={{ backgroundImage: `url(https://images.unsplash.com/photo-1551958219-acbc608c6377?w=2000&q=80)` }}></div>
+        <div className="hero__grain"></div>
+        <div className="hero__gradient"></div>
+        <div className="hero__inner">
+          <div className="hero__eyebrow">
+            <div className="hero__eyebrow-rule"></div>
+            <div className="hero__eyebrow-text">About · Ballerz Abroad · Est. 2024</div>
+          </div>
+          <h1 className="display-xl">More than a tour<br/>operator.</h1>
+          <div className="hero__sub">A UK-based football experience company built by football people, for football people. We design windows abroad that work because we've been on the other side of the bus.</div>
+        </div>
+      </section>
+
+      {/* MISSION */}
+      <section className="band">
+        <div className="wrap" style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: 64 }}>
+          <div>
+            <EyebrowBar>01 — Mission</EyebrowBar>
+            <h2 className="section-h">Football first.</h2>
+          </div>
+          <div style={{ fontFamily: "var(--font-body)", fontSize: 19, lineHeight: 1.6, color: "var(--stand-200)" }}>
+            <p style={{ marginBottom: 20 }}>We build international football experiences for grassroots clubs, academies, schools, development teams and US college soccer programmes. Every tour is custom — there is no brochure.</p>
+            <p style={{ marginBottom: 20 }}>Our network of partner clubs, federations and tournament organisers across the UK, Spain, Portugal, the Netherlands and the Dominican Republic is vetted to one standard: ours. We sell football, not flights.</p>
+            <p>Ballerz Abroad is a UK-registered company. UK contracts, UK staff on-tour, UK-managed travel ops — wherever in the world your squad is playing.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* PRINCIPLES */}
+      <section className="band">
+        <div className="wrap">
+          <EyebrowBar>02 — Principles</EyebrowBar>
+          <h2 className="section-h">How we work.</h2>
+          <div className="callout-grid">
+            <div className="cell"><div className="cell__n">01</div><div className="cell__t">Football first.</div><div className="cell__d">Every decision — destination, timing, hotel, opposition — is taken from the football outwards. Logistics serves the game, never the other way round.</div></div>
+            <div className="cell"><div className="cell__n">02</div><div className="cell__t">Tailored, not packaged.</div><div className="cell__d">We don't operate fixed itineraries. Every window is designed around the squad in front of us — age, level, ambition, budget.</div></div>
+            <div className="cell"><div className="cell__n">03</div><div className="cell__t">Vetted partners.</div><div className="cell__d">Levante UD, Real Betis, SL Benfica, MIC, Mare Nostrum. We open doors at clubs and tournaments that share our standards on safety, quality and competition.</div></div>
+            <div className="cell"><div className="cell__n">04</div><div className="cell__t">UK end-to-end.</div><div className="cell__d">UK contract, UK staff, UK travel ops, UK-based youth-football insurance. One number, one company, one accountability line.</div></div>
+            <div className="cell"><div className="cell__n">05</div><div className="cell__t">Tour by application.</div><div className="cell__d">We respond to every application within two working days. If we're not the right fit, we say so — and point you somewhere that is.</div></div>
+            <div className="cell"><div className="cell__n">06</div><div className="cell__t">On-tour delivery.</div><div className="cell__d">A Ballerz Abroad lead is embedded with your squad from arrival to wheels-up. You coach the football. We handle the rest.</div></div>
+          </div>
+        </div>
+      </section>
+
+      {/* TEAM */}
+      <section className="band">
+        <div className="wrap">
+          <EyebrowBar>03 — Team</EyebrowBar>
+          <h2 className="section-h">Who you'll meet.</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24, marginTop: 48 }}>
+            {[
+              ["Founder & Tour Director", "Designs every window. On the phone end of every application."],
+              ["Head of Football Ops", "Builds the fixture programmes. Coordinates with partner-club academy staff."],
+              ["Head of Travel Ops", "UK-based. Owns flights, transfers, hotels and the day-to-day on-tour."],
+            ].map(([role, bio], i) => (
+              <div key={i} style={{ background: "var(--ink-800)", border: "1px solid rgba(246,243,235,0.08)", padding: 24 }}>
+                <div style={{ aspectRatio: "1/1", background: "linear-gradient(135deg, #1F252B, #0A0B0D)", marginBottom: 18, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-display)", fontSize: 96, color: "rgba(246,243,235,0.06)" }}>{String(i+1).padStart(2,"0")}</div>
+                <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.18em", color: "var(--volt-500)", textTransform: "uppercase", marginBottom: 8 }}>{role}</div>
+                <div style={{ fontFamily: "var(--font-body)", fontSize: 14, color: "var(--stand-200)", lineHeight: 1.55 }}>{bio}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="app-band">
+        <div className="app-band__grid">
+          <div>
+            <div className="eyebrow-bar"><div className="eyebrow-bar__rule" style={{ background: "#0A0B0D" }}></div><div className="eyebrow-bar__text" style={{ color: "#0A0B0D" }}>04 — Get started</div></div>
+            <h2 className="section-h">Tell us about your squad.</h2>
+            <div className="section-lead" style={{ color: "#545B63" }}>Application or call — both lead to a real conversation with the person who'll design your tour.</div>
+            <div style={{ display: "flex", gap: 12, marginTop: 32, flexWrap: "wrap" }}>
+              <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Start an application →</button>
+              <button className="btn btn--ghost btn--lg" onClick={() => onNavigate("contact")} style={{ color: "#0A0B0D", borderColor: "rgba(10,11,13,0.32)" }}>Contact us</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+      <WhatsAppFab />
+    </>
+  );
+}
+window.About = About;
+
+
+function Contact({ onNavigate }) {
+  return (
+    <>
+      <Nav active="contact" onNavigate={onNavigate} />
+
+      <section className="band" style={{ paddingTop: 140, paddingBottom: 0 }}>
+        <div className="wrap">
+          <EyebrowBar>Contact · UK office</EyebrowBar>
+          <h2 className="section-h">Talk to a human.</h2>
+          <div className="section-lead">Every enquiry is read by the person who'll design your tour. No bots, no call centre, no chat handler.</div>
+        </div>
+      </section>
+
+      <section className="band">
+        <div className="wrap" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64 }}>
+          <div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
+              <div>
+                <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.14em", color: "var(--stand-300)", textTransform: "uppercase", marginBottom: 8 }}>Email</div>
+                <a href="mailto:info@ballerzabroad.com" style={{ fontFamily: "var(--font-display)", fontSize: 32, color: "var(--chalk-50)", textTransform: "uppercase", letterSpacing: "-0.01em", border: "none" }}>info@ballerzabroad.com</a>
+              </div>
+              <div>
+                <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.14em", color: "var(--stand-300)", textTransform: "uppercase", marginBottom: 8 }}>Phone · WhatsApp</div>
+                <a href="tel:07867205763" style={{ fontFamily: "var(--font-display)", fontSize: 32, color: "var(--chalk-50)", textTransform: "uppercase", letterSpacing: "-0.01em", border: "none" }}>07867 205763</a>
+              </div>
+              <div>
+                <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.14em", color: "var(--stand-300)", textTransform: "uppercase", marginBottom: 8 }}>UK office</div>
+                <div style={{ fontFamily: "var(--font-body)", fontSize: 17, color: "var(--chalk-50)", lineHeight: 1.55 }}>Ballerz Abroad Ltd<br/>Company Reg. 16941046<br/>Registered in England & Wales</div>
+              </div>
+              <div>
+                <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.14em", color: "var(--stand-300)", textTransform: "uppercase", marginBottom: 8 }}>Social</div>
+                <div style={{ display: "flex", gap: 16, fontFamily: "var(--font-body)", fontSize: 16 }}>
+                  <a href="#" style={{ color: "var(--chalk-50)", border: "none" }}>@ballerzabroad — TikTok</a>
+                  <a href="#" style={{ color: "var(--chalk-50)", border: "none" }}>Facebook</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style={{ background: "var(--ink-800)", border: "1px solid rgba(246,243,235,0.08)", padding: 32 }}>
+            <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.14em", color: "var(--volt-500)", textTransform: "uppercase", marginBottom: 8 }}>Quick message</div>
+            <div style={{ fontFamily: "var(--font-heading)", fontWeight: 700, fontSize: 22, marginBottom: 24 }}>Drop us a line.</div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+              <div className="app-form-row" style={{ marginBottom: 0 }}>
+                <label>Your name</label>
+                <input placeholder="Coach Roberts" />
+              </div>
+              <div className="app-form-row" style={{ marginBottom: 0 }}>
+                <label>Club / organisation</label>
+                <input placeholder="Hackney Marshes FC" />
+              </div>
+              <div className="app-form-row" style={{ marginBottom: 0 }}>
+                <label>Email</label>
+                <input placeholder="head.coach@yourclub.com" />
+              </div>
+              <div className="app-form-row" style={{ marginBottom: 0 }}>
+                <label>What do you need</label>
+                <textarea placeholder="Tell us in your own words. We read every enquiry." />
+              </div>
+              <button className="btn btn--primary btn--lg" style={{ alignSelf: "flex-start" }}>Send message →</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="band">
+        <div className="wrap">
+          <EyebrowBar>FAQ</EyebrowBar>
+          <h2 className="section-h">Questions, briefly answered.</h2>
+          <div style={{ display: "flex", flexDirection: "column", borderTop: "1px solid rgba(246,243,235,0.12)", marginTop: 32 }}>
+            {[
+              ["How far in advance should we apply?", "Most squads apply 4–8 months out. We open shorter-notice windows when a partner-club calendar permits — call us."],
+              ["What's the minimum squad size?", "We've run windows with 12 players and with 36. Below that, an Individual Player Development programme is usually the better fit."],
+              ["Are flights included?", "No — flights are not bundled. We can recommend airlines, routings and group-booking partners, but every squad books its own flights."],
+              ["What ages do you work with?", "U10 through to U23 and US college. Pro-Experience tours are usually U14 upwards."],
+              ["Is insurance included?", "No — travel and football insurance are not bundled. Every squad and player must arrange their own cover before the window. We share our recommended providers on request."],
+              ["Can parents travel?", "Yes. Individual Player Development windows are designed around parent travel. On club tours, a parents' floor at the team hotel is standard."],
+            ].map(([q, a], i) => (
+              <details key={i} style={{ borderBottom: "1px solid rgba(246,243,235,0.12)", padding: "22px 0", cursor: "pointer" }}>
+                <summary style={{ fontFamily: "var(--font-heading)", fontWeight: 700, fontSize: 19, color: "var(--chalk-50)", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  {q}
+                  <span style={{ fontFamily: "var(--font-mono)", fontSize: 14, color: "var(--volt-500)" }}>+</span>
+                </summary>
+                <div style={{ fontFamily: "var(--font-body)", fontSize: 16, color: "var(--stand-200)", lineHeight: 1.6, marginTop: 12, maxWidth: 720 }}>{a}</div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+      <WhatsAppFab />
+    </>
+  );
+}
+window.Contact = Contact;
