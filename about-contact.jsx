@@ -88,18 +88,15 @@ function About({ onNavigate }) {
         <div className="wrap">
           <EyebrowBar>03 — Team</EyebrowBar>
           <h2 className="section-h">Who you'll meet.</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24, marginTop: 48 }}>
-            {[
-              ["Founder & Tour Director", "Designs every window. On the phone end of every application."],
-              ["Head of Football Ops", "Builds the fixture programmes. Coordinates with partner-club academy staff."],
-              ["Head of Travel Ops", "UK-based. Owns flights, transfers, hotels and the day-to-day on-tour."],
-            ].map(([role, bio], i) => (
-              <div key={i} style={{ background: "var(--ink-800)", border: "1px solid rgba(246,243,235,0.08)", padding: 24 }}>
-                <div style={{ aspectRatio: "1/1", background: "linear-gradient(135deg, #1F252B, #0A0B0D)", marginBottom: 18, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-display)", fontSize: 96, color: "rgba(246,243,235,0.06)" }}>{String(i+1).padStart(2,"0")}</div>
-                <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.18em", color: "var(--volt-500)", textTransform: "uppercase", marginBottom: 8 }}>{role}</div>
-                <div style={{ fontFamily: "var(--font-body)", fontSize: 14, color: "var(--stand-200)", lineHeight: 1.55 }}>{bio}</div>
+          <div style={{ marginTop: 48, maxWidth: 600 }}>
+            <div style={{ background: "var(--ink-800)", border: "1px solid rgba(246,243,235,0.08)", padding: 32 }}>
+              <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.18em", color: "var(--volt-500)", textTransform: "uppercase", marginBottom: 8 }}>Founder & Tour Director</div>
+              <h3 style={{ fontFamily: "var(--font-display)", fontSize: 28, color: "var(--chalk-50)", textTransform: "uppercase", marginBottom: 12 }}>Harrison Green</h3>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 16, color: "var(--stand-200)", lineHeight: 1.6 }}>
+                <p style={{ marginBottom: 12 }}>Harrison is Ballerz Abroad. He designs every window, talks to every applicant, travels with every squad, and coordinates every partnership.</p>
+                <p>After 20 years in football — first as a player, then as a grassroots coach — he built Ballerz Abroad to fill a gap. No call centres, no templates, no layers. You speak directly to the person who'll design your tour.</p>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
