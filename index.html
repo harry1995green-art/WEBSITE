@@ -23,16 +23,49 @@
   <script type="text/babel" src="tournament-detail.jsx"></script>
   <script type="text/babel" src="blog.jsx"></script>
   <script type="text/babel" src="about-contact.jsx"></script>
+  <script type="text/babel" src="legal.jsx"></script>
   <script type="text/babel" src="application.jsx"></script>
 
   <script type="text/babel">
     const { useState: useStateApp2 } = React;
     function App() {
       const [route, setRoute] = useStateApp2("home");
+
+      const urlMap = {
+        "home": "/",
+        "about": "/about",
+        "contact": "/contact",
+        "application": "/application",
+        "tournaments": "/tournaments",
+        "blog": "/journal",
+        "blog-post": "/journal/post",
+        "terms": "/terms-conditions",
+        "privacy": "/privacy-policy",
+        "exp-nxgenpro": "/nxgenpro-experience",
+        "exp-levante": "/levanteexperience",
+        "exp-betis": "/betisexperience",
+        "exp-benfica": "/benficaexperience",
+        "exp-feyenoord": "/feyenoordexperience",
+      };
+
+      const reverseUrlMap = Object.fromEntries(Object.entries(urlMap).map(([k, v]) => [v, k]));
+
+      React.useEffect(() => {
+        const path = window.location.pathname;
+        const routeKey = reverseUrlMap[path] || "home";
+        setRoute(routeKey);
+      }, []);
+
+      const navigate = (newRoute) => {
+        const url = urlMap[newRoute] || "/";
+        window.history.pushState({}, "", url);
+        setRoute(newRoute);
+      };
+
       React.useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, [route]);
       const isExp = typeof route === "string" && route.startsWith("exp-");
       const isTour = typeof route === "string" && route.startsWith("tour-");
-      React.useEffect(() => { window.__navigate = setRoute; }, []);
+      React.useEffect(() => { window.__navigate = navigate; }, []);
       const label =
         route === "home" ? "Home" :
         route === "tournaments" ? "Tournaments" :
@@ -41,20 +74,24 @@
         route === "about" ? "About" :
         route === "contact" ? "Contact" :
         route === "application" ? "Application" :
+        route === "terms" ? "Terms & Conditions" :
+        route === "privacy" ? "Privacy Policy" :
         route === "detail" ? "Experiences" :
         isExp ? "Experience · " + route.replace("exp-", "") :
         isTour ? "Tournament · " + route.replace("tour-", "") : route;
       return (
         <div data-screen-label={label}>
-          {route === "home" && <Home onNavigate={setRoute} />}
-          {(route === "detail" || isExp) && <Detail onNavigate={setRoute} expId={isExp ? route : "exp-levante"} />}
-          {isTour && <TournamentDetail onNavigate={setRoute} tourId={route} />}
-          {route === "tournaments" && <Tournaments onNavigate={setRoute} />}
-          {route === "blog" && <Blog onNavigate={setRoute} />}
-          {route === "blog-post" && <BlogPost onNavigate={setRoute} />}
-          {route === "about" && <About onNavigate={setRoute} />}
-          {route === "contact" && <Contact onNavigate={setRoute} />}
-          {route === "application" && <Application onNavigate={setRoute} />}
+          {route === "home" && <Home onNavigate={navigate} />}
+          {(route === "detail" || isExp) && <Detail onNavigate={navigate} expId={isExp ? route : "exp-levante"} />}
+          {isTour && <TournamentDetail onNavigate={navigate} tourId={route} />}
+          {route === "tournaments" && <Tournaments onNavigate={navigate} />}
+          {route === "blog" && <Blog onNavigate={navigate} />}
+          {route === "blog-post" && <BlogPost onNavigate={navigate} />}
+          {route === "about" && <About onNavigate={navigate} />}
+          {route === "contact" && <Contact onNavigate={navigate} />}
+          {route === "application" && <Application onNavigate={navigate} />}
+          {route === "terms" && <TermsAndConditions onNavigate={navigate} />}
+          {route === "privacy" && <PrivacyPolicy onNavigate={navigate} />}
         </div>
       );
     }

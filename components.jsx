@@ -42,7 +42,7 @@ function Nav({ active = "home", onNavigate }) {
       <nav className={"nav " + (scrolled ? "nav--scrolled" : "")}>
         <div className="nav__left">
           <a href="#" onClick={(e) => { e.preventDefault(); go("home"); }} style={{ border: "none", display: "flex", alignItems: "center", background: "transparent" }}>
-            <img className="nav__logo" src="https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F79101045194d4e5d8f2d2875ea661638?format=webp&width=800&height=1200" alt="Ballerz Abroad" />
+            <img className="nav__logo" src="https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fc2524f6556de432fb71303db254cb2a5?format=webp&width=800&height=1200" alt="Ballerz Abroad" />
           </a>
           <div className="nav__links">
             <a href="#" className={active === "home" ? "is-active" : ""} onClick={(e) => { e.preventDefault(); go("home"); }}>Home</a>
@@ -201,10 +201,10 @@ function Footer() {
         </div>
         <div className="foot__col">
           <h4>Support</h4>
-          <a href="#">Contact</a>
-          <a href="#">FAQ</a>
-          <a href="#">Terms &amp; conditions</a>
-          <a href="#">Privacy policy</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); go("contact"); }} style={{ border: "none", background: "none", cursor: "pointer" }}>Contact</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); go("contact"); }} style={{ border: "none", background: "none", cursor: "pointer" }}>FAQ</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); go("terms"); }} style={{ border: "none", background: "none", cursor: "pointer" }}>Terms &amp; conditions</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); go("privacy"); }} style={{ border: "none", background: "none", cursor: "pointer" }}>Privacy policy</a>
           <a href="#">Safeguarding</a>
         </div>
       </div>
