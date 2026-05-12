@@ -7,15 +7,15 @@ function DestExplorer({ onNavigate }) {
   const [tab, setTab] = useHState("europe");
   const DATA = {
     uk: [
-      { c: "England · Surrey",  t: "NXGENPro", logo: "https://nx-genpro.com/wp-content/uploads/2025/08/NXGEN_Logo.png", img: "https://images.unsplash.com/photo-1518604666860-9ed391f76460?w=900&q=80" },
+      { c: "England · Surrey",  t: "NXGENPro", logo: "https://nx-genpro.com/wp-content/uploads/2025/08/NXGEN_Logo.png", img: "assets/dest-nxgen.avif" },
     ],
     europe: [
-      { c: "Spain · Valencia",  t: "Levante UD",        logo: "https://images.squarespace-cdn.com/content/v1/69657d0bde7b1d54486a7193/cdc306a3-efb4-407b-a841-cc986a9a0b41/ChatGPT+Image+Jan+9%2C+2026%2C+11_01_00+AM.png", img: "https://images.unsplash.com/photo-1610294232527-d11a4c7ce40c?w=900&q=80" },
-      { c: "Spain · Seville",   t: "Real Betis",        logo: "https://images.squarespace-cdn.com/content/v1/69657d0bde7b1d54486a7193/d9d4fac9-5dd8-41f7-b464-2d6345e2b12f/Real_betis_logo.svg.png", img: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=900&q=80" },
-      { c: "Spain · Catalonia", t: "MIC Costa Brava",   logo: "https://images.squarespace-cdn.com/content/v1/69657d0bde7b1d54486a7193/69806f9e-a44a-473f-8214-23cce19f86e3/images+%282%29.png", img: "https://images.unsplash.com/photo-1577471488278-16eec37ffcc2?w=900&q=80" },
-      { c: "Netherlands · Rotterdam", t: "Feyenoord Academy", logo: "https://pmsoccerevents.nl/wp-content/uploads/2025/11/Feyenoord_logo.svg.png", img: "https://images.unsplash.com/photo-1577471488278-16eec37ffcc2?w=900&q=80" },
-      { c: "Portugal · Lisbon", t: "Benfica window", logo: "assets/logo-benfica.png", img: "https://images.unsplash.com/photo-1517747614396-d21a78b850e8?w=900&q=80" },
-      { c: "Spain · Costa Daurada", t: "Copa Daurada",  logo: null, img: "https://images.unsplash.com/photo-1518614846906-3a8a8f0c40d5?w=900&q=80" },
+      { c: "Spain · Valencia",  t: "Levante UD",        logo: "https://images.squarespace-cdn.com/content/v1/69657d0bde7b1d54486a7193/cdc306a3-efb4-407b-a841-cc986a9a0b41/ChatGPT+Image+Jan+9%2C+2026%2C+11_01_00+AM.png", img: "assets/dest-levante.jpg" },
+      { c: "Spain · Seville",   t: "Real Betis",        logo: "https://images.squarespace-cdn.com/content/v1/69657d0bde7b1d54486a7193/d9d4fac9-5dd8-41f7-b464-2d6345e2b12f/Real_betis_logo.svg.png", img: "assets/dest-betis.png" },
+      { c: "Spain · Catalonia", t: "MIC Costa Brava",   logo: "https://images.squarespace-cdn.com/content/v1/69657d0bde7b1d54486a7193/69806f9e-a44a-473f-8214-23cce19f86e3/images+%282%29.png", img: "assets/dest-mic.webp" },
+      { c: "Netherlands · Rotterdam", t: "Feyenoord Academy", logo: "https://pmsoccerevents.nl/wp-content/uploads/2025/11/Feyenoord_logo.svg.png", img: "assets/dest-feyenoord.jfif" },
+      { c: "Portugal · Lisbon", t: "Benfica window", logo: "assets/logo-benfica.png", img: "assets/dest-benfica.jpeg" },
+      { c: "Spain · Costa Daurada", t: "Copa Daurada",  logo: null, img: "assets/dest-copa.jpg" },
     ],
     global: [
       { c: "Dominican Republic", t: "MIC Punta Cana", logo: "https://images.squarespace-cdn.com/content/v1/69657d0bde7b1d54486a7193/69806f9e-a44a-473f-8214-23cce19f86e3/images+%282%29.png", img: "https://images.unsplash.com/photo-1564415051543-cca4a18fe2cc?w=900&q=80" },
