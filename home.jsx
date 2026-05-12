@@ -66,7 +66,7 @@ function Home({ onNavigate }) {
         <div className="hero__gradient"></div>
         <div className="hero__meta">
           <span>2026 · WINDOWS OPEN</span>
-          <span><strong>SPAIN</strong> · <strong>NL</strong> · <strong>UK</strong></span>
+          <span><strong>ENGLAND</strong> · <strong>SPAIN</strong> · <strong>PORTUGAL</strong> · <strong>NETHERLANDS</strong></span>
         </div>
         <div className="hero__inner">
           <div className="hero__eyebrow">
