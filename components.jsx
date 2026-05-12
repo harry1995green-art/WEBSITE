@@ -42,7 +42,7 @@ function Nav({ active = "home", onNavigate }) {
       <nav className={"nav " + (scrolled ? "nav--scrolled" : "")}>
         <div className="nav__left">
           <a href="#" onClick={(e) => { e.preventDefault(); go("home"); }} style={{ border: "none", display: "flex", alignItems: "center", background: "transparent" }}>
-            <img className="nav__logo" src="https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Ff41106f9b9fc4fe882b56fc94890fca6?format=webp&width=800&height=1200" alt="Ballerz Abroad" />
+            <img className="nav__logo" src="assets/logo.svg" alt="Ballerz Abroad" />
           </a>
           <div className="nav__links">
             <a href="#" className={active === "home" ? "is-active" : ""} onClick={(e) => { e.preventDefault(); go("home"); }}>Home</a>
