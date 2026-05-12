@@ -4,13 +4,13 @@ const EXP_DATA = {
   "exp-nxgenpro": {
     title: "NXGENPro.",
     eyebrow: "England · UK-based development programme",
-    sub: "Year-round professional development inside an English elite environment. UK-managed end to end — domestic windows, no travel friction.",
+    sub: "",
     location: "England · UK",
     facts: [["Country", "England"], ["Format", "Year-round windows"], ["Age", "U13 — U18"], ["From", "£895 pp"]],
     img: "https://images.unsplash.com/photo-1518604666860-9ed391f76460?w=2000&q=80",
     pill: "Year-round",
     accent: "Apr 2026 · May 2026 · Jul 2026 — multiple windows live",
-    summary: "Built for clubs and squads who want pro-grade exposure without crossing a border. NXGENPro runs against the calendar of partner academies in the English football pyramid.",
+    summary: "NXGENPro is Ballerz Abroad's UK-based professional football experience partner. Based at Gordon's School in Surrey, it gives boys and girls aged 11–18 the chance to train, compete, and live inside a genuine professional football environment — without leaving England.\n\nWhere our European tours take squads abroad, NXGENPro brings the pro environment to the UK.",
     accommodation: {
       name: "Gordon's School · Augusta Boarding House · Surrey, England",
       link: "https://nx-genpro.com",
