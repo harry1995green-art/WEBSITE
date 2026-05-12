@@ -76,7 +76,7 @@ html, body { margin: 0; padding: 0; background: var(--ink-900); color: var(--cha
 }
 .nav__menu-item:hover { background: rgba(246,243,235,0.04); }
 .nav__menu-item-t {
-  font-family: var(--font-heading); font-weight: 700; font-size: 14px;
+  font-family: var(--font-heading); font-weight: 600; font-size: 14px;
   letter-spacing: 0; text-transform: none; color: var(--chalk-50);
 }
 .nav__menu-item-l {
@@ -313,8 +313,9 @@ footer.foot { background: var(--ink-1000); color: var(--chalk-50); padding: clam
   .nav__hamburger span { display: block; width: 22px; height: 2px; background: #F6F3EB; }
   .nav__mobile { display: none; position: fixed; inset: 0; background: rgba(5,6,8,0.98); z-index: 200; flex-direction: column; padding: 80px 24px 40px; gap: 0; overflow-y: auto; }
   .nav__mobile.is-open { display: flex; }
-  .nav__mobile a { font-family: 'Anton', sans-serif; font-size: 40px; line-height: 1; text-transform: uppercase; color: #F6F3EB; border: none; padding: 18px 0; border-bottom: 1px solid rgba(246,243,235,0.12); display: block; }
+  .nav__mobile a { font-family: var(--font-heading); font-weight: 700; font-size: 18px; line-height: 1.4; text-transform: none; color: #F6F3EB; border: none; padding: 16px 0; border-bottom: 1px solid rgba(246,243,235,0.12); display: block; }
   .nav__mobile a:first-child { border-top: 1px solid rgba(246,243,235,0.12); }
+  .nav__mobile a[style*="14px"] { font-size: 14px !important; padding-left: 24px !important; color: var(--stand-300) !important; font-weight: 600; padding-top: 12px !important; padding-bottom: 12px !important; }
   .nav__mobile-close { position: absolute; top: 18px; right: 20px; background: none; border: none; color: #F6F3EB; font-size: 28px; cursor: pointer; padding: 8px; }
   .nav__mobile-cta { margin-top: 32px; }
 

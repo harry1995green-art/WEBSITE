@@ -82,7 +82,7 @@ function Nav({ active = "home", onNavigate }) {
         <a href="#" onClick={(e) => { e.preventDefault(); go("home"); }}>Home</a>
         <a href="#" onClick={(e) => { e.preventDefault(); go("detail"); }}>Experiences</a>
         {EXPERIENCES.map(e => (
-          <a key={e.id} href="#" onClick={(ev) => { ev.preventDefault(); go(e.id); }} style={{ fontSize: 24, paddingLeft: 24, color: "#9CA4AC", borderTop: "none" }}>{e.label}</a>
+          <a key={e.id} href="#" onClick={(ev) => { ev.preventDefault(); go(e.id); }} style={{ fontSize: "14px !important" }}>{e.label}</a>
         ))}
         <a href="#" onClick={(e) => { e.preventDefault(); go("tournaments"); }}>Tournaments</a>
         <a href="#" onClick={(e) => { e.preventDefault(); go("about"); }}>About</a>
