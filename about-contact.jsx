@@ -35,6 +35,38 @@ function About({ onNavigate }) {
         </div>
       </section>
 
+      {/* FOUNDER */}
+      <section className="band">
+        <div className="wrap" style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: 64, alignItems: "center" }}>
+          <div>
+            <div style={{ aspectRatio: "3/4", background: "var(--ink-800)", border: "1px solid rgba(246,243,235,0.08)", borderRadius: 8, overflow: "hidden", backgroundImage: `url(https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F664bed4b7bef47eeaaadf217a15217e5?format=webp&width=800&height=1200)`, backgroundSize: "cover", backgroundPosition: "center" }}></div>
+          </div>
+          <div>
+            <EyebrowBar>About the founder</EyebrowBar>
+            <h2 className="section-h">Why Choose Ballerz Abroad for Your Youth Football Tours?</h2>
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 16, lineHeight: 1.7, color: "var(--stand-200)", marginBottom: 32 }}>
+              <h3 style={{ fontFamily: "var(--font-display)", fontSize: 24, color: "var(--chalk-50)", textTransform: "uppercase", marginBottom: 12 }}>About Ballerz Abroad</h3>
+              <p style={{ marginBottom: 16 }}>Ballerz Abroad was founded by Harrison Green, a grassroots football coach with over 20 years of experience in the game — first as a player, and for the past several years as a coach following his retirement from playing.</p>
+              <p style={{ marginBottom: 24 }}>Having spent two decades in football, Harrison recognised a gap in the market. UK clubs with ambition and talented squads had no straightforward, trustworthy route to professional European football experiences. The tours that existed were either generic travel packages with football bolted on, or prohibitively expensive academy programmes out of reach for most grassroots clubs. Ballerz Abroad was built to fix that.</p>
+
+              <h3 style={{ fontFamily: "var(--font-display)", fontSize: 24, color: "var(--chalk-50)", textTransform: "uppercase", marginBottom: 12, marginTop: 24 }}>Our Philosophy</h3>
+              <p style={{ marginBottom: 16 }}>We are a football-first company. Every programme we design starts with the football — the training sessions, the opposition, the tournament format, the facilities — and builds outward from there. Travel, accommodation and logistics follow the football plan, not the other way around.</p>
+              <p style={{ marginBottom: 24 }}>This means the teams that travel with us come home having genuinely experienced how professional European football operates. Not as tourists who watched a game, but as players who trained at professional facilities, competed against international opposition, and understood a different football culture from the inside.</p>
+
+              <h3 style={{ fontFamily: "var(--font-display)", fontSize: 24, color: "var(--chalk-50)", textTransform: "uppercase", marginBottom: 12, marginTop: 24 }}>Who We Work With</h3>
+              <p style={{ marginBottom: 24 }}>Ballerz Abroad works with grassroots clubs, school football programmes, community academies, female teams, and adult pre-season groups across the UK. Our programmes are built for teams at every level — from development-focused youth sides taking their first trip abroad, to ambitious academies looking for elite competition at tournaments like the MIC or Porto International Cup.</p>
+
+              <h3 style={{ fontFamily: "var(--font-display)", fontSize: 24, color: "var(--chalk-50)", textTransform: "uppercase", marginBottom: 12, marginTop: 24 }}>Harrison Green — Founder</h3>
+              <p style={{ marginBottom: 16 }}>Harrison holds FA coaching qualifications and has been actively involved in football for over 20 years. After a playing career spanning two decades, he transitioned into coaching at grassroots level, working with players from youth level through to adult football.</p>
+              <p style={{ marginBottom: 24 }}>His experience on both sides of the game shapes every Ballerz Abroad programme. He understands what coaches need from a tour, what players need from the experience, and what parents need from an operator they are trusting with their children. That combination of playing experience, coaching knowledge, and operational expertise is what makes Ballerz Abroad different from generic sports travel companies.</p>
+
+              <h3 style={{ fontFamily: "var(--font-display)", fontSize: 24, color: "var(--chalk-50)", textTransform: "uppercase", marginBottom: 12, marginTop: 24 }}>Our Partners</h3>
+              <p>Every tour is delivered in partnership with established European football organisations. Our football partners include the organisers of the MIC, Porto International Cup, Copa Daurada, Mare Nostrum Cup, Cruyff Tournament, Levante UD International Cup and MIC Punta Cana.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* PRINCIPLES */}
       <section className="band">
         <div className="wrap">
