@@ -38,7 +38,7 @@ function DestExplorer({ onNavigate }) {
           {rows.map((r, idx) => (
             <div key={r.t} className="dest-card" onClick={() => onNavigate("detail")}>
               <div className="dest-card__img" style={{ backgroundImage: `url(${r.img})` }}></div>
-              <div className="dest-card__grad" style={idx === 1 ? { backgroundImage: "url(https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F85fb5ebe851148a8aeca42899ab2bd4f?format=webp)", backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundSize: "cover" } : {}}></div>
+              <div className="dest-card__grad" style={idx === 1 ? { backgroundImage: "url(https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F4ff2a022ea184f78911989e7b54efccb)", backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundSize: "cover" } : {}}></div>
               <div className="dest-card__arrow">→</div>
               <div className="dest-card__body">
                 <div className="dest-card__country">{r.c}</div>
