@@ -73,10 +73,10 @@ const EXP_DATA = {
   "exp-benfica": {
     title: "Benfica Academy Experience.",
     eyebrow: "Lisbon · PT · Seixal training environment",
-    sub: "Inside Benfica's Seixal campus — the most decorated academy in modern Portuguese football. Coached by partner-club staff, tested against the Sub-19 field.",
+    sub: "One of the most decorated youth academies in world football. Train inside the Benfica Campus in Lisbon — the same environment that produced Bernardo Silva, Rúben Dias, and João Félix — on a professional football experience abroad built around your squad.",
     location: "Lisbon · PT",
     facts: [["Country", "Portugal"], ["Partner", "SL Benfica"], ["Age", "U7 — U19"], ["From", "£749"]],
-    img: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=2000&q=80",
+    img: "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F6ae357e4b18047bd97ef50f4161f3a12?format=webp&width=800&height=1200",
     pill: "By application",
     accent: "Summer window · Jul 12 — 19 2026",
     summary: "Seixal access. Daily sessions, video debrief, two fixtures against Benfica-aligned youth sides, one against an external Lisbon academy.",
