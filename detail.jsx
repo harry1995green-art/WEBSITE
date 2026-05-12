@@ -14,7 +14,7 @@ const EXP_DATA = {
     accommodation: {
       name: "Gordon's School · Augusta Boarding House · Surrey, England",
       link: "https://nx-genpro.com",
-      linkLabel: "Visit NXGENPro.com — quote BALLERZ ABROAD to book",
+      linkLabel: "Visit NXGENPro.com — quote BALLERZ ABROAD for our exclusive promo code",
       desc: "Players are housed in the Augusta Boarding House at Gordon's School — a recently refurbished residential boarding house run by resident NXGEN staff members. Gordon's School boasts a prestigious £6 million first-class sports hub with a 1,233 m² indoor sports hall and a brand new 150 m² fully air-conditioned fitness suite, alongside dedicated football pitches and recovery facilities.",
       features: ["Augusta Boarding House · recently refurbished", "Resident NXGEN staff on-site 24/7", "£6m sports hub + 1,233m² indoor hall", "150m² air-conditioned fitness suite", "Football pitches on campus", "Full board · all meals provided"],
       photos: [
