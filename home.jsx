@@ -146,32 +146,32 @@ function Home({ onNavigate }) {
           <EyebrowBar>03 — Tour type</EyebrowBar>
           <h2 className="section-h">Four ways to travel.</h2>
           <div className="callout-grid">
-            <div className="cell">
+            <div className="cell" style={{ backgroundImage: "url(assets/dest-levante.jpg)" }}>
               <div className="cell__n">01</div>
               <div className="cell__t">Pro Experience Tours.</div>
               <div className="cell__d">For squads competing at the top end. Development, team coherence, contested fixtures — the standard players see at the next level.</div>
             </div>
-            <div className="cell">
+            <div className="cell" style={{ backgroundImage: "url(assets/dest-betis.png)" }}>
               <div className="cell__n">02</div>
               <div className="cell__t">Experience Tours.</div>
               <div className="cell__d">For squads stepping up. Train at the next level, compete abroad, return sharper than you left.</div>
             </div>
-            <div className="cell">
+            <div className="cell" style={{ backgroundImage: "url(assets/dest-feyenoord.jfif)" }}>
               <div className="cell__n">03</div>
               <div className="cell__t">Combined Tours.</div>
               <div className="cell__d">Mixed-level, mixed-age, mixed-gender groups. Built around the squad you actually have — not the one the brochure assumes.</div>
             </div>
-            <div className="cell">
+            <div className="cell" style={{ backgroundImage: "url(assets/dest-benfica.jpeg)" }}>
               <div className="cell__n">04</div>
               <div className="cell__t">Individual Player Development.</div>
               <div className="cell__d">A structured programme inside Levante UD's training environment. Parents welcome to travel.</div>
             </div>
-            <div className="cell">
+            <div className="cell" style={{ backgroundImage: "url(assets/dest-mic.webp)" }}>
               <div className="cell__n">05</div>
               <div className="cell__t">On-tour delivery.</div>
               <div className="cell__d">A Ballerz Abroad lead with your squad from arrival to wheels-up. Logistics handled. You focus on football.</div>
             </div>
-            <div className="cell">
+            <div className="cell" style={{ backgroundImage: "url(assets/dest-copa.jpg)" }}>
               <div className="cell__n">06</div>
               <div className="cell__t">The Ballerz network.</div>
               <div className="cell__d">Vetted clubs, federations and tournament organisers across the UK, Europe and beyond. Selected to our standards — never the other way round.</div>
