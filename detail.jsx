@@ -34,7 +34,7 @@ const EXP_DATA = {
     img: "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?w=2000&q=80",
     pill: "Application open",
     accent: "Easter window · Apr 04 — 11 2026",
-    summary: "Full La Liga academy environment. Coached by Levante UD academy staff, fed at the Ciutat Esportiva, matched against Levante's own age-group XIs.",
+    summary: "Levante UD is one of three La Liga clubs based in the Valencia region — one of European football's most productive development ecosystems. Founded in 1909, the club runs a full youth academy structured around a methodology built on game understanding, decision-making, and tactical intelligence. It's the same system used across every age group from the first team down.\n\nWhen Ballerz Abroad takes a squad to Levante, they aren't visiting the club. They're training inside it — on the same pitches, under the same coaching model, in the same daily environment as Levante's own academy players.",
     accommodation: {
       name: "Global-Levante UD International Residence · L'Eliana, Valencia",
       desc: "Players stay at the official Global-Levante UD International Residence — located in L'Eliana, one of the quietest and most comfortable areas of the Valencian community. The 23,000 m² campus houses up to 120 players with private bathrooms, dining room (breakfast, lunch and dinner), swimming pool, gymnasium, crossfit area, padel courts, tennis courts, a cafeteria, games room and 24-hour surveillance. Players live, eat and recover where Levante UD's international programme is based — the environment is part of the experience.",
