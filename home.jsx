@@ -74,7 +74,7 @@ function Home({ onNavigate }) {
             <div className="hero__eyebrow-text">ENGLAND · SPAIN · PORTUGAL · NETHERLANDS</div>
           </div>
           <h1 className="display-xl">PROFESSIONAL FOOTBALL EXPERIENCES</h1>
-          <div className="hero__sub">Professional training environments, organised fixtures, and tournament football across Spain, the Netherlands and the UK. Built around your squad.</div>
+          <div className="hero__sub">Ballerz Abroad designs bespoke overseas football tours for UK academies and development teams. Professional training environments, vetted partner clubs, and competitive fixtures across Spain, the Netherlands, Portugal and England.</div>
           <div className="hero__ctas">
             <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Apply for a tour →</button>
             <button className="btn btn--ghost btn--lg" onClick={() => onNavigate("detail")}>View the destinations</button>
@@ -99,7 +99,7 @@ function Home({ onNavigate }) {
         <div className="wrap">
           <EyebrowBar>01 — Why Ballerz Abroad</EyebrowBar>
           <h2 className="section-h">More than a tour.</h2>
-          <div className="section-lead">We're a UK-based boutique football experience company. Every tour we run is built — not booked — around your squad, your level, and what success looks like to you.</div>
+          <div className="section-lead">We're a UK-based boutique football experience company. Every professional football experience we deliver is designed — not packaged — around your squad, your level, and your definition of success.</div>
           <div className="pillars">
             <div className="pillar">
               <div className="pillar__n">01 — Built, not booked</div>
@@ -130,11 +130,11 @@ function Home({ onNavigate }) {
           <h2 className="section-h">Tailored around your squad.</h2>
           <div className="section-lead">Every tour is custom-built around your club's age groups, level, duration, budget, destination, and training intensity. We don't run packages — we build them.</div>
           <div className="audience-list">
-            <AudienceRow n="01" title="Grassroots clubs" desc="Lift a season-long programme. Bond a squad. Expose players to the next level." />
-            <AudienceRow n="02" title="Academies" desc="Pre-season camps, mid-season resets, scouting windows inside partner-club environments." />
-            <AudienceRow n="03" title="Schools" desc="Football-first travel for school football programmes — academic + athletic friendly." />
-            <AudienceRow n="04" title="Development teams" desc="Pro-grade environments without an academy budget. Compete, recover, return sharper." />
-            <AudienceRow n="05" title="US college soccer" desc="European exposure for NCAA programmes. Pre-season abroad, contested fixtures." />
+            <AudienceRow n="01" title="Grassroots clubs" desc="Lift a full season's programme. Expose your squad to the next level with a professional football experience in Europe." />
+            <AudienceRow n="02" title="Academies" desc="Pre-season camps, mid-season resets and scouting windows inside professional partner-club environments in Europe." />
+            <AudienceRow n="03" title="Schools" desc="Football-first overseas tours that balance academic and athletic calendars. Professionally hosted fixtures included." />
+            <AudienceRow n="04" title="Development teams" desc="Professional-grade football experiences abroad without a Category One budget. Compete, recover, and return sharper." />
+            <AudienceRow n="05" title="US college soccer" desc="European exposure for NCAA programmes. Pre-season football tours in Europe with contested fixtures against quality opposition." />
           </div>
         </div>
       </section>

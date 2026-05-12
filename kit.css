@@ -1,7 +1,7 @@
 /* Web kit local helpers — extends colors_and_type.css */
 
 * { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; background: var(--ink-900); color: var(--chalk-50); font-family: var(--font-body); }
+html, body { margin: 0; padding: 0; background: var(--ink-900); color: var(--chalk-50); font-family: var(--font-body); overflow-x: hidden; }
 
 .wrap { max-width: 1440px; margin: 0 auto; padding: 0 clamp(24px, 5vw, 80px); }
 
