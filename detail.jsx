@@ -39,16 +39,7 @@ const EXP_DATA = {
       name: "Global-Levante UD International Residence · L'Eliana, Valencia",
       desc: "Players stay at the official Global-Levante UD International Residence — located in L'Eliana, one of the quietest and most comfortable areas of the Valencian community. The 23,000 m² campus houses up to 120 players with private bathrooms, dining room (breakfast, lunch and dinner), swimming pool, gymnasium, crossfit area, padel courts, tennis courts, a cafeteria, games room and 24-hour surveillance. Players live, eat and recover where Levante UD's international programme is based — the environment is part of the experience.",
       features: ["Up to 120 players · private bathrooms", "Full board (breakfast, lunch & dinner)", "Swimming pool + sports centre", "Gymnasium · crossfit · padel · tennis", "Games room · TV lounge · laundry", "24-hour surveillance + tutoring service", "Direct bus transfer to training campus"],
-      photos: [
-        { url: "https://images.unsplash.com/photo-1580041065738-e72023775cdc?w=1200&q=80", cap: "Residence exterior" },
-        { url: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=900&q=80", cap: "Player rooms" },
-        { url: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=900&q=80", cap: "Swimming pool" },
-        { url: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80", cap: "Dining room" },
-        { url: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&q=80", cap: "Gymnasium" },
-        { url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900&q=80", cap: "Cafeteria" },
-        { url: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=900&q=80", cap: "Grounds" },
-        { url: "https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=900&q=80", cap: "Courts" },
-      ],
+      photos: [],
     },
   },
   "exp-betis": {
