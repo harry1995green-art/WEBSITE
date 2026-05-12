@@ -13,7 +13,7 @@ function About({ onNavigate }) {
         <div className="hero__inner">
           <div className="hero__eyebrow">
             <div className="hero__eyebrow-rule"></div>
-            <div className="hero__eyebrow-text">About · Ballerz Abroad · Est. 2024</div>
+            <div className="hero__eyebrow-text">About · Ballerz Abroad · Est. 2025</div>
           </div>
           <h1 className="display-xl">More than a tour<br/>operator.</h1>
           <div className="hero__sub">A UK-based football experience company built by football people, for football people. We design windows abroad that work because we've been on the other side of the bus.</div>

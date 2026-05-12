@@ -101,7 +101,7 @@ const EXP_DATA = {
     eyebrow: "Rotterdam · NL · Eredivisie partner",
     sub: "Inside Feyenoord's training environment. Direct, physical, attacking Dutch football — contested against Rotterdam and Dutch youth opposition.",
     location: "Rotterdam · NL",
-    facts: [["Country", "Netherlands"], ["Partner", "Feyenoord"], ["Age", "U14 — U19"], ["From", "£1,795 pp"]],
+    facts: [["Country", "Netherlands"], ["Partner", "Feyenoord"], ["Age", "U7 — U19"], ["From", "£999pp"]],
     img: "https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?w=2000&q=80",
     pill: "Application open",
     accent: "Pre-season window · Jul — Aug 2026",
