@@ -19,9 +19,9 @@ const EXP_DATA = {
       features: ["Augusta Boarding House · recently refurbished", "Resident NXGEN staff on-site 24/7", "£6m sports hub + 1,233m² indoor hall", "150m² air-conditioned fitness suite", "Football pitches on campus", "Full board · all meals provided"],
       photos: [
         { url: "https://nx-genpro.com/wp-content/uploads/2025/08/3163_618-1-1024x683.jpg", cap: "Gordon's School sports hub" },
-        { url: "https://images.unsplash.com/photo-1580041065738-e72023775cdc?w=900&q=80", cap: "Boarding house grounds" },
+        { url: "https://www.synergyllp.co.uk/wp-content/uploads/2020/02/Gordons-School-Boarding-Accom-HIGH-RES-001-scaled.jpg", cap: "Boarding house grounds" },
         { url: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&q=80", cap: "Fitness suite" },
-        { url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900&q=80", cap: "Team dining" },
+        { url: "https://www.synergyllp.co.uk/wp-content/uploads/2020/02/Gordons-School-Boarding-Accom-HIGH-RES-025-e1582906641466.jpg.webp", cap: "Boarding rooms" },
       ],
     },
   },
