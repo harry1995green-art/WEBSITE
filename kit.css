@@ -21,7 +21,7 @@ html, body { margin: 0; padding: 0; background: var(--ink-900); color: var(--cha
   border-bottom-color: rgba(246, 243, 235, 0.08);
 }
 .nav__left { display: flex; align-items: center; gap: 36px; background: transparent; }
-.nav__logo { height: 90px; display: block; width: auto; border: none; background: transparent; }
+.nav__logo { height: 90px; display: block; width: auto; border: none; background: transparent; object-fit: contain; }
 .nav__links { display: flex; gap: 26px; }
 .nav__links a {
   font-family: var(--font-heading);
