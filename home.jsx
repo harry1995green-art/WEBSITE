@@ -11,7 +11,7 @@ function Home({ onNavigate }) {
 
       {/* HERO */}
       <section className="hero">
-        <div className="hero__img" style={{ backgroundImage: `url(${HERO_IMG})`, backgroundSize: "50%" }}></div>
+        <div className="hero__img" style={{ backgroundImage: `url(${HERO_IMG})` }}></div>
         <div className="hero__grain"></div>
         <div className="hero__gradient"></div>
         <div className="hero__meta">
@@ -75,7 +75,6 @@ function Home({ onNavigate }) {
               sub="Inside a La Liga club's training environment. Academy coaching, contested fixtures, and the Levante UD International Cup. Individual Player Development available."
               pill="Application open"
               onClick={() => onNavigate("levante")}
-              gradBg="https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fe56947d566fa42c08392dcadc64de8f3"
             />
             <ExpCard
               image="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=900&q=80"
