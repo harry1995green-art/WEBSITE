@@ -39,7 +39,13 @@ const EXP_DATA = {
       name: "Global-Levante UD International Residence · L'Eliana, Valencia",
       desc: "Players stay at the official Global-Levante UD International Residence — located in L'Eliana, one of the quietest and most comfortable areas of the Valencian community. The 23,000 m² campus houses up to 120 players with private bathrooms, dining room (breakfast, lunch and dinner), swimming pool, gymnasium, crossfit area, padel courts, tennis courts, a cafeteria, games room and 24-hour surveillance. Players live, eat and recover where Levante UD's international programme is based — the environment is part of the experience.",
       features: ["Up to 120 players · private bathrooms", "Full board (breakfast, lunch & dinner)", "Swimming pool + sports centre", "Gymnasium · crossfit · padel · tennis", "Games room · TV lounge · laundry", "24-hour surveillance + tutoring service", "Direct bus transfer to training campus"],
-      photos: [],
+      photos: [
+        { url: "https://www.globalfootballtotal.com/wp-content/uploads/2020/04/Edificio-Residencia.jpg", cap: "Residence exterior" },
+        { url: "http://www.globalfootballtotal.com/wp-content/uploads/2020/04/Dormitorios.jpg", cap: "Player rooms" },
+        { url: "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Ffce0f6409dea4c95a4fafd0cdb7ca997?format=webp&width=800&height=1200", cap: "Swimming pool" },
+        { url: "http://www.globalfootballtotal.com/wp-content/uploads/2020/04/Previo-Habitaciones.jpg", cap: "Accommodation" },
+        { url: "http://www.globalfootballtotal.com/wp-content/uploads/2020/04/Previo-Habitaciones-II.jpg", cap: "Residence grounds" },
+      ],
     },
   },
   "exp-betis": {
