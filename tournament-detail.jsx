@@ -35,15 +35,89 @@ const CAMBRILS_ACCOM = {
 const TOURNAMENT_DATA = {
   "tour-mic-costa-brava": {
     name: "MIC Costa Brava.",
-    eyebrow: "Spain · Easter window · International Youth Tournament",
-    sub: "The reference event in international youth football. Founded in 2001, hosted across Catalonia. Direct entry through Ballerz Abroad.",
+    eyebrow: "Tournament · Spain · Costa Brava",
+    sub: "The reference youth football tournament in Europe. Over 400 teams. More than 40 countries. Easter week on the Costa Brava — and the most competitive youth football environment your players will face all season.",
     location: "Costa Brava · ES",
-    facts: [["Country", "Spain"], ["Window", "28 Mar — 04 Apr 2026"], ["Age", "U10 — U19"], ["Teams", "350+"]],
+    facts: [["Country", "Spain"], ["Window", "28 Mar — 04 Apr 2026"], ["Age", "U10 — U19"], ["Teams", "400+"]],
     img: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=2000&q=80",
     pill: "2026 entries open",
     accent: "Finals played at RCDE Stadium",
-    summary: "Over 350 teams from 60+ countries every Easter. The MIC is the most-contested youth bracket in Europe — and the standard against which every other tournament is judged.",
+    summary: "Over 400 teams from more than 40 countries compete across nearly 900 matches on 59 pitches spread across the Girona region and Costa Brava coastline.",
     accommodation: CAMBRILS_ACCOM,
+    sections: [
+      {
+        eyebrow: "01 — What Is MIC",
+        title: "Not just a tournament. The tournament.",
+        content: `The Mediterranean International Cup — MIC — has been running every Easter on the Costa Brava since 2001. Now in its 24th edition, it has become the single most referenced youth football tournament in Europe. Over 400 teams from more than 40 countries compete across nearly 900 matches on 59 pitches spread across the Girona region and Costa Brava coastline.
+
+The clubs that show up tell the story. FC Barcelona, Real Madrid, Liverpool, Manchester United, Ajax, AC Milan, PSG, Atlético Madrid — the full spectrum of European academy football, alongside national youth teams and development programmes from the Americas, Asia, and Africa. This is not a regional competition or a prestige trip. It is the most contested youth tournament on the European calendar, and the standard reflects it.
+
+Players who have competed at MIC as youth footballers include Lamine Yamal, Cole Palmer, Rodri, Marcus Rashford, Pedri, Dani Carvajal, Lionel Messi, and Neymar. The tournament is what it says it is.`,
+      },
+      {
+        eyebrow: "02 — Format",
+        title: "How it works.",
+        content: `MIC runs over five days during Easter week across the Costa Brava — from Lloret de Mar to Roses — with matches played on natural grass and high-quality artificial pitches across 43 municipalities in the Girona region.
+
+Group stage: Teams are drawn into groups of four and play a round-robin format. The top two from each group progress to the final knockout rounds. Teams finishing third and fourth enter a consolation competition — meaning every team is guaranteed football throughout the tournament, not just the top sides.
+
+Knockout rounds: Quarterfinals, semifinals, and finals are played across the final two days, with finals hosted at the main stadiums in Palamós and Figueres.
+
+Minimum matches: Every team is guaranteed a minimum of four matches. Finalists can play up to nine.
+
+Age categories: U12 · U13 · U14 · U15 · U16 · U18 · U19 · Girls U16`,
+      },
+      {
+        eyebrow: "03 — Why It Matters for UK Academies",
+        title: "The standard your players won't get at home.",
+        content: `UK development football is physically competitive and tactically organised. MIC is technically elite and tactically varied — a tournament where your players will face Spanish academy sides built on positional play, Dutch teams with a decision-making philosophy, South American squads with technical creativity, and African sides with pace and intensity that is entirely different from anything in the domestic calendar.
+
+In a single week, your players will encounter more different styles of football than in an entire domestic season. That exposure — the discomfort of it, the adaptation required, the moments where what they know stops working — is the development value. Coaches consistently report that players return from MIC with a sharper understanding of the game and a clearer picture of the standard they are working towards.
+
+The best squads don't come to MIC just to win it. They come to be tested by it.`,
+      },
+      {
+        eyebrow: "04 — The Location",
+        title: "Easter week on the Costa Brava.",
+        content: `The Costa Brava is one of Catalonia's most distinctive stretches of Mediterranean coastline — a region of fishing towns, rocky coves, clear water, and unhurried pace. The tournament is spread across the Girona region, with accommodation areas in Lloret de Mar, Platja d'Aro, Roses, L'Estartit, and Palamós, depending on age category.
+
+Barcelona is approximately 100 kilometres away — reachable in under 90 minutes for squads who want to build a day trip into the itinerary. Girona itself, with its medieval walls and old town, is right in the middle of the tournament area.
+
+For players, the combination of competitive football and a genuinely beautiful part of Spain makes MIC unlike any domestic tournament experience. For parents travelling with the squad, the Costa Brava during Easter is somewhere worth being.`,
+      },
+      {
+        eyebrow: "05 — How Ballerz Abroad Builds a MIC Tour",
+        title: "Entry is just the starting point.",
+        content: `Ballerz Abroad secures your tournament entry, manages accommodation across the correct area for your age category, handles all ground transfers between pitches and accommodation, and provides a dedicated tour lead with your squad throughout.
+
+More importantly, we build the days before the tournament around your squad's preparation. A typical MIC tour with Ballerz Abroad looks like this:
+
+Days 1–2 — Arrival in Spain, settle in, first training sessions inside a partner club environment
+Days 3–4 — Professional training at Levante UD or a Catalonia-based partner facility
+Days 5–9 — MIC Costa Brava competition (five tournament days)
+Day 10 — Departure
+
+Arriving at MIC having trained properly inside a professional environment that week changes what your players are able to do when the competition starts. It is the difference between showing up and being ready.`,
+      },
+      {
+        eyebrow: "06 — Who This Is For",
+        title: "Right for your squad if…",
+        content: `You're running an academy or development programme and your players are ready to be tested against European-standard opposition across multiple styles of play
+
+You want the most competitive overseas football tournament available in the Easter window
+
+You're looking to combine a professional training environment in Spain with the most prestigious youth tournament entry in Europe
+
+Your players need a performance reference point — something to measure themselves against at the top end
+
+Not the right fit for squads at very early grassroots level entering their first overseas tournament. For those groups, Copa Daurada or Mare Nostrum Cup offer a better starting level and a more appropriate environment. We will tell you honestly which tournament fits your squad.`,
+      },
+      {
+        eyebrow: "07 — Also in the MIC Family",
+        title: "Can't make Easter? There's a winter option.",
+        content: `MIC Punta Cana — The MIC format, transposed to the Dominican Republic. Runs in late June across a 125,000m² sports complex at Cap Cana, with teams staying in four and five-star all-inclusive hotels. U12–U16 boys and girls U16. A genuine alternative for squads who can't travel at Easter or who want the MIC experience in a different window.`,
+      },
+    ],
   },
   "tour-copa-daurada": {
     name: "Copa Daurada.",
@@ -184,28 +258,19 @@ function TournamentDetail({ onNavigate, tourId = "tour-mic-costa-brava" }) {
         </div>
       </section>
 
-      <section className="band">
-        <div className="wrap">
-          <EyebrowBar>01 — The event</EyebrowBar>
-          <h2 className="section-h">What this is.</h2>
-          <div className="section-lead">{d.summary}</div>
-        </div>
-      </section>
-
-      <section className="band">
-        <div className="wrap">
-          <EyebrowBar>02 — How a tournament tour runs</EyebrowBar>
-          <h2 className="section-h">Five days, one bracket.</h2>
-          <div className="callout-grid">
-            <div className="cell"><div className="cell__n">01</div><div className="cell__t">Direct entry.</div><div className="cell__d">Ballerz Abroad holds confirmed places. No federation paperwork on your side.</div></div>
-            <div className="cell"><div className="cell__n">02</div><div className="cell__t">Travel ops.</div><div className="cell__d">Ground transport, daily transfers — UK-managed end to end. Flights not included.</div></div>
-            <div className="cell"><div className="cell__n">03</div><div className="cell__t">Camp lead on-tour.</div><div className="cell__d">A Ballerz Abroad lead embeds with your squad from arrival to wheels-up.</div></div>
-            <div className="cell"><div className="cell__n">04</div><div className="cell__t">Match-day standard.</div><div className="cell__d">Pre-match meals, tunnel walks, referee briefings, video.</div></div>
-            <div className="cell"><div className="cell__n">05</div><div className="cell__t">Recovery + culture.</div><div className="cell__d">Pool sessions, downtime, optional cultural windows.</div></div>
-            <div className="cell"><div className="cell__n">06</div><div className="cell__t">Media & memory.</div><div className="cell__d">Daily content drop. Every fixture filmed. Clipped reel by departure.</div></div>
+      {d.sections && d.sections.map((sec, i) => (
+        <section key={i} className="band">
+          <div className="wrap">
+            <EyebrowBar>{sec.eyebrow}</EyebrowBar>
+            <h2 className="section-h">{sec.title}</h2>
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 16, lineHeight: 1.7, color: "var(--stand-200)", maxWidth: 900 }}>
+              {sec.content.split('\n\n').map((para, idx) => (
+                <p key={idx} style={{ marginBottom: 16 }}>{para}</p>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ))}
 
       {/* ACCOMMODATION */}
       {d.accommodation && (
@@ -268,19 +333,12 @@ function TournamentDetail({ onNavigate, tourId = "tour-mic-costa-brava" }) {
       <section className="app-band">
         <div className="app-band__grid">
           <div>
-            <div className="eyebrow-bar"><div className="eyebrow-bar__rule" style={{ background: "#0A0B0D" }}></div><div className="eyebrow-bar__text" style={{ color: "#0A0B0D" }}>05 — Apply</div></div>
-            <h2 className="section-h">Apply for {d.name.replace(".", "")}</h2>
-            <div className="section-lead" style={{ color: "#545B63" }}>Tell us your bracket, your dates, your numbers. We confirm fit within two working days.</div>
+            <div className="eyebrow-bar"><div className="eyebrow-bar__rule" style={{ background: "#0A0B0D" }}></div><div className="eyebrow-bar__text" style={{ color: "#0A0B0D" }}>Ready to enter MIC Costa Brava?</div></div>
+            <h2 className="section-h">Entry slots are limited and fill well in advance — particularly at Easter.</h2>
+            <div className="section-lead" style={{ color: "#545B63" }}>Tell us about your squad and we'll confirm availability and put together your full tour brief within two working days.</div>
             <div style={{ display: "flex", gap: 12, marginTop: 32, flexWrap: "wrap" }}>
-              <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Start an application →</button>
+              <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Apply for a tour →</button>
               <a className="btn btn--ghost btn--lg" href="tel:07867205763" style={{ textDecoration: "none", color: "#0A0B0D", borderColor: "rgba(10,11,13,0.32)" }}>07867 205763</a>
-            </div>
-          </div>
-          <div>
-            <div className="app-band__steps">
-              <div className="app-step"><div className="app-step__n">●</div><div><div className="app-step__t">{d.pill}</div><div className="app-step__d">{d.accent}</div></div></div>
-              <div className="app-step"><div className="app-step__n">2d</div><div><div className="app-step__t">Two-day response window</div><div className="app-step__d">Every application gets a tailored brief — or a discovery call.</div></div></div>
-              <div className="app-step"><div className="app-step__n">UK</div><div><div className="app-step__t">UK-managed</div><div className="app-step__d">UK contract, UK staff, UK travel ops — wherever you're playing.</div></div></div>
             </div>
           </div>
         </div>
