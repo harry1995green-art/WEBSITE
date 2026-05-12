@@ -154,7 +154,7 @@ function Blog({ onNavigate }) {
                     <span>{p.cat}</span><span>·</span><span>{p.date}</span>
                   </div>
                   <h4 className="blog-card__t">{p.title}</h4>
-                  <div className="blog-card__excerpt">{p.excerpt}</div>
+                  <div className="blog-card__excerpt" style={{ fontFamily: "Arial, sans-serif" }}>{p.excerpt}</div>
                   <div className="blog-card__read">{p.read} →</div>
                 </div>
               </article>

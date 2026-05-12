@@ -44,10 +44,10 @@ function Tournaments({ onNavigate }) {
       <section className="band" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="stat-row">
-            <StatCell n="06" label="Partner events" />
-            <StatCell n="60" label="Countries represented" />
+            <StatCell n="07" label="Partner events" />
+            <StatCell n="3" label="Countries represented" />
             <StatCell n="11" label="Brackets · U8 — U19" />
-            <StatCell n="01" label="Bar" accent />
+            <StatCell n="40+" label="PROFESSIONAL ACADEMIES" accent />
           </div>
         </div>
       </section>
