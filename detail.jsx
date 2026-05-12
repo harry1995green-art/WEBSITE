@@ -53,7 +53,7 @@ const EXP_DATA = {
     eyebrow: "Seville · ES · Andalusian football",
     sub: "Andalusian football, on its own terms. Coached at the Real Betis Cantera, contested against the Andalusian academy field.",
     location: "Seville · ES",
-    facts: [["Country", "Spain"], ["Partner", "Real Betis Balompié"], ["Age", "U14 — U19"], ["From", "£1,950 pp"]],
+    facts: [["Country", "Spain"], ["Partner", "Real Betis Balompié"], ["Age", "U7 — U21"], ["From", "£999pp"]],
     img: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=2000&q=80",
     pill: "Application open",
     accent: "Spring window · May 02 — 09 2026",
