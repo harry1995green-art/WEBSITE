@@ -87,7 +87,7 @@ function Home({ onNavigate }) {
         <div className="wrap">
           <div className="stat-row">
             <StatCell n="07" label="Days abroad" />
-            <StatCell n="15" label="Pro sessions" />
+            <StatCell n="10" label="Pro sessions" />
             <StatCell n="03" label="Int. fixtures" />
             <StatCell n="01" label="Pro environment" accent />
           </div>
@@ -217,7 +217,7 @@ function Home({ onNavigate }) {
               ["Levante UD",     "https://images.squarespace-cdn.com/content/v1/69657d0bde7b1d54486a7193/cdc306a3-efb4-407b-a841-cc986a9a0b41/ChatGPT+Image+Jan+9%2C+2026%2C+11_01_00+AM.png"],
               ["Real Betis",    "https://images.squarespace-cdn.com/content/v1/69657d0bde7b1d54486a7193/d9d4fac9-5dd8-41f7-b464-2d6345e2b12f/Real_betis_logo.svg.png"],
               ["MIC Football",  "https://images.squarespace-cdn.com/content/v1/69657d0bde7b1d54486a7193/69806f9e-a44a-473f-8214-23cce19f86e3/images+%282%29.png"],
-              ["Mare Nostrum",  "https://images.squarespace-cdn.com/content/v1/69657d0bde7b1d54486a7193/25655f7a-a5f8-46cf-a5fb-3900848733d8/mare_nostrum_gmail_logo.png"],
+              ["NXGENPro",  "https://nx-genpro.com/wp-content/uploads/2025/08/NXGEN_Logo.png"],
             ].map(([name, src]) => (
               <div key={name} style={{ background: "var(--ink-900)", padding: 32, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16, minHeight: 180 }}>
                 <img src={src} alt={name} style={{ maxHeight: 80, maxWidth: "70%", objectFit: "contain", filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.4))" }} />
