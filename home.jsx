@@ -140,55 +140,6 @@ function Home({ onNavigate }) {
       </section>
 
       {/* EXPERIENCE GRID -------------------------------------------------- */}
-      <section className="band">
-        <div className="wrap">
-          <EyebrowBar>02 — 2026 Windows</EyebrowBar>
-          <div className="section-lead">Each experience is opened against partner-club calendars — built around your squad.</div>
-          <div className="exp-grid">
-            <ExpCard
-              featured
-              image="https://images.unsplash.com/photo-1610294232527-d11a4c7ce40c?w=1200&q=80"
-              meta="PRO EXPERIENCE · VALENCIA"
-              title="Levante UD experience"
-              sub="Inside the partner-club training environment. Individual Player Development available — parents welcome to travel."
-              pill="Application open"
-              onClick={() => onNavigate("exp-levante")}
-            />
-            <ExpCard
-              image="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=900&q=80"
-              meta="EXPERIENCE · SEVILLE"
-              title="Real Betis experience"
-              sub="Andalusian football. Pro environment."
-              pill="Application open"
-              onClick={() => onNavigate("exp-betis")}
-            />
-            <ExpCard
-              image="https://images.unsplash.com/photo-1517747614396-d21a78b850e8?w=900&q=80"
-              meta="DEVELOPMENT · ENGLAND"
-              title="NXGENPro"
-              sub="UK-based programme. Year-round windows."
-              pill="Year-round"
-              onClick={() => onNavigate("exp-nxgenpro")}
-            />
-            <ExpCard
-              image="https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?w=900&q=80"
-              meta="PRO EXPERIENCE · ROTTERDAM"
-              title="Feyenoord Academy"
-              sub="Eredivisie academy. Direct, physical Dutch football."
-              pill="Application open"
-              onClick={() => onNavigate("exp-feyenoord")}
-            />
-            <ExpCard
-              featured
-              image="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=1200&q=80"
-              meta="COMBINED TOUR · BUILT TO BRIEF"
-              title="Combined tours — your squad, your way"
-              sub="Mixed-level, mixed-age, mixed-gender groups. Aligned to one of our partner tournaments. Custom-built end to end."
-            />
-          </div>
-        </div>
-      </section>
-
       {/* TOUR TYPES ------------------------------------------------------- */}
       <section className="band">
         <div className="wrap">
