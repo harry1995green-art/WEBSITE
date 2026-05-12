@@ -332,41 +332,6 @@ function Home({ onNavigate }) {
       </section>
 
       {/* SOCIAL ------------------------------------------------------------- */}
-      <section className="band">
-        <div className="wrap">
-          <EyebrowBar>07 — From the tours</EyebrowBar>
-          <h2 className="section-h">@ballerzabroad</h2>
-          <div className="section-lead">Instagram · TikTok · @ballerzabroad&nbsp;</div>
-          <div style={{ display: "flex", gap: 24, marginBottom: 48 }}>
-            <a href="https://instagram.com/ballerzabroad" target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: 8, color: "var(--chalk-50)", textDecoration: "none", fontSize: 14 }}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/></svg>
-              Instagram
-            </a>
-            <a href="https://facebook.com/ballerzabroad" target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: 8, color: "var(--chalk-50)", textDecoration: "none", fontSize: 14 }}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-              Facebook
-            </a>
-            <a href="https://tiktok.com/@ballerzabroad" target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: 8, color: "var(--chalk-50)", textDecoration: "none", fontSize: 14 }}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.498 3.094c1.685-1.417 3.536-2.48 5.502-2.996v2.422c-1.61.533-3.124 1.548-4.403 3.036 1.002 1.016 1.845 2.277 2.319 3.778.473 1.502.639 3.108.639 4.666 0 1.557-.166 3.163-.639 4.666-.474 1.501-1.317 2.762-2.319 3.778.873.673 1.843 1.242 2.919 1.622v2.422c-1.966-.516-3.817-1.579-5.502-2.996-1.717 1.416-3.561 2.478-5.503 2.996v-2.422c1.076-.38 2.046-.949 2.919-1.622-1.003-1.016-1.845-2.277-2.32-3.778-.472-1.503-.639-3.109-.639-4.666 0-1.557.167-3.163.639-4.666.475-1.501 1.317-2.762 2.32-3.778-1.288-1.488-2.802-2.503-4.403-3.036V0c1.942.518 3.786 1.58 5.503 2.996z"/></svg>
-              TikTok
-            </a>
-          </div>
-          <div className="social-grid">
-            {[
-              ["https://images.unsplash.com/photo-1564415051543-cca4a18fe2cc?w=600&q=80", "@ballerzabroad", "BCN"],
-              ["https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?w=600&q=80", "Tunnel walk", "DAY 02"],
-              ["https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&q=80", "Recovery", "DAY 04"],
-              ["https://images.unsplash.com/photo-1518614846906-3a8a8f0c40d5?w=600&q=80", "Matchday", "FIXTURE 02"],
-            ].map(([img, label, badge], i) => (
-              <div key={i} className="social-tile">
-                <div className="social-tile__img" style={{ backgroundImage: `url(${img})` }}></div>
-                <div className="social-tile__overlay"></div>
-                <div className="social-tile__meta"><span>{label}</span><span>{badge}</span></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* APPLICATION BAND --------------------------------------------------- */}
       <section className="app-band">
