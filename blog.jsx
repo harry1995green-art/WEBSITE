@@ -198,7 +198,7 @@ window.POSTS = POSTS;
 
 // Single post view — pulls the first featured post.
 function BlogPost({ onNavigate }) {
-  const p = POSTS[0];
+  const p = POSTS[1];
   return (
     <>
       <Nav active="blog" onNavigate={onNavigate} />
@@ -218,9 +218,6 @@ function BlogPost({ onNavigate }) {
 
       <section className="band" style={{ paddingTop: 24 }}>
         <div className="wrap" style={{ maxWidth: 740, fontFamily: "var(--font-body)", color: "var(--chalk-50)" }}>
-          <p style={{ fontSize: 22, lineHeight: 1.5, color: "var(--chalk-50)", fontWeight: 500, marginBottom: 32 }}>
-            {p.excerpt}
-          </p>
           {p.body ? p.body.map((section, idx) => {
             if (typeof section === 'string') {
               return (
