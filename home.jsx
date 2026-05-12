@@ -184,7 +184,7 @@ function Home({ onNavigate }) {
       <section className="band">
         <div className="wrap">
           <EyebrowBar>04 — Tournaments</EyebrowBar>
-          <h2 className="section-h">Compete at the reference events.</h2>
+          <h2 className="section-h">COMPETE IN EUROPE'S MOST PRESTIGOUS TOURNAMENTS</h2>
           <div className="section-lead">Direct entries into European youth football's most contested tournaments — selected for level, not name.</div>
           <div className="fixture-table">
             {[
