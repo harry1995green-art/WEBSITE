@@ -79,7 +79,7 @@ const EXP_DATA = {
     sub: "Inside Benfica's Seixal campus — the most decorated academy in modern Portuguese football. Coached by partner-club staff, tested against the Sub-19 field.",
     location: "Lisbon · PT",
     facts: [["Country", "Portugal"], ["Partner", "SL Benfica"], ["Age", "U14 — U19"], ["From", "£2,150 pp"]],
-    img: "https://images.unsplash.com/photo-1577471488278-16eec37ffcc2?w=2000&q=80",
+    img: "https://images.unsplash.com/photo-1551958219-acbc608c6377?w=2000&q=80",
     pill: "By application",
     accent: "Summer window · Jul 12 — 19 2026",
     summary: "Seixal access. Daily sessions, video debrief, two fixtures against Benfica-aligned youth sides, one against an external Lisbon academy.",
