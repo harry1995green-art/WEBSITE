@@ -331,7 +331,7 @@ Levante UD International Cup — Hosted by our La Liga partner club in Valencia.
     eyebrow: "Tournament · Spain · Salou",
     sub: "Hosted in the spirit of Johan Cruyff's footballing philosophy. FC Barcelona, AFC Ajax, and Europe's best academy programmes. Salou, Spain — December window.",
     location: "Salou · ES",
-    facts: [["Country", "Spain"], ["Window", "4–7 December 2026"], ["Age", "U10 — U19"], ["Field", "Curated"]],
+    facts: [["Country", "Spain"], ["Window", "4–7 December 2026"], ["Age", "U10 — U19"], ["from", "£240pp"]],
     img: "https://images.unsplash.com/photo-1551958219-acbc608c6377?w=2000&q=80",
     pill: "December window",
     accent: "FC Barcelona · AFC Ajax",
