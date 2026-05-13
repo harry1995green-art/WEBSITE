@@ -36,7 +36,7 @@ function DestExplorer({ onNavigate }) {
         </div>
         <div className="dest-grid">
           {rows.map((r, idx) => (
-            <div key={r.t} className="dest-card" onClick={() => onNavigate("detail")}>
+            <div key={r.t} className="dest-card" onClick={() => onNavigate("exp-levante")}>
               <div className="dest-card__img" style={{ backgroundImage: `url(${r.img})` }}></div>
               <div className="dest-card__grad" style={idx === 3 ? { backgroundImage: "url(https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fe542691c14014b21b02b0fe16ada39a0)", backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundSize: "cover" } : {}}></div>
               <div className="dest-card__arrow">→</div>
