@@ -121,6 +121,7 @@ function About({ onNavigate }) {
 
       <Footer />
       <WhatsAppFab />
+      <CookieIcon onNavigate={onNavigate} />
     </>
   );
 }
@@ -226,6 +227,7 @@ function Contact({ onNavigate }) {
 
       <Footer />
       <WhatsAppFab />
+      <CookieIcon onNavigate={onNavigate} />
     </>
   );
 }

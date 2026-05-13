@@ -361,6 +361,7 @@ function Home({ onNavigate }) {
 
       <Footer />
       <WhatsAppFab />
+      <CookieIcon onNavigate={onNavigate} />
     </>
   );
 }

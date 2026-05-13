@@ -943,6 +943,7 @@ function TournamentDetail({ onNavigate, tourId = "tour-mic-costa-brava" }) {
 
       <Footer />
       <WhatsAppFab />
+      <CookieIcon onNavigate={onNavigate} />
     </>
   );
 }

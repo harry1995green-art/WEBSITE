@@ -346,6 +346,7 @@ function Detail({ onNavigate, expId = "exp-levante" }) {
 
       <Footer />
       <WhatsAppFab />
+      <CookieIcon onNavigate={onNavigate} />
     </>
   );
 }

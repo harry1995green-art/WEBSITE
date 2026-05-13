@@ -110,6 +110,51 @@ function WhatsAppFab() {
 }
 
 // ---------------------------------------------------------------------------
+// Cookie Policy Icon — fixed position, links to privacy policy
+// ---------------------------------------------------------------------------
+function CookieIcon({ onNavigate }) {
+  return (
+    <button
+      className="cookie-icon"
+      onClick={() => onNavigate && onNavigate("privacy")}
+      title="Cookie Policy"
+      aria-label="Cookie Policy"
+      style={{
+        position: "fixed",
+        bottom: 80,
+        right: 20,
+        width: 48,
+        height: 48,
+        borderRadius: "50%",
+        background: "rgba(245, 245, 240, 0.95)",
+        border: "1px solid rgba(10, 11, 13, 0.1)",
+        cursor: "pointer",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        zIndex: 999,
+        transition: "all 0.2s ease",
+        boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)"
+      }}
+      onMouseEnter={(e) => {
+        e.target.style.background = "rgba(245, 245, 240, 1)";
+        e.target.style.boxShadow = "0 4px 16px rgba(0, 0, 0, 0.15)";
+      }}
+      onMouseLeave={(e) => {
+        e.target.style.background = "rgba(245, 245, 240, 0.95)";
+        e.target.style.boxShadow = "0 2px 8px rgba(0, 0, 0, 0.1)";
+      }}
+    >
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="1" fill="currentColor"/>
+        <path d="M12 2a10 10 0 1 0 10 10"/>
+        <path d="M12 6v6"/>
+      </svg>
+    </button>
+  );
+}
+
+// ---------------------------------------------------------------------------
 // Eyebrow
 // ---------------------------------------------------------------------------
 function EyebrowBar({ children }) {
@@ -216,4 +261,4 @@ function Footer() {
   );
 }
 
-Object.assign(window, { Nav, WhatsAppFab, EyebrowBar, AudienceRow, ExpCard, StatCell, Footer, EXPERIENCES });
+Object.assign(window, { Nav, WhatsAppFab, CookieIcon, EyebrowBar, AudienceRow, ExpCard, StatCell, Footer, EXPERIENCES });
