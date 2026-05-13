@@ -517,8 +517,8 @@ function TournamentDetail({ onNavigate, tourId = "tour-mic-costa-brava" }) {
         <div className="app-band__grid">
           <div>
             <div className="eyebrow-bar"><div className="eyebrow-bar__rule" style={{ background: "#0A0B0D" }}></div><div className="eyebrow-bar__text" style={{ color: "#0A0B0D" }}>Ready to enter {d.name.replace(".", "")}?</div></div>
-            <h2 className="section-h">{tourId === "tour-mic-costa-brava" ? "Entry slots are limited and fill well in advance — particularly at Easter." : tourId === "tour-copa-daurada" ? "Places fill quickly, particularly for the Easter window." : tourId === "tour-mare-nostrum" ? "Easter entry fills well in advance." : "Tell us about your squad."}</h2>
-            <div className="section-lead" style={{ color: "#545B63" }}>{tourId === "tour-mic-costa-brava" ? "Tell us about your squad and we'll confirm availability and put together your full tour brief within two working days." : tourId === "tour-copa-daurada" ? "Tell us about your squad and we'll confirm availability and put together your full tour brief within two working days." : tourId === "tour-mare-nostrum" ? "Tell us about your squad — age groups, size, level, and preferred window — and we'll confirm availability and put together your full tour brief within two working days." : "Tell us about your squad and we'll respond within two working days."}</div>
+            <h2 className="section-h">Tell us your bracket, your dates, your numbers.</h2>
+            <div className="section-lead" style={{ color: "#545B63" }}>We confirm fit within two working days, lock the entry, and start the build.</div>
             <div style={{ display: "flex", gap: 12, marginTop: 32, flexWrap: "wrap" }}>
               <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Apply for a tour →</button>
               <a className="btn btn--ghost btn--lg" href="tel:07867205763" style={{ textDecoration: "none", color: "#0A0B0D", borderColor: "rgba(10,11,13,0.32)" }}>07867 205763</a>
