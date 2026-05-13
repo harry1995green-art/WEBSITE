@@ -213,7 +213,7 @@ function Home({ onNavigate }) {
           <EyebrowBar>05 — Partners</EyebrowBar>
           <h2 className="section-h">Vetted partners.</h2>
           <div className="section-lead">We only work with clubs, federations and tournaments who share our standards for safety, quality and competition.</div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 1, background: "rgba(246,243,235,0.12)", marginTop: 48, border: "1px solid rgba(246,243,235,0.12)" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 1, background: "rgba(246,243,235,0.12)", marginTop: 48, border: "1px solid rgba(246,243,235,0.12)" }}>
             {[
               ["Levante UD",     "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fecd4304b94af4777b17bf55676f7ac0a?format=webp&width=800&height=1200"],
               ["Real Betis",    "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F017e8565cae4423fbbbf2b16b4337f89?format=webp&width=800&height=1200"],
