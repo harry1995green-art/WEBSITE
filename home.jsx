@@ -214,14 +214,14 @@ function Home({ onNavigate }) {
           <div className="section-lead">We only work with clubs, federations and tournaments who share our standards for safety, quality and competition.</div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 1, background: "rgba(246,243,235,0.12)", marginTop: 48, border: "1px solid rgba(246,243,235,0.12)" }}>
             {[
-              ["Levante UD",     "https://www.levanteud.com/docs/default-source/default-album/escudo-levante.png?sfvrsn=1"],
-              ["Real Betis",    "https://www.realbetis.es/images/logo-betis.png"],
-              ["Feyenoord",  "https://www.feyenoord.nl/themes/custom/feyenoord/assets/images/logo.png"],
-              ["SL Benfica",  "https://www.slbenfica.pt/pt/cms/themes/benfica-theme/assets/image/logo-benfica.png"],
+              ["Levante UD",     "https://logo.clearbit.com/levanteud.com"],
+              ["Real Betis",    "https://logo.clearbit.com/realbetis.es"],
+              ["Feyenoord",  "https://logo.clearbit.com/feyenoord.nl"],
+              ["SL Benfica",  "https://logo.clearbit.com/slbenfica.pt"],
             ].map(([name, src]) => (
               <div key={name} style={{ background: "var(--ink-900)", padding: 32, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16, minHeight: 180 }}>
-                <img src={src} alt={name} loading="lazy" style={{ maxHeight: 100, maxWidth: "80%", objectFit: "contain" }} />
-                <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.16em", color: "var(--stand-300)", textTransform: "uppercase" }}>{name}</div>
+                <img src={src} alt={name} onError={(e) => { e.target.style.display = "none"; }} style={{ maxHeight: 80, maxWidth: "70%", objectFit: "contain" }} />
+                <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.16em", color: "var(--stand-300)", textTransform: "uppercase", textAlign: "center" }}>{name}</div>
               </div>
             ))}
           </div>
