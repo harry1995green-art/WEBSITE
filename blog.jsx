@@ -143,7 +143,7 @@ const POSTS = [
     read: "9 min read",
     title: "Pre-Season Football Tours in Europe: How to Choose the Right Package for Your Club",
     excerpt: "Pre-season is your squad's foundation for the year ahead. Get the tour right and you arrive at the first league game sharper, fitter, and more cohesive than ever. Here's how to plan it properly.",
-    img: "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F48c2f36c2a634f12a0242cc2f5afb6b6?format=webp&width=800&height=1200",
+    img: "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fee39ac91460f48fabf79de042d778509?format=webp&width=800&height=1200",
     body: [
       "Pre-season is non-negotiable. Every serious club — from grassroots to semi-professional — understands that the weeks before the competitive season begins are where you set the tone. And increasingly, clubs across the UK are choosing to do that abroad.",
       "A pre-season football tour in Europe offers something a domestic training camp simply can't: competitive fixtures against unfamiliar opponents, combined with the team-building that only comes from travelling and living together. This guide walks you through how to plan it, what to look for, and which destinations are worth considering.",
