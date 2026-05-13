@@ -24,10 +24,10 @@ const CAMBRILS_ACCOM = {
   features: ["Villas + apartments · 4–6 persons · private bathroom", "Multiple swimming pools + sports facilities", "Football, tennis, trampolining on site", "Restaurants, bars and shops on resort", "Close to all tournament venues · short transfers", "Group allocation for travelling squads"],
   photos: [
     { url: "assets/cambrils-1.avif", cap: "Cambrils Park Resort" },
-    { url: "assets/cambrils-2.avif", cap: "Resort grounds" },
+    { url: "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fc85ba3514ad143008f1682cecc7109d6?format=webp&width=800&height=1200", cap: "Resort grounds" },
     { url: "https://www.cambrilspark.com/data/webp/0306---bungalow-2-habitaciones-38f5d8f54dbce77c09216a276dc850b8-9172b32661376503cc9fd3e15e617f8f.webp", cap: "Bungalow accommodation" },
     { url: "https://www.cambrilspark.com/data/webp/0303---apartamento-2-habitaciones-0f49221e4e457e09abb9833fdc99a0c1-11c21bbe84a0809d0d2be39ced9076ea.webp", cap: "Apartment interiors" },
-    { url: "assets/cambrils-extra.jfif", cap: "Pool area" },
+    { url: "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F278249abd3fc46a181544b5451189399?format=webp&width=800&height=1200", cap: "Pool area" },
     { url: "https://www.cambrilspark.com/data/webp/0402---villa-adaptado-2-habitaciones-a990a04ff035991ca484885dbf112a51-888599c74d0617612bfdba9b5e255b7b.webp", cap: "Villa exteriors" },
   ],
 };
