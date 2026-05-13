@@ -214,13 +214,13 @@ function Home({ onNavigate }) {
           <div className="section-lead">We only work with clubs, federations and tournaments who share our standards for safety, quality and competition.</div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 1, background: "rgba(246,243,235,0.12)", marginTop: 48, border: "1px solid rgba(246,243,235,0.12)" }}>
             {[
-              ["Levante UD",     "https://logo.clearbit.com/levanteud.com"],
-              ["Real Betis",    "https://logo.clearbit.com/realbetis.es"],
-              ["Feyenoord",  "https://logo.clearbit.com/feyenoord.nl"],
-              ["SL Benfica",  "https://logo.clearbit.com/slbenfica.pt"],
+              ["Levante UD",     "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fecd4304b94af4777b17bf55676f7ac0a?format=webp&width=800&height=1200"],
+              ["Real Betis",    "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F017e8565cae4423fbbbf2b16b4337f89?format=webp&width=800&height=1200"],
+              ["NXGENPro",  "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F34566296fd694ffba6beaaf2c42ef832?format=webp&width=800&height=1200"],
+              ["SL Benfica",  "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Ff493c51c195147ad8bfe62f856d52f2b?format=webp&width=800&height=1200"],
             ].map(([name, src]) => (
               <div key={name} style={{ background: "var(--ink-900)", padding: 32, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16, minHeight: 180 }}>
-                <img src={src} alt={name} onError={(e) => { e.target.style.display = "none"; }} style={{ maxHeight: 80, maxWidth: "70%", objectFit: "contain" }} />
+                <img src={src} alt={name} style={{ maxHeight: 80, maxWidth: "70%", objectFit: "contain" }} />
                 <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.16em", color: "var(--stand-300)", textTransform: "uppercase", textAlign: "center" }}>{name}</div>
               </div>
             ))}
