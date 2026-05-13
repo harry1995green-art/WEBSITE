@@ -44,7 +44,7 @@ const POSTS = [
     read: "8 min read",
     title: "What Makes a Good Overseas Football Tour? Five Things Academy Directors Should Look For",
     excerpt: "Not all overseas football tours deliver what they promise. Here's what academy directors and development coaches should look for — and what to avoid — when planning a professional football experience abroad.",
-    img: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1600&q=80",
+    img: "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F74d0f8d3458742e69ddd4a8dc9e5bc8a?format=webp&width=800&height=1200",
     body: [
       "The market for overseas football tours is crowded. There are dozens of companies offering packages to Spain, Portugal, and the Netherlands — brochures full of partner club logos, tournament names, and phrases like \"world-class facilities\" and \"bespoke experiences.\" Most of them offer the same thing: a fixed itinerary, a standard opposition, and a tour manager who has never coached a football match in their life.",
       "Here is what actually separates a good overseas football tour from an expensive week with a badge on it.",
@@ -77,7 +77,7 @@ const POSTS = [
     read: "7 min read",
     title: "The Mid-Season Football Tour: Why December and January Are the Smartest Windows Most UK Academies Ignore",
     excerpt: "Easter is overcrowded. Summer is expensive. The mid-season window — December and January — is the most underused opportunity in the UK academy tour calendar. Here's why it works.",
-    img: "https://images.unsplash.com/photo-1518604666860-9ed391f76460?w=1600&q=80",
+    img: "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fd7f46626711b4c19a5e405b0be335e9b?format=webp&width=800&height=1200",
     body: [
       "Ask most UK academy directors when they take their squad on an overseas football tour and you'll get the same two answers: Easter or the summer. Both are sensible windows. Both are also the most expensive, the most logistically congested, and the most competitive for tournament entry slots.",
       "There is a third option that almost nobody uses. It is arguably the most useful of the three.",
