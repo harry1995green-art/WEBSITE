@@ -285,27 +285,15 @@ function Home({ onNavigate }) {
           <h2 className="section-h">Notes from inside the tours.</h2>
           <div className="section-lead">Tour diaries, partner-club features, behind-the-scenes from every camp we run.</div>
           <div className="journal-row">
-            <div className="j-card" onClick={() => onNavigate("blog")}>
-              <div className="j-card__img" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=900&q=80)" }}></div>
-              <div className="j-card__meta">TOUR DIARY · 04 FEB 2026</div>
-              <div className="j-card__t">Seven days at Levante.</div>
-              <div className="j-card__d">Inside the partner-club training environment with Hackney Marshes U16. Sessions, fixtures, recovery, debriefs.</div>
-              <div className="j-card__read">Read the diary →</div>
-            </div>
-            <div className="j-card" onClick={() => onNavigate("blog")}>
-              <div className="j-card__img" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?w=900&q=80)" }}></div>
-              <div className="j-card__meta">PARTNER FEATURE · 22 JAN 2026</div>
-              <div className="j-card__t">Why MIC is the reference.</div>
-              <div className="j-card__d">Costa Brava during Easter. The single most contested youth tournament on the European calendar — and what it actually takes to compete.</div>
-              <div className="j-card__read">Read the feature →</div>
-            </div>
-            <div className="j-card" onClick={() => onNavigate("blog")}>
-              <div className="j-card__img" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=900&q=80)" }}></div>
-              <div className="j-card__meta">METHOD · 09 JAN 2026</div>
-              <div className="j-card__t">How we build a tour.</div>
-              <div className="j-card__d">From first call to wheels-up — the four-step build behind every Ballerz Abroad itinerary.</div>
-              <div className="j-card__read">Read the method →</div>
-            </div>
+            {window.POSTS && window.POSTS.slice(0, 3).map((p) => (
+              <div key={p.id} className="j-card" onClick={() => onNavigate("blog")}>
+                <div className="j-card__img" style={{ backgroundImage: `url(${p.img})` }}></div>
+                <div className="j-card__meta">{p.cat.toUpperCase()} · {p.date}</div>
+                <div className="j-card__t">{p.title}</div>
+                <div className="j-card__d">{p.excerpt}</div>
+                <div className="j-card__read">Read the post →</div>
+              </div>
+            ))}
           </div>
           <div style={{ marginTop: 40 }}>
             <button className="btn btn--ghost btn--lg" onClick={() => onNavigate("blog")}>View the full journal →</button>
