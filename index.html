@@ -139,6 +139,7 @@
       const isExp = typeof route === "string" && route.startsWith("exp-");
       const isTour = typeof route === "string" && route.startsWith("tour-");
       React.useEffect(() => { window.__navigate = navigate; }, []);
+      const postId = window.__postId || "p01";
       const label =
         route === "home" ? "Home" :
         route === "tournaments" ? "Tournaments" :
@@ -161,7 +162,7 @@
           {isTour && <TournamentDetail onNavigate={navigate} tourId={route} />}
           {route === "tournaments" && <Tournaments onNavigate={navigate} />}
           {route === "blog" && <Blog onNavigate={navigate} />}
-          {route === "blog-post" && <BlogPost onNavigate={navigate} />}
+          {route === "blog-post" && <BlogPost onNavigate={navigate} postId={postId} />}
           {route === "about" && <About onNavigate={navigate} />}
           {route === "contact" && <Contact onNavigate={navigate} />}
           {route === "application" && <Application onNavigate={navigate} />}

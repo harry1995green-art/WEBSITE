@@ -220,7 +220,7 @@ function Blog({ onNavigate }) {
       {/* FEATURED + GRID */}
       <section className="band" style={{ paddingTop: 0 }}>
         <div className="wrap">
-          <div className="blog-feature" onClick={() => onNavigate("blog-post")}>
+          <div className="blog-feature" onClick={() => { window.__postId = hero.id; onNavigate("blog-post"); }} style={{ cursor: "pointer" }}>
             <div className="blog-feature__img" style={{ backgroundImage: `url(${hero.img})` }}></div>
             <div className="blog-feature__body">
               <div className="blog-feature__meta">
@@ -234,7 +234,7 @@ function Blog({ onNavigate }) {
 
           <div className="blog-grid">
             {rest.map(p => (
-              <article className="blog-card" key={p.id} onClick={() => onNavigate("blog-post")}>
+              <article className="blog-card" key={p.id} onClick={() => { window.__postId = p.id; onNavigate("blog-post"); }} style={{ cursor: "pointer" }}>
                 <div className="blog-card__img" style={{ backgroundImage: `url(${p.img})` }}></div>
                 <div className="blog-card__body">
                   <div className="blog-card__meta">
@@ -284,9 +284,9 @@ function Blog({ onNavigate }) {
 window.Blog = Blog;
 window.POSTS = POSTS;
 
-// Single post view — pulls the first featured post.
-function BlogPost({ onNavigate }) {
-  const p = POSTS[0];
+// Single post view — pulls post by ID, defaults to first
+function BlogPost({ onNavigate, postId = "p01" }) {
+  const p = POSTS.find(post => post.id === postId) || POSTS[0];
   const blogSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -366,7 +366,7 @@ function BlogPost({ onNavigate }) {
           <EyebrowBar>More journal</EyebrowBar>
           <div className="blog-grid">
             {POSTS.slice(1, 4).map(p => (
-              <article className="blog-card" key={p.id} onClick={() => onNavigate("blog-post")}>
+              <article className="blog-card" key={p.id} onClick={() => { window.__postId = p.id; onNavigate("blog-post"); }} style={{ cursor: "pointer" }}>
                 <div className="blog-card__img" style={{ backgroundImage: `url(${p.img})` }}></div>
                 <div className="blog-card__body">
                   <div className="blog-card__meta"><span>{p.cat}</span><span>·</span><span>{p.date}</span></div>
