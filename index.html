@@ -85,6 +85,8 @@
   <script type="text/babel" src="blog.jsx"></script>
   <script type="text/babel" src="about-contact.jsx"></script>
   <script type="text/babel" src="legal.jsx"></script>
+  <script type="text/babel" src="faq.jsx"></script>
+  <script type="text/babel" src="safeguarding.jsx"></script>
   <script type="text/babel" src="application.jsx"></script>
 
   <script type="text/babel">
@@ -100,8 +102,10 @@
         "tournaments": "/tournaments",
         "blog": "/journal",
         "blog-post": "/journal/post",
+        "faq": "/faq",
         "terms": "/terms-conditions",
         "privacy": "/privacy-policy",
+        "safeguarding": "/safeguarding",
         "exp-nxgenpro": "/nxgenpro-experience",
         "exp-levante": "/levanteexperience",
         "exp-betis": "/betisexperience",
@@ -143,8 +147,10 @@
         route === "about" ? "About" :
         route === "contact" ? "Contact" :
         route === "application" ? "Application" :
+        route === "faq" ? "FAQ" :
         route === "terms" ? "Terms & Conditions" :
         route === "privacy" ? "Privacy Policy" :
+        route === "safeguarding" ? "Safeguarding" :
         route === "detail" ? "Experiences" :
         isExp ? "Experience · " + route.replace("exp-", "") :
         isTour ? "Tournament · " + route.replace("tour-", "") : route;
@@ -159,8 +165,10 @@
           {route === "about" && <About onNavigate={navigate} />}
           {route === "contact" && <Contact onNavigate={navigate} />}
           {route === "application" && <Application onNavigate={navigate} />}
+          {route === "faq" && <FAQ onNavigate={navigate} />}
           {route === "terms" && <TermsAndConditions onNavigate={navigate} />}
           {route === "privacy" && <PrivacyPolicy onNavigate={navigate} />}
+          {route === "safeguarding" && <Safeguarding onNavigate={navigate} />}
         </div>
       );
     }
