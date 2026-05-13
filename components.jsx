@@ -56,7 +56,7 @@ function Nav({ active = "home", onNavigate }) {
       <nav className={"nav " + (scrolled ? "nav--scrolled" : "")}>
         <div className="nav__left">
           <a href="#" onClick={(e) => { e.preventDefault(); go("home"); }} style={{ border: "none", display: "flex", alignItems: "center", background: "transparent" }}>
-            <img className="nav__logo" src="assets/logo-black.png" alt="Ballerz Abroad" />
+            <img className="nav__logo" src="https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fd4ce4bd7ff2d43bfa0e72cd79e7daa44?format=webp&width=800&height=1200" alt="Ballerz Abroad" />
           </a>
           <div className="nav__links">
             <a href="#" className={active === "home" ? "is-active" : ""} onClick={(e) => { e.preventDefault(); go("home"); }}>Home</a>
@@ -236,7 +236,7 @@ function Footer() {
     <footer className="foot">
       <div className="foot__grid">
         <div className="foot__logo">
-          <img src="assets/logo-mark-white.svg" alt="Ballerz Abroad" style={{ transform: "scale(2)" }} />
+          <img src="https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fd4ce4bd7ff2d43bfa0e72cd79e7daa44?format=webp&width=800&height=1200" alt="Ballerz Abroad" style={{ transform: "scale(2)" }} />
           <div className="foot__tag"></div>
         </div>
         <div className="foot__col">
