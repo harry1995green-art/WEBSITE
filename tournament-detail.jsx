@@ -222,15 +222,109 @@ Levante UD International Cup — Hosted by our La Liga partner club in Valencia.
   },
   "tour-mare-nostrum": {
     name: "Mare Nostrum Cup.",
-    eyebrow: "Catalonia · Mediterranean coast",
-    sub: "Long-form international field. U8 to U19 brackets played on FIFA-grade pitches.",
-    location: "Catalonia · ES",
-    facts: [["Country", "Spain"], ["Window", "Easter 2026"], ["Age", "U8 — U19"], ["Pitches", "FIFA-grade"]],
+    eyebrow: "Tournament · Spain · Costa Daurada",
+    sub: "One of Spain's largest international youth football tournaments. Over 480 teams at Easter. U8 through U19, boys and girls. Salou on the Costa Daurada — one hour from Barcelona.",
+    location: "Salou · ES",
+    facts: [["Country", "Spain"], ["Window", "Easter & Summer 2026"], ["Age", "U8 — U19"], ["Teams", "480+"]],
     img: "https://images.unsplash.com/photo-1577223625816-7546f13df25d?w=2000&q=80",
-    pill: "Easter window",
-    accent: "Group + knockout format",
-    summary: "Mare Nostrum keeps a deep international field across every age group. Group stage then knockouts — three guaranteed fixtures, finals on the headline weekend.",
+    pill: "Large-scale tournament",
+    accent: "Opening ceremony · 3,000 players",
+    summary: "Mare Nostrum is one of the biggest international youth football tournaments in Spain with over 480 teams at Easter and more than 10,000 players from across Europe and beyond.",
     accommodation: CAMBRILS_ACCOM,
+    sections: [
+      {
+        eyebrow: "01 — What Is the Mare Nostrum Cup",
+        title: "Scale, range, and twenty years of organisation behind it.",
+        content: `The Mare Nostrum Cup has been running for over twenty years and has grown into one of the biggest international youth football tournaments in Spain. At Easter, over 480 teams and more than 10,000 players from across Europe, the Americas, and beyond descend on Salou for four days of competition. A summer edition follows with over 200 teams for squads who can't make the Easter window.
+
+The tournament covers one of the widest age ranges available anywhere on the European youth football calendar — from U8 all the way through to U19, with categories for both boys and girls across multiple brackets. Whatever age group you're travelling with, there is a category for your squad.
+
+Mare Nostrum is organised by a company with over two decades of football event experience. The logistics are reliable, the facilities are world-class, and the opening parade along Salou's Passeig Jaume I — 3,000 young players carrying club and national flags through the streets — sets a tone that no domestic cup weekend can match.`,
+      },
+      {
+        eyebrow: "02 — Format",
+        title: "How it works.",
+        content: `All matches are played at the Futbol Salou Sports Center — the Mediterranean Sports Hub — a purpose-built complex with 12 full-size pitches, over 20 changing rooms, a mini-stadium with seating for 1,000 spectators, and professional-standard natural grass, hybrid, and artificial surfaces. Everything on one site.
+
+Group stage: Teams are drawn into groups of four playing a round-robin format. Group winners advance to the Gold Final Stage. Runners-up enter the Silver Stage. Remaining teams continue in consolation rounds — meaning every squad plays throughout the tournament, not just the top sides.
+
+Minimum matches: Every team is guaranteed a minimum of four matches.
+
+Dates:
+Easter Edition — 2nd–5th April 2026 · Salou, Costa Daurada
+Summer Edition — available for squads unable to travel at Easter
+
+Age categories:
+Boys: U8 · U10 · U12 · U14 · U16 · U19
+Girls: U12 · U14 · U16 · U19`,
+      },
+      {
+        eyebrow: "03 — How Mare Nostrum Sits in the Landscape",
+        title: "The right tournament for a wide range of squads.",
+        content: `The Spanish tournament calendar offers options at different levels. Understanding where Mare Nostrum sits helps you choose the right one for your group.
+
+MIC Costa Brava is Europe's most competitive elite academy tournament. The opposition includes La Liga, Bundesliga, and Premier League youth sides alongside national teams. It is the highest-standard entry in the Ballerz Abroad network and demands squads at the top end of their development pathway.
+
+Copa Daurada is a well-organised, accessible tournament with around 90 teams and a strong community feel. Right for grassroots clubs and younger age groups on a first overseas tour.
+
+Mare Nostrum sits between the two. With 480+ teams at Easter, the field is broad enough to accommodate a range of levels — from grassroots clubs stepping up to international competition through to development squads wanting contested football against varied European and international opposition. It is the largest tournament in Salou and the one with the widest bracket across age groups.
+
+If you are travelling with multiple age groups and need a single tournament entry point that covers U8s through to U19s in one location, Mare Nostrum is the answer.`,
+      },
+      {
+        eyebrow: "04 — The Opening Ceremony",
+        title: "It starts before a ball is kicked.",
+        content: `One of the things that sets Mare Nostrum apart from the competition is the opening ceremony. Over 3,000 players representing more than 400 clubs and nations parade along Salou's seafront promenade — the Passeig Jaume I — carrying their club colours, cheered by families and locals lining the route.
+
+For younger players in particular, this moment lands differently than anything in the domestic calendar. It signals clearly that this is something bigger than a weekend tournament — an international event they are genuinely part of.`,
+      },
+      {
+        eyebrow: "05 — Salou and the Costa Daurada",
+        title: "The location delivers on and off the pitch.",
+        content: `Salou is Mare Nostrum's permanent home and one of the best tournament locations in Spain for travelling squads. The Mediterranean Sports Hub sits within walking distance of the town centre, the beach, and accommodation options ranging from resort hotels to apartments depending on your group's budget and preferences.
+
+Barcelona is one hour away. PortAventura, one of Europe's largest theme parks, is immediately adjacent to Salou and a consistent highlight for squads with a day off between matches. The Costa Daurada coastline — golden beaches, calm Mediterranean water, warm April weather — does the rest.
+
+For clubs where parents travel with the squad, Salou makes the logistics easy and the experience genuinely worthwhile for everyone who makes the trip.`,
+      },
+      {
+        eyebrow: "06 — How Ballerz Abroad Builds a Mare Nostrum Tour",
+        title: "Tournament entry is the centrepiece. The week around it is what we build.",
+        content: `Ballerz Abroad secures your entry into the correct age category, manages accommodation in Salou, coordinates all ground transfers, and provides a dedicated tour lead throughout. The days before the tournament are built around your squad — professional training sessions at a partner club in Spain, then into Mare Nostrum ready to compete.
+
+A typical Mare Nostrum tour with Ballerz Abroad:
+
+Days 1–2 — Arrival in Spain, settle in, professional training sessions at a partner club
+Days 3–6 — Mare Nostrum Cup competition, Salou
+Day 7 — Departure
+
+Clubs travelling with multiple age groups get a single point of contact managing all brackets simultaneously. No juggling multiple providers. One brief, one lead, one tour.`,
+      },
+      {
+        eyebrow: "07 — Who This Is For",
+        title: "Right for your squad if…",
+        content: `You're travelling with multiple age groups and need a single tournament that covers U8 through to U19 in one location
+
+You want a large-scale, well-organised international tournament with a genuine festival atmosphere — not just a series of fixtures
+
+Your squad is at grassroots or development level and you want broad international competition rather than the most elite field available
+
+You want the Easter window in Spain with a proven, reliable tournament organiser behind it
+
+Girls football is part of your programme — Mare Nostrum has strong girls categories across U12 to U19
+
+Not sure whether Mare Nostrum, Copa Daurada, or MIC is right for your group? Tell us your squad details and we'll give you an honest recommendation.`,
+      },
+      {
+        eyebrow: "08 — Other Tournament Options in Spain",
+        title: "More from the Ballerz Abroad tournament network.",
+        content: `MIC Costa Brava — Europe's most prestigious elite academy tournament. 400+ teams, 40+ countries. Easter window.
+
+Copa Daurada — Accessible international tournament in Salou. Easter and summer windows. Best for grassroots and younger age groups.
+
+Levante UD International Cup — Hosted by our La Liga partner club in Valencia.`,
+      },
+    ],
   },
   "tour-cruyff": {
     name: "Cruyff Tournament.",
@@ -422,9 +516,9 @@ function TournamentDetail({ onNavigate, tourId = "tour-mic-costa-brava" }) {
       <section className="app-band">
         <div className="app-band__grid">
           <div>
-            <div className="eyebrow-bar"><div className="eyebrow-bar__rule" style={{ background: "#0A0B0D" }}></div><div className="eyebrow-bar__text" style={{ color: "#0A0B0D" }}>Ready to enter MIC Costa Brava?</div></div>
-            <h2 className="section-h">Entry slots are limited and fill well in advance — particularly at Easter.</h2>
-            <div className="section-lead" style={{ color: "#545B63" }}>Tell us about your squad and we'll confirm availability and put together your full tour brief within two working days.</div>
+            <div className="eyebrow-bar"><div className="eyebrow-bar__rule" style={{ background: "#0A0B0D" }}></div><div className="eyebrow-bar__text" style={{ color: "#0A0B0D" }}>Ready to enter {d.name.replace(".", "")}?</div></div>
+            <h2 className="section-h">{tourId === "tour-mic-costa-brava" ? "Entry slots are limited and fill well in advance — particularly at Easter." : tourId === "tour-copa-daurada" ? "Places fill quickly, particularly for the Easter window." : tourId === "tour-mare-nostrum" ? "Easter entry fills well in advance." : "Tell us about your squad."}</h2>
+            <div className="section-lead" style={{ color: "#545B63" }}>{tourId === "tour-mic-costa-brava" ? "Tell us about your squad and we'll confirm availability and put together your full tour brief within two working days." : tourId === "tour-copa-daurada" ? "Tell us about your squad and we'll confirm availability and put together your full tour brief within two working days." : tourId === "tour-mare-nostrum" ? "Tell us about your squad — age groups, size, level, and preferred window — and we'll confirm availability and put together your full tour brief within two working days." : "Tell us about your squad and we'll respond within two working days."}</div>
             <div style={{ display: "flex", gap: 12, marginTop: 32, flexWrap: "wrap" }}>
               <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Apply for a tour →</button>
               <a className="btn btn--ghost btn--lg" href="tel:07867205763" style={{ textDecoration: "none", color: "#0A0B0D", borderColor: "rgba(10,11,13,0.32)" }}>07867 205763</a>
