@@ -36,7 +36,7 @@ function DestExplorer({ onNavigate }) {
         </div>
         <div className="dest-grid">
           {rows.map((r, idx) => (
-            <div key={r.t} className="dest-card" onClick={() => onNavigate("detail")}>
+            <div key={r.t} className="dest-card" onClick={() => onNavigate("exp-levante")}>
               <div className="dest-card__img" style={{ backgroundImage: `url(${r.img})` }}></div>
               <div className="dest-card__grad" style={idx === 3 ? { backgroundImage: "url(https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fe542691c14014b21b02b0fe16ada39a0)", backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundSize: "cover" } : {}}></div>
               <div className="dest-card__arrow">→</div>
@@ -89,7 +89,7 @@ function Home({ onNavigate }) {
             <StatCell n="07" label="Days abroad" />
             <StatCell n="10" label="Pro sessions" />
             <StatCell n="03" label="Int. fixtures" />
-            <StatCell n="01" label="Pro environment" accent />
+            <StatCell n="100%" label="Pro environment" accent />
           </div>
         </div>
       </section>
@@ -191,9 +191,10 @@ function Home({ onNavigate }) {
               ["MIC COSTA BRAVA",    "Spain · Easter window",          "The international youth football reference tournament"],
               ["COPA DAURADA",       "Salou, Costa Daurada",           "Grassroots through academy bracket"],
               ["EASTER YOUTH CUP",   "Netherlands · Apr 7–10 2026",    "One of the Netherlands' most established international youth tournaments"],
-              ["CRUYFF TOURNAMENT",  "Amsterdam · Netherlands",        "Hosted in the spirit of the Cruyff philosophy"],
+              ["CRUYFF TOURNAMENT",  "Salou, Spain · December",        "Possession-first, technically demanding football in the Cruyff philosophy"],
               ["WINTER CUP HOLLAND", "Netherlands · Dec + Jan windows","Two editions at Duinrell Wassenaar with strong European field"],
-              ["LEVANTE UD INT. CUP","Valencia, Spain",                "Hosted by our partner La Liga club"],
+              ["LEVANTE UD INT. CUP","Valencia, Spain · June",          "Hosted by our partner La Liga club — direct entry for Ballerz squads"],
+              ["MIC PUNTA CANA",     "Dominican Republic · Jun 24-29 2026", "Global youth tournament at The Fields Cap Cana Sports City"],
             ].map(([city, sub, opp], i) => (
               <div className="fixture-row" key={i}>
                 <div className="fixture-row__date">T0{i+1}</div>
@@ -214,14 +215,14 @@ function Home({ onNavigate }) {
           <div className="section-lead">We only work with clubs, federations and tournaments who share our standards for safety, quality and competition.</div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 1, background: "rgba(246,243,235,0.12)", marginTop: 48, border: "1px solid rgba(246,243,235,0.12)" }}>
             {[
-              ["Levante UD",     "https://images.squarespace-cdn.com/content/v1/69657d0bde7b1d54486a7193/cdc306a3-efb4-407b-a841-cc986a9a0b41/ChatGPT+Image+Jan+9%2C+2026%2C+11_01_00+AM.png"],
-              ["Real Betis",    "https://images.squarespace-cdn.com/content/v1/69657d0bde7b1d54486a7193/d9d4fac9-5dd8-41f7-b464-2d6345e2b12f/Real_betis_logo.svg.png"],
-              ["MIC Football",  "https://images.squarespace-cdn.com/content/v1/69657d0bde7b1d54486a7193/69806f9e-a44a-473f-8214-23cce19f86e3/images+%282%29.png"],
-              ["NXGENPro",  "https://nx-genpro.com/wp-content/uploads/2025/08/NXGEN_Logo.png"],
+              ["Levante UD",     "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fecd4304b94af4777b17bf55676f7ac0a?format=webp&width=800&height=1200"],
+              ["Real Betis",    "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F017e8565cae4423fbbbf2b16b4337f89?format=webp&width=800&height=1200"],
+              ["NXGENPro",  "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F34566296fd694ffba6beaaf2c42ef832?format=webp&width=800&height=1200"],
+              ["SL Benfica",  "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F089fc518870d4c2d9e8f6284416b2ba1?format=webp&width=800&height=1200"],
             ].map(([name, src]) => (
-              <div key={name} style={{ background: "var(--ink-900)", padding: 32, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16, minHeight: 180 }}>
-                <img src={src} alt={name} loading="lazy" style={{ maxHeight: 80, maxWidth: "70%", objectFit: "contain", filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.4))" }} />
-                <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.16em", color: "var(--stand-300)", textTransform: "uppercase" }}>{name}</div>
+              <div key={name} style={{ padding: 32, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16, minHeight: 180 }}>
+                <img src={src} alt={name} style={{ maxHeight: 80, maxWidth: "70%", objectFit: "contain" }} />
+                <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.16em", color: "var(--stand-300)", textTransform: "uppercase", textAlign: "center" }}>{name}</div>
               </div>
             ))}
           </div>
@@ -285,27 +286,15 @@ function Home({ onNavigate }) {
           <h2 className="section-h">Notes from inside the tours.</h2>
           <div className="section-lead">Tour diaries, partner-club features, behind-the-scenes from every camp we run.</div>
           <div className="journal-row">
-            <div className="j-card" onClick={() => onNavigate("blog")}>
-              <div className="j-card__img" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1551958219-acbc608c6377?w=900&q=80)" }}></div>
-              <div className="j-card__meta">TOUR PLANNING · 15 MAY 2026</div>
-              <div className="j-card__t">Spain vs Netherlands vs Portugal: Which European Football Tour Destination Is Right for Your Academy?</div>
-              <div className="j-card__d">Spain, Netherlands, or Portugal — three of Europe's best football tour destinations for UK academies. Here's how to choose the right one based on your squad's objectives, not the brochure.</div>
-              <div className="j-card__read">Read the post →</div>
-            </div>
-            <div className="j-card" onClick={() => onNavigate("blog")}>
-              <div className="j-card__img" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=900&q=80)" }}></div>
-              <div className="j-card__meta">ACADEMY COACHING · 10 MAY 2026</div>
-              <div className="j-card__t">What Makes a Good Overseas Football Tour? Five Things Academy Directors Should Look For</div>
-              <div className="j-card__d">Not all overseas football tours deliver what they promise. Here's what academy directors and development coaches should look for — and what to avoid — when planning a professional football experience abroad.</div>
-              <div className="j-card__read">Read the post →</div>
-            </div>
-            <div className="j-card" onClick={() => onNavigate("blog")}>
-              <div className="j-card__img" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1518604666860-9ed391f76460?w=900&q=80)" }}></div>
-              <div className="j-card__meta">TOUR TIMING · 05 MAY 2026</div>
-              <div className="j-card__t">The Mid-Season Football Tour: Why December and January Are the Smartest Windows Most UK Academies Ignore</div>
-              <div className="j-card__d">Easter is overcrowded. Summer is expensive. The mid-season window — December and January — is the most underused opportunity in the UK academy tour calendar. Here's why it works.</div>
-              <div className="j-card__read">Read the post →</div>
-            </div>
+            {typeof window !== "undefined" && window.BLOG_POSTS ? window.BLOG_POSTS.slice(0, 3).map(p => (
+              <div key={p.id} className="j-card" onClick={() => { window.__postId = p.id; onNavigate("blog-post"); }} style={{ cursor: "pointer" }}>
+                <div className="j-card__img" style={{ backgroundImage: `url(${p.img})` }}></div>
+                <div className="j-card__meta">{p.cat.toUpperCase()} · {p.date}</div>
+                <div className="j-card__t">{p.title}</div>
+                <div className="j-card__d">{p.excerpt}</div>
+                <div className="j-card__read">Read the post →</div>
+              </div>
+            )) : null}
           </div>
           <div style={{ marginTop: 40 }}>
             <button className="btn btn--ghost btn--lg" onClick={() => onNavigate("blog")}>View the full journal →</button>

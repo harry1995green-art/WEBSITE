@@ -8,10 +8,10 @@ const DUINRELL_ACCOM = {
   desc: "Tournament squads stay at Duinrell — a renowned holiday park in Wassenaar, near The Hague, ideally positioned for the tournament venues. Players are accommodated in comfortable holiday bungalows set within Duinrell's extensive woodland grounds. The park features indoor and outdoor pools, a waterpark, sports facilities, restaurants and on-site catering — everything a squad needs between fixtures.",
   features: ["Woodland bungalows · group allocation", "Indoor + outdoor pools", "On-site waterpark + sports facilities", "Restaurants and catering on site", "Close to tournament venues · short transfers", "Ideal recovery environment between fixtures"],
   photos: [
-    { url: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=900&q=80", cap: "Pool facilities" },
-    { url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=900&q=80", cap: "Resort grounds" },
-    { url: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=900&q=80", cap: "Bungalow accommodation" },
-    { url: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80", cap: "On-site dining" },
+    { url: "https://www.duinrell.com/media/112/EN/Banners/24433/800x600xfit@60@%7B%22type%22%3A%22jpg%22%7D/cycloon-tiki-pool-duinrell-800x600.jpg?d=1759824269", cap: "Pool facilities" },
+    { url: "https://www.duinrell.com/media/112/EN/layered-content-page/41005/800x9999xfit@60/Kopie%20van%20Caroussel%20-%20Crazy%20Kamperen%20-%20800x600.jpg?d=1767347750", cap: "Resort grounds" },
+    { url: "https://www.duinrell.com/media/112/EN/Paginavoet%202019/22233/800x600xfit@60/Duingalow.png?d=1655796394", cap: "Bungalow accommodation" },
+    { url: "https://www.duinrell.com/media/112/NL/Banners/35049/800x600xfit@60@%7B%22type%22%3A%22jpg%22%7D/Premium%20Plus.jpg?d=1776343855", cap: "Holiday bungalows" },
   ],
 };
 
@@ -24,10 +24,10 @@ const CAMBRILS_ACCOM = {
   features: ["Villas + apartments · 4–6 persons · private bathroom", "Multiple swimming pools + sports facilities", "Football, tennis, trampolining on site", "Restaurants, bars and shops on resort", "Close to all tournament venues · short transfers", "Group allocation for travelling squads"],
   photos: [
     { url: "assets/cambrils-1.avif", cap: "Cambrils Park Resort" },
-    { url: "assets/cambrils-2.avif", cap: "Resort grounds" },
+    { url: "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fc85ba3514ad143008f1682cecc7109d6?format=webp&width=800&height=1200", cap: "Resort grounds" },
     { url: "https://www.cambrilspark.com/data/webp/0306---bungalow-2-habitaciones-38f5d8f54dbce77c09216a276dc850b8-9172b32661376503cc9fd3e15e617f8f.webp", cap: "Bungalow accommodation" },
     { url: "https://www.cambrilspark.com/data/webp/0303---apartamento-2-habitaciones-0f49221e4e457e09abb9833fdc99a0c1-11c21bbe84a0809d0d2be39ced9076ea.webp", cap: "Apartment interiors" },
-    { url: "assets/cambrils-extra.jfif", cap: "Pool area" },
+    { url: "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F278249abd3fc46a181544b5451189399?format=webp&width=800&height=1200", cap: "Pool area" },
     { url: "https://www.cambrilspark.com/data/webp/0402---villa-adaptado-2-habitaciones-a990a04ff035991ca484885dbf112a51-888599c74d0617612bfdba9b5e255b7b.webp", cap: "Villa exteriors" },
   ],
 };
@@ -125,7 +125,7 @@ Not the right fit for squads at very early grassroots level entering their first
     sub: "Five days of international tournament football on the Costa Daurada. Over 90 teams from across Europe. Salou, Spain — Easter and summer windows available.",
     location: "Salou · ES",
     facts: [["Country", "Spain"], ["Windows", "Easter & Summer 2026"], ["Age", "U8 — U16"], ["Teams", "90+"]],
-    img: "https://images.unsplash.com/photo-1521412644187-c49fa049e84d?w=2000&q=80",
+    img: "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fa57ab251aeea4d0fa46ab41ea4fc4f5b?format=webp&width=800&height=1200",
     pill: "Two windows available",
     accent: "Beachside basing · FIFA-grade pitches",
     summary: "Copa Daurada is an international youth football tournament held in Salou on the Costa Daurada with two windows per year — Easter and summer.",
@@ -547,7 +547,7 @@ Levante UD Academy training — Professional training inside the partner club en
     sub: "The MIC format. The same clubs. The Caribbean. A June window for squads who can't make Easter — or who want one of the most extraordinary tournament experiences available in youth football.",
     location: "Punta Cana · DR",
     facts: [["Country", "Dominican Republic"], ["Window", "24–29 June 2026"], ["Age", "U12 — U16"], ["Teams", "International"]],
-    img: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=2000&q=80",
+    img: "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F201c796488b54cc5b7ede7c01b6937bb?format=webp&width=800&height=1200",
     pill: "June window",
     accent: "All-inclusive resort · 4 & 5-star hotels",
     summary: "The MIC format, transposed to the Dominican Republic. Runs in late June across a 125,000m² sports complex at Cap Cana, with teams staying in four and five-star all-inclusive hotels.",
@@ -935,7 +935,6 @@ function TournamentDetail({ onNavigate, tourId = "tour-mic-costa-brava" }) {
             <div className="section-lead" style={{ color: "#545B63" }}>We confirm fit within two working days, lock the entry, and start the build.</div>
             <div style={{ display: "flex", gap: 12, marginTop: 32, flexWrap: "wrap" }}>
               <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Apply for a tour →</button>
-              <a className="btn btn--ghost btn--lg" href="tel:07867205763" style={{ textDecoration: "none", color: "#0A0B0D", borderColor: "rgba(10,11,13,0.32)" }}>07867 205763</a>
             </div>
           </div>
         </div>

@@ -42,7 +42,7 @@ function Nav({ active = "home", onNavigate }) {
       <nav className={"nav " + (scrolled ? "nav--scrolled" : "")}>
         <div className="nav__left">
           <a href="#" onClick={(e) => { e.preventDefault(); go("home"); }} style={{ border: "none", display: "flex", alignItems: "center", background: "transparent" }}>
-            <img className="nav__logo" src="https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fc2524f6556de432fb71303db254cb2a5?format=webp&width=800&height=1200" alt="Ballerz Abroad" />
+            <img className="nav__logo" src="assets/logo.svg" alt="Ballerz Abroad" />
           </a>
           <div className="nav__links">
             <a href="#" className={active === "home" ? "is-active" : ""} onClick={(e) => { e.preventDefault(); go("home"); }}>Home</a>
@@ -222,7 +222,7 @@ function Footer() {
     <footer className="foot">
       <div className="foot__grid">
         <div className="foot__logo">
-          <img src="assets/logo-mark-white.svg" alt="Ballerz Abroad" />
+          <img src="assets/logo-mark-white.svg" alt="Ballerz Abroad" style={{ transform: "scale(2)" }} />
           <div className="foot__tag">European football experiences — built around your squad.</div>
         </div>
         <div className="foot__col">
@@ -246,24 +246,30 @@ function Footer() {
         </div>
         <div className="foot__col">
           <h4>Support</h4>
-          <a href="#" onClick={(e) => { e.preventDefault(); go("contact"); }} style={{ border: "none", background: "none", cursor: "pointer" }}>Contact</a>
-          <a href="#" onClick={(e) => { e.preventDefault(); go("contact"); }} style={{ border: "none", background: "none", cursor: "pointer" }}>FAQ</a>
-          <a href="#" onClick={(e) => { e.preventDefault(); go("terms"); }} style={{ border: "none", background: "none", cursor: "pointer" }}>Terms &amp; conditions</a>
-          <a href="#" onClick={(e) => { e.preventDefault(); go("privacy"); }} style={{ border: "none", background: "none", cursor: "pointer" }}>Privacy policy</a>
-          <a href="#">Safeguarding</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); window.__navigate && window.__navigate("contact"); }} style={{ border: "none", background: "none", cursor: "pointer" }}>Contact</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); window.__navigate && window.__navigate("faq"); }} style={{ border: "none", background: "none", cursor: "pointer" }}>FAQ</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); window.__navigate && window.__navigate("terms"); }} style={{ border: "none", background: "none", cursor: "pointer" }}>Terms &amp; conditions</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); window.__navigate && window.__navigate("privacy"); }} style={{ border: "none", background: "none", cursor: "pointer" }}>Privacy policy</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); window.__navigate && window.__navigate("safeguarding"); }} style={{ border: "none", background: "none", cursor: "pointer" }}>Safeguarding</a>
         </div>
       </div>
       <div className="foot__bottom">
         <div>© 2026 Ballerz Abroad · Company Reg. 16941046 · England & Wales</div>
         <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
-          <a href="https://www.facebook.com/people/Ballerz-Abroad/61586226172523/" target="_blank" rel="noopener noreferrer" title="Facebook" style={{ display: "flex", alignItems: "center", border: "none", background: "none", cursor: "pointer" }}>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282023%29.png/1200px-Facebook_Logo_%282023%29.png" alt="Facebook" style={{ width: 26, height: 26, filter: "invert(1)" }} />
+          <a href="https://www.facebook.com/people/Ballerz-Abroad/61586226172523/" target="_blank" rel="noopener noreferrer" title="Facebook" style={{ display: "flex", alignItems: "center", border: "none", background: "none", cursor: "pointer", color: "var(--chalk-50)" }}>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
           </a>
-          <a href="https://www.instagram.com/ballerzabroad/" target="_blank" rel="noopener noreferrer" title="Instagram" style={{ display: "flex", alignItems: "center", border: "none", background: "none", cursor: "pointer" }}>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo.svg/1200px-Instagram_logo.svg.png" alt="Instagram" style={{ width: 26, height: 26, filter: "invert(1)" }} />
+          <a href="https://www.instagram.com/ballerzabroad/" target="_blank" rel="noopener noreferrer" title="Instagram" style={{ display: "flex", alignItems: "center", border: "none", background: "none", cursor: "pointer", color: "var(--chalk-50)" }}>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+            </svg>
           </a>
-          <a href="https://www.tiktok.com/tag/ballerzabroad" target="_blank" rel="noopener noreferrer" title="TikTok" style={{ display: "flex", alignItems: "center", border: "none", background: "none", cursor: "pointer" }}>
-            <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok" style={{ width: 26, height: 26, filter: "invert(1)" }} />
+          <a href="https://www.tiktok.com/@ballerzabroad" target="_blank" rel="noopener noreferrer" title="TikTok" style={{ display: "flex", alignItems: "center", border: "none", background: "none", cursor: "pointer", color: "var(--chalk-50)" }}>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.1 1.75 2.9 2.9 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.26 6.26 0 0 0-1.01-.08C5.84 9.32 2 13.46 2 18.14s3.84 8.82 8.65 8.82c4.63 0 8.44-3.88 8.44-8.65V10.7a8.19 8.19 0 0 0 3.54 2.34v-3.72a4.3 4.3 0 0 1-2.04-.67z"/>
+            </svg>
           </a>
         </div>
       </div>
