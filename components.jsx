@@ -4,6 +4,20 @@
 
 const { useState, useEffect, useRef } = React;
 
+// Add responsive styles for nav logo on mobile
+if (typeof document !== "undefined" && !document.getElementById("nav-logo-responsive")) {
+  const style = document.createElement("style");
+  style.id = "nav-logo-responsive";
+  style.innerHTML = `
+    @media (max-width: 768px) {
+      .nav__logo {
+        transform: scale(1.5);
+      }
+    }
+  `;
+  document.head.appendChild(style);
+}
+
 const EXPERIENCES = [
   { id: "exp-nxgenpro",   label: "NXGENPro",                    loc: "England · UK" },
   { id: "exp-levante",    label: "Levante Academy Experience",   loc: "Valencia · ES" },
