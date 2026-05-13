@@ -31,7 +31,7 @@ function Tournaments({ onNavigate }) {
             <div className="hero__eyebrow-rule"></div>
             <div className="hero__eyebrow-text">Tournaments · Direct entry · By application</div>
           </div>
-          <h1 className="display-xl">The reference<br/>events.</h1>
+          <h1 className="display-xl"></h1>
           <div className="hero__sub">Direct entries into European youth football's most contested tournaments — selected for level, not name. Six events across the calendar, three continents, one bar.</div>
           <div className="hero__ctas">
             <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Apply for a tournament →</button>
