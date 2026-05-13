@@ -293,7 +293,7 @@ function BlogPost({ onNavigate }) {
     "headline": p.title,
     "description": p.excerpt,
     "image": p.img,
-    "datePublished": new Date(p.date).toISOString().split('T')[0],
+    "datePublished": "2026-05-15",
     "author": {
       "@type": "Organization",
       "name": "Ballerz Abroad"
