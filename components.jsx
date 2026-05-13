@@ -255,21 +255,15 @@ function Footer() {
       </div>
       <div className="foot__bottom">
         <div>© 2026 Ballerz Abroad · Company Reg. 16941046 · England & Wales</div>
-        <div style={{ display: "flex", gap: 24, alignItems: "center" }}>
-          <a href="https://www.facebook.com/people/Ballerz-Abroad/61586226172523/" target="_blank" rel="noopener noreferrer" title="Facebook" style={{ display: "flex", alignItems: "center", border: "none", background: "none", cursor: "pointer", color: "var(--chalk-50)" }}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm3.6 12h-2.4v8h-3v-8H9v-2.5h1.2V7c0-1 0.5-2.5 2.5-2.5h2v2.3c0 0-.5 0-1.2 0s-1.5.2-1.5 1.2v1.5h2.8l-.5 2.5z"/>
-            </svg>
+        <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
+          <a href="https://www.facebook.com/people/Ballerz-Abroad/61586226172523/" target="_blank" rel="noopener noreferrer" title="Facebook" style={{ display: "flex", alignItems: "center", border: "none", background: "none", cursor: "pointer" }}>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282023%29.png/1200px-Facebook_Logo_%282023%29.png" alt="Facebook" style={{ width: 26, height: 26, filter: "invert(1)" }} />
           </a>
-          <a href="https://www.instagram.com/ballerzabroad/" target="_blank" rel="noopener noreferrer" title="Instagram" style={{ display: "flex", alignItems: "center", border: "none", background: "none", cursor: "pointer", color: "var(--chalk-50)" }}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 5c1.933 0 2.17.007 2.929.043.789.036 1.359.169 1.844.36.698.27 1.295.645 1.858 1.208.563.563.938 1.16 1.207 1.858.191.485.324 1.055.36 1.844.036.759.043.996.043 2.929s-.007 2.17-.043 2.929c-.036.789-.169 1.359-.36 1.844-.27.698-.645 1.295-1.208 1.858-.563.563-1.16.938-1.858 1.207-.485.191-1.055.324-1.844.36-.759.036-.996.043-2.929.043s-2.17-.007-2.929-.043c-.789-.036-1.359-.169-1.844-.36-.698-.27-1.295-.645-1.858-1.208-.563-.563-.938-1.16-1.207-1.858-.191-.485-.324-1.055-.36-1.844-.036-.759-.043-.996-.043-2.929s.007-2.17.043-2.929c.036-.789.169-1.359.36-1.844.27-.698.645-1.295 1.208-1.858.563-.563 1.16-.938 1.858-1.207.485-.191 1.055-.324 1.844-.36.759-.036.996-.043 2.929-.043zm0 2.162c-1.593 0-2.886 1.293-2.886 2.886s1.293 2.886 2.886 2.886 2.886-1.293 2.886-2.886-1.293-2.886-2.886-2.886zm0 4.756c-1.028 0-1.87-.842-1.87-1.87s.842-1.87 1.87-1.87 1.87.842 1.87 1.87-.842 1.87-1.87 1.87zm3.667-5.121c-.373 0-.676.303-.676.676s.303.676.676.676.676-.303.676-.676-.303-.676-.676-.676z"/>
-            </svg>
+          <a href="https://www.instagram.com/ballerzabroad/" target="_blank" rel="noopener noreferrer" title="Instagram" style={{ display: "flex", alignItems: "center", border: "none", background: "none", cursor: "pointer" }}>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo.svg/1200px-Instagram_logo.svg.png" alt="Instagram" style={{ width: 26, height: 26, filter: "invert(1)" }} />
           </a>
-          <a href="https://www.tiktok.com/tag/ballerzabroad" target="_blank" rel="noopener noreferrer" title="TikTok" style={{ display: "flex", alignItems: "center", border: "none", background: "none", cursor: "pointer", color: "var(--chalk-50)" }}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.5 8c-.6 0-1.2-.1-1.8-.4v4.8c0 2.4-1.9 4.3-4.3 4.3-2.4 0-4.3-1.9-4.3-4.3 0-2.4 1.9-4.3 4.3-4.3.4 0 .8 0 1.1.2V7.5c-.4 0-.7 0-1.1 0-3.7 0-6.8 3-6.8 6.8S6.3 21 10 21c3.7 0 6.8-3 6.8-6.8V9c1.3 1 2.9 1.5 4.5 1.5V8c-.5 0-1-.2-1.3-.5-.3-.3-.5-.8-.5-1.3v-1.2zm-2-1.5c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z"/>
-            </svg>
+          <a href="https://www.tiktok.com/tag/ballerzabroad" target="_blank" rel="noopener noreferrer" title="TikTok" style={{ display: "flex", alignItems: "center", border: "none", background: "none", cursor: "pointer" }}>
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok" style={{ width: 26, height: 26, filter: "invert(1)" }} />
           </a>
         </div>
       </div>
