@@ -137,12 +137,11 @@ const EXP_DATA = {
       desc: "Players stay at Mainport Hotel — a boutique design hotel set on the Maas riverfront in Rotterdam's Old Harbour (Leuvehaven). The hotel's Vitality Spa features an outdoor rooftop pool, sauna, steam room and treatments. 214 contemporary rooms, a riverside restaurant and bar, and direct access to the waterfront. Feyenoord's training complex is a short transfer by coach. Rotterdam's architecture, the waterfront and De Kuip are part of the daily backdrop.",
       features: ["Old Harbour · Leuvehaven, Rotterdam", "Vitality Spa · rooftop pool + sauna", "214 contemporary rooms", "Riverside restaurant + bar", "Full board for travelling squads", "Short transfer to Feyenoord training complex"],
       photos: [
-        { url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80", cap: "Mainport Hotel exterior" },
-        { url: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=900&q=80", cap: "Rooftop pool" },
-        { url: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=900&q=80", cap: "Player rooms" },
-        { url: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80", cap: "Riverside restaurant" },
-        { url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900&q=80", cap: "Hotel interiors" },
-        { url: "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=900&q=80", cap: "Spa & wellness" },
+        { url: "https://mainport.1strotterdamhotels.com/data/Photos/OriginalPhoto/17224/1722473/1722473621/mainport-hotel-rotterdam-rotterdam-photo-1.JPEG", cap: "Hotel exterior" },
+        { url: "https://mainport.1strotterdamhotels.com/data/Photos/OriginalPhoto/17224/1722473/1722473600/mainport-hotel-rotterdam-rotterdam-photo-2.JPEG", cap: "Rooftop pool" },
+        { url: "https://mainport.1strotterdamhotels.com/data/Photos/OriginalPhoto/17224/1722473/1722473721/mainport-hotel-rotterdam-rotterdam-photo-3.JPEG", cap: "Hotel interiors" },
+        { url: "https://mainport.1strotterdamhotels.com/data/Photos/OriginalPhoto/17587/1758748/1758748410/mainport-hotel-rotterdam-rotterdam-photo-4.JPEG", cap: "Accommodation" },
+        { url: "https://mainport.1strotterdamhotels.com/data/Photos/OriginalPhoto/17399/1739964/1739964898/mainport-hotel-rotterdam-rotterdam-photo-5.JPEG", cap: "Riverside views" },
       ],
     },
     sections: [
