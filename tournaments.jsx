@@ -107,7 +107,6 @@ function Tournaments({ onNavigate }) {
             <div className="section-lead" style={{ color: "#545B63" }}>Tell us your bracket, your dates, your numbers. We confirm fit within two working days, lock the entry, and start the build.</div>
             <div style={{ display: "flex", gap: 12, marginTop: 32, flexWrap: "wrap" }}>
               <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Apply for a tournament →</button>
-              <a className="btn btn--ghost btn--lg" href="tel:07867205763" style={{ textDecoration: "none", color: "#0A0B0D", borderColor: "rgba(10,11,13,0.32)" }}>07867 205763</a>
             </div>
           </div>
           <div>
