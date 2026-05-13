@@ -35,16 +35,11 @@ function DestExplorer({ onNavigate }) {
           ))}
         </div>
         <div className="dest-grid">
-          {rows.map((r) => (
+          {rows.map((r, idx) => (
             <div key={r.t} className="dest-card" onClick={() => onNavigate("detail")}>
               <div className="dest-card__img" style={{ backgroundImage: `url(${r.img})` }}></div>
-              <div className="dest-card__grad"></div>
+              <div className="dest-card__grad" style={idx === 3 ? { backgroundImage: "url(https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fe542691c14014b21b02b0fe16ada39a0)", backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundSize: "cover" } : {}}></div>
               <div className="dest-card__arrow">→</div>
-              {r.logo && (
-                <div style={{ position: "absolute", top: 16, left: 16, zIndex: 3, background: "rgba(10,11,13,0.65)", backdropFilter: "blur(8px)", padding: "6px 10px", borderRadius: 4 }}>
-                  <img src={r.logo} alt={r.t} style={{ height: 32, maxWidth: 72, objectFit: "contain", display: "block" }} />
-                </div>
-              )}
               <div className="dest-card__body">
                 <div className="dest-card__country">{r.c}</div>
                 <div className="dest-card__t">{r.t}</div>
@@ -71,15 +66,15 @@ function Home({ onNavigate }) {
         <div className="hero__gradient"></div>
         <div className="hero__meta">
           <span>2026 · WINDOWS OPEN</span>
-          <span><strong>SPAIN</strong> · <strong>NL</strong> · <strong>UK</strong></span>
+          <span><strong>ENGLAND</strong> · <strong>SPAIN</strong> · <strong>PORTUGAL</strong> · <strong>NETHERLANDS</strong></span>
         </div>
         <div className="hero__inner">
           <div className="hero__eyebrow">
             <div className="hero__eyebrow-rule"></div>
-            <div className="hero__eyebrow-text">Levante UD · Real Betis · MIC · Mare Nostrum · Cruyff</div>
+            <div className="hero__eyebrow-text">ENGLAND · SPAIN · PORTUGAL · NETHERLANDS</div>
           </div>
-          <h1 className="display-xl">Train like<br/>a pro abroad.</h1>
-          <div className="hero__sub">Professional training environments, organised fixtures, and tournament football across Spain, the Netherlands and the UK. Built around your squad.</div>
+          <h1 className="display-xl">PROFESSIONAL FOOTBALL EXPERIENCES</h1>
+          <div className="hero__sub">Ballerz Abroad designs bespoke overseas football tours for UK academies and development teams. Professional training environments, vetted partner clubs, and competitive fixtures across Spain, the Netherlands, Portugal and England.</div>
           <div className="hero__ctas">
             <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Apply for a tour →</button>
             <button className="btn btn--ghost btn--lg" onClick={() => onNavigate("detail")}>View the destinations</button>
@@ -92,7 +87,7 @@ function Home({ onNavigate }) {
         <div className="wrap">
           <div className="stat-row">
             <StatCell n="07" label="Days abroad" />
-            <StatCell n="15" label="Pro sessions" />
+            <StatCell n="10" label="Pro sessions" />
             <StatCell n="03" label="Int. fixtures" />
             <StatCell n="01" label="Pro environment" accent />
           </div>
@@ -104,7 +99,7 @@ function Home({ onNavigate }) {
         <div className="wrap">
           <EyebrowBar>01 — Why Ballerz Abroad</EyebrowBar>
           <h2 className="section-h">More than a tour.</h2>
-          <div className="section-lead">We're a UK-based boutique football experience company. Every tour we run is built — not booked — around your squad, your level, and what success looks like to you.</div>
+          <div className="section-lead">We're a UK-based boutique football experience company. Every professional football experience we deliver is designed — not packaged — around your squad, your level, and your definition of success.</div>
           <div className="pillars">
             <div className="pillar">
               <div className="pillar__n">01 — Built, not booked</div>
@@ -135,65 +130,16 @@ function Home({ onNavigate }) {
           <h2 className="section-h">Tailored around your squad.</h2>
           <div className="section-lead">Every tour is custom-built around your club's age groups, level, duration, budget, destination, and training intensity. We don't run packages — we build them.</div>
           <div className="audience-list">
-            <AudienceRow n="01" title="Grassroots clubs" desc="Lift a season-long programme. Bond a squad. Expose players to the next level." />
-            <AudienceRow n="02" title="Academies" desc="Pre-season camps, mid-season resets, scouting windows inside partner-club environments." />
-            <AudienceRow n="03" title="Schools" desc="Football-first travel for school football programmes — academic + athletic friendly." />
-            <AudienceRow n="04" title="Development teams" desc="Pro-grade environments without an academy budget. Compete, recover, return sharper." />
-            <AudienceRow n="05" title="US college soccer" desc="European exposure for NCAA programmes. Pre-season abroad, contested fixtures." />
+            <AudienceRow n="01" title="Grassroots clubs" desc="Lift a full season's programme. Expose your squad to the next level with a professional football experience in Europe." />
+            <AudienceRow n="02" title="Academies" desc="Pre-season camps, mid-season resets and scouting windows inside professional partner-club environments in Europe." />
+            <AudienceRow n="03" title="Schools" desc="Football-first overseas tours that balance academic and athletic calendars. Professionally hosted fixtures included." />
+            <AudienceRow n="04" title="Development teams" desc="Professional-grade football experiences abroad without a Category One budget. Compete, recover, and return sharper." />
+            <AudienceRow n="05" title="US college soccer" desc="European exposure for NCAA programmes. Pre-season football tours in Europe with contested fixtures against quality opposition." />
           </div>
         </div>
       </section>
 
       {/* EXPERIENCE GRID -------------------------------------------------- */}
-      <section className="band">
-        <div className="wrap">
-          <EyebrowBar>02 — 2026 Windows</EyebrowBar>
-          <div className="section-lead">Each experience is opened against partner-club calendars — built around your squad.</div>
-          <div className="exp-grid">
-            <ExpCard
-              featured
-              image="https://images.unsplash.com/photo-1610294232527-d11a4c7ce40c?w=1200&q=80"
-              meta="PRO EXPERIENCE · VALENCIA"
-              title="Levante UD experience"
-              sub="Inside the partner-club training environment. Individual Player Development available — parents welcome to travel."
-              pill="Application open"
-              onClick={() => onNavigate("exp-levante")}
-            />
-            <ExpCard
-              image="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=900&q=80"
-              meta="EXPERIENCE · SEVILLE"
-              title="Real Betis experience"
-              sub="Andalusian football. Pro environment."
-              pill="Application open"
-              onClick={() => onNavigate("exp-betis")}
-            />
-            <ExpCard
-              image="https://images.unsplash.com/photo-1517747614396-d21a78b850e8?w=900&q=80"
-              meta="DEVELOPMENT · ENGLAND"
-              title="NXGENPro"
-              sub="UK-based programme. Year-round windows."
-              pill="Year-round"
-              onClick={() => onNavigate("exp-nxgenpro")}
-            />
-            <ExpCard
-              image="https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?w=900&q=80"
-              meta="PRO EXPERIENCE · ROTTERDAM"
-              title="Feyenoord Academy"
-              sub="Eredivisie academy. Direct, physical Dutch football."
-              pill="Application open"
-              onClick={() => onNavigate("exp-feyenoord")}
-            />
-            <ExpCard
-              featured
-              image="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=1200&q=80"
-              meta="COMBINED TOUR · BUILT TO BRIEF"
-              title="Combined tours — your squad, your way"
-              sub="Mixed-level, mixed-age, mixed-gender groups. Aligned to one of our partner tournaments. Custom-built end to end."
-            />
-          </div>
-        </div>
-      </section>
-
       {/* TOUR TYPES ------------------------------------------------------- */}
       <section className="band">
         <div className="wrap">
@@ -238,16 +184,16 @@ function Home({ onNavigate }) {
       <section className="band">
         <div className="wrap">
           <EyebrowBar>04 — Tournaments</EyebrowBar>
-          <h2 className="section-h">Compete at the reference events.</h2>
+          <h2 className="section-h">COMPETE IN EUROPE'S MOST PRESTIGOUS TOURNAMENTS</h2>
           <div className="section-lead">Direct entries into European youth football's most contested tournaments — selected for level, not name.</div>
           <div className="fixture-table">
             {[
               ["MIC COSTA BRAVA",    "Spain · Easter window",          "The international youth football reference tournament"],
               ["COPA DAURADA",       "Salou, Costa Daurada",           "Grassroots through academy bracket"],
-              ["MARE NOSTRUM CUP",   "Catalonia · Mediterranean coast","U8 — U19 international field"],
-              ["CRUYFF TOURNAMENT",  "Netherlands",                    "Hosted in the spirit of the Cruyff philosophy"],
+              ["EASTER YOUTH CUP",   "Netherlands · Apr 7–10 2026",    "One of the Netherlands' most established international youth tournaments"],
+              ["CRUYFF TOURNAMENT",  "Amsterdam · Netherlands",        "Hosted in the spirit of the Cruyff philosophy"],
+              ["WINTER CUP HOLLAND", "Netherlands · Dec + Jan windows","Two editions at Duinrell Wassenaar with strong European field"],
               ["LEVANTE UD INT. CUP","Valencia, Spain",                "Hosted by our partner La Liga club"],
-              ["MIC PUNTA CANA",     "Dominican Republic",             "Winter window — MIC format, Caribbean staging"],
             ].map(([city, sub, opp], i) => (
               <div className="fixture-row" key={i}>
                 <div className="fixture-row__date">T0{i+1}</div>
@@ -271,10 +217,10 @@ function Home({ onNavigate }) {
               ["Levante UD",     "https://images.squarespace-cdn.com/content/v1/69657d0bde7b1d54486a7193/cdc306a3-efb4-407b-a841-cc986a9a0b41/ChatGPT+Image+Jan+9%2C+2026%2C+11_01_00+AM.png"],
               ["Real Betis",    "https://images.squarespace-cdn.com/content/v1/69657d0bde7b1d54486a7193/d9d4fac9-5dd8-41f7-b464-2d6345e2b12f/Real_betis_logo.svg.png"],
               ["MIC Football",  "https://images.squarespace-cdn.com/content/v1/69657d0bde7b1d54486a7193/69806f9e-a44a-473f-8214-23cce19f86e3/images+%282%29.png"],
-              ["Mare Nostrum",  "https://images.squarespace-cdn.com/content/v1/69657d0bde7b1d54486a7193/25655f7a-a5f8-46cf-a5fb-3900848733d8/mare_nostrum_gmail_logo.png"],
+              ["NXGENPro",  "https://nx-genpro.com/wp-content/uploads/2025/08/NXGEN_Logo.png"],
             ].map(([name, src]) => (
               <div key={name} style={{ background: "var(--ink-900)", padding: 32, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16, minHeight: 180 }}>
-                <img src={src} alt={name} style={{ maxHeight: 80, maxWidth: "70%", objectFit: "contain", filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.4))" }} />
+                <img src={src} alt={name} loading="lazy" style={{ maxHeight: 80, maxWidth: "70%", objectFit: "contain", filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.4))" }} />
                 <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.16em", color: "var(--stand-300)", textTransform: "uppercase" }}>{name}</div>
               </div>
             ))}
@@ -302,30 +248,30 @@ function Home({ onNavigate }) {
       <section className="band">
         <div className="wrap">
           <EyebrowBar>07 — In their words</EyebrowBar>
-          <h2 className="section-h">Clubs who've travelled with us.</h2>
+          <h2 className="section-h">Parents and coaches on what they experienced.</h2>
           <div className="testi-row">
             <div className="testi">
               <div className="testi__quote-mark">"</div>
-              <div className="testi__q">The Levante experience was a different level. Our U16s came home sharper, tighter, and bought into a higher standard. We've already booked a return for next pre-season.</div>
+              <div className="testi__q">I wasn't sure what to expect sending my son on an individual tour. Honestly, it was the best thing I've done for his football. He came back a different player — more confident, more switched on. The Levante experience was something else.</div>
               <div className="testi__by">
-                <div className="testi__by-name">Daniel Okafor</div>
-                <div className="testi__by-role">Head of Football · Hackney Marshes FC</div>
+                <div className="testi__by-name">Marcus O.</div>
+                <div className="testi__by-role">Parent · Levante Tour</div>
               </div>
             </div>
             <div className="testi">
               <div className="testi__quote-mark">"</div>
-              <div className="testi__q">Ballerz built the tour around our squad — not the other way around. Mixed-age, mixed-level, all of it. MIC was the test we needed. The on-tour lead made it effortless.</div>
+              <div className="testi__q">My daughter had been playing for years but this was a completely different level. NxGenPro pushed her in ways I hadn't seen before. She came home with a hunger she's kept ever since. Already asking when she can go back.</div>
               <div className="testi__by">
-                <div className="testi__by-name">Sarah Hughes</div>
-                <div className="testi__by-role">Director of Football · Heritage Park Academy</div>
+                <div className="testi__by-name">Sarah H.</div>
+                <div className="testi__by-role">Parent · NxGenPro Tour</div>
               </div>
             </div>
             <div className="testi">
               <div className="testi__quote-mark">"</div>
-              <div className="testi__q">As a school football programme, we have to balance academics and athletics. Ballerz understood the brief from day one. Three fixtures, all contested, all professionally hosted.</div>
+              <div className="testi__q">MIC Tournament was exactly the test our squad needed. Ballerz handled everything — fixtures, logistics, the lot. Our players stepped up. We came home with a clearer picture of where we are and where we're going.</div>
               <div className="testi__by">
-                <div className="testi__by-name">James Whitlock</div>
-                <div className="testi__by-role">Director of Sport · St. Augustine's College</div>
+                <div className="testi__by-name">James W.</div>
+                <div className="testi__by-role">Head of Football · MIC Tournament</div>
               </div>
             </div>
           </div>
@@ -340,25 +286,25 @@ function Home({ onNavigate }) {
           <div className="section-lead">Tour diaries, partner-club features, behind-the-scenes from every camp we run.</div>
           <div className="journal-row">
             <div className="j-card" onClick={() => onNavigate("blog")}>
-              <div className="j-card__img" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=900&q=80)" }}></div>
-              <div className="j-card__meta">TOUR DIARY · 04 FEB 2026</div>
-              <div className="j-card__t">Seven days at Levante.</div>
-              <div className="j-card__d">Inside the partner-club training environment with Hackney Marshes U16. Sessions, fixtures, recovery, debriefs.</div>
-              <div className="j-card__read">Read the diary →</div>
-            </div>
-            <div className="j-card" onClick={() => onNavigate("blog")}>
-              <div className="j-card__img" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?w=900&q=80)" }}></div>
-              <div className="j-card__meta">PARTNER FEATURE · 22 JAN 2026</div>
-              <div className="j-card__t">Why MIC is the reference.</div>
-              <div className="j-card__d">Costa Brava during Easter. The single most contested youth tournament on the European calendar — and what it actually takes to compete.</div>
-              <div className="j-card__read">Read the feature →</div>
+              <div className="j-card__img" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1551958219-acbc608c6377?w=900&q=80)" }}></div>
+              <div className="j-card__meta">TOUR PLANNING · 15 MAY 2026</div>
+              <div className="j-card__t">Spain vs Netherlands vs Portugal: Which European Football Tour Destination Is Right for Your Academy?</div>
+              <div className="j-card__d">Spain, Netherlands, or Portugal — three of Europe's best football tour destinations for UK academies. Here's how to choose the right one based on your squad's objectives, not the brochure.</div>
+              <div className="j-card__read">Read the post →</div>
             </div>
             <div className="j-card" onClick={() => onNavigate("blog")}>
               <div className="j-card__img" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=900&q=80)" }}></div>
-              <div className="j-card__meta">METHOD · 09 JAN 2026</div>
-              <div className="j-card__t">How we build a tour.</div>
-              <div className="j-card__d">From first call to wheels-up — the four-step build behind every Ballerz Abroad itinerary.</div>
-              <div className="j-card__read">Read the method →</div>
+              <div className="j-card__meta">ACADEMY COACHING · 10 MAY 2026</div>
+              <div className="j-card__t">What Makes a Good Overseas Football Tour? Five Things Academy Directors Should Look For</div>
+              <div className="j-card__d">Not all overseas football tours deliver what they promise. Here's what academy directors and development coaches should look for — and what to avoid — when planning a professional football experience abroad.</div>
+              <div className="j-card__read">Read the post →</div>
+            </div>
+            <div className="j-card" onClick={() => onNavigate("blog")}>
+              <div className="j-card__img" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1518604666860-9ed391f76460?w=900&q=80)" }}></div>
+              <div className="j-card__meta">TOUR TIMING · 05 MAY 2026</div>
+              <div className="j-card__t">The Mid-Season Football Tour: Why December and January Are the Smartest Windows Most UK Academies Ignore</div>
+              <div className="j-card__d">Easter is overcrowded. Summer is expensive. The mid-season window — December and January — is the most underused opportunity in the UK academy tour calendar. Here's why it works.</div>
+              <div className="j-card__read">Read the post →</div>
             </div>
           </div>
           <div style={{ marginTop: 40 }}>
@@ -386,27 +332,6 @@ function Home({ onNavigate }) {
       </section>
 
       {/* SOCIAL ------------------------------------------------------------- */}
-      <section className="band">
-        <div className="wrap">
-          <EyebrowBar>07 — From the tours</EyebrowBar>
-          <h2 className="section-h">@ballerzabroad</h2>
-          <div className="section-lead">Instagram · TikTok · @ballerzabroad — the feed updates from inside every camp.</div>
-          <div className="social-grid">
-            {[
-              ["https://images.unsplash.com/photo-1564415051543-cca4a18fe2cc?w=600&q=80", "@ballerzabroad", "BCN"],
-              ["https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?w=600&q=80", "Tunnel walk", "DAY 02"],
-              ["https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&q=80", "Recovery", "DAY 04"],
-              ["https://images.unsplash.com/photo-1518614846906-3a8a8f0c40d5?w=600&q=80", "Matchday", "FIXTURE 02"],
-            ].map(([img, label, badge], i) => (
-              <div key={i} className="social-tile">
-                <div className="social-tile__img" style={{ backgroundImage: `url(${img})` }}></div>
-                <div className="social-tile__overlay"></div>
-                <div className="social-tile__meta"><span>{label}</span><span>{badge}</span></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* APPLICATION BAND --------------------------------------------------- */}
       <section className="app-band">
@@ -419,7 +344,7 @@ function Home({ onNavigate }) {
               <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Start an application →</button>
               <button className="btn btn--whatsapp btn--lg">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 2.1.55 4.14 1.6 5.95L2 22l4.31-1.13a9.86 9.86 0 0 0 5.73 1.82h0c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01A9.82 9.82 0 0 0 12.04 2zm5.46 14.16c-.23.65-1.34 1.24-1.87 1.32-.48.07-1.09.1-1.76-.11-.41-.13-.93-.3-1.6-.59-2.82-1.22-4.66-4.06-4.8-4.25-.14-.19-1.15-1.53-1.15-2.91 0-1.38.73-2.06.99-2.34.26-.28.56-.35.75-.35h.54c.17.01.41-.07.64.49.23.57.79 1.96.86 2.1.07.14.11.3.02.49-.09.19-.14.3-.28.46-.14.16-.29.36-.42.49-.14.13-.29.28-.13.55.16.27.71 1.17 1.52 1.9 1.04.93 1.92 1.21 2.19 1.34.27.13.43.11.59-.07.16-.18.69-.81.87-1.08.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.13.45.2.52.31.07.11.07.66-.16 1.31z"/></svg>
-                07867 205763 · WhatsApp
+                WhatsApp
               </button>
             </div>
           </div>
@@ -436,6 +361,7 @@ function Home({ onNavigate }) {
 
       <Footer />
       <WhatsAppFab />
+      <CookieIcon onNavigate={onNavigate} />
     </>
   );
 }

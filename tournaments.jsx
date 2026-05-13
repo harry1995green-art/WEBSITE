@@ -4,12 +4,12 @@ function Tournaments({ onNavigate }) {
   const T_IMG = "https://images.unsplash.com/photo-1518604666860-9ed391f76460?w=2000&q=80";
 
   const tournaments = [
-    { id: "tour-mic-costa-brava", featured: true, name: "MIC Costa Brava", meta: "Spain · Easter window · 28 Mar — 04 Apr 2026", img: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=1400&q=80", desc: "The reference event in international youth football. Founded in 2001, hosted across Catalonia. Over 350 teams from 60+ countries; finals played at RCDE Stadium.", facts: [["Age", "U10 — U19"], ["Format", "Group + KO"], ["Teams", "350+"], ["Window", "Easter"]] },
-    { id: "tour-copa-daurada", name: "Copa Daurada", meta: "Salou · Costa Daurada · ES", img: "https://images.unsplash.com/photo-1521412644187-c49fa049e84d?w=1000&q=80", desc: "Grassroots-through-academy bracket. 1,500+ matches across the week, beachside basing — the youth tournament that opens the European season.", facts: [["Age", "U8 — U18"], ["Format", "Bracketed"], ["Teams", "300+"], ["Window", "Apr / Oct"]] },
-    { id: "tour-mare-nostrum", name: "Mare Nostrum Cup", meta: "Catalonia · Mediterranean coast", img: "https://images.unsplash.com/photo-1577223625816-7546f13df25d?w=1000&q=80", desc: "Long-form international field. U8 to U19 brackets play on FIFA-grade pitches across the Mediterranean coast.", facts: [["Age", "U8 — U19"], ["Format", "Group + KO"], ["Pitches", "FIFA-grade"], ["Window", "Easter"]] },
-    { id: "tour-cruyff", name: "Cruyff Tournament", meta: "Amsterdam · Netherlands", img: "https://images.unsplash.com/photo-1551958219-acbc608c6377?w=1000&q=80", desc: "Hosted in the spirit of the Cruyff philosophy — possession-first, technically demanding football. Dutch academy field; invitational standard.", facts: [["Age", "U10 — U17"], ["Format", "Invitational"], ["Field", "Academy"], ["Window", "Spring"]] },
-    { id: "tour-levante-cup", featured: true, name: "Levante UD Int. Cup", meta: "Valencia · ES · Hosted by our partner La Liga club", img: "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?w=1400&q=80", desc: "The home tournament of our partner club. Played across Ciutat Esportiva facilities. Direct entry for Ballerz Abroad squads — restricted field, full pro environment.", facts: [["Age", "U12 — U19"], ["Format", "League + finals"], ["Host", "Levante UD"], ["Window", "May"]] },
-    { id: "tour-easter-youth-cup", featured: false, name: "Easter Youth Cup", meta: "Netherlands · Easter window · Apr 7–10 2026", img: "https://pmsoccerevents.nl/wp-content/uploads/2025/12/7x7jeugdDSC_0019-1920w.webp", desc: "One of the Netherlands' most established international youth tournaments. Hosted at Duinrell Wassenaar — previous participants include Feyenoord, Sunderland and Watford.", facts: [["Country", "Netherlands"], ["Window", "Apr 7–10"], ["Format", "Group + KO"], ["Venue", "Duinrell"]] },
+    { id: "tour-mic-costa-brava", featured: true, name: "MIC Costa Brava", meta: "Spain · Easter window · 28 Mar — 04 Apr 2026", img: "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F032691b5832c48ad98a2c4f7b03eeff7?format=webp", desc: "The reference event in international youth football. Founded in 2001, hosted across Catalonia. Over 350 teams from 60+ countries; finals played at RCDE Stadium.", facts: [["Age", "U10 — U19"], ["Format", "Group + KO"], ["Teams", "350+"], ["Window", "Easter"]] },
+    { id: "tour-copa-daurada", name: "Copa Daurada", meta: "Salou · Costa Daurada · ES", img: "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F43ec6735cb3740d4b85a11cef8068f0f", desc: "Grassroots-through-academy bracket. 1,500+ matches across the week, beachside basing — the youth tournament that opens the European season.", facts: [["Age", "U8 — U18"], ["Format", "Bracketed"], ["Teams", "300+"], ["Window", "Apr / Oct"]] },
+    { id: "tour-mare-nostrum", name: "Mare Nostrum Cup", meta: "Catalonia · Mediterranean coast", img: "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fb683cce85259419fb0dd7835de827f98", desc: "Long-form international field. U8 to U19 brackets play on FIFA-grade pitches across the Mediterranean coast.", facts: [["Age", "U8 — U19"], ["Format", "Group + KO"], ["Pitches", "FIFA-grade"], ["Window", "Easter"]] },
+    { id: "tour-cruyff", name: "Cruyff Tournament", meta: "Amsterdam · Netherlands", img: "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F6b7717d918c24293ac81a2d7ae270706?format=webp&width=800&height=1200", desc: "Hosted in the spirit of the Cruyff philosophy — possession-first, technically demanding football. Dutch academy field; invitational standard.", facts: [["Age", "U10 — U17"], ["Format", "Invitational"], ["Field", "Academy"], ["Window", "Spring"]] },
+    { id: "tour-levante-cup", featured: true, name: "Levante UD Int. Cup", meta: "Valencia · ES · Hosted by our partner La Liga club", img: "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F72d8c14eea674af3a855500f305d4f80?format=webp&width=800&height=1200", desc: "The home tournament of our partner club. Played across Ciutat Esportiva facilities. Direct entry for Ballerz Abroad squads — restricted field, full pro environment.", facts: [["Age", "U12 — U19"], ["Format", "League + finals"], ["Host", "Levante UD"], ["Window", "May"]] },
+    { id: "tour-easter-youth-cup", featured: false, name: "Easter Youth Cup", meta: "Netherlands · Easter window · Apr 7–10 2026", img: "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fce13cba90d35467982a5ce5cbf7a73c9?format=webp&width=800&height=1200", desc: "One of the Netherlands' most established international youth tournaments. Hosted at Duinrell Wassenaar — previous participants include Feyenoord, Sunderland and Watford.", facts: [["Country", "Netherlands"], ["Window", "Apr 7–10"], ["Format", "Group + KO"], ["Venue", "Duinrell"]] },
     { id: "tour-winter-cup-nl", featured: false, name: "Winter Cup Holland", meta: "Netherlands · Dec + Jan windows", img: "https://pmsoccerevents.nl/wp-content/uploads/2025/12/7x7jeugdDSC_0019-1920w.webp", desc: "Two editions at Duinrell Wassenaar — December and January. Youth and seniors brackets in parallel. Strong Dutch and European international field.", facts: [["Country", "Netherlands"], ["Window", "Dec + Jan"], ["Format", "Group + KO"], ["Level", "Youth + Seniors"]] },
   ];
 
@@ -44,10 +44,10 @@ function Tournaments({ onNavigate }) {
       <section className="band" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="stat-row">
-            <StatCell n="06" label="Partner events" />
-            <StatCell n="60" label="Countries represented" />
+            <StatCell n="07" label="Partner events" />
+            <StatCell n="3" label="Countries represented" />
             <StatCell n="11" label="Brackets · U8 — U19" />
-            <StatCell n="01" label="Bar" accent />
+            <StatCell n="40+" label="PROFESSIONAL ACADEMIES" accent />
           </div>
         </div>
       </section>
@@ -121,6 +121,7 @@ function Tournaments({ onNavigate }) {
 
       <Footer />
       <WhatsAppFab />
+      <CookieIcon onNavigate={onNavigate} />
     </>
   );
 }

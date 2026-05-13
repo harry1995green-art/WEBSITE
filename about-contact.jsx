@@ -13,7 +13,7 @@ function About({ onNavigate }) {
         <div className="hero__inner">
           <div className="hero__eyebrow">
             <div className="hero__eyebrow-rule"></div>
-            <div className="hero__eyebrow-text">About · Ballerz Abroad · Est. 2024</div>
+            <div className="hero__eyebrow-text">About · Ballerz Abroad · Est. 2025</div>
           </div>
           <h1 className="display-xl">More than a tour<br/>operator.</h1>
           <div className="hero__sub">A UK-based football experience company built by football people, for football people. We design windows abroad that work because we've been on the other side of the bus.</div>
@@ -31,6 +31,38 @@ function About({ onNavigate }) {
             <p style={{ marginBottom: 20 }}>We build international football experiences for grassroots clubs, academies, schools, development teams and US college soccer programmes. Every tour is custom — there is no brochure.</p>
             <p style={{ marginBottom: 20 }}>Our network of partner clubs, federations and tournament organisers across the UK, Spain, Portugal, the Netherlands and the Dominican Republic is vetted to one standard: ours. We sell football, not flights.</p>
             <p>Ballerz Abroad is a UK-registered company. UK contracts, UK staff on-tour, UK-managed travel ops — wherever in the world your squad is playing.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* FOUNDER */}
+      <section className="band">
+        <div className="wrap" style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: 64, alignItems: "center" }}>
+          <div>
+            <div style={{ aspectRatio: "3/4", background: "var(--ink-800)", border: "1px solid rgba(246,243,235,0.08)", borderRadius: 8, overflow: "hidden", backgroundImage: `url(https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F664bed4b7bef47eeaaadf217a15217e5?format=webp&width=800&height=1200)`, backgroundSize: "cover", backgroundPosition: "center" }}></div>
+          </div>
+          <div>
+            <EyebrowBar>About the founder</EyebrowBar>
+            <h2 className="section-h">Why Choose Ballerz Abroad for Your Youth Football Tours?</h2>
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 16, lineHeight: 1.7, color: "var(--stand-200)", marginBottom: 32 }}>
+              <h3 style={{ fontFamily: "var(--font-display)", fontSize: 24, color: "var(--chalk-50)", textTransform: "uppercase", marginBottom: 12 }}>About Ballerz Abroad</h3>
+              <p style={{ marginBottom: 16 }}>Ballerz Abroad was founded by Harrison Green, a grassroots football coach with over 20 years of experience in the game — first as a player, and for the past several years as a coach following his retirement from playing.</p>
+              <p style={{ marginBottom: 24 }}>Having spent two decades in football, Harrison recognised a gap in the market. UK clubs with ambition and talented squads had no straightforward, trustworthy route to professional European football experiences. The tours that existed were either generic travel packages with football bolted on, or prohibitively expensive academy programmes out of reach for most grassroots clubs. Ballerz Abroad was built to fix that.</p>
+
+              <h3 style={{ fontFamily: "var(--font-display)", fontSize: 24, color: "var(--chalk-50)", textTransform: "uppercase", marginBottom: 12, marginTop: 24 }}>Our Philosophy</h3>
+              <p style={{ marginBottom: 16 }}>We are a football-first company. Every programme we design starts with the football — the training sessions, the opposition, the tournament format, the facilities — and builds outward from there. Travel, accommodation and logistics follow the football plan, not the other way around.</p>
+              <p style={{ marginBottom: 24 }}>This means the teams that travel with us come home having genuinely experienced how professional European football operates. Not as tourists who watched a game, but as players who trained at professional facilities, competed against international opposition, and understood a different football culture from the inside.</p>
+
+              <h3 style={{ fontFamily: "var(--font-display)", fontSize: 24, color: "var(--chalk-50)", textTransform: "uppercase", marginBottom: 12, marginTop: 24 }}>Who We Work With</h3>
+              <p style={{ marginBottom: 24 }}>Ballerz Abroad works with grassroots clubs, school football programmes, community academies, female teams, and adult pre-season groups across the UK. Our programmes are built for teams at every level — from development-focused youth sides taking their first trip abroad, to ambitious academies looking for elite competition at tournaments like the MIC or Porto International Cup.</p>
+
+              <h3 style={{ fontFamily: "var(--font-display)", fontSize: 24, color: "var(--chalk-50)", textTransform: "uppercase", marginBottom: 12, marginTop: 24 }}>Harrison Green — Founder</h3>
+              <p style={{ marginBottom: 16 }}>Harrison holds FA coaching qualifications and has been actively involved in football for over 20 years. After a playing career spanning two decades, he transitioned into coaching at grassroots level, working with players from youth level through to adult football.</p>
+              <p style={{ marginBottom: 24 }}>His experience on both sides of the game shapes every Ballerz Abroad programme. He understands what coaches need from a tour, what players need from the experience, and what parents need from an operator they are trusting with their children. That combination of playing experience, coaching knowledge, and operational expertise is what makes Ballerz Abroad different from generic sports travel companies.</p>
+
+              <h3 style={{ fontFamily: "var(--font-display)", fontSize: 24, color: "var(--chalk-50)", textTransform: "uppercase", marginBottom: 12, marginTop: 24 }}>Our Partners</h3>
+              <p>Every tour is delivered in partnership with established European football organisations. Our football partners include the organisers of the MIC, Porto International Cup, Copa Daurada, Mare Nostrum Cup, Cruyff Tournament, Levante UD International Cup and MIC Punta Cana.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -53,21 +85,21 @@ function About({ onNavigate }) {
 
       {/* TEAM */}
       <section className="band">
-        <div className="wrap">
-          <EyebrowBar>03 — Team</EyebrowBar>
-          <h2 className="section-h">Who you'll meet.</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24, marginTop: 48 }}>
-            {[
-              ["Founder & Tour Director", "Designs every window. On the phone end of every application."],
-              ["Head of Football Ops", "Builds the fixture programmes. Coordinates with partner-club academy staff."],
-              ["Head of Travel Ops", "UK-based. Owns flights, transfers, hotels and the day-to-day on-tour."],
-            ].map(([role, bio], i) => (
-              <div key={i} style={{ background: "var(--ink-800)", border: "1px solid rgba(246,243,235,0.08)", padding: 24 }}>
-                <div style={{ aspectRatio: "1/1", background: "linear-gradient(135deg, #1F252B, #0A0B0D)", marginBottom: 18, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-display)", fontSize: 96, color: "rgba(246,243,235,0.06)" }}>{String(i+1).padStart(2,"0")}</div>
-                <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.18em", color: "var(--volt-500)", textTransform: "uppercase", marginBottom: 8 }}>{role}</div>
-                <div style={{ fontFamily: "var(--font-body)", fontSize: 14, color: "var(--stand-200)", lineHeight: 1.55 }}>{bio}</div>
+        <div className="wrap" style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: 64, alignItems: "center" }}>
+          <div style={{ aspectRatio: "3/4", background: "var(--ink-800)", border: "1px solid rgba(246,243,235,0.08)", borderRadius: 8, overflow: "hidden", backgroundImage: `url(https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fc50f71cb4d8340f68b4f304608879763?format=webp&width=800&height=1200)`, backgroundSize: "cover", backgroundPosition: "center" }}></div>
+          <div>
+            <EyebrowBar>03 — Team</EyebrowBar>
+            <h2 className="section-h">Who you'll meet.</h2>
+            <div style={{ marginTop: 24 }}>
+              <div style={{ background: "var(--ink-800)", border: "1px solid rgba(246,243,235,0.08)", padding: 32 }}>
+                <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.18em", color: "var(--volt-500)", textTransform: "uppercase", marginBottom: 8 }}>Founder & Tour Director</div>
+                <h3 style={{ fontFamily: "var(--font-display)", fontSize: 28, color: "var(--chalk-50)", textTransform: "uppercase", marginBottom: 12 }}>Harrison Green</h3>
+                <div style={{ fontFamily: "var(--font-body)", fontSize: 16, color: "var(--stand-200)", lineHeight: 1.6 }}>
+                  <p style={{ marginBottom: 12 }}>Harrison is Ballerz Abroad. He designs every window, talks to every applicant, travels with every squad, and coordinates every partnership.</p>
+                  <p>After 20 years in football — first as a player, then as a grassroots coach — he built Ballerz Abroad to fill a gap. No call centres, no templates, no layers. You speak directly to the person who'll design your tour.</p>
+                </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
@@ -89,6 +121,7 @@ function About({ onNavigate }) {
 
       <Footer />
       <WhatsAppFab />
+      <CookieIcon onNavigate={onNavigate} />
     </>
   );
 }
@@ -168,9 +201,17 @@ function Contact({ onNavigate }) {
               ["How far in advance should we apply?", "Most squads apply 4–8 months out. We open shorter-notice windows when a partner-club calendar permits — call us."],
               ["What's the minimum squad size?", "We've run windows with 12 players and with 36. Below that, an Individual Player Development programme is usually the better fit."],
               ["Are flights included?", "No — flights are not bundled. We can recommend airlines, routings and group-booking partners, but every squad books its own flights."],
-              ["What ages do you work with?", "U10 through to U23 and US college. Pro-Experience tours are usually U14 upwards."],
+              ["What ages do you work with?", "U7 through to senior teams and US college. Pro-Experience tours are usually U12 upwards."],
               ["Is insurance included?", "No — travel and football insurance are not bundled. Every squad and player must arrange their own cover before the window. We share our recommended providers on request."],
               ["Can parents travel?", "Yes. Individual Player Development windows are designed around parent travel. On club tours, a parents' floor at the team hotel is standard."],
+              ["Who is responsible for booking the travel?", "Ballerz Abroad manages all ground logistics directly — including accommodation, transfers and tournament entry. Flights are booked independently by your club. We provide recommended partners and full guidance to make that process straightforward. You have one point of contact for everything else, from first enquiry to the day you return home."],
+              ["Who do we pay?", "All payments are made directly to Ballerz Abroad. We handle everything in-house, so there are no third parties involved and no confusion about who to contact."],
+              ["Can parents pay individually?", "Yes. Individual parent payment options are available on most tours, making it easier for clubs to spread costs across the squad without the club carrying the full amount upfront. We will confirm the payment structure when we put your programme together."],
+              ["Will a Ballerz Abroad representative be on the tour?", "On selected tours a senior Ballerz Abroad representative will be present on the ground to support coordination and ensure the programme runs smoothly. Your club's coaches and staff remain fully responsible for coaching, player supervision and welfare throughout."],
+              ["What does Ballerz Abroad handle?", "We manage the full tour end to end — tournament entry, accommodation, ground transfers, fixture scheduling, liaison with tournament organisers and European club partners, and on-site coordination. Flights are arranged independently by your club; we provide trusted recommendations to help with that. You focus on the football. We handle everything else."],
+              ["What age groups do you cater for?", "We work with youth teams from under 7s through to adult pre-season groups, as well as female squads and school football programmes. Every programme is tailored to the age group, playing level and objectives of the travelling team."],
+              ["How far in advance should we book?", "We recommend getting in touch at least three to four months before your intended travel date, particularly for popular tournaments which have limited entry slots. Some tournaments fill up six months in advance — the earlier you contact us the better."],
+              ["What destinations do you cover?", "We currently offer tours and tournament packages in Spain, Portugal, the Netherlands, England and the Dominican Republic. New destinations are added regularly — get in touch if you have somewhere specific in mind."],
             ].map(([q, a], i) => (
               <details key={i} style={{ borderBottom: "1px solid rgba(246,243,235,0.12)", padding: "22px 0", cursor: "pointer" }}>
                 <summary style={{ fontFamily: "var(--font-heading)", fontWeight: 700, fontSize: 19, color: "var(--chalk-50)", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
@@ -186,6 +227,7 @@ function Contact({ onNavigate }) {
 
       <Footer />
       <WhatsAppFab />
+      <CookieIcon onNavigate={onNavigate} />
     </>
   );
 }

@@ -88,13 +88,13 @@
      ------------------------------------------------------------------------- */
 
   /* Anton — heavy condensed display. ALL CAPS only. Hero headlines, scoreline numerals. */
-  --font-display: 'Anton', 'Archivo Black', 'Impact', sans-serif;
+  --font-display: 'Anton', sans-serif;
 
   /* Archivo — modern editorial sans. Headings, subheads, eyebrows. Weight range. */
   --font-heading: 'Archivo', system-ui, sans-serif;
 
-  /* Manrope — clean, readable, slightly geometric. Body, UI. */
-  --font-body: 'Manrope', system-ui, -apple-system, sans-serif;
+  /* Archivo — body copy font. */
+  --font-body: 'Archivo', system-ui, sans-serif;
 
   /* JetBrains Mono — stats, metadata, timestamps, dates, codes. */
   --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;

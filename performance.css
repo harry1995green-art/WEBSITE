@@ -1,0 +1,97 @@
+/* Performance and Lazy Loading Optimizations */
+
+/* Lazy load image animations */
+img[loading="lazy"] {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Prevent layout shift while lazy loading images */
+img[loading="lazy"] {
+  background: rgba(245, 245, 240, 0.1);
+  opacity: 0;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+/* Background images - apply loading state */
+.exp-card__img,
+.j-card__img,
+.blog-card__img,
+.dest-card__img,
+.tour-card__img {
+  position: relative;
+  background-color: rgba(245, 245, 240, 0.1);
+  background-attachment: scroll;
+}
+
+/* Optimize font loading to prevent FOUT (Flash Of Unstyled Text) */
+@font-face {
+  font-family: 'Archivo';
+  font-display: swap;
+}
+
+/* Reduce paint area during animations */
+.exp-detail-photos-first div {
+  will-change: transform;
+}
+
+/* Mobile optimization - reduce animations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Core Web Vitals optimization */
+
+/* LCP (Largest Contentful Paint) - prioritize hero image */
+.hero__img {
+  content-visibility: auto;
+}
+
+/* CLS (Cumulative Layout Shift) - reserve space for images */
+.exp-detail-photos-first {
+  aspect-ratio: 16 / 9;
+}
+
+.j-card__img,
+.blog-card__img,
+.exp-card__img {
+  aspect-ratio: 16 / 9;
+}
+
+.dest-card__img {
+  aspect-ratio: 1 / 1.3;
+}
+
+/* Optimize scrolling performance */
+.nav,
+.hero,
+.band {
+  contain: layout;
+}
+
+/* Image optimization hints */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Reduce repaints during scroll */
+.sticky-header {
+  will-change: transform;
+}
+
+/* Optimize button interactions */
+button {
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.98);
+}
