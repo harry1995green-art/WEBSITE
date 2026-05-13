@@ -53,8 +53,9 @@ function Tournaments({ onNavigate }) {
       </section>
 
       {/* GRID */}
-      <section className="band">
-        <div className="wrap">
+      <section className="band" style={{ backgroundImage: `url(https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fce13cba90d35467982a5ce5cbf7a73c9?format=webp&width=800&height=1200)`, backgroundSize: "cover", backgroundPosition: "center", backgroundAttachment: "fixed", position: "relative" }}>
+        <div style={{ position: "absolute", inset: 0, background: "rgba(5, 6, 8, 0.75)" }}></div>
+        <div className="wrap" style={{ position: "relative", zIndex: 2 }}>
           <EyebrowBar>01 — 2026 Calendar</EyebrowBar>
           <h2 className="section-h">Where we play.</h2>
           <div className="section-lead">Each entry is opened against the host federation's calendar. Capacity is finite — apply early or join a waiting list.</div>
