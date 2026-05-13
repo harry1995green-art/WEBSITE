@@ -234,7 +234,7 @@ function Detail({ onNavigate, expId = "exp-levante" }) {
       <section className="band">
         <div className="wrap">
           <EyebrowBar>02 — Itinerary</EyebrowBar>
-          <h2 className="section-h">{d.itinerary ? (d.itinerary.length === 7 ? "Seven days, seven standards." : "Sample Itinerary") : "Seven days, seven standards."}</h2>
+          <h2 className="section-h">Example itinerary.</h2>
           <div className="section-lead">An indicative schedule — your final itinerary is built around squad age, training load, and your club's specific goals.</div>
           <div className="itin">
             {d.itinerary && d.itinerary.length > 0 ? (
@@ -379,7 +379,6 @@ function Detail({ onNavigate, expId = "exp-levante" }) {
 
       <Footer />
       <WhatsAppFab />
-      <CookieIcon onNavigate={onNavigate} />
     </>
   );
 }

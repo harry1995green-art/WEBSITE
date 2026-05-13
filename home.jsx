@@ -2,6 +2,27 @@
 
 const { useState: useHState } = React;
 
+// Add responsive styles for partners grid
+if (typeof document !== "undefined" && !document.getElementById("partners-responsive")) {
+  const style = document.createElement("style");
+  style.id = "partners-responsive";
+  style.innerHTML = `
+    .partners-grid {
+      display: grid;
+      gap: 1px;
+      background: rgba(246,243,235,0.12);
+      border: 1px solid rgba(246,243,235,0.12);
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media (max-width: 768px) {
+      .partners-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+}
+
 // Destination explorer — UK · Europe · Global tabs
 function DestExplorer({ onNavigate }) {
   const [tab, setTab] = useHState("europe");
@@ -13,8 +34,8 @@ function DestExplorer({ onNavigate }) {
       { c: "Spain · Valencia",  t: "Levante UD",        logo: "https://images.squarespace-cdn.com/content/v1/69657d0bde7b1d54486a7193/cdc306a3-efb4-407b-a841-cc986a9a0b41/ChatGPT+Image+Jan+9%2C+2026%2C+11_01_00+AM.png", img: "assets/dest-levante.jpg" },
       { c: "Spain · Seville",   t: "Real Betis",        logo: "https://images.squarespace-cdn.com/content/v1/69657d0bde7b1d54486a7193/d9d4fac9-5dd8-41f7-b464-2d6345e2b12f/Real_betis_logo.svg.png", img: "assets/dest-betis.png" },
       { c: "Spain · Catalonia", t: "MIC Costa Brava",   logo: "https://images.squarespace-cdn.com/content/v1/69657d0bde7b1d54486a7193/69806f9e-a44a-473f-8214-23cce19f86e3/images+%282%29.png", img: "assets/dest-mic.webp" },
-      { c: "Netherlands · Rotterdam", t: "Feyenoord Academy", logo: "https://pmsoccerevents.nl/wp-content/uploads/2025/11/Feyenoord_logo.svg.png", img: "assets/dest-feyenoord.jfif" },
-      { c: "Portugal · Lisbon", t: "Benfica window", logo: "assets/logo-benfica.png", img: "assets/dest-benfica.jpeg" },
+      { c: "Netherlands · Rotterdam", t: "FEYENOORD", logo: "https://pmsoccerevents.nl/wp-content/uploads/2025/11/Feyenoord_logo.svg.png", img: "assets/dest-feyenoord.jfif" },
+      { c: "Portugal · Lisbon", t: "BENFICA", logo: "assets/logo-benfica.png", img: "assets/dest-benfica.jpeg" },
       { c: "Spain · Costa Daurada", t: "Copa Daurada",  logo: null, img: "assets/dest-copa.jpg" },
     ],
     global: [
@@ -213,14 +234,14 @@ function Home({ onNavigate }) {
           <EyebrowBar>05 — Partners</EyebrowBar>
           <h2 className="section-h">Vetted partners.</h2>
           <div className="section-lead">We only work with clubs, federations and tournaments who share our standards for safety, quality and competition.</div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 1, background: "rgba(246,243,235,0.12)", marginTop: 48, border: "1px solid rgba(246,243,235,0.12)" }}>
+          <div className="partners-grid" style={{ marginTop: 48 }}>
             {[
               ["Levante UD",     "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fecd4304b94af4777b17bf55676f7ac0a?format=webp&width=800&height=1200"],
               ["Real Betis",    "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F017e8565cae4423fbbbf2b16b4337f89?format=webp&width=800&height=1200"],
               ["NXGENPro",  "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F34566296fd694ffba6beaaf2c42ef832?format=webp&width=800&height=1200"],
               ["SL Benfica",  "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F089fc518870d4c2d9e8f6284416b2ba1?format=webp&width=800&height=1200"],
             ].map(([name, src]) => (
-              <div key={name} style={{ padding: 32, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16, minHeight: 180 }}>
+              <div key={name} style={{ background: "var(--ink-900)", padding: 32, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16, minHeight: 180 }}>
                 <img src={src} alt={name} style={{ maxHeight: 80, maxWidth: "70%", objectFit: "contain" }} />
                 <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.16em", color: "var(--stand-300)", textTransform: "uppercase", textAlign: "center" }}>{name}</div>
               </div>
@@ -350,7 +371,6 @@ function Home({ onNavigate }) {
 
       <Footer />
       <WhatsAppFab />
-      <CookieIcon onNavigate={onNavigate} />
     </>
   );
 }

@@ -121,7 +121,6 @@ function Tournaments({ onNavigate }) {
 
       <Footer />
       <WhatsAppFab />
-      <CookieIcon onNavigate={onNavigate} />
     </>
   );
 }

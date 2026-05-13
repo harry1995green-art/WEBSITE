@@ -4,6 +4,20 @@
 
 const { useState, useEffect, useRef } = React;
 
+// Add responsive styles for nav logo on mobile
+if (typeof document !== "undefined" && !document.getElementById("nav-logo-responsive")) {
+  const style = document.createElement("style");
+  style.id = "nav-logo-responsive";
+  style.innerHTML = `
+    @media (max-width: 768px) {
+      .nav__logo {
+        transform: scale(1.5);
+      }
+    }
+  `;
+  document.head.appendChild(style);
+}
+
 const EXPERIENCES = [
   { id: "exp-nxgenpro",   label: "NXGENPro",                    loc: "England · UK" },
   { id: "exp-levante",    label: "Levante Academy Experience",   loc: "Valencia · ES" },
@@ -42,7 +56,7 @@ function Nav({ active = "home", onNavigate }) {
       <nav className={"nav " + (scrolled ? "nav--scrolled" : "")}>
         <div className="nav__left">
           <a href="#" onClick={(e) => { e.preventDefault(); go("home"); }} style={{ border: "none", display: "flex", alignItems: "center", background: "transparent" }}>
-            <img className="nav__logo" src="assets/logo.svg" alt="Ballerz Abroad" />
+            <img className="nav__logo" src="assets/logo-black.png" alt="Ballerz Abroad" />
           </a>
           <div className="nav__links">
             <a href="#" className={active === "home" ? "is-active" : ""} onClick={(e) => { e.preventDefault(); go("home"); }}>Home</a>
@@ -223,7 +237,7 @@ function Footer() {
       <div className="foot__grid">
         <div className="foot__logo">
           <img src="assets/logo-mark-white.svg" alt="Ballerz Abroad" style={{ transform: "scale(2)" }} />
-          <div className="foot__tag">European football experiences — built around your squad.</div>
+          <div className="foot__tag"></div>
         </div>
         <div className="foot__col">
           <h4>Experiences</h4>
