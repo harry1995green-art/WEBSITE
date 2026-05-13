@@ -421,20 +421,20 @@ Mare Nostrum Cup — Easter and summer. Spain's largest youth tournament. U8–U
   },
   "tour-levante-cup": {
     name: "Levante UD International Cup.",
-    eyebrow: "Valencia · ES · Hosted by our partner La Liga club",
-    sub: "The home tournament of our partner club. Played across Levante UD's Ciutat Esportiva.",
+    eyebrow: "Tournament · Spain · Valencia",
+    sub: "Hosted by our La Liga partner club at their own training ground. 300 teams. 500 matches. An opening ceremony inside Levante's stadium. Valencia, Spain — June 2026.",
     location: "Valencia · ES",
-    facts: [["Country", "Spain"], ["Window", "May 2026"], ["Age", "U12 — U19"], ["Host", "Levante UD"]],
+    facts: [["Country", "Spain"], ["Window", "18–21 June 2026"], ["Age", "U8 — U19"], ["Teams", "300+"]],
     img: "https://images.unsplash.com/photo-1556056504-5c7696c4c28d?w=2000&q=80",
-    pill: "Direct entry",
-    accent: "Restricted field · Full pro environment",
-    summary: "Levante UD opens its own academy facilities to a restricted international field every May. Ballerz Abroad holds direct entries. League-format group stage, single-elimination finals — all inside the Ciutat Esportiva.",
+    pill: "Inaugural edition",
+    accent: "Stadium ceremony · Partner club",
+    summary: "The Levante UD International Cup launches in June 2026 — the first edition of a tournament hosted directly by Levante UD at their own Ciudad Deportiva in Buñol, Valencia. Opening ceremony inside their La Liga stadium.",
     accommodation: {
       name: "Global-Levante UD International Residence · L'Eliana, Valencia",
       link: "https://www.globalfootballtotal.com/en/facilities/",
       linkLabel: "View facilities at globalfootballtotal.com",
       desc: "Tournament squads stay at the official Global-Levante UD International Residence — the same campus used for the Levante Academy Experience. Located in L'Eliana in the Valencian community, the 23,000 m² site houses up to 120 players with private bathrooms, dining room (breakfast, lunch and dinner), swimming pool, gymnasium, crossfit area, padel courts, tennis courts, cafeteria, games room and 24-hour surveillance.",
-      features: ["Up to 120 players · private bathrooms", "Full board (breakfast, lunch & dinner)", "Swimming pool + sports centre", "Gymnasium · crossfit · padel · tennis", "24-hour surveillance + tutoring service", "Direct bus transfer to Levante UD Ciutat Esportiva"],
+      features: ["Up to 120 players · private bathrooms", "Full board (breakfast, lunch & dinner)", "Swimming pool + sports centre", "Gymnasium · crossfit · padel · tennis", "24-hour surveillance + tutoring service", "Direct bus transfer to Levante UD Ciudad Deportiva"],
       photos: [
         { url: "https://www.globalfootballtotal.com/wp-content/uploads/2020/04/Edificio-Residencia.jpg", cap: "Residence building" },
         { url: "https://www.globalfootballtotal.com/wp-content/uploads/2020/04/Area-Exterior.jpg", cap: "Exterior grounds" },
@@ -444,6 +444,102 @@ Mare Nostrum Cup — Easter and summer. Spain's largest youth tournament. U8–U
         { url: "https://www.globalfootballtotal.com/wp-content/uploads/2020/04/GYM.jpg", cap: "Gymnasium" },
       ],
     },
+    sections: [
+      {
+        eyebrow: "01 — What Is the Levante UD International Cup",
+        title: "A brand new tournament. A partner club hosting it. Your squad inside it.",
+        content: `The Levante UD International Cup launches in June 2026 — the first edition of a tournament hosted directly by Levante UD at their own Ciudad Deportiva in Buñol, Valencia. It is the flagship event in Levante's international strategy, bringing together all of the club's partner academies and associated clubs from across the Americas, Europe, Asia, Africa, and Oceania into a single four-day competition.
+
+300 teams. 500 matches. 2,500 players. 8,000 spectators.
+
+The tournament opens with an inauguration ceremony inside the Estadi Ciutat de València — Levante's own La Liga stadium — bringing every participating squad and their families together in a moment that no other tournament in the Ballerz Abroad network can offer. Then four days of football at the club's training complex, on the same pitches where Levante's own academy squads train every day.
+
+For Ballerz Abroad squads, this is the most direct expression of our partnership with Levante UD. You are not visiting the club. You are competing in their tournament, on their ground, in an event they have built.`,
+      },
+      {
+        eyebrow: "02 — Format and Details",
+        title: "The tournament at a glance.",
+        content: `Dates: 18–21 June 2026 · Valencia, Spain
+
+Venues:
+Ciudad Deportiva Levante UD, Buñol — All match play. Located 40km west of Valencia, the full training complex of Levante UD's first team and academy
+Estadi Ciutat de València — Opening ceremony and inauguration
+
+Facilities at Ciudad Deportiva:
+3 natural grass full-size pitches (F11)
+8 artificial pitches (F8)
+18 full-size changing rooms · 12 F8 changing rooms
+
+Age categories:
+F8 format:
+Benjamín: 2016–2017
+Alevín: 2014–2015
+
+F11 format:
+Infantil: 2012–2013
+Cadete: 2010–2011
+Juvenil: 2008–2009
+Female: 2008–2009–2010`,
+      },
+      {
+        eyebrow: "03 — The Opening Ceremony",
+        title: "It starts at the stadium.",
+        content: `Every participating squad gathers at the Estadi Ciutat de València — Levante's La Liga home — for the tournament inauguration. Players, coaches, and families inside a professional football stadium, marking the start of four days of competition.
+
+For players who have trained at the club's academy environment earlier in their tour, walking into that stadium to open the tournament is the moment that ties the whole experience together. It is the kind of memory that no domestic cup final, no weekend tournament, no training ground session can produce.`,
+      },
+      {
+        eyebrow: "04 — Why This Tournament Is Different",
+        title: "The tournament your squad trains in all week and then competes in.",
+        content: `Every other tournament in the Ballerz Abroad network is a competition we take squads to. The Levante UD International Cup is a competition hosted by our partner club — the same club whose pitches, coaches, and academy methodology we use for professional training sessions earlier in the week.
+
+The natural tour structure builds itself. Arrive in Valencia. Train at the Ciudad Deportiva under Levante's coaching staff for two or three days. Enter the Levante UD International Cup and compete on the same pitches against academies and clubs from 40+ countries. Return home having trained, competed, and experienced what a La Liga club's environment looks and feels like from the inside.
+
+No other destination in the network gives you that continuity — the training environment and the tournament competition in the same place, with the same club behind both.`,
+      },
+      {
+        eyebrow: "05 — Valencia and the June Window",
+        title: "The right city. The right time of year.",
+        content: `Valencia in June is one of the finest football tour destinations in Europe. The weather is reliably warm, the city is at its best, and the end-of-season timing works cleanly for UK academies finishing their domestic programme and looking for a summer experience before pre-season begins.
+
+Valencia itself offers everything beyond the football — the City of Arts and Sciences, the Oceanogràfic, the historic old town, Gulliver Park, and the natural beauty of Albufera Natural Park just outside the city. For squads travelling with families, Valencia in June is a destination in its own right.`,
+      },
+      {
+        eyebrow: "06 — How Ballerz Abroad Builds a Levante Cup Tour",
+        title: "Training and tournament. One destination. One week.",
+        content: `The Levante UD International Cup slots perfectly into a seven to ten day Valencia-based tour. Ballerz Abroad manages tournament entry, accommodation, ground transfers, and a dedicated tour lead throughout.
+
+A typical Levante Cup tour:
+
+Days 1–3 — Arrival in Valencia, professional training sessions at the Ciudad Deportiva under Levante academy coaching staff
+Days 4–7 — Levante UD International Cup competition, Ciudad Deportiva Buñol
+Day 8 — Departure
+
+For clubs wanting to extend the tour, Copa Daurada and MIC Costa Brava entries are available from the same Valencia base in the weeks either side of the June window.`,
+      },
+      {
+        eyebrow: "07 — Who This Is For",
+        title: "Right for your squad if…",
+        content: `You want to combine professional partner-club training with a tournament hosted by the same club — the most joined-up experience in the Ballerz Abroad network
+
+You're travelling in the June window and want an ambitious end-of-season or early summer tour with genuine international competition
+
+You have mixed age groups — the Levante Cup covers F8 and F11 categories from U8 through to U19 including a female category
+
+You want your players to compete on a La Liga club's actual training pitches and open the tournament in their stadium`,
+      },
+      {
+        eyebrow: "08 — Other Valencia-Based Options",
+        title: "More from Ballerz Abroad in Valencia.",
+        content: `The Levante UD International Cup is the centrepiece of our Valencia offering — but the destination opens up access to the wider tournament network from the same base.
+
+MIC Costa Brava — Easter. Europe's most competitive elite academy tournament.
+
+Copa Daurada — Easter and summer. Salou, Costa Daurada.
+
+Levante UD Academy training — Professional training inside the partner club environment, independent of tournament entry.`,
+      },
+    ],
   },
   "tour-mic-punta-cana": {
     name: "MIC Punta Cana.",
