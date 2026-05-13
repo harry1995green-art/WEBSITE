@@ -641,7 +641,7 @@ Not the right fit if your primary objective is maximum age group coverage — fo
     sub: "International tournament football in the heart of Dutch football country. Easter weekend, Roosendaal, Netherlands — and the perfect pairing with a Feyenoord Academy training week.",
     location: "Roosendaal · NL",
     facts: [["Country", "Netherlands"], ["Window", "3–6 April 2026"], ["Age", "U9 — U15"], ["Field", "International"]],
-    img: "https://pmsoccerevents.nl/wp-content/uploads/2025/12/7x7jeugdDSC_0019-1920w.webp",
+    img: "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fce13cba90d35467982a5ce5cbf7a73c9?format=webp&width=800&height=1200",
     pill: "Easter window",
     accent: "Roosendaal · 30 mins from Rotterdam",
     summary: "The Netherlands Easter Youth Cup is an international youth football tournament held over Easter weekend in Roosendaal — a Dutch town midway between Rotterdam and Antwerp.",
