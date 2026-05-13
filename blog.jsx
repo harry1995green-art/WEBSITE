@@ -77,7 +77,7 @@ const POSTS = [
     read: "7 min read",
     title: "The Mid-Season Football Tour: Why December and January Are the Smartest Windows Most UK Academies Ignore",
     excerpt: "Easter is overcrowded. Summer is expensive. The mid-season window — December and January — is the most underused opportunity in the UK academy tour calendar. Here's why it works.",
-    img: "https://images.unsplash.com/photo-CZ_HwDtvEus?w=1600&q=80",
+    img: "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fafd0cc1d17714d0a86fda0fd5755f214?format=webp&width=800&height=1200",
     body: [
       "Ask most UK academy directors when they take their squad on an overseas football tour and you'll get the same two answers: Easter or the summer. Both are sensible windows. Both are also the most expensive, the most logistically congested, and the most competitive for tournament entry slots.",
       "There is a third option that almost nobody uses. It is arguably the most useful of the three.",
