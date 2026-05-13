@@ -93,8 +93,8 @@
   /* Archivo — modern editorial sans. Headings, subheads, eyebrows. Weight range. */
   --font-heading: 'Archivo', system-ui, sans-serif;
 
-  /* Marcellus SC — serif typeface for body copy. */
-  --font-body: 'Marcellus SC', serif;
+  /* Archivo — body copy font. */
+  --font-body: 'Archivo', system-ui, sans-serif;
 
   /* JetBrains Mono — stats, metadata, timestamps, dates, codes. */
   --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
