@@ -547,7 +547,7 @@ Levante UD Academy training — Professional training inside the partner club en
     sub: "The MIC format. The same clubs. The Caribbean. A June window for squads who can't make Easter — or who want one of the most extraordinary tournament experiences available in youth football.",
     location: "Punta Cana · DR",
     facts: [["Country", "Dominican Republic"], ["Window", "24–29 June 2026"], ["Age", "U12 — U16"], ["Teams", "International"]],
-    img: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=2000&q=80",
+    img: "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F201c796488b54cc5b7ede7c01b6937bb?format=webp&width=800&height=1200",
     pill: "June window",
     accent: "All-inclusive resort · 4 & 5-star hotels",
     summary: "The MIC format, transposed to the Dominican Republic. Runs in late June across a 125,000m² sports complex at Cap Cana, with teams staying in four and five-star all-inclusive hotels.",
