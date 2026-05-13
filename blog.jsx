@@ -108,7 +108,7 @@ const POSTS = [
     read: "10 min read",
     title: "Football Tours Abroad for Youth Clubs: The Complete Guide (2025–26)",
     excerpt: "Thinking about taking your youth football club on their first tour abroad? Here's everything you need to know — from choosing the right destination to making sure every player comes home with memories they'll never forget.",
-    img: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1600&q=80",
+    img: "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F48c2f36c2a634f12a0242cc2f5afb6b6?format=webp&width=800&height=1200",
     body: [
       "Every youth footballer remembers their first tour. The early morning flights, the unfamiliar kits, the pitches that looked nothing like home — and the matches that somehow meant everything. If you're a manager or club secretary exploring football tours abroad for youth clubs, you're about to give your players one of those moments.",
       "But organising a youth football tour is more involved than booking a family holiday. You're responsible for a squad of young players, managing parents' expectations, coordinating fixtures, and making sure every detail — from travel insurance to dietary requirements — is covered before you leave. This guide breaks it all down.",
@@ -143,7 +143,7 @@ const POSTS = [
     read: "9 min read",
     title: "Pre-Season Football Tours in Europe: How to Choose the Right Package for Your Club",
     excerpt: "Pre-season is your squad's foundation for the year ahead. Get the tour right and you arrive at the first league game sharper, fitter, and more cohesive than ever. Here's how to plan it properly.",
-    img: "https://images.unsplash.com/photo-1552821206-53a0a0f1b6c8?w=1600&q=80",
+    img: "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F48c2f36c2a634f12a0242cc2f5afb6b6?format=webp&width=800&height=1200",
     body: [
       "Pre-season is non-negotiable. Every serious club — from grassroots to semi-professional — understands that the weeks before the competitive season begins are where you set the tone. And increasingly, clubs across the UK are choosing to do that abroad.",
       "A pre-season football tour in Europe offers something a domestic training camp simply can't: competitive fixtures against unfamiliar opponents, combined with the team-building that only comes from travelling and living together. This guide walks you through how to plan it, what to look for, and which destinations are worth considering.",
@@ -178,7 +178,7 @@ const POSTS = [
     read: "6 min read",
     title: "7 Real Benefits of Taking Your Football Club on Tour (That Have Nothing to Do With Winning)",
     excerpt: "Winning matches is great. But the most important things that happen on a football tour abroad often have nothing to do with the scoreline.",
-    img: "https://images.unsplash.com/photo-1552821206-53a0a0f1b6c8?w=1600&q=80",
+    img: "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F48c2f36c2a634f12a0242cc2f5afb6b6?format=webp&width=800&height=1200",
     body: [
       "Ask any player who's been on a football tour abroad and they'll struggle to tell you the final scores. Ask them what they remember, and you'll get something different entirely — the hotel lobby at midnight, the match played in 30-degree heat, the teammate who came up huge when it mattered. Those are the things that stay.",
       "Football club tours are increasingly popular for a reason. Clubs that tour regularly — at youth, amateur, and semi-professional level — report stronger squad culture, better player retention, and genuine improvements in on-pitch performance. Here are seven benefits that extend well beyond the final whistle.",
