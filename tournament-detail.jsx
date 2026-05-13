@@ -724,15 +724,94 @@ Winter Cup Holland — Netherlands winter tournament window.`,
   },
   "tour-winter-cup-nl": {
     name: "Winter Cup Holland.",
-    eyebrow: "Wassenaar · Netherlands · Winter window",
-    sub: "The Dutch winter tournament window. Two editions — December and January — both hosted at Duinrell Wassenaar.",
+    eyebrow: "Tournament · Netherlands · Wassenaar",
+    sub: "International youth football tournament in the Netherlands. December and January windows. Boys and girls U12–U19. Based at Duinrell — one of the most distinctive tournament venues in Europe.",
     location: "Wassenaar · NL",
-    facts: [["Country", "Netherlands"], ["Window", "Dec 11–14 · Jan 15–18"], ["Format", "Group + KO"], ["Level", "Youth + Seniors"]],
+    facts: [["Country", "Netherlands"], ["Windows", "Dec & Jan 2026–27"], ["Age", "U12 — U19"], ["Teams", "International"]],
     img: "https://pmsoccerevents.nl/wp-content/uploads/2025/12/7x7jeugdDSC_0019-1920w.webp",
     pill: "Two windows available",
-    accent: "Youth + Seniors brackets · Duinrell Wassenaar",
-    summary: "Winter Cup Holland runs two editions at Duinrell Wassenaar — December and January. Youth and seniors brackets run in parallel, making it ideal for clubs travelling with multiple squads. A strong Dutch and European international field.",
+    accent: "Mid-season tournament",
+    summary: "Winter Cup Holland runs two editions at Duinrell Wassenaar — December and January. Boys and girls U12–U19 with international field from Netherlands, Germany, Belgium, France, and other European nations.",
     accommodation: DUINRELL_ACCOM,
+    sections: [
+      {
+        eyebrow: "01 — What Is the Winter Cup Holland",
+        title: "Mid-season international football. In the Netherlands. In winter.",
+        content: `The Winter Cup Holland is an international youth football tournament held at the RKSV Blauw Zwart sports complex in Wassenaar, Netherlands — a well-established event running since 2016, bringing together boys and girls teams from the Netherlands, Germany, Belgium, France, and other European nations across a four-day weekend.
+
+Two windows are available — December and January — making it one of the only tournaments in the Ballerz Abroad network that fills the mid-season gap. For UK squads looking for an international benchmark in the middle of their domestic campaign, or for clubs who can't travel at Easter or in the summer, the Winter Cup Holland is the answer.
+
+The format is straightforward and well-organised. Teams arrive on Friday, play group stage matches on Saturday, advance to knockout rounds on Sunday, and depart Monday. All matches are played at the RKSV Blauw Zwart sports complex adjacent to Duinrell — professional-standard pitches with changing rooms and full tournament infrastructure on site.`,
+      },
+      {
+        eyebrow: "02 — Format and Details",
+        title: "The tournament at a glance.",
+        content: `Dates:
+December Edition — 11–14 December 2026 · Wassenaar, Netherlands
+January Edition — 15–18 January 2027 · Wassenaar, Netherlands
+
+Venue: RKSV Blauw Zwart sports complex, Wassenaar — adjacent to Duinrell leisure park
+
+Age categories:
+Boys: U12–U19
+Girls: U12–U19
+
+Format: Group stage pools of 5 or 6 teams, followed by knockout playoffs culminating in the final. Every team is guaranteed multiple matches. All teams receive a commemorative cup and tournament souvenir at the awards ceremony.
+
+Accommodation: Teams stay in Duingalows at Duinrell park — self-contained cottages with living rooms, kitchen, comfortable beds, and bathrooms, centrally located within the park. Keeping the whole squad together in one location builds the team environment that makes a winter tour genuinely valuable.
+
+Duinrell: Beyond the football, Duinrell is a leisure park with a theme park and the Tikibad indoor water park — giving squads activities between matches and a social programme that works particularly well for younger age groups and for clubs travelling with families.`,
+      },
+      {
+        eyebrow: "03 — The Winter Window Opportunity",
+        title: "The calendar slot most clubs overlook.",
+        content: `Easter is oversubscribed. Summer is competitive. The winter window — December and January — is largely untapped by UK clubs despite being one of the most useful points in the football calendar for a mid-season reset or development experience abroad.
+
+A Winter Cup Holland tour gives your squad a performance benchmark at the halfway point of their domestic season — competitive international football against European opposition at a point when the data from those games is immediately actionable. Return in January and your coaching staff know exactly what your squad needs to work on for the second half of the season. That is a different kind of development value from an end-of-season or pre-season tour.
+
+The Netherlands in December and January is cold but very manageable — pitches are well-maintained, facilities are indoor-heated, and the Duinrell setting insulates the squad from the weather between matches.`,
+      },
+      {
+        eyebrow: "04 — Wassenaar and the Netherlands",
+        title: "Well placed for everything the Netherlands offers.",
+        content: `Wassenaar is a small town on the Dutch coast between The Hague and the North Sea — quiet, well-connected, and surrounded by the dunes and woodland that give Duinrell its distinctive character. Rotterdam is 30 minutes south by road. Amsterdam is 45 minutes north. The Hague is 15 minutes.
+
+For squads with a day between arrival and the tournament start, all three cities are within easy reach — Rotterdam for its architecture and football culture, Amsterdam for the full Dutch city experience, The Hague for something quieter. The Netherlands in winter has a character entirely its own — Christmas markets, canal cities, and a football culture that is fully active and visible year-round.`,
+      },
+      {
+        eyebrow: "05 — The Natural Pairing with Feyenoord",
+        title: "Train at Varkenoord. Compete at Duinrell.",
+        content: `The Winter Cup Holland pairs naturally with a Feyenoord Academy training block earlier in the week. Varkenoord sits in Rotterdam — 30 minutes from Wassenaar — making a joined-up Netherlands tour easy to build.
+
+A typical Winter Cup Holland tour with Ballerz Abroad:
+
+Days 1–3 — Arrival in Rotterdam, professional training sessions at Varkenoord under Feyenoord Academy coaching staff
+Days 4–7 — Winter Cup Holland competition, Wassenaar
+Day 8 — Departure
+
+Your squad arrives at the tournament having already trained inside one of Europe's most respected youth development environments that week. The standard they encountered at Varkenoord and the standard they then face in competition come from the same Dutch football tradition — that continuity shapes what your players take home.`,
+      },
+      {
+        eyebrow: "06 — Who This Is For",
+        title: "Right for your squad if…",
+        content: `You want a mid-season international tournament in December or January — a benchmark at the halfway point of the domestic season that feeds directly back into your coaching programme
+
+You have U12–U19 boys or girls and want a winter window overseas tour that combines competitive football with a distinctive venue
+
+You're looking to combine a Feyenoord Academy training block with winter tournament competition in a single Netherlands-based tour
+
+You want a tournament environment where the squad stays together in one location — Duinrell's self-contained setup builds team cohesion in a way that hotel-based tournaments don't
+
+Not the right fit if you need an Easter or summer window, or if your primary goal is the most elite competitive field available. For that, MIC Costa Brava or the Cruyff Tournament are the stronger options. The Winter Cup Holland is the right choice when the window, the location, and the mid-season timing are what your club needs.`,
+      },
+      {
+        eyebrow: "07 — More from the Netherlands Network",
+        title: "Other Ballerz Abroad options in the Netherlands.",
+        content: `Feyenoord Academy — Professional training at Varkenoord, Rotterdam. The natural pairing for any Netherlands-based tour.
+
+Netherlands Easter Youth Cup — Easter weekend tournament in Roosendaal. U9–U15 boys.`,
+      },
+    ],
   },
 };
 
