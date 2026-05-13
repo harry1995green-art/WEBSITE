@@ -125,7 +125,7 @@ Not the right fit for squads at very early grassroots level entering their first
     sub: "Five days of international tournament football on the Costa Daurada. Over 90 teams from across Europe. Salou, Spain — Easter and summer windows available.",
     location: "Salou · ES",
     facts: [["Country", "Spain"], ["Windows", "Easter & Summer 2026"], ["Age", "U8 — U16"], ["Teams", "90+"]],
-    img: "https://images.unsplash.com/photo-1521412644187-c49fa049e84d?w=2000&q=80",
+    img: "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fa57ab251aeea4d0fa46ab41ea4fc4f5b?format=webp&width=800&height=1200",
     pill: "Two windows available",
     accent: "Beachside basing · FIFA-grade pitches",
     summary: "Copa Daurada is an international youth football tournament held in Salou on the Costa Daurada with two windows per year — Easter and summer.",
