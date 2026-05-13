@@ -248,30 +248,30 @@ function Home({ onNavigate }) {
       <section className="band">
         <div className="wrap">
           <EyebrowBar>07 — In their words</EyebrowBar>
-          <h2 className="section-h">Clubs who've travelled with us.</h2>
+          <h2 className="section-h">Parents and coaches on what they experienced.</h2>
           <div className="testi-row">
             <div className="testi">
               <div className="testi__quote-mark">"</div>
-              <div className="testi__q">The Levante experience was a different level. Our U16s came home sharper, tighter, and bought into a higher standard. We've already booked a return for next pre-season.</div>
+              <div className="testi__q">I wasn't sure what to expect sending my son on an individual tour. Honestly, it was the best thing I've done for his football. He came back a different player — more confident, more switched on. The Levante experience was something else.</div>
               <div className="testi__by">
-                <div className="testi__by-name">Daniel Okafor</div>
-                <div className="testi__by-role">Head of Football · Hackney Marshes FC</div>
+                <div className="testi__by-name">Marcus O.</div>
+                <div className="testi__by-role">Parent · Levante Tour</div>
               </div>
             </div>
             <div className="testi">
               <div className="testi__quote-mark">"</div>
-              <div className="testi__q">Ballerz built the tour around our squad — not the other way around. Mixed-age, mixed-level, all of it. MIC was the test we needed. The on-tour lead made it effortless.</div>
+              <div className="testi__q">My daughter had been playing for years but this was a completely different level. NxGenPro pushed her in ways I hadn't seen before. She came home with a hunger she's kept ever since. Already asking when she can go back.</div>
               <div className="testi__by">
-                <div className="testi__by-name">Sarah Hughes</div>
-                <div className="testi__by-role">Director of Football · Heritage Park Academy</div>
+                <div className="testi__by-name">Sarah H.</div>
+                <div className="testi__by-role">Parent · NxGenPro Tour</div>
               </div>
             </div>
             <div className="testi">
               <div className="testi__quote-mark">"</div>
-              <div className="testi__q">As a school football programme, we have to balance academics and athletics. Ballerz understood the brief from day one. Three fixtures, all contested, all professionally hosted.</div>
+              <div className="testi__q">MIC Tournament was exactly the test our squad needed. Ballerz handled everything — fixtures, logistics, the lot. Our players stepped up. We came home with a clearer picture of where we are and where we're going.</div>
               <div className="testi__by">
-                <div className="testi__by-name">James Whitlock</div>
-                <div className="testi__by-role">Director of Sport · St. Augustine's College</div>
+                <div className="testi__by-name">James W.</div>
+                <div className="testi__by-role">Head of Football · MIC Tournament</div>
               </div>
             </div>
           </div>
