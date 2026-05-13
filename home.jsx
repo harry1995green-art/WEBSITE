@@ -213,14 +213,14 @@ function Home({ onNavigate }) {
           <EyebrowBar>05 — Partners</EyebrowBar>
           <h2 className="section-h">Vetted partners.</h2>
           <div className="section-lead">We only work with clubs, federations and tournaments who share our standards for safety, quality and competition.</div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 1, background: "rgba(246,243,235,0.12)", marginTop: 48, border: "1px solid rgba(246,243,235,0.12)" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 1, background: "rgba(246,243,235,0.12)", marginTop: 48, border: "1px solid rgba(246,243,235,0.12)" }}>
             {[
               ["Levante UD",     "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fecd4304b94af4777b17bf55676f7ac0a?format=webp&width=800&height=1200"],
               ["Real Betis",    "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F017e8565cae4423fbbbf2b16b4337f89?format=webp&width=800&height=1200"],
               ["NXGENPro",  "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F34566296fd694ffba6beaaf2c42ef832?format=webp&width=800&height=1200"],
               ["SL Benfica",  "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F089fc518870d4c2d9e8f6284416b2ba1?format=webp&width=800&height=1200"],
             ].map(([name, src]) => (
-              <div key={name} style={{ padding: 32, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16, minHeight: 180 }}>
+              <div key={name} style={{ background: "var(--ink-900)", padding: 32, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16, minHeight: 180 }}>
                 <img src={src} alt={name} style={{ maxHeight: 80, maxWidth: "70%", objectFit: "contain" }} />
                 <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.16em", color: "var(--stand-300)", textTransform: "uppercase", textAlign: "center" }}>{name}</div>
               </div>

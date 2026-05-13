@@ -42,7 +42,7 @@ function Nav({ active = "home", onNavigate }) {
       <nav className={"nav " + (scrolled ? "nav--scrolled" : "")}>
         <div className="nav__left">
           <a href="#" onClick={(e) => { e.preventDefault(); go("home"); }} style={{ border: "none", display: "flex", alignItems: "center", background: "transparent" }}>
-            <img className="nav__logo" src="assets/logo.svg" alt="Ballerz Abroad" />
+            <img className="nav__logo" src="assets/logo.svg" alt="Ballerz Abroad" style={{ maxWidth: "100%", height: "auto" }} />
           </a>
           <div className="nav__links">
             <a href="#" className={active === "home" ? "is-active" : ""} onClick={(e) => { e.preventDefault(); go("home"); }}>Home</a>
@@ -223,7 +223,7 @@ function Footer() {
       <div className="foot__grid">
         <div className="foot__logo">
           <img src="assets/logo-mark-white.svg" alt="Ballerz Abroad" style={{ transform: "scale(2)" }} />
-          <div className="foot__tag">European football experiences — built around your squad.</div>
+          <div className="foot__tag"></div>
         </div>
         <div className="foot__col">
           <h4>Experiences</h4>
