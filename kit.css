@@ -308,7 +308,7 @@ footer.foot { background: var(--ink-1000); color: var(--chalk-50); padding: clam
   /* Nav */
   .nav { padding: 14px 20px; }
   .nav__links { display: none; }
-  .nav__logo { height: 28px; transform: scale(2); }
+  .nav__logo { height: 28px; }
   .lang-pill { display: none; }
   .nav__hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
   .nav__hamburger span { display: block; width: 22px; height: 2px; background: #F6F3EB; }
