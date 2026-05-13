@@ -285,27 +285,15 @@ function Home({ onNavigate }) {
           <h2 className="section-h">Notes from inside the tours.</h2>
           <div className="section-lead">Tour diaries, partner-club features, behind-the-scenes from every camp we run.</div>
           <div className="journal-row">
-            <div className="j-card" onClick={() => onNavigate("blog")}>
-              <div className="j-card__img" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1551958219-acbc608c6377?w=900&q=80)" }}></div>
-              <div className="j-card__meta">TOUR PLANNING · 15 MAY 2026</div>
-              <div className="j-card__t">Spain vs Netherlands vs Portugal: Which European Football Tour Destination Is Right for Your Academy?</div>
-              <div className="j-card__d">Spain, Netherlands, or Portugal — three of Europe's best football tour destinations for UK academies. Here's how to choose the right one based on your squad's objectives, not the brochure.</div>
-              <div className="j-card__read">Read the post →</div>
-            </div>
-            <div className="j-card" onClick={() => onNavigate("blog")}>
-              <div className="j-card__img" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=900&q=80)" }}></div>
-              <div className="j-card__meta">ACADEMY COACHING · 10 MAY 2026</div>
-              <div className="j-card__t">What Makes a Good Overseas Football Tour? Five Things Academy Directors Should Look For</div>
-              <div className="j-card__d">Not all overseas football tours deliver what they promise. Here's what academy directors and development coaches should look for — and what to avoid — when planning a professional football experience abroad.</div>
-              <div className="j-card__read">Read the post →</div>
-            </div>
-            <div className="j-card" onClick={() => onNavigate("blog")}>
-              <div className="j-card__img" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1518604666860-9ed391f76460?w=900&q=80)" }}></div>
-              <div className="j-card__meta">TOUR TIMING · 05 MAY 2026</div>
-              <div className="j-card__t">The Mid-Season Football Tour: Why December and January Are the Smartest Windows Most UK Academies Ignore</div>
-              <div className="j-card__d">Easter is overcrowded. Summer is expensive. The mid-season window — December and January — is the most underused opportunity in the UK academy tour calendar. Here's why it works.</div>
-              <div className="j-card__read">Read the post →</div>
-            </div>
+            {typeof window !== "undefined" && window.BLOG_POSTS ? window.BLOG_POSTS.slice(0, 3).map(p => (
+              <div key={p.id} className="j-card" onClick={() => { window.__postId = p.id; onNavigate("blog-post"); }} style={{ cursor: "pointer" }}>
+                <div className="j-card__img" style={{ backgroundImage: `url(${p.img})` }}></div>
+                <div className="j-card__meta">{p.cat.toUpperCase()} · {p.date}</div>
+                <div className="j-card__t">{p.title}</div>
+                <div className="j-card__d">{p.excerpt}</div>
+                <div className="j-card__read">Read the post →</div>
+              </div>
+            )) : null}
           </div>
           <div style={{ marginTop: 40 }}>
             <button className="btn btn--ghost btn--lg" onClick={() => onNavigate("blog")}>View the full journal →</button>

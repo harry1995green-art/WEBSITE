@@ -202,6 +202,8 @@ const POSTS = [
   },
 ];
 
+if (typeof window !== "undefined") { window.BLOG_POSTS = POSTS; }
+
 function Blog({ onNavigate }) {
   const [hero, ...rest] = POSTS;
   return (
