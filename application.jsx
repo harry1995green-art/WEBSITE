@@ -157,7 +157,19 @@ function Application({ onNavigate }) {
           {step < 3 ? (
             <button className="btn btn--primary btn--lg" onClick={() => setStep(s => s + 1)}>Continue →</button>
           ) : (
-            <button className="btn btn--primary btn--lg" onClick={() => alert("Application submitted — we'll be in touch within 2 working days.")}>Submit application →</button>
+            <button className="btn btn--primary btn--lg" onClick={() => {
+              const formData = new FormData();
+              formData.append('Club', club);
+              formData.append('Role', role);
+              formData.append('Squad Size', size);
+              formData.append('Age Groups', age);
+              formData.append('Goals', goals.join(', '));
+              formData.append('Destinations', dest.join(', '));
+              fetch('https://formsubmit.co/ajax/info@ballerzabroad.com', {
+                method: 'POST',
+                body: formData
+              }).then(() => alert("Application submitted — we'll be in touch within 2 working days."));
+            }}>Submit application →</button>
           )}
         </div>
 

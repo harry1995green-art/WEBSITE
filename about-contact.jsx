@@ -169,25 +169,26 @@ function Contact({ onNavigate }) {
           <div style={{ background: "var(--ink-800)", border: "1px solid rgba(246,243,235,0.08)", padding: 32 }}>
             <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.14em", color: "var(--volt-500)", textTransform: "uppercase", marginBottom: 8 }}>Quick message</div>
             <div style={{ fontFamily: "var(--font-heading)", fontWeight: 700, fontSize: 22, marginBottom: 24 }}>Drop us a line.</div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+            <form action="https://formsubmit.co/info@ballerzabroad.com" method="POST" style={{ display: "flex", flexDirection: "column", gap: 20 }}>
               <div className="app-form-row" style={{ marginBottom: 0 }}>
                 <label>Your name</label>
-                <input placeholder="Coach Roberts" />
+                <input name="name" placeholder="Coach Roberts" required />
               </div>
               <div className="app-form-row" style={{ marginBottom: 0 }}>
                 <label>Club / organisation</label>
-                <input placeholder="Hackney Marshes FC" />
+                <input name="organisation" placeholder="Hackney Marshes FC" required />
               </div>
               <div className="app-form-row" style={{ marginBottom: 0 }}>
                 <label>Email</label>
-                <input placeholder="head.coach@yourclub.com" />
+                <input name="email" type="email" placeholder="head.coach@yourclub.com" required />
               </div>
               <div className="app-form-row" style={{ marginBottom: 0 }}>
                 <label>What do you need</label>
-                <textarea placeholder="Tell us in your own words. We read every enquiry." />
+                <textarea name="message" placeholder="Tell us in your own words. We read every enquiry." required />
               </div>
-              <button className="btn btn--primary btn--lg" style={{ alignSelf: "flex-start" }}>Send message →</button>
-            </div>
+              <input type="hidden" name="_captcha" value="false" />
+              <button type="submit" className="btn btn--primary btn--lg" style={{ alignSelf: "flex-start" }}>Send message →</button>
+            </form>
           </div>
         </div>
       </section>
