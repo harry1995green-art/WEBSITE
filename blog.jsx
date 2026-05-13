@@ -307,12 +307,17 @@ function BlogPost({ onNavigate }) {
       }
     }
   };
+  React.useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(blogSchema);
+    document.head.appendChild(script);
+    return () => script.remove();
+  }, [blogSchema]);
+
   return (
     <>
       <Nav active="blog" onNavigate={onNavigate} />
-      <script type="application/ld+json">
-        {JSON.stringify(blogSchema)}
-      </script>
 
       <section className="band" style={{ paddingTop: 140, paddingBottom: 32 }}>
         <div className="wrap" style={{ maxWidth: 820 }}>
