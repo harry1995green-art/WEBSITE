@@ -191,9 +191,10 @@ function Home({ onNavigate }) {
               ["MIC COSTA BRAVA",    "Spain · Easter window",          "The international youth football reference tournament"],
               ["COPA DAURADA",       "Salou, Costa Daurada",           "Grassroots through academy bracket"],
               ["EASTER YOUTH CUP",   "Netherlands · Apr 7–10 2026",    "One of the Netherlands' most established international youth tournaments"],
-              ["CRUYFF TOURNAMENT",  "Amsterdam · Netherlands",        "Hosted in the spirit of the Cruyff philosophy"],
+              ["CRUYFF TOURNAMENT",  "Salou, Spain · Spring",          "Possession-first, technically demanding football in the Cruyff philosophy"],
               ["WINTER CUP HOLLAND", "Netherlands · Dec + Jan windows","Two editions at Duinrell Wassenaar with strong European field"],
-              ["LEVANTE UD INT. CUP","Valencia, Spain",                "Hosted by our partner La Liga club"],
+              ["LEVANTE UD INT. CUP","Valencia, Spain · May",          "Hosted by our partner La Liga club — direct entry for Ballerz squads"],
+              ["MIC PUNTA CANA",     "Dominican Republic · Jun 24-29 2026", "Global youth tournament at The Fields Cap Cana Sports City"],
             ].map(([city, sub, opp], i) => (
               <div className="fixture-row" key={i}>
                 <div className="fixture-row__date">T0{i+1}</div>
