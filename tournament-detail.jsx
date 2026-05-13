@@ -637,15 +637,90 @@ Not the right fit if your primary objective is maximum age group coverage — fo
   },
   "tour-easter-youth-cup": {
     name: "Netherlands Easter Youth Cup.",
-    eyebrow: "Wassenaar · Netherlands · Easter window",
-    sub: "One of the Netherlands' most established international youth tournaments. Hosted at Duinrell Wassenaar — drawing clubs from across Europe.",
-    location: "Wassenaar · NL",
-    facts: [["Country", "Netherlands"], ["Window", "Apr 7 — 10 2026"], ["Format", "Group + KO"], ["Teams", "60+"]],
+    eyebrow: "Tournament · Netherlands · Roosendaal",
+    sub: "International tournament football in the heart of Dutch football country. Easter weekend, Roosendaal, Netherlands — and the perfect pairing with a Feyenoord Academy training week.",
+    location: "Roosendaal · NL",
+    facts: [["Country", "Netherlands"], ["Window", "3–6 April 2026"], ["Age", "U9 — U15"], ["Field", "International"]],
     img: "https://pmsoccerevents.nl/wp-content/uploads/2025/12/7x7jeugdDSC_0019-1920w.webp",
-    pill: "2026 entries open",
-    accent: "Previous participants include Feyenoord · Sunderland · Watford",
-    summary: "The Easter Youth Cup at Duinrell Wassenaar draws clubs from across the Netherlands and Europe every April. Previous participants include Feyenoord, ADO Den Haag, Sparta Rotterdam, SC Heerenveen, Sunderland and Watford. Well-organised, contested, and hosted at an outstanding venue.",
+    pill: "Easter window",
+    accent: "Roosendaal · 30 mins from Rotterdam",
+    summary: "The Netherlands Easter Youth Cup is an international youth football tournament held over Easter weekend in Roosendaal — a Dutch town midway between Rotterdam and Antwerp.",
     accommodation: DUINRELL_ACCOM,
+    sections: [
+      {
+        eyebrow: "01 — What Is the Netherlands Easter Youth Cup",
+        title: "Easter weekend football in the Netherlands. Done properly.",
+        content: `The Netherlands Easter Youth Cup is an international youth football tournament held over Easter weekend in Roosendaal — a well-connected Dutch town midway between Rotterdam and Antwerp, and within easy reach of Amsterdam. It brings together teams from across Europe including England, Denmark, France, Italy, Germany, Belgium, and the Netherlands, competing across top-quality grass and artificial pitches at BSC Roosendaal's excellent facility.
+
+The format is four days — Friday to Monday over Easter — with multiple matches per team, a genuine international field, and the kind of tournament atmosphere that UK squads rarely encounter in their domestic calendar. Fast-paced games, strong competition, teams from different countries playing different styles. Exactly what an overseas football tour should deliver.
+
+For UK clubs, the timing and location make it one of the most practically accessible European tournaments available. The Netherlands is an easy journey from the UK — a straightforward option for clubs who want international tournament football at Easter without the logistics of travelling to Spain.`,
+      },
+      {
+        eyebrow: "02 — Format and Details",
+        title: "The tournament at a glance.",
+        content: `Dates: 3–6 April 2026 · Roosendaal, Netherlands
+
+Venue: BSC Roosendaal — 8 grass pitches and 1 artificial pitch, all on a single well-maintained facility
+
+Age categories: Boys U9–U15
+
+Format: Group stage followed by knockout rounds. Every team is guaranteed multiple matches across the tournament weekend. Competition is structured by age group with teams playing opponents matched to their level throughout.
+
+Accommodation: Options range from budget holiday park bungalows in the Roosendaal area through to Centre Parcs De Kempervennen — a premium stay in natural surroundings with swimming complexes, leisure facilities, and activities for players and families between matches.
+
+Location: Roosendaal sits 30 minutes south of Rotterdam by road, and approximately 1.5 to 2 hours from Amsterdam — making day trips or city exploration easy to build into the itinerary.`,
+      },
+      {
+        eyebrow: "03 — The Dutch Football Experience",
+        title: "Playing in the Netherlands is a different kind of test.",
+        content: `The Netherlands produces professional footballers at a rate that makes no sense relative to the country's population. Ajax, Feyenoord, PSV — three clubs with a continuous tradition of developing technically elite players from youth level. The domestic youth leagues are built around technique, decision-making, and positional intelligence from an early age.
+
+When UK squads play against Dutch opposition — or face German, French, and Scandinavian clubs at a tournament like this — they encounter different rhythms, different pressing systems, and different technical expectations than they face at home. That exposure is what makes the Netherlands Easter Youth Cup genuinely developmental rather than just competitive.
+
+Your players will face situations they haven't faced before. That's the point.`,
+      },
+      {
+        eyebrow: "04 — The Natural Pairing with Feyenoord",
+        title: "Train at Varkenoord. Compete at Easter.",
+        content: `The Netherlands Easter Youth Cup pairs naturally with a Feyenoord Academy training block earlier in the week. Feyenoord's Varkenoord complex sits 30 minutes north of Roosendaal in Rotterdam — close enough to build a seamless tour that moves from professional partner-club training to Easter tournament competition without changing base.
+
+A typical Netherlands Easter tour with Ballerz Abroad:
+
+Days 1–3 — Arrival in Rotterdam, professional training sessions at Varkenoord under Feyenoord Academy coaching staff
+Days 4–7 — Netherlands Easter Youth Cup, Roosendaal
+Day 8 — Departure
+
+Your squad arrives at the tournament having already trained inside one of the Netherlands' most respected academy environments that week. The football your players see at Varkenoord and the football they then face in competition is part of the same Dutch development tradition — that continuity is what separates a well-built Netherlands tour from a tournament trip with training added as an afterthought.`,
+      },
+      {
+        eyebrow: "05 — Roosendaal and the Netherlands",
+        title: "A well-placed base with everything within reach.",
+        content: `Roosendaal is a compact, pleasant Dutch town with easy road and rail connections in all directions. Rotterdam is 30 minutes north — Europe's largest port and one of the most architecturally distinctive cities on the continent, well worth a day trip for squads with time between matches. Amsterdam is 1.5 to 2 hours away for groups who want to build a cultural day into the itinerary.
+
+The tournament accommodation options sit in the green countryside around Roosendaal — holiday parks that give squads a shared base, space to recover between games, and a team environment that continues off the pitch as well as on it. For clubs where the social and bonding element of a tour matters alongside the football, a Centre Parcs base brings that naturally.`,
+      },
+      {
+        eyebrow: "06 — Who This Is For",
+        title: "Right for your squad if…",
+        content: `You're travelling with U9–U15 boys and want Easter weekend international tournament football in the Netherlands
+
+You want a practical, accessible European tournament without the longer journey to Spain — the Netherlands is one of the most straightforward overseas destinations for UK clubs
+
+You're looking to combine a Feyenoord Academy training block with Easter tournament competition in a single joined-up Netherlands tour
+
+You want a tournament with a genuine international field from across northern Europe — not just UK clubs travelling together
+
+Not the right fit if you need girls categories or U16+ age groups — for those, the Spanish tournament options have wider brackets. For U9–U15 boys at Easter in the Netherlands, this is the right entry point.`,
+      },
+      {
+        eyebrow: "07 — More from the Netherlands Network",
+        title: "Other options from Ballerz Abroad in the Netherlands.",
+        content: `Feyenoord Academy — Professional training at Varkenoord, Rotterdam. The natural pairing with this tournament.
+
+Winter Cup Holland — Netherlands winter tournament window.`,
+      },
+    ],
   },
   "tour-winter-cup-nl": {
     name: "Winter Cup Holland.",
