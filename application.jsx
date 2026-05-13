@@ -179,7 +179,6 @@ function Application({ onNavigate }) {
       </div>
 
       <WhatsAppFab />
-      <CookieIcon onNavigate={onNavigate} />
     </div>
   );
 }

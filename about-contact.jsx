@@ -196,7 +196,6 @@ function Contact({ onNavigate }) {
 
       <Footer />
       <WhatsAppFab />
-      <CookieIcon onNavigate={onNavigate} />
     </>
   );
 }

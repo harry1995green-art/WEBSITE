@@ -88,7 +88,6 @@ function TermsAndConditions({ onNavigate }) {
 
       <Footer />
       <WhatsAppFab />
-      <CookieIcon onNavigate={onNavigate} />
     </>
   );
 }
@@ -208,7 +207,6 @@ function PrivacyPolicy({ onNavigate }) {
 
       <Footer />
       <WhatsAppFab />
-      <CookieIcon onNavigate={onNavigate} />
     </>
   );
 }

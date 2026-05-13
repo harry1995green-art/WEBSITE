@@ -60,7 +60,6 @@ function FAQ({ onNavigate }) {
 
       <Footer />
       <WhatsAppFab />
-      <CookieIcon onNavigate={onNavigate} />
     </>
   );
 }

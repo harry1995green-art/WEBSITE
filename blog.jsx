@@ -278,7 +278,6 @@ function Blog({ onNavigate }) {
 
       <Footer />
       <WhatsAppFab />
-      <CookieIcon onNavigate={onNavigate} />
     </>
   );
 }
@@ -384,7 +383,6 @@ function BlogPost({ onNavigate, postId = "p01" }) {
 
       <Footer />
       <WhatsAppFab />
-      <CookieIcon onNavigate={onNavigate} />
     </>
   );
 }
