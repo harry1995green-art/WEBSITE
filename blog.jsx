@@ -287,9 +287,32 @@ window.POSTS = POSTS;
 // Single post view — pulls the first featured post.
 function BlogPost({ onNavigate }) {
   const p = POSTS[0];
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": p.title,
+    "description": p.excerpt,
+    "image": p.img,
+    "datePublished": new Date(p.date).toISOString().split('T')[0],
+    "author": {
+      "@type": "Organization",
+      "name": "Ballerz Abroad"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ballerz Abroad",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fc2524f6556de432fb71303db254cb2a5?format=webp"
+      }
+    }
+  };
   return (
     <>
       <Nav active="blog" onNavigate={onNavigate} />
+      <script type="application/ld+json">
+        {JSON.stringify(blogSchema)}
+      </script>
 
       <section className="band" style={{ paddingTop: 140, paddingBottom: 32 }}>
         <div className="wrap" style={{ maxWidth: 820 }}>

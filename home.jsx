@@ -220,7 +220,7 @@ function Home({ onNavigate }) {
               ["NXGENPro",  "https://nx-genpro.com/wp-content/uploads/2025/08/NXGEN_Logo.png"],
             ].map(([name, src]) => (
               <div key={name} style={{ background: "var(--ink-900)", padding: 32, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16, minHeight: 180 }}>
-                <img src={src} alt={name} style={{ maxHeight: 80, maxWidth: "70%", objectFit: "contain", filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.4))" }} />
+                <img src={src} alt={name} loading="lazy" style={{ maxHeight: 80, maxWidth: "70%", objectFit: "contain", filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.4))" }} />
                 <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.16em", color: "var(--stand-300)", textTransform: "uppercase" }}>{name}</div>
               </div>
             ))}
