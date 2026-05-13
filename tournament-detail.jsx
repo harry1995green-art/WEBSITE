@@ -327,16 +327,97 @@ Levante UD International Cup — Hosted by our La Liga partner club in Valencia.
     ],
   },
   "tour-cruyff": {
-    name: "Cruyff Tournament.",
-    eyebrow: "Amsterdam · Netherlands · Invitational",
-    sub: "Hosted in the spirit of the Cruyff philosophy — possession-first, technically demanding football.",
-    accommodation: CAMBRILS_ACCOM,
-    location: "Amsterdam · NL",
-    facts: [["Country", "Netherlands"], ["Window", "Spring 2026"], ["Age", "U10 — U17"], ["Format", "Invitational"]],
+    name: "The Cruyff Tournament.",
+    eyebrow: "Tournament · Spain · Salou",
+    sub: "Hosted in the spirit of Johan Cruyff's footballing philosophy. FC Barcelona, AFC Ajax, and Europe's best academy programmes. Salou, Spain — December window.",
+    location: "Salou · ES",
+    facts: [["Country", "Spain"], ["Window", "4–7 December 2026"], ["Age", "U10 — U19"], ["Field", "Curated"]],
     img: "https://images.unsplash.com/photo-1551958219-acbc608c6377?w=2000&q=80",
-    pill: "Invitational only",
-    accent: "Dutch academy field",
-    summary: "An invitational field of Dutch and European academy sides. The Cruyff Tournament is technical, possession-led football at the highest youth level — entry is restricted, level is the only criterion.",
+    pill: "December window",
+    accent: "FC Barcelona · AFC Ajax",
+    summary: "The Cruyff Football Tournament was created to honour Johan Cruyff's footballing philosophy — total football, positional intelligence, technical freedom. FC Barcelona and AFC Ajax lead a curated field of Europe's best academies.",
+    accommodation: CAMBRILS_ACCOM,
+    sections: [
+      {
+        eyebrow: "01 — What Is the Cruyff Tournament",
+        title: "More than a competition. A philosophy in action.",
+        content: `The Cruyff Football Tournament was created to honour the legacy of Johan Cruyff — the man who more than any other individual shaped the way modern football is played, coached, and taught. Total Football. Positional intelligence. Technical freedom. The belief that the game should be played a specific way, and that developing players means developing thinkers as much as athletes.
+
+The tournament launched in 2024 with 90 teams from 17 countries and 1,600 players — FC Barcelona and AFC Ajax leading the field alongside some of the most respected youth academies in Europe. It has grown each year since, with the 2026 edition building on that foundation with an expanded field and the same commitment to competition that reflects Cruyff's values rather than simply carrying his name.
+
+For squads and coaching staff who want a tournament where the philosophy of play matters — not just the result — the Cruyff Tournament is the most distinctive entry in the Ballerz Abroad network.`,
+      },
+      {
+        eyebrow: "02 — Format and Details",
+        title: "The tournament at a glance.",
+        content: `Date: 4–7 December 2026 · Salou, Costa Daurada, Spain
+
+Age categories:
+U10 · U12 · U14 · U16 · U19
+
+Notable participants:
+FC Barcelona · AFC Ajax · Leading European club academies · International youth programmes
+
+Format:
+Group stage followed by knockout rounds. Spaces are deliberately limited to maintain competition quality and ensure every team has ample playing time throughout. This is not an open-entry mass participation event — it is a curated field of clubs and academies who have been selected to reflect the standard the tournament is built around.
+
+Venue:
+Salou, Costa Daurada — the same location as Copa Daurada and Mare Nostrum Cup, played at the Mediterranean Sports Hub complex with professional-grade pitches and first-class facilities on the Costa Daurada coastline.`,
+      },
+      {
+        eyebrow: "03 — Why the Name Matters",
+        title: "Johan Cruyff. The standard his name sets.",
+        content: `Johan Cruyff played for Ajax and FC Barcelona, won three consecutive European Cups, and remains the greatest Dutch footballer in the history of the game. As a manager and thinker, he built the foundation of La Masia — Barça's academy — and exported a philosophy of technical football, positional awareness, and creative intelligence that is still the dominant influence on European youth development today.
+
+The clubs that show up to a tournament in his name are the ones who play the game the way he believed it should be played. Ajax, who produced him. Barcelona, who he transformed. Academies that have built their identity around technique, movement, and intelligence over physicality.
+
+For UK development squads, that field is exactly the kind of challenge that produces genuine development. You will not face teams that play like the teams at home. That is the point.`,
+      },
+      {
+        eyebrow: "04 — The December Window",
+        title: "A tournament slot most clubs don't use. That's the opportunity.",
+        content: `The Easter and summer windows are heavily contested for overseas football tours — flights and accommodation are at a premium, popular tournaments fill months in advance, and the calendar is busy. December is different.
+
+The Cruyff Tournament runs in early December, in a window that sits cleanly after the first half of the domestic season and before Christmas. For UK academies and development squads looking for a mid-season reset, a performance benchmark, or an overseas experience that doesn't compete with the Easter calendar, it is the most useful window in the Ballerz Abroad network.
+
+Salou in December is cooler than the summer months but consistently mild by UK standards — playable conditions throughout, and a location that retains all its tournament infrastructure and accommodation quality year-round.`,
+      },
+      {
+        eyebrow: "05 — How Ballerz Abroad Builds a Cruyff Tournament Tour",
+        title: "Entry is the centrepiece. The build around it is ours.",
+        content: `Ballerz Abroad secures your tournament entry, manages accommodation in Salou, coordinates all ground transfers, and provides a dedicated tour lead with your squad throughout. The days leading into the tournament are built around your squad's preparation — professional training sessions matched to your objectives before you step into competition.
+
+A typical Cruyff Tournament tour with Ballerz Abroad:
+
+Days 1–2 — Arrival in Spain, settle in, professional training sessions at a partner club
+Days 3–6 — Cruyff Tournament competition, Salou
+Day 7 — Departure
+
+Tell us your age group, squad size, and window. We'll have a full brief back to you within two working days.`,
+      },
+      {
+        eyebrow: "06 — Who This Is For",
+        title: "Right for your squad if…",
+        content: `You want a mid-season overseas tournament in a December window that doesn't clash with Easter or summer commitments
+
+You're looking for a tournament where the opposition has been developed with a specific technical and tactical identity — Ajax, Barcelona, and their equivalents in the field
+
+Your coaching staff want to benchmark your squad against European academy standard football at a specific point in the season
+
+Your U10–U19 players are technically capable and ready to be challenged by the best academy football Europe produces in a curated, limited-entry field
+
+Not the right fit if you need an Easter window or a large open-entry bracket across many age groups simultaneously. For those requirements, MIC Costa Brava, Mare Nostrum, or Copa Daurada are the better fit.`,
+      },
+      {
+        eyebrow: "07 — Other Spanish Tournament Options",
+        title: "More from the Ballerz Abroad Spain network.",
+        content: `MIC Costa Brava — Easter. Europe's most competitive elite academy tournament. 400+ teams, 40+ countries.
+
+Copa Daurada — Easter and summer. Accessible international tournament. Grassroots through development bracket.
+
+Mare Nostrum Cup — Easter and summer. Spain's largest youth tournament. U8–U19, boys and girls.`,
+      },
+    ],
   },
   "tour-levante-cup": {
     name: "Levante UD International Cup.",
