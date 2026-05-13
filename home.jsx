@@ -89,7 +89,7 @@ function Home({ onNavigate }) {
             <StatCell n="07" label="Days abroad" />
             <StatCell n="10" label="Pro sessions" />
             <StatCell n="03" label="Int. fixtures" />
-            <StatCell n="01" label="Pro environment" accent />
+            <StatCell n="100%" label="Pro environment" accent />
           </div>
         </div>
       </section>
