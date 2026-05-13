@@ -366,14 +366,97 @@ Levante UD International Cup — Hosted by our La Liga partner club in Valencia.
   },
   "tour-mic-punta-cana": {
     name: "MIC Punta Cana.",
-    eyebrow: "Dominican Republic · Winter window",
-    sub: "MIC format, Caribbean staging. The Christmas-break alternative for squads who want a tropical fixture programme.",
+    eyebrow: "Tournament · Dominican Republic · Punta Cana",
+    sub: "The MIC format. The same clubs. The Caribbean. A June window for squads who can't make Easter — or who want one of the most extraordinary tournament experiences available in youth football.",
     location: "Punta Cana · DR",
-    facts: [["Country", "Dominican Republic"], ["Window", "Dec / Jan 2026"], ["Age", "U10 — U18"], ["Format", "MIC bracket"]],
+    facts: [["Country", "Dominican Republic"], ["Window", "24–29 June 2026"], ["Age", "U12 — U16"], ["Teams", "International"]],
     img: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=2000&q=80",
-    pill: "Winter window",
-    accent: "Long-haul · Beach resort basing",
-    summary: "The MIC format, exported to the Caribbean. Winter-window staging in Punta Cana with beach-resort basing. Long-haul travel — built for squads with the appetite for a Christmas-break programme.",
+    pill: "June window",
+    accent: "All-inclusive resort · 4 & 5-star hotels",
+    summary: "The MIC format, transposed to the Dominican Republic. Runs in late June across a 125,000m² sports complex at Cap Cana, with teams staying in four and five-star all-inclusive hotels.",
+    sections: [
+      {
+        eyebrow: "01 — What Is MIC Punta Cana",
+        title: "MIC goes to the Caribbean.",
+        content: `MICFootball launched its Punta Cana edition in 2025 — taking the format, the standards, and the club network that made MIC Costa Brava Europe's reference youth tournament, and transplanting it to the Dominican Republic for a June window.
+
+The result is exactly what it sounds like. Real Madrid, FC Barcelona, Atlético de Madrid, River Plate, Inter Miami, Club América, Olympique de Marseille — the same calibre of clubs that appear at Costa Brava in April, competing across 13 natural grass pitches at The Fields Cap Cana Sports City, a 125,000m² purpose-built sports complex in one of the Caribbean's most exclusive resort destinations.
+
+It is a genuinely different proposition from any other tournament in the Ballerz Abroad network — not just because of the competition standard, but because of where it happens. There is no other youth football tournament that puts your players in 4 and 5-star all-inclusive hotels on the Caribbean coast for a week of international competition.`,
+      },
+      {
+        eyebrow: "02 — Format",
+        title: "How it works.",
+        content: `MIC Punta Cana runs over five days in late June, with teams arriving on Wednesday and competition running from Thursday through Sunday.
+
+All matches are played at The Fields Cap Cana Sports City — 13 natural grass pitches on a single 125,000m² complex, with tents for players and coaches, food trucks, leisure areas, and the MIC Store on site. Everything in one place.
+
+Group stage: Teams play a round-robin group stage with four teams per group. The top two from each group advance to the Gold knockout rounds. All other teams continue in the Silver stage — no squad is knocked out and left without football.
+
+Knockout rounds: Single-match elimination through to the final. Finals and awards ceremony on the final day.
+
+Dates: 24–29 June 2026 · Cap Cana, Dominican Republic
+
+Age categories:
+Boys: U12 · U13 · U14 · U15 · U16
+Girls: U16
+
+Match format:
+U12: 7-a-side
+U13–U16: 11-a-side`,
+      },
+      {
+        eyebrow: "03 — The Setting",
+        title: "Punta Cana. The best beaches in the Caribbean. Youth football.",
+        content: `Cap Cana is a private resort complex on the eastern tip of the Dominican Republic — considered one of the finest tourist destinations in the Caribbean. The tournament's partner hotels are 4 and 5-star all-inclusive properties with direct beach access, pools, and full resort facilities. Squads are accommodated, fed, and transported to the tournament complex together — the all-inclusive format means no per-meal logistics and no budget surprises on the ground.
+
+Airport transfers from Punta Cana International Airport to the hotels take 30 to 40 minutes. The tournament is compact, logistically straightforward, and set against a backdrop that is difficult to match anywhere on the European football tour calendar.
+
+For clubs whose players and parents have done Spain before, or for squads looking for a genuinely different summer football experience, Punta Cana is the answer.`,
+      },
+      {
+        eyebrow: "04 — Why It Works for UK Squads",
+        title: "A summer window. A different world.",
+        content: `The vast majority of UK academy and development teams focus their overseas football tours on the Easter window — Spain, Portugal, the Netherlands. The summer calendar is less well served by tournaments of genuine quality and international standard.
+
+MIC Punta Cana fills that gap directly. It runs in late June, after the domestic season has finished and before the pre-season window fully opens — a clean slot in the calendar that works for clubs wanting to travel in the summer without clashing with existing commitments.
+
+The competition standard is high. The clubs entering Punta Cana are drawn from the same global network as MIC Costa Brava — this is not a second-tier version of MIC built for teams who couldn't get into the main event. It is a distinct edition, in a distinct location, with the same organisational standards and the same quality of opposition.`,
+      },
+      {
+        eyebrow: "05 — MIC Punta Cana vs MIC Costa Brava",
+        title: "Same brand. Different experience. Different window.",
+        content: `Both tournaments are run by MICFootball. Both draw from the same club network. Both operate to the same organisational standards and competition format. The differences are the window, the location, and the scale.
+
+MIC Costa Brava — Easter, Spain. The flagship edition. 400+ teams, 40+ countries, nine categories from U12 to U19. The most competitive youth tournament in Europe. Costa Brava coastline.
+
+MIC Punta Cana — Late June, Dominican Republic. The Caribbean edition. Focused U12–U16 bracket plus girls U16. Fewer teams, tighter field, 4 and 5-star all-inclusive setting. A different kind of experience at the same competition level.
+
+Not sure which is right for your squad? If Easter works and you want maximum age category coverage, Costa Brava. If you're travelling in June or want the Caribbean experience alongside top-level competition, Punta Cana.`,
+      },
+      {
+        eyebrow: "06 — How Ballerz Abroad Builds a MIC Punta Cana Tour",
+        title: "We handle everything on the ground.",
+        content: `Ballerz Abroad secures your tournament entry, manages accommodation through the MIC partner hotel network, coordinates airport transfers, and provides a dedicated tour lead with your squad throughout.
+
+The all-inclusive format simplifies the on-the-ground logistics significantly — meals, pools, beach access, and transfers to the complex are all built in. Your coaching staff focus on preparation and performance. We handle everything else.
+
+A typical MIC Punta Cana tour runs across six days — arrival Wednesday, competition Thursday through Sunday, departure Monday. Extensions before or after the tournament can be arranged for squads who want additional time in the Dominican Republic.`,
+      },
+      {
+        eyebrow: "07 — Who This Is For",
+        title: "Right for your squad if…",
+        content: `You want to enter a MIC-standard tournament in a June window that doesn't interfere with the Easter calendar
+
+Your players have done Spain and you're looking for a tournament experience that is categorically different — in setting, atmosphere, and memory
+
+You're travelling with U12–U16 age groups and want the most ambitious summer overseas football tour available
+
+Your club wants to offer families something that goes well beyond a standard football tour — a genuine destination trip built around top-level international competition
+
+Not the right fit if your primary objective is maximum age group coverage — for U17, U18, and U19 squads, the Easter Costa Brava edition has the fuller bracket. For the U12–U16 window in June, Punta Cana stands alone.`,
+      },
+    ],
   },
   "tour-easter-youth-cup": {
     name: "Netherlands Easter Youth Cup.",
