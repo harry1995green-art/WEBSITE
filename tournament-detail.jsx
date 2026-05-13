@@ -8,10 +8,10 @@ const DUINRELL_ACCOM = {
   desc: "Tournament squads stay at Duinrell — a renowned holiday park in Wassenaar, near The Hague, ideally positioned for the tournament venues. Players are accommodated in comfortable holiday bungalows set within Duinrell's extensive woodland grounds. The park features indoor and outdoor pools, a waterpark, sports facilities, restaurants and on-site catering — everything a squad needs between fixtures.",
   features: ["Woodland bungalows · group allocation", "Indoor + outdoor pools", "On-site waterpark + sports facilities", "Restaurants and catering on site", "Close to tournament venues · short transfers", "Ideal recovery environment between fixtures"],
   photos: [
-    { url: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=900&q=80", cap: "Pool facilities" },
-    { url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=900&q=80", cap: "Resort grounds" },
-    { url: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=900&q=80", cap: "Bungalow accommodation" },
-    { url: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80", cap: "On-site dining" },
+    { url: "https://www.duinrell.com/media/112/EN/Banners/24433/800x600xfit@60@%7B%22type%22%3A%22jpg%22%7D/cycloon-tiki-pool-duinrell-800x600.jpg?d=1759824269", cap: "Pool facilities" },
+    { url: "https://www.duinrell.com/media/112/EN/layered-content-page/41005/800x9999xfit@60/Kopie%20van%20Caroussel%20-%20Crazy%20Kamperen%20-%20800x600.jpg?d=1767347750", cap: "Resort grounds" },
+    { url: "https://www.duinrell.com/media/112/EN/Paginavoet%202019/22233/800x600xfit@60/Duingalow.png?d=1655796394", cap: "Bungalow accommodation" },
+    { url: "https://www.duinrell.com/media/112/NL/Banners/35049/800x600xfit@60@%7B%22type%22%3A%22jpg%22%7D/Premium%20Plus.jpg?d=1776343855", cap: "Holiday bungalows" },
   ],
 };
 
