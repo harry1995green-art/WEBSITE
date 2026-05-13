@@ -222,7 +222,7 @@ function Footer() {
     <footer className="foot">
       <div className="foot__grid">
         <div className="foot__logo">
-          <img src="assets/logo-mark-white.svg" alt="Ballerz Abroad" />
+          <img src="assets/logo-mark-white.svg" alt="Ballerz Abroad" style={{ transform: "scale(2)" }} />
           <div className="foot__tag">European football experiences — built around your squad.</div>
         </div>
         <div className="foot__col">
