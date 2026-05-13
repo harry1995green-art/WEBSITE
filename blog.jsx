@@ -8,7 +8,7 @@ const POSTS = [
     read: "7 min read",
     title: "Spain vs Netherlands vs Portugal: Which European Football Tour Destination Is Right for Your Academy?",
     excerpt: "Spain, Netherlands, or Portugal — three of Europe's best football tour destinations for UK academies. Here's how to choose the right one based on your squad's objectives, not the brochure.",
-    img: "https://images.unsplash.com/photo-1551958219-acbc608c6377?w=1600&q=80",
+    img: "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F44d36947abd641faaa34e708dd7bdbd6?format=webp&width=800&height=1200",
     featured: true,
     body: [
       "Every year, academy directors and heads of football at UK development clubs face the same question when planning an overseas football tour: where do we go? Spain is the default answer for most. But default answers aren't always the right ones — and for academy squads with specific development objectives, the destination should be a decision, not a habit.",
