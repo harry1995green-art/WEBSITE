@@ -22,7 +22,7 @@ body { margin: 0; padding: 0; background: var(--ink-900); color: var(--chalk-50)
   border-bottom-color: rgba(246, 243, 235, 0.08);
 }
 .nav__left { display: flex; align-items: center; gap: 36px; background: transparent; }
-.nav__logo { height: 90px; width: auto; display: block; border: none; background: transparent; image-rendering: crisp-edges; -webkit-font-smoothing: antialiased; mix-blend-mode: screen; }
+.nav__logo { height: 90px; width: auto; display: block; border: none; background: transparent; image-rendering: crisp-edges; -webkit-font-smoothing: antialiased; filter: invert(1) hue-rotate(180deg); }
 .nav__links { display: flex; gap: 26px; }
 .nav__links a {
   font-family: var(--font-heading);
