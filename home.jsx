@@ -217,9 +217,9 @@ function Home({ onNavigate }) {
               ["Levante UD",     "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Fecd4304b94af4777b17bf55676f7ac0a?format=webp&width=800&height=1200"],
               ["Real Betis",    "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F017e8565cae4423fbbbf2b16b4337f89?format=webp&width=800&height=1200"],
               ["NXGENPro",  "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F34566296fd694ffba6beaaf2c42ef832?format=webp&width=800&height=1200"],
-              ["SL Benfica",  "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2Ff493c51c195147ad8bfe62f856d52f2b?format=webp&width=800&height=1200"],
+              ["SL Benfica",  "https://cdn.builder.io/api/v1/image/assets%2F94fd70ad307f4ddc9cac607abab780ad%2F089fc518870d4c2d9e8f6284416b2ba1?format=webp&width=800&height=1200"],
             ].map(([name, src]) => (
-              <div key={name} style={{ background: name === "SL Benfica" ? "transparent" : "var(--ink-900)", padding: 32, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16, minHeight: 180 }}>
+              <div key={name} style={{ background: "var(--ink-900)", padding: 32, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16, minHeight: 180 }}>
                 <img src={src} alt={name} style={{ maxHeight: 80, maxWidth: "70%", objectFit: "contain" }} />
                 <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.16em", color: "var(--stand-300)", textTransform: "uppercase", textAlign: "center" }}>{name}</div>
               </div>
