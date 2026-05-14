@@ -196,6 +196,9 @@
         route === "detail" ? "Experiences" :
         isExp ? "Experience · " + route.replace("exp-", "") :
         isTour ? "Tournament · " + route.replace("tour-", "") : route;
+      React.useEffect(() => {
+        document.title = label === "Home" ? "Ballerz Abroad | Elite Youth Football Tours & Academy Experiences" : label + " | Ballerz Abroad";
+      }, [label]);
       return (
         <div data-screen-label={label}>
           {route === "home" && <Home onNavigate={navigate} />}
