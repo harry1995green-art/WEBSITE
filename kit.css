@@ -362,10 +362,11 @@ footer.foot { background: var(--ink-1000); color: var(--chalk-50); padding: clam
   .fixture-row__opp { display: none; }
 
   /* Itinerary */
-  .itin-day { grid-template-columns: 60px 1fr !important; gap: 12px; padding: 12px 0 !important; }
-  .itin-day__n { font-size: 24px !important; }
-  .itin-day__title { font-size: 16px !important; }
-  .itin-day__desc { font-size: 13px; line-height: 1.4; }
+  .itin-day { display: block !important; padding: 16px 0 !important; }
+  .itin-day__n { font-size: 28px !important; margin-bottom: 8px; }
+  .itin-day__title { font-size: 17px !important; margin-bottom: 4px; }
+  .itin-day__time { margin-bottom: 8px !important; }
+  .itin-day__desc { font-size: 14px; line-height: 1.5; max-width: 100%; }
   .section-lead { font-size: 14px; line-height: 1.5; }
 
   /* Text blocks */
