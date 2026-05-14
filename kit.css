@@ -363,6 +363,11 @@ footer.foot { background: var(--ink-1000); color: var(--chalk-50); padding: clam
 
   /* Itinerary */
   .itin-day { grid-template-columns: 80px 1fr !important; gap: 16px; }
+  .itin-day__desc { font-size: 14px; line-height: 1.5; }
+  .section-lead { font-size: 15px; line-height: 1.5; }
+
+  /* Text blocks */
+  .band p { font-size: 15px; line-height: 1.5; }
 
   /* Tour grid */
   .tour-grid { grid-template-columns: 1fr !important; }
