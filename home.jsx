@@ -94,7 +94,7 @@ function Home({ onNavigate }) {
             <div className="hero__eyebrow-rule"></div>
             <div className="hero__eyebrow-text">ENGLAND · SPAIN · PORTUGAL · NETHERLANDS</div>
           </div>
-          <h1 className="display-xl">PROFESSIONAL FOOTBALL EXPERIENCES</h1>
+          <h1 className="display-xl">PROFESSIONAL FOOTBALL EXPERIENCEs</h1>
           <div className="hero__sub">Ballerz Abroad designs bespoke overseas football tours for UK academies and development teams. Professional training environments, vetted partner clubs, and competitive fixtures across Spain, the Netherlands, Portugal and England.</div>
           <div className="hero__ctas">
             <button className="btn btn--primary btn--lg" onClick={() => onNavigate("application")}>Apply for a tour →</button>
