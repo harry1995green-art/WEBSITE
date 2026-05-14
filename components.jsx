@@ -262,8 +262,8 @@ function Footer() {
           <h4>Support</h4>
           <a href="#" onClick={(e) => { e.preventDefault(); window.__navigate && window.__navigate("contact"); }} style={{ border: "none", background: "none", cursor: "pointer" }}>Contact</a>
           <a href="#" onClick={(e) => { e.preventDefault(); window.__navigate && window.__navigate("faq"); }} style={{ border: "none", background: "none", cursor: "pointer" }}>FAQ</a>
-          <a href="#" onClick={(e) => { e.preventDefault(); window.__navigate && window.__navigate("terms"); }} style={{ border: "none", background: "none", cursor: "pointer" }}>Terms &amp; conditions</a>
-          <a href="#" onClick={(e) => { e.preventDefault(); window.__navigate && window.__navigate("privacy"); }} style={{ border: "none", background: "none", cursor: "pointer" }}>Privacy policy</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); window.__navigate && window.__navigate("terms-conditions"); }} style={{ border: "none", background: "none", cursor: "pointer" }}>Terms &amp; conditions</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); window.__navigate && window.__navigate("privacy-policy"); }} style={{ border: "none", background: "none", cursor: "pointer" }}>Privacy policy</a>
           <a href="#" onClick={(e) => { e.preventDefault(); window.__navigate && window.__navigate("safeguarding"); }} style={{ border: "none", background: "none", cursor: "pointer" }}>Safeguarding</a>
         </div>
       </div>

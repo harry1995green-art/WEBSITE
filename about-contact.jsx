@@ -160,8 +160,8 @@ function Contact({ onNavigate }) {
               <div>
                 <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.14em", color: "var(--stand-300)", textTransform: "uppercase", marginBottom: 8 }}>Social</div>
                 <div style={{ display: "flex", gap: 16, fontFamily: "var(--font-body)", fontSize: 16 }}>
-                  <a href="#" style={{ color: "var(--chalk-50)", border: "none" }}>@ballerzabroad — TikTok</a>
-                  <a href="#" style={{ color: "var(--chalk-50)", border: "none" }}>Facebook</a>
+                  <a href="https://www.tiktok.com/@ballerzabroad" target="_blank" rel="noopener noreferrer" style={{ color: "var(--chalk-50)", border: "none" }}>@ballerzabroad — TikTok</a>
+                  <a href="https://www.facebook.com/people/Ballerz-Abroad/61586226172523/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--chalk-50)", border: "none" }}>Facebook</a>
                 </div>
               </div>
             </div>
