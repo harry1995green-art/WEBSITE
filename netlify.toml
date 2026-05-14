@@ -1,6 +1,37 @@
 [build]
   publish = "."
 
+# Use Netlify prerender plugin for better SEO and indexability
+[[plugins]]
+  package = "@netlify/plugin-prerender"
+  [plugins.inputs]
+    routes = [
+      "/",
+      "/nxgenpro-experience",
+      "/levanteexperience",
+      "/betisexperience",
+      "/benficaexperience",
+      "/feyenoordexperience",
+      "/tournaments",
+      "/mic-costa-brava",
+      "/copa-daurada",
+      "/mare-nostrum",
+      "/cruyff-tournament",
+      "/levante-international-cup",
+      "/mic-punta-cana",
+      "/easter-youth-cup",
+      "/winter-cup-holland",
+      "/journal",
+      "/faq",
+      "/terms-conditions",
+      "/privacy-policy",
+      "/safeguarding",
+      "/about",
+      "/contact",
+      "/application"
+    ]
+    staticQueryString = "prerender=true"
+
 # Redirect all requests to index.html for SPA routing
 [[redirects]]
   from = "/*"
