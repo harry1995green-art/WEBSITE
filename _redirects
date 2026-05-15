@@ -1,1 +1,16 @@
+# 301 Redirects for old URLs
+/europeantours                      /tournaments                301
+/valencia                           /levanteexperience          301
+/realbetisexperience                /betisexperience            301
+/nxgenpro                           /nxgenpro-experience        301
+/copadaurada                        /copa-daurada               301
+/mictournamentcostabrava            /mic-costa-brava            301
+/marenostrumcup                     /mare-nostrum               301
+/cruyfftournament                   /cruyff-tournament          301
+/levante-ud-international-cup       /levante-international-cup  301
+/micpuntacana                       /mic-punta-cana             301
+/terms-and-conditions               /terms-conditions           301
+/howitworks                         /about                      301
+
+# Catch-all SPA routing rule
 /* /index.html 200
