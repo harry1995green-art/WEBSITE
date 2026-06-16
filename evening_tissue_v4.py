@@ -483,15 +483,27 @@ def generate_composite_tissue(runners, course, temps, is_jumps, race_class="", i
         t14 = runner.get("trainer_sr", 0.10)
         trainer_pct = t14 * 100 if t14 <= 1 else t14
 
-        # Base factors used in all race types
-        tf   = trainer_course_factor(trainer_ae)
-        jf   = jockey_course_factor(jockey_ae)
-        t14f = trainer_14day_factor(trainer_pct)
+        rpr_exp = get_rpr_exponent(race_class)
+        is_group_listed = rpr_exp > 1.0  # Group 1/2/3, Listed, Class 1/2
+
+        rc_lower = str(race_class).strip().lower()
+        is_group_12 = any(x in rc_lower for x in ["group 1", "group 2", "g1", "g2"])
+
+        # In Group 1/2, trainers are always trying — historical course AE is
+        # meaningless and actively harmful (it can over-penalise a trainer
+        # who simply hasn't sent many horses to this course).
+        # Jockey course AE is retained but halved — still some signal.
+        if is_group_12:
+            tf   = 1.0
+            jf   = 1.0 + (jockey_course_factor(jockey_ae) - 1.0) * 0.5
+            t14f = 1.0  # 14-day form also irrelevant in G1/2 — trainer always trying
+        else:
+            tf   = trainer_course_factor(trainer_ae)
+            jf   = jockey_course_factor(jockey_ae)
+            t14f = trainer_14day_factor(trainer_pct)
+
         cf   = class_factor(rpr, median_or)
         sjf  = same_trainer_jockey_factor(runner, runners)
-        rpr_exp = get_rpr_exponent(race_class)
-
-        is_group_listed = rpr_exp > 1.0  # Group 1/2/3, Listed, Class 1/2
 
         # Exclude horses absent 400+ days — RPR is too stale to be meaningful,
         # perf_rating will be missing, and the market routinely ignores them.
