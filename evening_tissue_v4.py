@@ -419,7 +419,7 @@ def form_recency_factor(form_str):
 
 # ── Main tissue generation ─────────────────────────────────────────────────────
 
-def generate_composite_tissue(runners, course, temps, is_jumps, race_class="", is_handicap=False):
+def generate_composite_tissue(runners, course, temps, is_jumps, race_class="", is_handicap=False, race_name=""):
     """
     Build composite score for each rated runner and run softmax.
     Returns runners with tissue prices added.
@@ -487,7 +487,11 @@ def generate_composite_tissue(runners, course, temps, is_jumps, race_class="", i
         is_group_listed = rpr_exp > 1.0  # Group 1/2/3, Listed, Class 1/2
 
         rc_lower = str(race_class).strip().lower()
-        is_group_12 = any(x in rc_lower for x in ["group 1", "group 2", "g1", "g2"])
+        # Check both race_class and race_name — the API often returns "Class 1"
+        # for Group races, so we need to match on the race name as well.
+        rn_lower = str(race_name).strip().lower()
+        is_group_12 = any(x in rc_lower for x in ["group 1", "group 2", "g1", "g2"]) or \
+                      any(x in rn_lower for x in ["group 1", "group 2", "(g1)", "(g2)"])
 
         # In Group 1/2, trainers are always trying — historical course AE is
         # meaningless and actively harmful (it can over-penalise a trainer
@@ -735,6 +739,7 @@ def run_tissue(mode="both"):
                 "going": going, "distance": distance_f,
                 "time": off_time,
                 "is_handicap": is_handicap,
+                "name": card.get("race_name", ""),
                 "runners": runners,
             }
             if is_jumps:
@@ -759,7 +764,8 @@ def run_tissue(mode="both"):
             effective_temps = HIGH_CLASS_FLAT_TEMPS if (is_high_class and label=="flat") else temps
             race["runners"] = generate_composite_tissue(
                 race["runners"], course, effective_temps, label=="jumps",
-                race_class=rc, is_handicap=race.get("is_handicap", False))
+                race_class=rc, is_handicap=race.get("is_handicap", False),
+                race_name=race.get("name", ""))
 
         # Save
         filename = os.path.join(OUTPUT_DIR, f"tissue_{suffix}_{today}.csv")
